@@ -64,9 +64,9 @@ Thus this commands cannot be guaranteed to work properly in every system.
 
 ### System,HasUAC
 
-Turning off UAC in Windows is very dangerous, and turning UAC by force in Windows 10 will break UWP apps.
+Currently PEBakery always returns `True` to this command.
 
-Currently PEBakery return always true to this command.
+User Account Control (UAC) is enabled by default in all supported versions of Windows making this command largely unnecessary. Furthermore many users are not aware of the dangers of disabling UAC, therefore it is better to design your project to work on UAC enabled systems rather then encourage users to disable security features in order to build a project.
 
 ### System,RebuildVars
 
