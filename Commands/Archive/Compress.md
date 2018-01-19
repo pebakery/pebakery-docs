@@ -1,8 +1,8 @@
 # Compress
 
-Compress file or directory into archive.
+Compress a file or directory into archive.
 
-**Warning!** this command is unstable, it can be changed.
+**Warning!** This command is unstable and may be changed in a future release.
 
 ## Syntax
 
@@ -10,19 +10,27 @@ Compress file or directory into archive.
 Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel],[Encoding]
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| Format | Archive format. Should be one of `Zip`.<br>TODO: Support `7z` format. |
-| SrcPath | Path of file/directory to compress. |
-| DestArchive | Path to save compressed archive. |
-| CompressLevel (Opt) | This effects archive size and compression time.<br>Should be one of `Store`, `Fastest`, `Normal`, `Best`.<br>By default, `Normal` is used. |
-| Encoding (Opt) | Encoding to be used in filename.<br>Should be one of `UTF8`, `UTF16`, `UTF16BE`, `ANSI`. <br>By default, `UTF8` is used. |
+| Format | Archive format. Only `Zip` is supported at this time. |
+| SrcPath | Full path of the file/directory to compress. |
+| DestArchive | Full path where the archive will be created. |
+| CompressLevel | **(Optional)** This effects archive size and compression time. Supported compression: `Store`, `Fastest`, `Normal`, `Best`. **Default** is `Normal`. |
+| Encoding | **(Optional)** Encoding to be used in filename. Supported options: `UTF8`, `UTF16`, `UTF16BE`, `ANSI`. **Default** is `UTF8`. |
 
 `CompressLevel` and `Encoding` can be used independently.
 
-## Example
+## Remarks
+
+This command depends on [SharpCompress](https://github.com/adamhathcock/sharpcompress)
+
+## Related
+
+[Decompress](./Decompress.md)
+
+## Examples
 
 ```pebakery
 // PEBakery.ini will be compressed into Setting.zip.

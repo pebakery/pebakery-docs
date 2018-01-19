@@ -1,8 +1,8 @@
 # CopyOrExpand
 
-Copy file or extract file from cabinet.
+Copy or Extract files from a Microsoft Cabinet Archive (*.CAB).
 
-If source file exists, it will be copied. Otherwise, PEBakery will search compressed cabniet and extract them.
+If the source file exists, it will be copied to the `DestPath`. Otherwise, PEBakery will search for a compressed cabinet (*.ex_, *.dl_) and extract the file.
 
 ## Syntax
 
@@ -10,34 +10,38 @@ If source file exists, it will be copied. Otherwise, PEBakery will search compre
 CopyOrExpand,<SrcFile>,<DestPath>,[PRESERVE],[NOWARN]
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcFile | Path of file to copy. |
-| DestPath | Path to copy or extract file. |
+| SrcFile | The full path of the file to copy. Wildcards (*, ?) can be used to CopyOrExpand multiple files. |
+| DestPath | The full path where the file will be copied or extracted. |
 
-- Flags
+### Flags
 
 | Flag | Description |
 | --- | --- |
-| PRESERVE | Do not overwrite. |
-| NOWARN | Do not log warning if a file is overwritten. |
+| PRESERVE | Do not overwrite existing files. |
+| NOWARN | Do not log an overwrite warning if a file is overwritten. |
+
+Flags can be specified in any order.
 
 ## Remarks
 
-If `SrcFile` is `%SrcDir%\EXPLORER.EXE`, PEBakery search for files in `%SrcDir%` in order of:
+PEBakery searches for files in the following order:
 
-1. EXPLORER.EXE (Copy)
-1. EXPLORER.EX_ (Expand)
+1. Copy
+1. Expand
 
-Its behavior resembles [SetupDecompressOrCopyFile](https://msdn.microsoft.com/en-us/library/aa376992(v=vs.85).aspx) API.
+This command is mainly used to extract compressed EXE (\*.EX\_) and DLL (\*.DL\_) files from NT5 (WindowsXP) sources.
 
-This command is mainly used to copy EXE, DLL from EX\_, DL\_ in NT5 sources.
+Depends on `cabinet.dll`. (Included with Windows)
 
-Depends on `cabinet.dll`, a Windows component.
+## Related
 
-## Example
+[Expand](./Expand.md)
+
+## Examples
 
 ```pebakery
 // If EXPLORER.EXE exists, it will be copied to %DestDir%.

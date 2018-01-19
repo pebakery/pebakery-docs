@@ -1,37 +1,41 @@
 # Expand
 
-Decompress files from cabinet.
+Extract files from a Microsoft Cabinet Archive (*.CAB).
 
 ## Syntax
 
 ```pebakery
-Expand,<SrcCab>,<DestDir>,[SingleFile],[PRESERVE],[NOWARN]
+Expand,<CabFile>,<DestDir>,[FileName],[PRESERVE],[NOWARN]
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcCab | Path of cabinet to decompress. |
-| DestDir | Directory to decompress cabinet. |
-| SingleFile (Opt) | Extract only this single file. |
+| CabFile | The full path of the cabinet file to extract. |
+| DestDir | Directory where the files will be extracted. |
+| FileName | **(Optional)** Extract only this specific file. |
 
-- Flags
+### Flags
 
 | Flag | Description |
 | --- | --- |
-| PRESERVE | Do not overwrite when `SingleFile` is specified. |
-| NOWARN | Do not log warning if a file is overwritten when `SingleFile` is specified. |
+| PRESERVE | **(Optional)** Do not overwrite existing files when `SingleFile` is specified. |
+| NOWARN | **(Optional)** Do not log an overwrite warning if a file is overwritten when extracting a single file. |
 
-Flags can be used independently.
+Flags can be specified in any order.
 
 ## Remarks
 
-This command is mainly used to extract EXE, DLL from EX\_, DL\_ in NT5 sources.
+This command is mainly used to extract compressed EXE (\*.EX\_) and DLL (\*.DL\_) files from NT5 (WindowsXP) sources.
 
-Depends on `cabinet.dll`, a Windows component.
+Depends on `cabinet.dll`. (Included with Windows)
 
-## Example
+## Related
+
+[CopyOrExpand](./CopyOrExpand.md)
+
+## Examples
 
 ```pebakery
 // ex1.cab will be decompressed into %DestDir%.
