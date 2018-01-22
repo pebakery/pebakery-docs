@@ -1,6 +1,6 @@
 # DirMake
 
-Create a directory.
+Creates a directory.
 
 ## Syntax
 
@@ -8,15 +8,23 @@ Create a directory.
 DirMake,<DestDir>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| DestDir | Directory to create. |
+| DestDir | Full path of the directory to create. |
 
-## Example
+## Remarks
+
+[DirCopy](./DirCopy.md), [DirDelete](./DirDelete.md), [DirMove](/DirMove.md)
+
+## Related
+
+## Examples
+
+### Example 1
 
 ```pebakery
-// %DestDir% will be created.
-DirMake,%DestDir%
+// C:\Temp will be created.
+DirMake,C:\Temp
 ```

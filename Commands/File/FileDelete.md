@@ -1,8 +1,8 @@
 # FileDelete
 
-Delete file.
+Deletes a file.
 
-When used with wildcard, multiple files can be deleted.
+Wildcards are supported, allowing multiple files to be deleted at one time.
 
 ## Syntax
 
@@ -10,72 +10,111 @@ When used with wildcard, multiple files can be deleted.
 FileDelete,<FilePath>,[NOWARN],[NOREC]
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| FilePath | File or files to delete.<br>Wildcard (*, ?) can be used in filename. |
+| FilePath | File or files to delete. Wildcards (*, ?) are allowed. |
 
-- Flags
+### Flags
+
+Flags may be specified in any order.
 
 | Flag | Description |
 | --- | --- |
-| NOWARN | Do not log warning if file not exists. |
-| NOREC | Ignore subdirectories when deleting files when using wildcard. |
+| NOWARN | **(Optional)** Do not log a warning if the files do not exist. |
+| NOREC | **(Optional)** Ignore subdirectories when deleting files using wildcards. |
 
 ## Remarks
 
-When wildcard is used, files in subdirectories will also be deleted. To prevent this, use `NOREC` flag.
+When wildcards are used files in subdirectories will also be deleted. To prevent this, use `NOREC` flag.
 
-## Example
+**Deleted folders are permanently removed can not be recovered from the recycle bin.**
 
-Let us assume a directory `%SrcDir%` contains these files:
+## Related
+
+[DirDelete](./DirDelete.md), [FileCopy](./FileCopy.md), [PathMove](./PathMove.md)
+
+## Examples
+
+Let us assume a directory `%SrcDir%` *C:\Temp* contains these files:
 
 ```pebakery
-(D) %SrcDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) Y.ini
-|- (F) AZ.txt
+C:\Temp\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+|--- Y.ini
+|--- AZ.txt
 ```
 
+### Example 1
+
+`C:\Temp\AZ.txt` will be deleted.
+
 ```pebakery
-// %SrcDir%\AZ.txt will be deleted.
 FileDelete,%SrcDir%\AZ.txt
-
-Result
-(D) %SrcDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) Y.ini
 ```
 
+**Result**
+
 ```pebakery
-// All .txt files in %SrcDir% will be deleted.
+C:\Temp\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+|--- Y.ini
+```
+
+### Example 2
+
+All `.txt` files in %SrcDir% will be deleted, including those located in subdirectories.
+
+```pebakery
 FileDelete,%SrcDir%\*.txt
-
-Result
-(D) %SrcDir%
-|- (D) AAA
-|- (D) ABB - (F) B.ini
-|- (D) ACC
-|- (D) AEE
-|- (F) Y.ini
 ```
 
-```pebakery
-// All .ini files in %SrcDir% will be deleted, ignoring subdirectory.
-FileDelete,%SrcDir%\*.ini,NOREC
+**Result**
 
-Result
-(D) %SrcDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) AZ.txt
+```pebakery
+C:\Temp\
+|--- AAA\
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+|--- AEE\
+|--- Y.ini
+```
+
+### Example 3
+
+All `.ini` files in %SrcDir% will be deleted, ignoring any files located in subdirectories.
+
+```pebakery
+FileDelete,%SrcDir%\*.ini,NOREC
+```
+
+**Result**
+
+```pebakery
+C:\Temp\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+|--- AZ.txt
 ```

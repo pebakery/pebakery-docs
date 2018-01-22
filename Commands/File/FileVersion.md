@@ -2,7 +2,7 @@
 
 **Alias**: `Retrieve,FileVersion`
 
-Get version of the file.
+Retrieves the version number of the specified file.
 
 ## Syntax
 
@@ -10,16 +10,33 @@ Get version of the file.
 FileVersion,<FilePath>,<DestVar>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| FilePath | Path of the file. |
-| DestVar | Variable name to save file version. |
+| FilePath | Full path of the file. |
+| DestVar | Variable where the file version will be stored. |
+
+## Remarks
+
+If version information is not available the command returns `0.0.0.0`
+
+## Related
 
 ## Example
 
 ```pebakery
-// %Dest% is set to "10.0.16299.15".
-FileVersion,%WindowsDir%\System32\notepad.exe,%Dest%
+[Main]
+Title=FileVersion
+Description=Show the usage of FileVersion.
+Level=5
+Version=1
+Author=Homes32
+
+[Variables]
+%File%=C:\Windows\notepad.exe
+
+[process]
+FileVersion,%File%,%Ver%
+Message,"%File%#$xFile Version: %Ver%"
 ```

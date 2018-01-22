@@ -10,27 +10,37 @@ Rename or move a file.
 FileRename,<SrcPath>,<DestPath>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcPath | Path of file to rename. |
-| DestPath | New path to rename file. |
+| SrcPath | Full path of the file to rename. |
+| DestPath | New path of the renamed file. |
 
 ## Remarks
 
-FileRename can also be used to move file.
+`FileRename` can also be used to move a file.
 
-WinBuilder 082 allows FileRename to move directory. Turning on compatibility option `FileRename and DirMove work like PathMove` makes FileRename identical to PathMove.
+WinBuilder 082 allows `FileRename` to move a directory. Turning on compatibility option `FileRename and DirMove work like PathMove` makes `FileRename` identical to `PathMove`.
 
-## Example
+## Related
+
+[FileCopy](./FileCopy.md), [PathMove](./PathMove.md)
+
+## Examples
+
+### Example 1
+
+`A.txt` will be renamed to `B.txt`.
 
 ```pebakery
-// A.txt will be renamed to B.txt.
 FileRename,%SrcDir%\A.txt,%SrcDir%\B.txt
 ```
 
+### Example 2
+
+`%SrcDir%\A.txt` will be moved into `%DestDir%\B.txt`.
+
 ```pebakery
-// %SrcDir%\A.txt will be moved into %DestDir%\B.txt.
 FileMove,%SrcDir%\A.txt,%DestDir%\B.txt
 ```

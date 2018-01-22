@@ -1,8 +1,8 @@
 # DirCopy
 
-Copy directory.
+Copies a directory along with all sub-directories and files.
 
-When used with wildcard, multiple files can be copied.
+Wildcards are supported, allowing multiple directories to be copied at one time.
 
 ## Syntax
 
@@ -10,85 +10,97 @@ When used with wildcard, multiple files can be copied.
 DirCopy,<SrcDir>,<DestDir>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcDir | Directory to copy.<br>Wildcard (*, ?) can be used in name. |
-| DestDir | Destination directory. New directory will be created if not exists. |
+| SrcDir | Full path of the directory to copy. Wildcards (*, ?) are allowed. |
+| DestDir | Full path to the destination directory. The directory structure will be created if it does not exist. If the directory exists it will be overwritten. |
 
 ## Remarks
 
 If `DestDir` is a file, DirCopy fails.
 
-If wildcard is used, `DestDir` copies subdirectories filtered by wildcard.
+WinBuilder 082 has a bug that DirCopy works similar to FileCopy when wildcards are used. Turning on compatibility option `Simulate WinBuilder's DirCopy Asterisk Bug` emulates this bug. See Example 2 for more details.
 
-WinBuilder 082 has a bug that DirCopy works similar to FileCopy when wildcard is used. Turning on compatibility option `Simulate WinBuilder's DirCopy Asterisk Bug` emulates this bug.
+## Related
 
-## Example
+[DirMove](./DirMove.md),[DirDelete](./DirDelete.md), [FileCopy](./FileCopy.md), [PathMove](./PathMove.md)
 
-Let us assume a directory `%SrcDir%` contains these files:
+## Examples
+
+Let us assume a directory `%SrcDir%` *C:\Temp\Src* contains these files:
 
 ```pebakery
-(D) %SrcDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) Y.ini
-|- (F) AZ.txt
+C:\Temp\Src\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+|--- Y.ini
+|--- AZ.txt
 ```
 
+### Example 1
+
 ```pebakery
-// All files of %SrcDir% will be copied into %DestDir%.
+// The entire %SrcDir% will be copied into %DestDir%.
 DirCopy,%SrcDir%,%DestDir%
-
-- Result
-(D) %DestDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) Y.ini
-|- (F) AZ.txt
 ```
+
+**Result**
+
+```pebakery
+C:\Temp\Dest\
+|--- Src\
+     |--- AAA\
+          |--- A.txt
+     |--- ABB\
+          |--- B.ini
+     |--- ACC\
+          |--- C.txt
+          |--- D.txt
+     |--- AEE\
+     |--- Y.ini
+     |--- AZ.txt
+```
+
+### Example 2
 
 ```pebakery
 // All files of %SrcDir% will be copied into %DestDir%.
 DirCopy,%SrcDir%\A*,%DestDir%
-
-- Correct Result
-(D) %DestDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-
-- WB082 Result (Bug)
-(D) %DestDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) AZ.txt
 ```
 
+**Result**
+
 ```pebakery
-// All files of %SrcDir% will be copied into %DestDir%.
-DirCopy,%SrcDir%\A*,%DestDir%
+C:\Temp\Dest\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+```
 
-- Correct Result
-(D) %DestDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
+**Result when using the compatibility option to simulate WinBuilder's DirCopy Asterisk Bug**
 
-- WB082 Result (Bug)
-(D) %DestDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) AZ.txt
+```pebakery
+C:\Temp\Dest\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+|--- AZ.txt
 ```

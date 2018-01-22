@@ -1,8 +1,6 @@
 # FileCreateBlank
 
-Create empty file.
-
-Can also initialize unicode BOM.
+Creates an empty file.
 
 ## Syntax
 
@@ -10,36 +8,58 @@ Can also initialize unicode BOM.
 FileCreateBlank,<FilePath>,[Encoding],[PRESERVE],[NOWARN]
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
 | FilePath | Path to create empty file. |
-| Encoding (Opt) | Write Unicode BOM in file.<br>Should be one of `UTF8`, `UTF16`, `UTF16BE`, `ANSI`.<br>By default, `ANSI` is used. |
+| Encoding | **(Optional)** Character encoding to use in the new file. Supported encodings are : `UTF8`, `UTF16`, `UTF16BE`, `ANSI`. **Default** is `ANSI`. |
 
-- Flags
+### Flags
+
+Flags may be specified in any order.
 
 | Flag | Description |
 | --- | --- |
-| PRESERVE | Do not overwrite. |
-| NOWARN | Do not log warning if file is overwritten. |
+| PRESERVE | **(Optional)** Do not overwrite existing files. |
+| NOWARN | **(Optional)** Do not log a warning if file is overwritten. |
 
 ## Remarks
 
-This command is useful to create empty text file.
+Some commands such as `TXTAddLine` require that the file exists before it can be written. This command can be to create an empty text file if the target file does not exist.
 
-For batch file, use `ANSI` encoding.
+For batch files (*.bat, *.cmd), use `ANSI` encoding. For normal text files, `UTF16` or `UTF8` encoding is highly recommended.
 
-For normal text file, `UTF16` or `UTF8` encoding is highly recommended.
+## Related
 
-## Example
+[TXTAddLine](../TXT/TXTAddLine.md)
+
+## Examples
+
+### Example 1
+
+Create empty file Unicode.txt, write BOM (U+FEFF) encoded with UTF-16 Little Endian.
 
 ```pebakery
-// Create empty file Hello.cmd. 
-FileCreateBlank,%DestDir%\Hello.cmd
+FileCreateBlank,C:\Temp\Unicode.txt,UTF16
 ```
 
+### Example 2
+
+This sample script checks to see if the target file exists, and uses `FileCreateBlank` to create it if necessary.
+
 ```pebakery
-// Create empty file Unicode.txt, write BOM (U+FEFF) encoded with UTF-16 Little Endian.
-FileCreateBlank,%DestDir%\Unicode.txt,UTF16
+[Main]
+Title=FileCreateBlank
+Description=Show the usage of FileCreateBlank.
+Level=5
+Version=1
+Author=Homes32
+
+[Variables]
+%grubMenu%=C:\Temp\menu.lst
+
+[process]
+If,Not,ExistFile,%grubMenu%,FileCreateBlank,%grubMenu%
+TXTAddLine,%grubMenu%,"TITLE Main Menu",APPEND
 ```

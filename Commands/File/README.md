@@ -1,4 +1,4 @@
-# File Command
+# File & Directory Commands
 
 1. [FileCopy](./FileCopy.md)
 1. [FileDelete](./FileDelete.md)

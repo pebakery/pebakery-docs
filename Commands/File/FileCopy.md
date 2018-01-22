@@ -1,8 +1,8 @@
 # FileCopy
 
-Copy file.
+Copies one or more files.
 
-When used with wildcard, multiple files can be copied.
+Wildcards are supported, allowing multiple files to be copied at one time.
 
 ## Syntax
 
@@ -10,77 +10,110 @@ When used with wildcard, multiple files can be copied.
 FileCopy,<SrcFile>,<DestPath>,[PRESERVE],[NOWARN],[NOREC]
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcFile | File or files to copy.<br>Wildcard (*, ?) can be used in filename. |
-| DestPath | Destination to copy files. |
+| SrcFile | File(s) to copy. Wildcards (*, ?) are allowed. |
+| DestPath | Destination path. This can be either a file name or a directory if multiple files are to be copied. The directory structure will be created if it does not exist. |
 
-- Flags
+### Flags
+
+Flags may be specified in any order.
 
 | Flag | Description |
 | --- | --- |
-| PRESERVE | Do not overwrite. |
-| NOWARN | Do not log warning if a file is overwritten. |
-| NOREC | Do not copy subdirectories when using wildcard. |
+| PRESERVE | **(Optional)** Do not overwrite existing files. |
+| NOWARN | **(Optional)** Do not log a warning if a file is overwritten. |
+| NOREC | **(Optional)** Do not copy files in subdirectories when using wildcards. |
 
 ## Remarks
 
-If `DestPath` is a directory, `SrcFile` will be copied under `DestPath`.
+When wildcard is used in filename, `FileCopy` copies subdirectories by default. To prevent this, use the `NOREC` flag. Wildcards cannot be used in directories.
 
-Elsewhere, `SrcFile` will be copied to the path `DestPath`, renaming if necessary.
+## Related
 
-When wildcard is used in filename, `FileCopy` copies subdirectories by default. To prevent this, use `NOREC` flag. Note that Wildcard cannot be used in directory.
+[DirCopy](./DirCopy.md), [DirCreate](./DirCreate.md), [FileDelete](./FileDelete.md), [FileMove](./FileMove.md), [PathMove](./PathMove.md)
 
-## Example
+## Examples
 
-Let us assume a directory `%SrcDir%` contains these files:
+Let us assume a directory `%SrcDir%` *C:\Temp\Src* contains these files:
 
 ```pebakery
-(D) %SrcDir%
-|- (D) AAA - (F) A.txt
-|- (D) ABB - (F) B.ini
-|- (D) ACC - (F) C.txt, D.txt
-|- (D) AEE
-|- (F) Y.ini
-|- (F) AZ.txt
+C:\Temp\Src\
+|--- AAA\
+     |--- A.txt
+|--- ABB\
+     |--- B.ini
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AEE\
+|--- Y.ini
+|--- AZ.txt
 ```
 
+### Example 1
+
+`C:\Temp\AZ.txt` will be copied into %DestDir% `C:\Temp\myFolder\`
+
 ```pebakery
-// %SrcDir%\AZ.txt will be copied into %DestDir%\AZ.txt
 FileCopy,%SrcDir%\AZ.txt,%DestDir%
-
-- Result
-(D) %DestDir%
-|- (F) AZ.txt
 ```
 
+**Result**
+
 ```pebakery
-// %SrcDir%\A.txt will be copied into %DestDir%\B.txt
+C:\Temp\myFolder\
+|--- AZ.txt
+```
+
+### Example 2
+
+`C:\Temp\AZ.txt` will be copied into %DestDir%\ `C:\Temp\myFolder\` and renamed `B.txt`
+
+```pebakery
 FileCopy,%SrcDir%\AZ.txt,%DestDir%\B.txt
-
-- Result
-(D) %DestDir%
-|- (F) B.txt
 ```
 
+**Result**
+
 ```pebakery
-// All .txt files in %SrcDir% will be copied under %DestDir%.
+C:\Temp\myFolder\
+|--- B.txt
+```
+
+### Example 3
+
+All `.txt` files in %SrcDir% will be copied under %DestDir%.
+
+```pebakery
 FileCopy,%SrcDir%\*.txt,%DestDir%
-
-- Result
-(D) %DestDir%
-|- (D) AAA - (F) A.txt
-|- (D) ACC - (F) C.txt, D.txt
-|- (F) AZ.txt
 ```
 
-```pebakery
-// All .txt files in %SrcDir% will be copied under %DestDir%, ignoring subdirectory.
-FileCopy,%SrcDir%\*.txt,%DestDir%,NOREC
+**Result**
 
-- Result
-(D) %DestDir%
-|- (F) AZ.txt
+```pebakery
+C:\Temp\myFolder\
+|--- AAA\
+     |--- A.txt
+|--- ACC\
+     |--- C.txt
+     |--- D.txt
+|--- AZ.txt
+```
+
+### Example 4
+
+All `.txt` files in %SrcDir% will be copied under %DestDir%, ignoring subdirectories.
+
+```pebakery
+FileCopy,%SrcDir%\*.txt,%DestDir%,NOREC
+```
+
+**Result**
+
+```pebakery
+C:\Temp\myFolder\
+|--- AZ.txt
 ```

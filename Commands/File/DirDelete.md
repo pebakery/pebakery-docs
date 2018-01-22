@@ -1,6 +1,6 @@
 # DirDelete
 
-Delete a directory.
+Deletes a directory and all files and sub-directories it contains.
 
 ## Syntax
 
@@ -8,15 +8,25 @@ Delete a directory.
 DirDelete,<DirPath>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| DirPath | Directory to delete. |
+| DirPath | Full path of the directory to delete. |
 
-## Example
+## Remarks
+
+**Deleted folders are permanently removed can not be recovered from the recycle bin.**
+
+## Related
+
+[FileDelete](./FileDelete)
+
+## Examples
+
+### Example 1
 
 ```pebakery
-// %SrcDir% will be deleted.
-DirDelete,%SrcDir%
+// C:\Temp will be deleted.
+DirDelete,C:\Temp
 ```

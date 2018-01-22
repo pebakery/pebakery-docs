@@ -1,6 +1,6 @@
 # DirMove
 
-Move a directory.
+Moves a directory.
 
 ## Syntax
 
@@ -8,21 +8,25 @@ Move a directory.
 DirMove,<SrcDir>,<DestPath>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcDir | Source directory to move. |
-| DestPath | Destination directory. |
+| SrcDir | Full path of the directory to move. |
+| DestPath | Full path of the destination directory. The directory structure will be created if it does not exist. Any existing files will be overwritten. |
 
 ## Remarks
 
-WinBuilder 082 allows DirMove to move file. Turning on compatibility option `FileRename and DirMove work like PathMove` makes DirMove identical to PathMove.
+WinBuilder 082 allows DirMove to move files. Turning on the compatibility option `FileRename and DirMove work like PathMove` makes the `DirMove` command identical to `PathMove`.
 
-## Example
+## Related
+
+[DirCopy](./DirCopy), [DirDelete](./DirDelete), [PathMove](./PathMove.md)
+
+## Examples
+
+### Example 1
 
 ```pebakery
-// If %DestDir% exists : %SrcDir%\A will be moved into %DestDir%\A.
-// If %DestDir% not exist : %SrcDir%\A will be moved into %DestDir%.
 DirMove,%SrcDir%\A,%DestDir%
 ```

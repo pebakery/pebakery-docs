@@ -2,28 +2,49 @@
 
 **Alias**: `Retrieve,DirSize`
 
-Get size of the directory.
+Gets the size of a directory.
 
 ## Syntax
 
 ```pebakery
-DirSize,<DirPath>,<DestVar>
+DirSize,<DirPath>,<%DestVar%>
 ```
 
-- Arguments
+### Arguments
 
 | Argument | Description |
 | --- | --- |
-| DirPath | Path of the directory. |
-| DestVar | Variable name to save directory size. |
+| DirPath | Full path of the directory. |
+| DestVar | Variable where the directory size (in bytes) will be stored. |
 
 ## Remarks
 
-If `DirPath` contains files cannot be accessed with `administrator` privilege, PEBakery ignores them.
+If `DirPath` contains files that cannot be accessed with `Administrator` privileges PEBakery ignores them.
 
-## Example
+You can use `StrFormat,Bytes` to convert the size to a more human readable format. (Ex. 3.5GB)
+
+## Related
+
+[FileSize](./FileSize.md), [StrFormat,Bytes](../String/Bytes.md)
+
+## Examples
+
+### Example 1
 
 ```pebakery
-// %Dest% is set to "8364393557".
-DirSize,%WindowsDir%\System32,%Dest%
+[Main]
+Title=DirSize
+Description=Show the usage of DirSize.
+Level=5
+Version=1
+Author=Homes32
+
+[Variables]
+%Dir%=C:\Windows\System32
+
+[process]
+DirSize,%Dir%,%Size%
+// Use StrFormat to convert the size to a more human readable format.
+StrFormat,Bytes,%Size%,%StrSize%
+Message,"Dir Size: %Size% bytes (%StrSize%)"
 ```
