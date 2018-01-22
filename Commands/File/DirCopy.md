@@ -52,7 +52,7 @@ C:\Temp\Src\
 DirCopy,%SrcDir%,%DestDir%
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\Dest\
@@ -76,7 +76,7 @@ C:\Temp\Dest\
 DirCopy,%SrcDir%\A*,%DestDir%
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\Dest\

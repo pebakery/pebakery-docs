@@ -61,7 +61,7 @@ C:\Temp\Src\
 FileCopy,%SrcDir%\AZ.txt,%DestDir%
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\myFolder\
@@ -76,7 +76,7 @@ C:\Temp\myFolder\
 FileCopy,%SrcDir%\AZ.txt,%DestDir%\B.txt
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\myFolder\
@@ -91,7 +91,7 @@ All `.txt` files in %SrcDir% will be copied under %DestDir%.
 FileCopy,%SrcDir%\*.txt,%DestDir%
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\myFolder\
@@ -111,7 +111,7 @@ All `.txt` files in %SrcDir% will be copied under %DestDir%, ignoring subdirecto
 FileCopy,%SrcDir%\*.txt,%DestDir%,NOREC
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\myFolder\

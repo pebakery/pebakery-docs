@@ -61,7 +61,7 @@ C:\Temp\
 FileDelete,%SrcDir%\AZ.txt
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\
@@ -84,7 +84,7 @@ All `.txt` files in %SrcDir% will be deleted, including those located in subdire
 FileDelete,%SrcDir%\*.txt
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\
@@ -104,7 +104,7 @@ All `.ini` files in %SrcDir% will be deleted, ignoring any files located in subd
 FileDelete,%SrcDir%\*.ini,NOREC
 ```
 
-**Result**
+Result
 
 ```pebakery
 C:\Temp\
