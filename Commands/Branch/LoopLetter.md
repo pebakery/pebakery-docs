@@ -1,6 +1,6 @@
 # LoopLetter
 
-Loops through a series of letters based on the value of a counter.
+Loops through a range of letters in alphabetical order.
 
 ## Syntax
 
