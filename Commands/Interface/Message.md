@@ -13,8 +13,8 @@ Message,<Message>,<Icon>[,Timeout]
 | Argument | Description |
 | --- | --- |
 | Message | The text that will be displayed to the user. |
-| Icon | Defines the Icon to display. Valid options are: |
-|| Information - Displays an Information Icon |
+| Icon | **(Optional)** Defines the Icon to display. Valid options are: |
+|| Information - **(Default)** Displays an Information Icon |
 || Confirmation - Displays a Question Icon |
 || Error - Displays a Error Icon |
 || Warning - Displays a Warning Icon |

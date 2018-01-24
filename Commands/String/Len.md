@@ -12,7 +12,7 @@ StrFormat,Len,<String>,<%DestVar%>
 
 | Argument | Description |
 | --- | --- |
-| DestVar | The string to read. |
+| String | The string to read. |
 | DestVar | The variable where the result will be saved. |
 
 ## Remarks
@@ -21,7 +21,7 @@ None.
 
 ## Related
 
-[StrFormat,Left](./Left.md), [StrFormat,SubStr](./SubStr.md), [StrFormat,LTrim](./LTrim.md), [StrFormat,RTrim](./RTrim.md), [StrFormat,CTrim](./CTrim.md), [StrFormat,RTrim](./RTrim.md), [StrFormat,NTrim](./NTrim.md), [StrFormat,UCase](./UCase.md), [StrFormat,LCase](./LCase.md), [StrFormat,Pos](./Pos.md), [StrFormat,PosX](./PosX.md)
+[StrFormat,Left](./Left.md), [StrFormat,SubStr](./SubStr.md), [StrFormat,LTrim](./LTrim.md), [StrFormat,RTrim](./RTrim.md), [StrFormat,CTrim](./CTrim.md), [StrFormat,RTrim](./RTrim.md), [StrFormat,NTrim](./NTrim.md), [StrFormat,UCase](./UCase.md), [StrFormat,LCase](./LCase.md), [StrFormat,Pos](./Pos.md), [StrFormat,PosX](./PosX.md), [StrFormat,Replace](./Replace.md), [StrFormat,ReplaceX](./ReplaceX.md), [StrFormat,Split](./Split)
 
 ## Examples
 

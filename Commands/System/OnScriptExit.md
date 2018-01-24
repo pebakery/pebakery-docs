@@ -1,7 +1,5 @@
 # System,OnScriptExit
 
-**Alias**: `System,OnPluginExit`
-
 Specifies the command to be executed before the current script terminates.
 
 ## Syntax

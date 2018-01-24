@@ -11,7 +11,7 @@
 1. [Interface](./Interface/README.md)
 1. [Math](./Math/README.md)
 1. [Network](./Network/README.md)
-1. [Plugin](./Plugin/README.md)
+1. [Script](./Script/README.md)
 1. [Registry](./Registry/README.md)
 1. [String](./String/README.md)
 1. [System](./System/README.md)
