@@ -7,7 +7,7 @@ Converts an number of bytes to a more human readable format. Any amount of bytes
 ## Syntax
 
 ```pebakery
-StrFormat,IntToBytes,<Bytes>,<%DestVar%> 
+StrFormat,IntToBytes,<Bytes>,<%DestVar%>
 ```
 
 ### Arguments

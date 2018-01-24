@@ -1,8 +1,8 @@
 # Visible
 
-**This command has been deprecated and will be removed in a future version. It is recommended that you update your code to use `WriteInterface,Visible` as soon as possible to avoid breaking your script.**
-
 Sets the visibility of a UI control.
+
+**This command has been deprecated and will be removed in a future release. It is recommended that you update your code to use `WriteInterface,Visible` as soon as possible to avoid breaking your script.**
 
 ## Syntax
 

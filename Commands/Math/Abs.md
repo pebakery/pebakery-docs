@@ -30,6 +30,7 @@ None.
 Title=Math-Abs Example
 Description=Show usage of the Math,Abs Command
 Author=Homes32
+Level=5
 
 [Variables]
 

@@ -31,6 +31,7 @@ None.
 Title=Math-Pow Example
 Description=Show usage of the Math,Pow Command
 Author=Homes32
+Level=5
 
 [Variables]
 

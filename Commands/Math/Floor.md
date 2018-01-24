@@ -33,6 +33,7 @@ File sizes can be rounded down to the nearest Kb/MB/Gb/Tb/Pb using `StrFormat,Fl
 Title=Math-Floor Example
 Description=Show usage of the Math,Floor Command
 Author=Homes32
+Level=5
 
 [Variables]
 

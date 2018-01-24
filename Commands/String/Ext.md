@@ -1,6 +1,6 @@
 # StrFormat,Ext
 
-Returns the file extension from a path. 
+Returns the file extension from a path.
 
 ## Syntax
 

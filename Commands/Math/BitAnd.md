@@ -33,6 +33,7 @@ None.
 Title=Math-BitAnd Example
 Description=Show usage of the Math,BitAnd Command
 Author=Homes32
+Level=5
 
 [Variables]
 

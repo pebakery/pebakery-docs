@@ -5,7 +5,7 @@ Converts an human readable string representing the size of a file or directory t
 ## Syntax
 
 ```pebakery
-StrFormat,BytesToInt,<String>,<%DestVar%> 
+StrFormat,BytesToInt,<String>,<%DestVar%>
 ```
 
 ### Arguments
@@ -26,7 +26,6 @@ Whitespace in the string is discarded, so `5.123GB` is treated the same as `5.12
 [DirSize](../File/DirSize.md), [FileSize](../File/FileSize.md), [StrFormat, IntToBytes](./IntToBytes), [System,GetFreeSpace](../System/GetFreeSpace.md)
 
 ## Examples
-
 
 ### Example 1
 

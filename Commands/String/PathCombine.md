@@ -1,6 +1,6 @@
 # StrFormat,PathCombine
 
-Combines a path with a filename to form a full path. 
+Combines a path with a filename to form a full path.
 
 ## Syntax
 

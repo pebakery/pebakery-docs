@@ -1,6 +1,6 @@
 # StrFormat,FileName
 
-Returns the filename portion of a path. 
+Returns the filename portion of a path.
 
 ## Syntax
 

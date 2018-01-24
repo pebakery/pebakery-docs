@@ -30,6 +30,7 @@ None.
 Title=Math-Neg Example
 Description=Show usage of the Math,Neg Command
 Author=Homes32
+Level=5
 
 [Variables]
 

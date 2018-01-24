@@ -36,6 +36,7 @@ None.
 Title=Math-BitShift Example
 Description=Show usage of the Math,BitShift Command
 Author=Homes32
+Level=5
 
 [Variables]
 

@@ -2,7 +2,7 @@
 
 **Alias**: `StrFormat,Path`
 
-Returns a path without the filename or extension. 
+Returns a path without the filename or extension.
 
 ## Syntax
 

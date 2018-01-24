@@ -33,6 +33,7 @@ None.
 Title=Math-BoolAnd Example
 Description=Show usage of the Math,BoolAnd Command
 Author=Homes32
+Level=5
 
 [Variables]
 

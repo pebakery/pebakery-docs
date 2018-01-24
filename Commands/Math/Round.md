@@ -33,6 +33,7 @@ File sizes can be rounded to the nearest Kb/MB/Gb/Tb/Pb using `StrFormat,Round`.
 Title=Math-Round Example
 Description=Show usage of the Math,Round Command
 Author=Homes32
+Level=5
 
 [Variables]
 

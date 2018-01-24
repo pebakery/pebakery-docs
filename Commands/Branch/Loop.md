@@ -160,11 +160,11 @@ End
 This example shows how we can replicate Winbuilder's character looping behavior by cycling through the drive letters A-Z  searching for notepad.exe.
 
 ```pebakery
-[main]
+[Main]
 Title=Loop-A-Z Example
 Description=Demonstrate how to loop through drive letters searching for a file.
 Level=5
-Version=1
+Version=2
 Author=Homes32
 
 [variables]
@@ -175,32 +175,8 @@ Loop,%ScriptFile%,Search-Drives,1,26
 If,EXISTFILE,%fullPath%,ShellExecute,OPEN,%fullPath%
 
 [Search-Drives]
-If,#c,Equal,1,Set,%drive%,A
-If,#c,Equal,2,Set,%drive%,B
-If,#c,Equal,3,Set,%drive%,C
-If,#c,Equal,4,Set,%drive%,D
-If,#c,Equal,5,Set,%drive%,E
-If,#c,Equal,6,Set,%drive%,F
-If,#c,Equal,7,Set,%drive%,G
-If,#c,Equal,8,Set,%drive%,H
-If,#c,Equal,9,Set,%drive%,I
-If,#c,Equal,10,Set,%drive%,J
-If,#c,Equal,11,Set,%drive%,K
-If,#c,Equal,12,Set,%drive%,L
-If,#c,Equal,13,Set,%drive%,M
-If,#c,Equal,14,Set,%drive%,N
-If,#c,Equal,15,Set,%drive%,O
-If,#c,Equal,16,Set,%drive%,P
-If,#c,Equal,17,Set,%drive%,Q
-If,#c,Equal,18,Set,%drive%,R
-If,#c,Equal,19,Set,%drive%,S
-If,#c,Equal,20,Set,%drive%,T
-If,#c,Equal,21,Set,%drive%,U
-If,#c,Equal,22,Set,%drive%,V
-If,#c,Equal,23,Set,%drive%,W
-If,#c,Equal,24,Set,%drive%,X
-If,#c,Equal,25,Set,%drive%,Y
-If,#c,Equal,26,Set,%drive%,Z
+Set,%drive%,A
+StrFormat,Inc,%drive%,#c
 Echo,"Searching drive [%drive%:\]"
 Set,%fullPath%,%drive%:\%searchFile%
 If,EXISTFILE,%fullPath%,Loop,BREAK

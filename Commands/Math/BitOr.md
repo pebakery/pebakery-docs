@@ -33,6 +33,7 @@ None.
 Title=Math-BitOr Example
 Description=Show usage of the Math,BitOr Command
 Author=Homes32
+Level=5
 
 [Variables]
 

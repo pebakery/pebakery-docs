@@ -31,6 +31,7 @@ None.
 Title=Math-Sub Example
 Description=Show usage of the Math,Sub Command
 Author=Homes32
+Level=5
 
 [Variables]
 

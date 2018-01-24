@@ -33,6 +33,7 @@ None.
 Title=Math-BitXor Example
 Description=Show usage of the Math,BitXor Command
 Author=Homes32
+Level=5
 
 [Variables]
 

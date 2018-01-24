@@ -23,7 +23,7 @@ For backwards compatibility with Winbuilder only 32bit integers are supported at
 
 ## Related
 
-
+None.
 
 ## Examples
 

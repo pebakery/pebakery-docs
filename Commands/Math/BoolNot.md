@@ -32,6 +32,7 @@ None.
 Title=Math-BoolNot Example
 Description=Show usage of the Math,BoolNot Command
 Author=Homes32
+Level=5
 
 [Variables]
 

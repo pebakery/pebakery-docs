@@ -33,6 +33,7 @@ File sizes can be rounded up to the nearest Kb/MB/Gb/Tb/Pb using `StrFormat,Ceil
 Title=Math-Ceil Example
 Description=Show usage of the Math,Ceil Command
 Author=Homes32
+Level=5
 
 [Variables]
 

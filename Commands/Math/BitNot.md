@@ -32,6 +32,7 @@ None.
 Title=Math-BitNot Example
 Description=Show usage of the Math,BitNot Command
 Author=Homes32
+Level=5
 
 [Variables]
 

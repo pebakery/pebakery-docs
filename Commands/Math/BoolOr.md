@@ -33,6 +33,7 @@ None.
 Title=Math-BoolOr Example
 Description=Show usage of the Math,BoolOr Command
 Author=Homes32
+Level=5
 
 [Variables]
 
