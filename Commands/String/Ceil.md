@@ -14,7 +14,7 @@ StrFormat,Ceil,<%Integer%>,<CeilTo>
 | --- | --- |
 | Integer | Variable containing the number to round up. |
 | CeilTo | Size to round up to. Can be one of the following: |
-|| <Int> - An positive integer representing the number of bytes to Ceil. |
+|| <Integer> - An positive integer representing the number of bytes to Ceil. |
 || K - Round up to the next Kilobyte |
 || M - Round up to the next Megabyte |
 || G - Round up to the next Gigabyte |

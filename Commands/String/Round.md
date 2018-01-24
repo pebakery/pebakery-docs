@@ -14,7 +14,7 @@ StrFormat,Round,<%Integer%>,<RoundTo>
 | --- | --- |
 | Integer | Variable containing the number to round. |
 | FloorTo | Size to round to. Can be one of the following: |
-|| <Int> - An positive integer representing the number of bytes to round to. |
+|| <Integer> - An positive integer representing the number of bytes to round to. |
 || K - Round to the Kilobyte |
 || M - Round to the Megabyte |
 || G - Round to the Gigabyte |

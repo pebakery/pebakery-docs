@@ -14,7 +14,7 @@ StrFormat,Floor,<%Integer%>,<FloorTo>
 | --- | --- |
 | Integer | Variable containing the number to round down to Floor. |
 | FloorTo | Size to round down to. Can be one of the following: |
-|| <Int> - An positive integer representing the number of bytes to round down to. |
+|| <Integer> - An positive integer representing the number of bytes to round down to. |
 || K - Round down to the Kilobyte |
 || M - Round down to the Megabyte |
 || G - Round down to the Gigabyte |
