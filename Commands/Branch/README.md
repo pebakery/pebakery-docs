@@ -5,5 +5,6 @@
 1. [If-Else](./If-Else.md)
 1. [If-Question](./If-Question.md)
 1. [Loop](./Loop.md)
+1. [LoopLetter](./LoopLetter.md)
 1. [Operators](./Operators.md)
 1. [Run](./Run.md)

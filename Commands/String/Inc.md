@@ -19,13 +19,13 @@ StrFormat,Inc,<%DestVar%>,<Integer>
 
 The result of the operation will be written back into `%DestVar%`.
 
-This command supports letters of the alphabet as well as integers, allowing you to cycle through a range of drive letters.
+This command supports letters of the alphabet as well as integers, allowing you to cycle through a range of drive letters lexicographically.
 
 `Integer` must be a positive value. If you need to Decrement a number or drive letter use `StrFormat,Dec`.
 
 ## Related
 
-[Loop](../Branch/Loop.md), [Math,Add](../Math/Add.md), [Math,Sub](../Math/Sub.md), [StrFormat,Dec](./Dec.md)
+[Loop](../Branch/Loop.md),[LoopLetter](../Branch/LoopLetter.md), [Math,Add](../Math/Add.md), [Math,Sub](../Math/Sub.md), [StrFormat,Dec](./Dec.md)
 
 ## Examples
 
@@ -49,11 +49,11 @@ Message,"Inc [10] by [5] = [%int%]"
 
 ### Example 2
 
-In this example we use `StrFormat,Inc` in conjunction with the `Loop` command to cycle through the drive letters A-Z  searching for notepad.exe.
+In this example we use `StrFormat,Inc` in conjunction with the `Loop` command to cycle through the drive letters A-Z searching for notepad.exe.
 
 ```pebakery
 [Main]
-Title=Loop-A-Z Example
+Title=StrFormat-Inc A-Z Example
 Description=Demonstrate how to loop through drive letters searching for a file.
 Level=5
 Version=2

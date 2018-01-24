@@ -46,11 +46,11 @@ PEBakery allows an unlimited number of parameters to be passed to the `[section]
 
 Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
-*Note:* Winbuilder allows looping through characters A-Z in addition to integers. This behavior is not supported in PEBakery. See Example 4 for an alternative.
+*Note:* Winbuilder allows looping through characters A-Z in addition to integers. The PEBakery `LoopLetter` command replaces this functionality.
 
 ## Related
 
-[System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
+[LoopLetter](./LoopLetter.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 
@@ -153,31 +153,4 @@ If,Not,-%var%,Equal,-,Begin
   Set,%Result%,%file%
   Loop,BREAK
 End
-```
-
-### Example 4
-
-This example shows how we can replicate Winbuilder's character looping behavior by cycling through the drive letters A-Z  searching for notepad.exe.
-
-```pebakery
-[Main]
-Title=Loop-A-Z Example
-Description=Demonstrate how to loop through drive letters searching for a file.
-Level=5
-Version=2
-Author=Homes32
-
-[variables]
-
-[process]
-Set,%searchFile%,"Windows\notepad.exe"
-Loop,%ScriptFile%,Search-Drives,1,26
-If,EXISTFILE,%fullPath%,ShellExecute,OPEN,%fullPath%
-
-[Search-Drives]
-Set,%drive%,A
-StrFormat,Inc,%drive%,#c
-Echo,"Searching drive [%drive%:\]"
-Set,%fullPath%,%drive%:\%searchFile%
-If,EXISTFILE,%fullPath%,Loop,BREAK
 ```
