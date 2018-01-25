@@ -23,7 +23,7 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |
-| %DestVar% | The variable that will contain the value of the selected property. |
+| DestVar | The variable that will contain the value of the selected property. |
 
 ## Remarks
 

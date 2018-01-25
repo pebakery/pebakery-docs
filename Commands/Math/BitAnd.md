@@ -5,7 +5,7 @@ Performs a bitwise AND operation.
 ## Syntax
 
 ```pebakery
-Math,BitAnd,<DestVar>,<Vaue1>,<Value2>
+Math,BitAnd,<%DestVar%>,<Vaue1>,<Value2>
 ```
 
 ### Arguments

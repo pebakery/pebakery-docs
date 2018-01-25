@@ -28,7 +28,7 @@ Most often used to launch programs and browsers from a script's graphical interf
 
 ## Related
 
-[ShellExecute](./ShellExecute.md), [ShellExecuteDelete](./ShellExecuteDelete.md), [ShellExecuteSlow](./ShellExecuteSlow.md)
+[ShellExecute](./ShellExecute.md), [ShellExecuteDelete](./ShellExecuteDelete.md)
 
 ## Examples
 

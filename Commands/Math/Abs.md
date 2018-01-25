@@ -5,7 +5,7 @@ Calculates the absolute value of a number.
 ## Syntax
 
 ```pebakery
-Math,Abs,<DestVar>,<Value>
+Math,Abs,<%DestVar%>,<Value>
 ```
 
 ### Arguments

@@ -2,6 +2,8 @@
 
 Convert an integer to it's hexadecimal representation.
 
+**This command is included for compatibility with Winbuilder 082. It is recommended that you update your code to use the more flexible `Math,Hex` command.**
+
 ## Syntax
 
 ```pebakery
@@ -19,11 +21,11 @@ StrFormat,Hex,<Integer>,<%DestVar%>
 
 Negative integer conversion is supported.
 
-For backwards compatibility with Winbuilder only 32bit integers are supported at this time.
+For backwards compatibility with Winbuilder only 32bit integers are supported.
 
 ## Related
 
-None.
+[Math,Hex](../Math/Hex.md)
 
 ## Examples
 

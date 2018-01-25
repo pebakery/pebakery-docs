@@ -5,7 +5,7 @@ Performs an Not test on two boolean values.
 ## Syntax
 
 ```pebakery
-Math,BoolNot,<DestVar>,<Vaue>
+Math,BoolNot,<%DestVar%>,<Vaue>
 ```
 
 ### Arguments

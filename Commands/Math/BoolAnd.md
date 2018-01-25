@@ -5,7 +5,7 @@ Performs an AND test on two boolean values. A true output results only if both v
 ## Syntax
 
 ```pebakery
-Math,BoolAnd,<DestVar>,<Vaue1>,<Value2>
+Math,BoolAnd,<%DestVar%>,<Vaue1>,<Value2>
 ```
 
 ### Arguments

@@ -29,7 +29,7 @@ ShellExecute,<Action>,<FilePath>[,Params][,WorkDir][,%ExitOutVar%]
 
 ## Related
 
-[ShellExecuteDelete](./ShellExecuteDelete.md), [ShellExecuteEx](./ShellExecuteEx.md), [ShellExecuteSlow](./ShellExecuteSlow.md)
+[ShellExecuteDelete](./ShellExecuteDelete.md), [ShellExecuteEx](./ShellExecuteEx.md)
 
 ## Examples
 

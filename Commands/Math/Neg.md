@@ -5,7 +5,7 @@ Returns the arithmetic inverse of a value.
 ## Syntax
 
 ```pebakery
-Math,Neg,<DestVar>,<Value>
+Math,Neg,<%DestVar%>,<Value>
 ```
 
 ### Arguments

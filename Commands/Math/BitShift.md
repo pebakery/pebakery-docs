@@ -5,7 +5,7 @@ Performs a bit shifting operation.
 ## Syntax
 
 ```pebakery
-Math,BitShift,<DestVar>,<Value>,<Direction>,<Shift>[,Size][,UNSIGNED]
+Math,BitShift,<%DestVar%>,<Value>,<Direction>,<Shift>[,Size][,UNSIGNED]
 ```
 
 ### Arguments

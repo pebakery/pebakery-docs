@@ -5,7 +5,7 @@ Returns a integer rounded to the nearest whole number.
 ## Syntax
 
 ```pebakery
-Math,Round,<DestVar>,<Value>,<Unit>
+Math,Round,<%DestVar%>,<Value>,<Unit>
 ```
 
 ### Arguments

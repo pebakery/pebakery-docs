@@ -5,7 +5,7 @@ Performs an exclusive OR test on two boolean values. A true output results if on
 ## Syntax
 
 ```pebakery
-Math,BoolXor,<DestVar>,<Vaue1>,<Value2>
+Math,BoolXor,<%DestVar%>,<Vaue1>,<Value2>
 ```
 
 ### Arguments

@@ -5,7 +5,7 @@ Raises a number to the power.
 ## Syntax
 
 ```pebakery
-Math,Pow,<DestVar>,<Base>,<PowerOf>
+Math,Pow,<%DestVar%>,<Base>,<PowerOf>
 ```
 
 ### Arguments

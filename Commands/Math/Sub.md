@@ -5,7 +5,7 @@ Subtracts two numbers.
 ## Syntax
 
 ```pebakery
-Math,Sub,<DestVar>,<Value1>,<Value2>
+Math,Sub,<%DestVar%>,<Value1>,<Value2>
 ```
 
 ### Arguments

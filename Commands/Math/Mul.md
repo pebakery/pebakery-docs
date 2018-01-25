@@ -5,7 +5,7 @@ Multiplies two numbers.
 ## Syntax
 
 ```pebakery
-Math,Mul,<DestVar>,<Value1>,<Value2>
+Math,Mul,<%DestVar%>,<Value1>,<Value2>
 ```
 
 ### Arguments

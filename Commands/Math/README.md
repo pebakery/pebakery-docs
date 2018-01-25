@@ -22,3 +22,4 @@
 1. [Round](./Round.md)
 1. [Abs](./Abs.md)
 1. [Pow](./Pow.md)
+1. [Hex](./Hex.md)

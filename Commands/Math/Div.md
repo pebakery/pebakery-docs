@@ -5,7 +5,7 @@ Divides two numbers.
 ## Syntax
 
 ```pebakery
-Math,Div,<DestVar>,<Value1>,<Value2>
+Math,Div,<%DestVar%>,<Value1>,<Value2>
 ```
 
 ### Arguments

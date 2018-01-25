@@ -5,7 +5,7 @@ Performs a bitwise exclusive OR operation.
 ## Syntax
 
 ```pebakery
-Math,BitNot,<DestVar>,<Vaue>
+Math,BitNot,<%DestVar%>,<Vaue>
 ```
 
 ### Arguments

@@ -5,7 +5,7 @@ Adds two numbers.
 ## Syntax
 
 ```pebakery
-Math,Add,<DestVar>,<Value1>,<Value2>
+Math,Add,<%DestVar%>,<Value1>,<Value2>
 ```
 
 ### Arguments

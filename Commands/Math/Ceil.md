@@ -5,7 +5,7 @@ Returns a number rounded up to the next integer.
 ## Syntax
 
 ```pebakery
-Math,Ceil,<DestVar>,<Value>,<Unit>
+Math,Ceil,<%DestVar%>,<Value>,<Unit>
 ```
 
 ### Arguments

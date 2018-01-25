@@ -17,4 +17,3 @@
 1. [ShellExecute](./ShellExecute.md)
 1. [ShellExecuteDelete](./ShellExecuteDelete.md)
 1. [ShellExecuteEx](./ShellExecuteEx.md)
-1. [ShellExecuteSlow](./ShellExecuteSlow.md)

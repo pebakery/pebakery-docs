@@ -5,7 +5,7 @@ Converts an Unsigned Integer to a Signed Integer.
 ## Syntax
 
 ```pebakery
-Math,ToSign,<DestVar>,<Integer>[,Size]
+Math,ToSign,<%DestVar%>,<Integer>[,Size]
 ```
 
 ### Arguments

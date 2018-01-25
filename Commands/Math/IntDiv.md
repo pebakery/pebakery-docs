@@ -5,7 +5,7 @@ Divides two integers and returns the quotient and remainder.
 ## Syntax
 
 ```pebakery
-Math,IntDiv,<QuotientVar>,<RemainderVar>,<Value1>,<Value2>
+Math,IntDiv,<%QuotientVar%>,<%RemainderVar%>,<Value1>,<Value2>
 ```
 
 ### Arguments
