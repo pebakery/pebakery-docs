@@ -1,3 +1,7 @@
-# Hash Command
+# Hash Commands
 
-1. [Hash](./Hash.md)
+Click on a Command name for a detailed description.
+
+| Command | Description |
+| --- | --- |
+| [Hash](./Hash.md) | Calculates the cryptographic hash of a file. |

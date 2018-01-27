@@ -1,6 +1,8 @@
 # StrFormat,BytesToInt
 
-Converts an human readable string representing the size of a file or directory to a machine readable intiger representing the size in bytes. Strings can be converted to bytes from KB, MB, GB, TB or PB.
+Converts a human readable string representing the size of a file or directory to a machine readable integer representing the size in bytes.
+
+Strings can be converted to bytes from KB, MB, GB, TB or PB.
 
 ## Syntax
 

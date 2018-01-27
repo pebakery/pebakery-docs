@@ -1,6 +1,6 @@
 # IniRead
 
-Read the value of a key from a section inside a file that you specify.
+Reads a value from a standard .ini file.
 
 ## Syntax
 

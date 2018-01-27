@@ -1,6 +1,6 @@
 # IniAddSection
 
-This command will add a new empty section inside the file you specify.
+Adds a new empty section inside a standard .ini file.
 
 ## Syntax
 

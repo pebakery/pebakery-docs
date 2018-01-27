@@ -1,6 +1,6 @@
 # TXTDelEmptyLines
 
-This function will remove all empty lines from a given text file.
+Removes all empty lines from a given text file.
 
 ## Syntax
 

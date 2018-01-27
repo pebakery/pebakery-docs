@@ -1,6 +1,6 @@
 # IniMerge
 
-This command will combine the contents of two .ini files.
+Combines the contents of two .ini files.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ IniMerge,<SrcFile>,<DestFile>
 
 + `SrcFile` will never be modified.
 + If `DestFile` does not exist it will be created.
-+ Only .ini specific contents will be merged. Anthing that is not a [Section] name or part of a key=value pair will be ignored. Standard .ini recognized comments such as `; Comment` or `# Comment` as well as PEBakery style comments `// Comment` will likewise be ignored.
++ Only .ini specific contents will be merged. Anything that is not a [Section] name or part of a key=value pair will be ignored. Standard .ini recognized comments such as `; Comment` or `# Comment` as well as PEBakery style comments `// Comment` will likewise be ignored.
 
 ## Example
 

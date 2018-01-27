@@ -1,6 +1,6 @@
 # IniReadSection
 
-Read the section from a file that you specify.
+Reads the contents of a section in a standard .ini file.
 
 ## Syntax
 
@@ -18,11 +18,11 @@ IniReadSection,<FileName>,<Section>,<%DestVar%>
 
 ## Remarks
 
-This command was designed to log more infomation to assist troubleshooting.
+This command was designed to log more information to assist troubleshooting.
 
-The string to be stored in %DestVar% is human-readable rather than coding friendly, and it is mainly used with `Echo`.
+The string to be stored in %DestVar% is human-readable rather than coding friendly, and it is intended to be used with `Echo`.
 
-PEBakery will optimize multiple `IniReadSection` in a row to single command.
+PEBakery will optimize multiple `IniReadSection` commands in a row to single read command.
 
 ## Example
 

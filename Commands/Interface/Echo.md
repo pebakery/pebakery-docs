@@ -1,6 +1,8 @@
 # Echo
 
-Display a message in the processing window while the script is running. This message will persist until another message is displayed or the script execution finishes.
+Display a message in the build window while the script is running.
+
+This message will persist until another message is displayed or the script execution finishes.
 
 ## Syntax
 

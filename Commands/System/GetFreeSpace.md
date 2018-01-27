@@ -20,6 +20,7 @@ System,GetFreeSpace,<Path>,<%DestVar%>
 PEBakery calculates 1 Megabyte = 1024 Bytes.
 
 ## Related
+[StrFormat,Ceil](../String/Ceil.md), [StrFormat,Floor](../String/Floor.md), [StrFormat,Round](../String/Round.md)
 
 ## Examples
 

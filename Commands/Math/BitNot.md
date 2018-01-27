@@ -1,6 +1,6 @@
 # Math,BitNot
 
-Performs a bitwise exclusive OR operation.
+Performs a bitwise NOT operation.
 
 ## Syntax
 

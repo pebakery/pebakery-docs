@@ -1,8 +1,8 @@
 # ExtractAndRun
 
-**This command has been deprecated and will be removed in a future version. It is recommended that you update your code as soon as possible to avoid breaking your script. See Example 3 for a more flexible alternative.**
-
 Extracts a single file from inside a script and executes it.
+
+**This command has been deprecated and will be removed in a future version. It is recommended that you update your code as soon as possible to avoid breaking your script. See Example 3 for a more flexible alternative.**
 
 ## Syntax
 

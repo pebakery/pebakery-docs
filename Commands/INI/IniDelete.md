@@ -1,6 +1,6 @@
 # IniDelete
 
-This command will delete the key from a section inside a file that you specify.
+Deletes a key from a standard .ini file.
 
 ## Syntax
 

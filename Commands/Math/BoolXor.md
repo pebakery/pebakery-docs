@@ -1,6 +1,8 @@
 # Math,BoolXor
 
-Performs an exclusive OR test on two boolean values. A true output results if one, and only one, of the values is true.
+Performs an exclusive OR test on two boolean values.
+
+A true output results if one, and only one, of the values is true.
 
 ## Syntax
 

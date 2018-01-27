@@ -1,6 +1,8 @@
 # Math,BoolOr
 
-Performs an OR test on two boolean values. A true output results if any one of the values is true.
+Performs an OR test on two boolean values.
+
+A true output results if any one of the values is true.
 
 ## Syntax
 

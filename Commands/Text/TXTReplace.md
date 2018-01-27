@@ -1,6 +1,6 @@
 # TXTReplace
 
-This command will search inside a given file and replace all text that matches the value of OldString and replace it with NewString. 
+Search inside a given file and replace all text that matches the value of OldString and replace it with NewString.
 
 ## Syntax
 

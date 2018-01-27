@@ -1,6 +1,6 @@
 # IniDeleteSection
 
-This command will delete a given section, along with all keys and values it contains from the file you specify.
+Deletes a section, along with all keys and values it contains from a standard .ini file.
 
 ## Syntax
 
@@ -17,7 +17,7 @@ IniDeleteSection,<Filename>,<Section>
 
 ## Remarks
 
-PEBakery will optimize multiple `IniDeleteSection` in a row to single command.
+PEBakery will optimize multiple `IniDeleteSection` commands in a row to single delete command.
 
 ## Example
 

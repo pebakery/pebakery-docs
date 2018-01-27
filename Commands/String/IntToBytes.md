@@ -2,7 +2,9 @@
 
 **Alias**: `StrFormat,Bytes`
 
-Converts an number of bytes to a more human readable format. Any amount of bytes specified will be converted to a string representing the size in KB, MB, GB, TB or PB.
+Converts a number of bytes to a more human readable format.
+
+Any amount of bytes specified will be converted to a string representing the size in KB, MB, GB, TB or PB.
 
 ## Syntax
 

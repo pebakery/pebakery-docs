@@ -1,6 +1,6 @@
 # IniWriteTextLine
 
-This command will add a line of text to given section inside the file you specify.
+Write a line of text to a section inside a standard .ini file.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ IniWriteTextLine,<FileName>,<Section>,<Line>[,APPEND]
 
 Unless the `APPEND` flag is specified the `Line` will be inserted at the beginning of the section.
 
-PEBakery will optimize multiple `IniWriteTextLine` in a row to single command.
+PEBakery will optimize multiple `IniWriteTextLine` commands in a row into a single write operation.
 
 ## Example
 

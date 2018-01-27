@@ -1,6 +1,6 @@
 # TXTDelLine
 
-This command will remove lines from a given text file that begin with a specific string.
+Removes lines from a given text file that begin with a specific string.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ Caution should be exercised when using this command, as the value of `String` do
 
 If `FileName` does not exist the operation will fail.
 
-PEBakery will optimize multiple `TXTDelLine` in a row to single command.
+PEBakery will optimize multiple `TXTDelLine` commands in a row into a single delete command.
 
 ## Related
 

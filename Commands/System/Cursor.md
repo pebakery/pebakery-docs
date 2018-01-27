@@ -38,7 +38,6 @@ Author=Homes32
 
 [variables]
 
-
 [process]
 System,CURSOR,WAIT
 Echo,"Cursor is in WAIT state.#$xPausing for 5 seconds..."

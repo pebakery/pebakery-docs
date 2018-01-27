@@ -1,6 +1,6 @@
 # TXTAddLine
 
-This command will insert a line of text at the specified location inside a file.
+Inserts a line of text at the specified location inside a file.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ If `FileName` does not exist the operation will fail.
 
 WinBuilder's implementation of TxtAddLine allowed for an `Action` called **Place** which would allow the developer to specify a line number where the text should be inserted. This feature was depreciated in PEBakery due to lack of perceived usefulness.
 
-PEBakery will optimize multiple `TXTAddLine` in a row to single command.
+PEBakery will optimize multiple `TXTAddLine` commands in a row into single write command.
 
 ## Related
 

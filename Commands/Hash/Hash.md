@@ -1,6 +1,8 @@
 # Hash
 
-Calculates the cryptographic hash of a file. The result can then be compared with a known value in order to verify the integrity of a file.
+Calculates the cryptographic hash of a file. 
+
+The result can then be compared with a known value in order to verify the integrity of a file.
 
 ## Syntax
 
