@@ -19,7 +19,7 @@ IniRead,<FileName>,<Section>,<Key>,<%DestVar%>
 
 ## Remarks
 
-PEBakery will optimize multiple `IniRead` in a row to single command.
+PEBakery will optimize multiple `IniRead` commands in a row into a single read command.
 
 ## Example
 

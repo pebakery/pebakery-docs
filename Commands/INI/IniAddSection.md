@@ -19,7 +19,7 @@ IniAddSection,<FileName>,<Section>
 
 If the section already exists no action will be taken.
 
-PEBakery will optimize multiple `IniAddSection` in a row to single command.
+PEBakery will optimize multiple `IniAddSection` commands in a row into a single write command.
 
 ## Example
 

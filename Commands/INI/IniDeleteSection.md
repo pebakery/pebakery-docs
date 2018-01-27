@@ -17,7 +17,7 @@ IniDeleteSection,<Filename>,<Section>
 
 ## Remarks
 
-PEBakery will optimize multiple `IniDeleteSection` commands in a row to single delete command.
+PEBakery will optimize multiple `IniDeleteSection` commands in a row into a single delete command.
 
 ## Example
 
