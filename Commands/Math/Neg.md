@@ -1,6 +1,6 @@
 # Math,Neg
 
-Returns the arithmetic inverse of a value.
+Calculates the additive inverse of a value *(n * -1)*.
 
 ## Syntax
 
@@ -13,7 +13,7 @@ Math,Neg,<%DestVar%>,<Value>
 | Argument | Description |
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
-| Value | The value to inverse. |
+| Value | The value to invert. |
 
 ## Remarks
 

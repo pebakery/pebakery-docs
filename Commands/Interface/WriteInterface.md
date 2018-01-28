@@ -14,7 +14,7 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>
 | --- | --- |
 | Property | The Property value to edit:
 || Text - Text value of the control. |
-|| Visible - True/False - Show or Hide the control. |
+|| Visible - `True`/`False` - Show or Hide the control. |
 || PosX - Horizontal Position measured from the control's top left corner. |
 || PosY - Vertical Position measured from the control's top left corner. |
 || Width - Width of the control. |

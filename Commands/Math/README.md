@@ -21,7 +21,7 @@ Click on a Command name for a detailed description.
 | [Math,Hex](./Hex.md) | Convert an integer to it's hexadecimal representation. |
 | [Math,IntDiv](./IntDiv.md) | Divides two integers and returns the quotient and remainder. |
 | [Math,Mul](./Mul.md) | Multiplies two numbers. |
-| [Math,Neg](./Neg.md) | Returns the arithmetic inverse of a value. |
+| [Math,Neg](./Neg.md) | Calculates the additive inverse of a value. |
 | [Math,Pow](./Pow.md) | Raises a number to the power. |
 | [Math,Round](./Round.md) | Returns a integer rounded to the nearest whole number. |
 | [Math,Sub](./Sub.md) | Subtracts two numbers. |
