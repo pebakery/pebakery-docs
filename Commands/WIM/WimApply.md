@@ -2,6 +2,8 @@
 
 Extracts ("applies") an image, or all images, from a Windows Imaging (WIM) archive.
 
+**Warning!** This command is unstable and may be changed in a future release.
+
 ## Syntax
 
 ```pebakery
@@ -12,9 +14,9 @@ WimApply,<SrcWim>,<ImageIndex>,<DestDir>[,CHECK][,NOACL][,NOATTRIB]
 
 | Argument | Description |
 | --- | --- |
-| SrcWim | The full path to the .wim file that to be mounted. |
-| ImageIndex | The index of the image in the .wim file to be applied. |
-| DestDir | The full path to the directory where the .wim file is to be applied. If the directory does not exist or there is already an image mounted the operation will fail. |
+| SrcWim | The full path to the .wim file that to be extracted. |
+| ImageIndex | The index of the image in the .wim file to be extracted. |
+| DestDir | The full path to the directory where the .wim file is to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
 
 ### Flags
 
@@ -34,7 +36,7 @@ Data integrity: WIM files include checksums of file data. To detect accidental (
 
 ESD files: wimlib can extract files from solid-compressed WIMs, or "ESD" (.esd) files, just like from normal WIM (.wim) files. However, Microsoft sometimes distributes ESD files with encrypted segments; wimlib cannot extract such files until they are first decrypted.
 
-This command internally uses `wimlib-15.dll`.
+This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
@@ -42,32 +44,10 @@ This command internally uses `wimlib-15.dll`.
 
 ## Examples
 
-Mount the install.wim image to our *%BaseDir%\Mount\InstallWim* folder.
+This example will extract (apply) the entire contents of the 1st image from *C:\Temp\boot.wim* to a folder called *C:\Temp\Target*.
 
 ### Example 1
 
 ```pebakery
-[Main]
-Title=WimMount Example
-Description=Show usage of the WimMount command.
-Author=Homes32
-Level=5
-Version=1
-
-[Variables]
-%InstallWim%=C:\W10\x64\sources\install.wim
-%WimIndex%=4
-%MountDir%=C:\PEBakery\Mount\Win10PESE\Source\InstallWimSrc
-
-[Process]
-// the directory %MountDir% must exist or the mount operation will fail.
-If,Not,EXISTDIR,%MountDir%,DirMake,%MountDir%
-Echo,"Mounting Install.wim from#$x--> %InstallWim% [Index: %WimIndex%]"
-// Mount the image with index 4
-WimMount,%InstallWim%,%WimIndex%,%MountDir%
-Echo,"This is where you would copy some files, etc..."
-Wait,10
-// Cleanup after ourselves...
-Echo,"UnMounting %MountDir%..."
-WimUnmount,%MountDir%
+WimApply,C:\Temp\boot.wim,1,C:\Temp\Target
 ```
