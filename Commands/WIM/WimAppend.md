@@ -1,13 +1,13 @@
-# WimCapture
+# WimAppend
 
-Creates a new Windows Imaging (WIM) archive.
+Adds an image to an existing Windows Imaging (WIM) archive.
 
 **Warning!** This command is unstable and may be changed in a future release.
 
 ## Syntax
 
 ```pebakery
-WimCapture,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=STR][,IMAGEDESC=STR][,FLAGS=STR][,BOOT][,CHECK][,NOACL]
+WimAppend,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=<String>][,IMAGEDESC=<String>][,FLAGS=<String>][,DELTAFROM=<Integer>][,BOOT][,CHECK][,NOACL]
 ```
 
 ### Arguments
@@ -16,16 +16,12 @@ WimCapture,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=STR][,IMAGEDESC=STR][,FLAGS=
 | --- | --- |
 | SrcWim | The full path to the source files to be captured. |
 | DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist it will be created. |
-| Compress | Supported Compression levels: |
-|| NONE - No Compression. |
-|| XPRESS - Fast compression and decompression, but results in a larger image size. _(Similar to DISM.exe  /compress:fast )_ |
-|| LZX - Zip style DEFLATE compression. _(Similar to DISM.exe: /compress:maximum)_ |
-|| LZMS - Microsoft's undocumented compression format similar to the LZMA algorithm used by 7zip. Smaller image size, but takes significantly longer to compress. _(Similar to DISM.exe /compress:recovery)_ |
 | IMAGENAME= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
 | IMAGEDESC= | **(Optional)** Additional information about the image. |
 | FLAGS= | **(Optional)** Specify a string to use in the <FLAGS> element of the XML data for the new image. |
+| DELTAFROM= | **(Optional)** An integer representing an existing image inside the `DestWim` archive. Any file data that would ordinarily need to be archived in the new or updated WIM is omitted if it is already present in the `SrcWim` image on which the delta is being based. The resulting WIM will still contain a full copy of the image metadata, but this is typically only a small fraction of a WIM’s total size. |
 
-The arguments `IMAGENAME=`, `IMAGEDESC=`, and `FLAGS=` can be used independently and can be specified in any order.
+The arguments `DELTAFROM=`,`IMAGENAME=`, `IMAGEDESC=`, and `FLAGS=` can be used independently and can be specified in any order.
 
 ### Flags
 
@@ -40,6 +36,8 @@ The following flags can be used independently and can be specified in any order.
 ## Remarks
 
 Data integrity: WIM files include checksums of file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons wimlib does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+
+Note: It has been observed that --update-of mode is not completely reliable at detecting changes in file contents, sometimes causing the old contents of a few files to be archived rather than the current contents. The cause of this problem is that Windows does not immediately update a file’s last modification timestamp after every write to that file. Unfortunately, there is no known way for applications like wimlib to automatically work around this bug. Manual workarounds are possible; theoretically, taking any action that causes the problematic files to be closed, such as restarting applications or the computer itself, should cause the files’ last modification timestamps to be updated. Also note that wimlib compares file sizes as well as timestamps in determining whether a file has changed, which helps make the problem less likely to occur. 
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
