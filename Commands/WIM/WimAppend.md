@@ -7,7 +7,7 @@ Adds an image to an existing Windows Imaging (WIM) archive.
 ## Syntax
 
 ```pebakery
-WimAppend,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=<String>][,IMAGEDESC=<String>][,FLAGS=<String>][,DELTAFROM=<Integer>][,BOOT][,CHECK][,NOACL]
+WimAppend,<SrcDir>,<DestWim>,<Compress>[,ImageName=<String>][,ImageDesc=<String>][,Flags=<String>][,DeltaIndex=<Integer>][,BOOT][,CHECK][,NOACL]
 ```
 
 ### Arguments
@@ -19,9 +19,9 @@ WimAppend,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=<String>][,IMAGEDESC=<String>
 | IMAGENAME= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
 | IMAGEDESC= | **(Optional)** Additional information about the image. |
 | FLAGS= | **(Optional)** Specify a string to use in the <FLAGS> element of the XML data for the new image. |
-| DELTAFROM= | **(Optional)** An integer representing an existing image inside the `DestWim` archive. Any file data that would ordinarily need to be archived in the new or updated WIM is omitted if it is already present in the `SrcWim` image on which the delta is being based. The resulting WIM will still contain a full copy of the image metadata, but this is typically only a small fraction of a WIM’s total size. |
+| DeltaIndex= | **(Optional)** An integer representing an existing image inside the `DestWim` archive. Any file data that would ordinarily need to be archived in the new or updated WIM is omitted if it is already present in the `SrcWim` image on which the delta is being based. The resulting WIM will still contain a full copy of the image metadata, but this is typically only a small fraction of a WIM’s total size. |
 
-The arguments `DELTAFROM=`,`IMAGENAME=`, `IMAGEDESC=`, and `FLAGS=` can be used independently and can be specified in any order.
+The arguments `DeltaIndex=`,`IMAGENAME=`, `IMAGEDESC=`, and `FLAGS=` can be used independently and can be specified in any order.
 
 ### Flags
 
