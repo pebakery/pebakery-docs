@@ -7,7 +7,7 @@ Creates a new Windows Imaging (WIM) archive.
 ## Syntax
 
 ```pebakery
-WimCapture,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=STR][,IMAGEDESC=STR][,FLAGS=STR][,BOOT][,CHECK][,NOACL]
+WimCapture,<SrcDir>,<DestWim>,<Compress>[,ImageName=<String>][,ImageDesc=<String>][,Flags=<String>][,BOOT][,CHECK][,NOACL]
 ```
 
 ### Arguments
@@ -21,11 +21,11 @@ WimCapture,<SrcDir>,<DestWim>,<Compress>[,IMAGENAME=STR][,IMAGEDESC=STR][,FLAGS=
 || XPRESS - Fast compression and decompression, but results in a larger image size. _(Similar to DISM.exe  /compress:fast )_ |
 || LZX - Zip style DEFLATE compression. _(Similar to DISM.exe: /compress:maximum)_ |
 || LZMS - Microsoft's undocumented compression format similar to the LZMA algorithm used by 7zip. Smaller image size, but takes significantly longer to compress. _(Similar to DISM.exe /compress:recovery)_ |
-| IMAGENAME= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
-| IMAGEDESC= | **(Optional)** Additional information about the image. |
-| FLAGS= | **(Optional)** Specify a string to use in the <FLAGS> element of the XML data for the new image. |
+| ImageName= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
+| ImageDesc= | **(Optional)** Additional information about the image. |
+| Flags= | **(Optional)** Specify a string to use in the <FLAGS> element of the XML data for the new image. |
 
-The arguments `IMAGENAME=`, `IMAGEDESC=`, and `FLAGS=` can be used independently and can be specified in any order.
+The arguments `ImageName=`, `ImageDesc=`, and `Flags=` can be used independently and can be specified in any order.
 
 ### Flags
 
@@ -41,7 +41,7 @@ The following flags can be used independently and can be specified in any order.
 
 Data integrity: WIM files include checksums of file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons wimlib does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
+**This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).**
 
 ## Related
 

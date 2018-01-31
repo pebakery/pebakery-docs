@@ -1,22 +1,25 @@
-# WimApply
+# WimExtract
 
-Extracts ("applies") an image, or all images, from a Windows Imaging (WIM) archive.
+Extracts one or more files or directory trees from a Windows Imaging (WIM) archive.
+
+Wildcards are supported, allowing multiple files or directories to be copied at one time.
 
 **Warning!** This command is unstable and may be changed in a future release.
 
 ## Syntax
 
 ```pebakery
-WimApply,<SrcWim>,<ImageIndex>,<DestDir>[,CHECK][,NOACL][,NOATTRIB]
+WimExtract,<SrcWim>,<ImageIndex>,<DestDir>,<ExtractPath>,[CHECK],[NOACL],[NOATTRIB]
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcWim | The full path of the .wim file to be extracted. |
-| ImageIndex | The index of the image in the .wim file to be extracted. |
-| DestDir | The full path to the directory where the .wim file is to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
+| SrcWim | The full path of the .wim file to extract files from. |
+| ImageIndex | The index of the image within the .wim file containing the files to be extracted. |
+| DestDir | The full path to the directory where the files are to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
+| ExtractPath | The full path of the file(s) within the image to be extracted. Wildcards (*, ?) are allowed. |
 
 ### Flags
 
@@ -30,11 +33,13 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-Note that WimApply is designed to extract, or "apply", full WIM images. If you want to extract only certain files or directories from a WIM image, use the `WimExtract` command instead.
+Note that `WimExtract` is intended for extracting only a subset of a WIM image. If you want to extract or "apply" a full WIM image use the `WimApply` command instead.
 
 Data integrity: WIM files include checksums of file data. To detect accidental (non-malicious) data corruption, wimlib calculates the checksum of every file it extracts and issues an error if it does not have the expected value. (This default behavior seems equivalent to the /verify option of ImageX.) In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons wimlib does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
 ESD files: wimlib can extract files from solid-compressed WIMs, or "ESD" (.esd) files, just like from normal WIM (.wim) files. However, Microsoft sometimes distributes ESD files with encrypted segments; wimlib cannot extract such files until they are first decrypted.
+
+The `WimExtract` command supports extracting files and directory trees from stand-alone WIMs as well as split WIMs
 
 **This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).**
 
