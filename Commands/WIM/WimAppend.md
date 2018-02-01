@@ -2,8 +2,6 @@
 
 Adds an image to an existing Windows Imaging (WIM) archive.
 
-**Warning!** This command is unstable and may be changed in a future release.
-
 ## Syntax
 
 ```pebakery
@@ -35,22 +33,24 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-Data integrity: WIM files include checksums of file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons wimlib does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+Data integrity: WIM files include checksums of all file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-Note: It has been observed that wimlib's `--update-of` mode used by the `DeltaIndex` argument is not completely reliable at detecting changes in file contents, sometimes causing the old contents of a few files to be archived rather than the current contents. The cause of this problem is that Windows does not immediately update a file’s last modification timestamp after every write to that file. Unfortunately, there is no known way for applications like wimlib to automatically work around this bug. Manual workarounds are possible; theoretically, taking any action that causes the problematic files to be closed, such as restarting applications or the computer itself, should cause the files’ last modification timestamps to be updated. Also note that wimlib compares file sizes as well as timestamps in determining whether a file has changed, which helps make the problem less likely to occur. 
+Note: It has been observed that wimlib's `--update-of` mode used by the `DeltaIndex` argument is not completely reliable at detecting changes in file contents, sometimes causing the old contents of a few files to be archived rather than the current contents. The cause of this problem is that Windows does not immediately update a file’s last modification timestamp after every write to that file. Unfortunately, there is no known way for applications like wimlib to automatically work around this bug. Manual workarounds are possible; theoretically, taking any action that causes the problematic files to be closed, such as restarting applications or the computer itself, should cause the file's last modification timestamps to be updated. Also note that wimlib compares file sizes as well as timestamps in determining whether a file has changed, which helps make the problem less likely to occur. 
 
-**This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).**
+Split WIMs: PEBakery does not support appending to split WIM archives (.swm).
+
+This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
-[WimUnmount](./WimUnmount.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimCapture](./WimCapture.md)
 
 ## Examples
 
-
-
 ### Example 1
 
-```pebakery
+Capture data into an existing .wim archive.
 
+```pebakery
+WimAppend,"C:\Temp\Target","C:\Temp\Target\TEST.WIM"
 ```

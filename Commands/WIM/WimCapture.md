@@ -2,8 +2,6 @@
 
 Creates a new Windows Imaging (WIM) archive.
 
-**Warning!** This command is unstable and may be changed in a future release.
-
 ## Syntax
 
 ```pebakery
@@ -39,20 +37,20 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-Data integrity: WIM files include checksums of file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons wimlib does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+Data integrity: WIM files include checksums of all file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-**This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).**
+This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
-[WimUnmount](./WimUnmount.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimAppend](./WimAppend.md)
 
 ## Examples
 
-
-
 ### Example 1
 
-```pebakery
+Create a bootable .wim archive using _LZX_ compression from _C:\Temp\Target_
 
+```pebakery
+WimCapture,C:\Temp\Target,C:\Temp\Target\TEST.WIM,LZX,ImageName="MyBootImage",BOOT
 ```

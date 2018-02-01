@@ -1,8 +1,6 @@
 # WimApply
 
-Extracts ("applies") an image, or all images, from a Windows Imaging (WIM) archive.
-
-**Warning!** This command is unstable and may be changed in a future release.
+Extracts ("applies") an image from a Windows Imaging (WIM) archive.
 
 ## Syntax
 
@@ -30,23 +28,25 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-Note that WimApply is designed to extract, or "apply", full WIM images. If you want to extract only certain files or directories from a WIM image, use the `WimExtract` command instead.
+`WimApply` is designed to extract, or "apply", entire WIM images. If you want to extract specific files or directories use the `WimExtract` command instead.
 
-Data integrity: WIM files include checksums of file data. To detect accidental (non-malicious) data corruption, wimlib calculates the checksum of every file it extracts and issues an error if it does not have the expected value. (This default behavior seems equivalent to the /verify option of ImageX.) In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons wimlib does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+Data integrity: In order to detect accidental (non-malicious) data corruption, the checksum of every file extracted is calculated and an error is returned if it does not match the checksum included in the WIM file. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-ESD files: wimlib can extract files from solid-compressed WIMs, or "ESD" (.esd) files, just like from normal WIM (.wim) files. However, Microsoft sometimes distributes ESD files with encrypted segments; wimlib cannot extract such files until they are first decrypted.
+ESD files: PEBakery can extract files from solid-compressed WIMs, or "ESD" (.esd) files, just like from normal WIM (.wim) files. However, Microsoft sometimes distributes ESD files with encrypted segments; PEBakery cannot extract such files until they have been decrypted.
 
-**This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).**
+Split WIMs: PEBakery does not support extracting from split WIM archives (.swm) at this time.
+
+This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
-[WimUnmount](./WimUnmount.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimExtract](./WimExtract.md), [WimExtractList](./WimExtractList.md)
 
 ## Examples
 
-This example will extract (apply) the entire contents of the 1st image from *C:\Temp\boot.wim* to a folder called *C:\Temp\Target*.
-
 ### Example 1
+
+This example will extract (apply) the entire contents of the 1st image from *C:\Temp\boot.wim* to a folder called *C:\Temp\Target*.
 
 ```pebakery
 WimApply,C:\Temp\boot.wim,1,C:\Temp\Target

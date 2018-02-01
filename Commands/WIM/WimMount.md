@@ -1,6 +1,6 @@
 # WimMount
 
-Mounts an image in a Windows image (.wim) file to the specified directory.
+Mounts an image in a Windows Image (WIM) archive to the specified directory.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ WimMount,<ImageFile>,<Index>,<MountDir>
 
 You must unmount the image using the `WimUnmount` command when you are finished.
 
-This command internally uses `wimgapi.dll`.
+This command uses the `wimgapi.dll` library included with Microsoft Windows.
 
 ## Related
 

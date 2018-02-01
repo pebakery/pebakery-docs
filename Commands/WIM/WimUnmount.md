@@ -1,6 +1,6 @@
 # WimUnmount
 
-Unmounts a mounted image in a Windows image (.wim) file from the specified directory.
+Unmounts a mounted image in a Windows image (WIM) archive from the specified directory.
 
 ## Syntax
 
@@ -16,7 +16,7 @@ WimMount,<MountDir>
 
 ## Remarks
 
-This command internally uses `wimgapi.dll`.
+This command uses the `wimgapi.dll` library included with Microsoft Windows.
 
 ## Related
 
