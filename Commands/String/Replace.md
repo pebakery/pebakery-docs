@@ -14,7 +14,7 @@ StrFormat,Replace,<String>,<SearchString>,<ReplaceString>,<%DestVar%>
 | --- | --- |
 | String | The string to read. |
 | SearchString | The string to find within `String`. |
-| ReplaceString | The string to replace `SearchString`. |
+| ReplaceString | The replacement string. |
 | DestVar | The variable where the result will be saved. |
 
 ## Remarks

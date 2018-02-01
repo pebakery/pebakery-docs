@@ -12,7 +12,7 @@ StrFormat,Dec,<%DestVar%>,<Integer>
 
 | Argument | Description |
 | --- | --- |
-| DestVar | The variable containing the value to increment. |
+| DestVar | The variable containing the value to decrement. |
 | Integer | Decrease the value of `DestVar` by `Integer`. |
 
 ## Remarks
