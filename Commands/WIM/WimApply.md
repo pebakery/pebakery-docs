@@ -1,6 +1,6 @@
 # WimApply
 
-Extracts ("applies") an image from a Windows Imaging (WIM) archive.
+Extracts ("applies") an image from a Windows Imaging File (.WIM).
 
 ## Syntax
 
@@ -28,7 +28,7 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-`WimApply` is designed to extract, or "apply", entire WIM images. If you want to extract specific files or directories use the `WimExtract` command instead.
+`WimApply` is designed to extract, or "apply", entire WIM images. If you want to extract specific files or directories use the `WimExtract` or `WimExtractList` command instead.
 
 Data integrity: In order to detect accidental (non-malicious) data corruption, the checksum of every file extracted is calculated and an error is returned if it does not match the checksum included in the WIM file. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 

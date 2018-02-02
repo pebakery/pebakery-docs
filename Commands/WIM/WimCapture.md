@@ -1,6 +1,6 @@
 # WimCapture
 
-Creates a new Windows Imaging (WIM) archive.
+Creates a new Windows Imaging File (.WIM).
 
 ## Syntax
 
@@ -21,7 +21,7 @@ WimCapture,<SrcDir>,<DestWim>,<Compress>[,ImageName=<String>][,ImageDesc=<String
 || LZMS - Microsoft's undocumented compression format similar to the LZMA algorithm used by 7zip. Smaller image size, but takes significantly longer to compress. _(Similar to DISM.exe /compress:recovery)_ |
 | ImageName= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
 | ImageDesc= | **(Optional)** Additional information about the image. |
-| Flags= | **(Optional)** Specify a string to use in the <FLAGS> element of the XML data for the new image. |
+| Flags= | **(Optional)** Specify a string to use in the `<FLAGS>` element of the XML data for the new image. |
 
 The arguments `ImageName=`, `ImageDesc=`, and `Flags=` can be used independently and can be specified in any order.
 
@@ -31,8 +31,8 @@ The following flags can be used independently and can be specified in any order.
 
 | Argument | Description |
 | --- | --- |
-| BOOT | **(Optional)** Mark the new image as the "bootable" image of the WIM. |
-| CHECK | **(Optional)** Include extra integrity information in the resulting WIM.  |
+| BOOT | **(Optional)** Mark the new image as the "bootable" image of the WIM file. |
+| CHECK | **(Optional)** Include extra integrity information in the resulting WIM file.  |
 | NOACL | **(Optional)** Do not capture security descriptors on files and directories. |
 
 ## Remarks

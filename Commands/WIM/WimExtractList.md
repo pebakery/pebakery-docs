@@ -1,6 +1,6 @@
 # WimExtractList
 
-Extracts one or more files or directory trees from a Windows Imaging (WIM) archive.
+Extracts one or more files or directory trees from a Windows Imaging File (.WIM).
 
 Wildcards are supported, allowing multiple files or directories to be copied at one time.
 
@@ -63,7 +63,7 @@ Windows\System32\en-US\*
 ; Leading and trailing whitespace is ignored
 
    \Windows\notepad*
-   
+
 ```
 
 ## Remarks
@@ -122,7 +122,7 @@ Windows\winsxs\*_microsoft.windows.gdiplus*\
 Windows\winsxs\*_microsoft.windows.isolationautomation*\
 Windows\Globalization\
 
-; Files 
+; Files
 Windows\*.*
 
 Windows\Boot\PXE\??-??\bootmgr.exe.mui

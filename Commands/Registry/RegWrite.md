@@ -34,7 +34,7 @@ RegWrite,<HKey>,<ValueType>,<KeyPath>,<ValueName>,<Value>,[NOWARN]
 
 | Flag | Description |
 | --- | --- |
-| NOWARN | **(Optional)** Suppress OverWrite messages in the log if the `Value` already exists. |
+| NOWARN | **(Optional)** Suppress Overwrite messages in the log if the `Value` already exists. |
 
 ## Remarks
 

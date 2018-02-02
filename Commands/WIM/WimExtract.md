@@ -1,6 +1,6 @@
 # WimExtract
 
-Extracts one or more files or directory trees from a Windows Imaging (WIM) archive.
+Extracts one or more files or directory trees from a Windows Imaging File (.WIM).
 
 Wildcards are supported, allowing multiple files or directories to be copied at one time.
 

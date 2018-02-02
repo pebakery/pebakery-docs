@@ -1,6 +1,6 @@
 # WimMount
 
-Mounts an image in a Windows Image (WIM) archive to the specified directory.
+Mounts an image in a Windows Imaging File (.WIM) to the specified directory.
 
 ## Syntax
 

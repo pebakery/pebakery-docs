@@ -1,6 +1,6 @@
 # WimUnmount
 
-Unmounts a mounted image in a Windows image (WIM) archive from the specified directory.
+Unmounts a mounted image in a Windows Imaging File (.WIM) from the specified directory.
 
 ## Syntax
 
