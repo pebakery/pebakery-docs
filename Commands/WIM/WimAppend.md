@@ -1,6 +1,6 @@
 # WimAppend
 
-Adds an image to an existing Windows Imaging File (.WIM).
+Adds an image to an existing Windows Imaging (.wim) file.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ Data integrity: WIM files include checksums of all file data. In addition, a WIM
 
 Note: It has been observed that wimlib's `--update-of` mode used by the `DeltaIndex` argument is not completely reliable at detecting changes in file contents, sometimes causing the old contents of a few files to be archived rather than the current contents. The cause of this problem is that Windows does not immediately update a file’s last modification timestamp after every write to that file. Unfortunately, there is no known way for applications like wimlib to automatically work around this bug. Manual workarounds are possible; theoretically, taking any action that causes the problematic files to be closed, such as restarting applications or the computer itself, should cause the file's last modification timestamps to be updated. Also note that wimlib compares file sizes as well as timestamps in determining whether a file has changed, which helps make the problem less likely to occur.
 
-Split WIMs: PEBakery does not support appending to split WIM archives (.swm).
+Split WIMs: PEBakery does not support appending to split WIM files (.swm).
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 

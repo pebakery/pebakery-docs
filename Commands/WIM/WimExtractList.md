@@ -1,10 +1,10 @@
 # WimExtractList
 
-Extracts one or more files or directory trees from a Windows Imaging File (.WIM).
+Extracts one or more files or directory trees from a Windows Imaging (.wim) file.
 
 Wildcards are supported, allowing multiple files or directories to be copied at one time.
 
-**Warning!** This command is unstable and may be changed in a future release.
+Note that `WimExtractList` is intended for extracting only a subset of a WIM image. If you want to extract or "apply" a full WIM image use the `WimApply` command instead.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ List files are text files that contain a list of paths to extract from the WIM i
 List files must must obey the following rules:
 
 - Only one path is allowed per line.
-- All paths are relative to the images root directory.
+- All paths are relative to the image's root directory.
 - Paths are not case sensitive.
 - Wildcards (*, ?) are allowed and may expand to include multiple files or directories.
 - Both fowardslash `/` and backslash `\` characters are supported. The leading `\` is optional.
@@ -67,8 +67,6 @@ Windows\System32\en-US\*
 ```
 
 ## Remarks
-
-Note that `WimExtractList` is intended for extracting only a subset of a WIM image. If you want to extract or "apply" a full WIM image use the `WimApply` command instead.
 
 Data integrity: In order to detect accidental (non-malicious) data corruption, the checksum of every file extracted is calculated and an error is returned if it does not match the checksum included in the WIM file. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 

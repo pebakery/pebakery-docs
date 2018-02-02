@@ -1,6 +1,6 @@
 # WimCapture
 
-Creates a new Windows Imaging File (.WIM).
+Creates a new Windows Imaging (.wim) file.
 
 ## Syntax
 

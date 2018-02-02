@@ -1,6 +1,6 @@
 # WimInfo
 
-Display information about a Windows Imaging File (.WIM).
+Retrieves information about a Windows Imaging (.wim) file.
 
 ## Syntax
 
@@ -72,7 +72,7 @@ The following is a non-exhaustive list of custom image properties present in Win
 
 ## Remarks
 
-Split WIMs: PEBakery does not support retrieving info from split WIM archives (.swm).
+Split WIMs: PEBakery does not support retrieving info from split WIM files (.swm).
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
