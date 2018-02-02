@@ -15,7 +15,7 @@ WimInfo,<SrcWim>,<ImageIndex>,<Property>,<%DestVar%>
 | SrcWim | The full path to the source files to be captured. |
 | ImageIndex | The index of the image within the .wim file to retrieve info from. |
 || 0 - Retrieve basic information about the WIM file. See **WIM File Properties**. |
-|| 1 - Retrieve information about the 1st image in the WIM file. |
+|| 1 - Retrieve information about the 1st image in the WIM file. See **Image Properties**. |
 || _n_ - Retrieve information about the _nth_ image in the WIM file. |
 | Property | The property to query from the image's XML data. Use the `/` character to access nested properties. Multiple nested properties can be accessed by using brackets. (Ex. _WINDOWS/LANGUAGES/LANGUAGE[2]_ indicates the second _LANGUAGE_ element nested within the _WINDOWS/LANGUAGES_ element.) |
 | DestVar | The variable where the value of the specified `Property` will be stored. |
@@ -26,15 +26,17 @@ The following properties can be retrieved from the WIM file's Header.
 
 | Property | Description |
 | --- | --- |
-| ImageCount | Returns the number of images the WIM file contains. |
-| BootIndex | Returns the index of the bootable image in the .wim file. If there are no bootable images available the value will be zero. |
-| Compression | Returns the compression used by the WIM file. `NONE` `XPRESS` `LZX` `LZMS`. |
+| ImageCount | The number of images the WIM file contains. |
+| BootIndex | The index of the bootable image in the .wim file. If there are no bootable images available the value will be zero. |
+| Compression | The compression format used by the WIM file. `NONE` `XPRESS` `LZX` `LZMS`. |
 
-### Image File Properties
+### Image Properties
 
-The following image specific properties can be retrieved from the XML data if they are defined.
+Individual properties for each image are stored as XML data within the .wim file. These properties include basic information such as the Image Name, Image Description, Size, File/Dir Count, and Created/Modified timestamps. The XML format also allows for additional properties to be defined for each image. Often times this is used by the author to include information that may be used to make a decision on which image should be selected, such as the product version, language, edition, and processor architecture.
 
-**Default Image Properties:**
+#### Default Image Properties
+
+The following image specific properties can be retrieved:
 
 | Property | Description |
 | --- | --- |
@@ -48,14 +50,14 @@ The following image specific properties can be retrieved from the XML data if th
 | LASTMODIFICATIONTIME | Contains 2 properties: `HIGHTPART` and `LOWPART` that when combined as a 64bit integer represent a Windows timestamp. |
 | LASTMODIFICATIONTIME/HIGHPART | Modified Date (Hex) |
 | LASTMODIFICATIONTIME/LOWPART | Modified Time (Hex) |
-| NAME | **(User Defined)** Image Name. |
-| DESCRIPTION | **(User Defined)** Image Description.  |
-| FLAGS | **(User Defined)** Image Flags. |
+| NAME | User defined image name. |
+| DESCRIPTION | User defined image description.  |
+| FLAGS | User defined image flags. |
 
-The WIM file's XML data may also contain arbitrary properties defined by the WIM files author.
-The following is a non-exhaustive list of custom image properties present in Windows sources.
+#### Additional Image Properties
 
-**Custom Image Properties:**
+The WIM file's XML data may also contain arbitrary properties defined by it's author.
+The following is a non-exhaustive list of custom image properties used by the Microsoft Windows Operating System sources.
 
 | Attribute | Description |
 | --- | --- |
