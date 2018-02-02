@@ -59,7 +59,7 @@ The following image specific properties can be retrieved:
 The WIM file's XML data may also contain arbitrary properties defined by it's author.
 The following is a non-exhaustive list of custom image properties used by the Microsoft Windows Operating System sources.
 
-| Attribute | Description |
+| Property | Description |
 | --- | --- |
 | DISPLAY NAME | "Friendly" name used by the Windows installer. |
 | DISPLAYDESCRIPTION | "Friendly" description used by the Windows installer. |
