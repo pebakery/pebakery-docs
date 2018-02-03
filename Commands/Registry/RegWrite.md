@@ -42,6 +42,8 @@ PEBakery does not permit use of variables in `HKey` and `ValueType`.
 
 If you need to modify the value of an ***existing*** REG_MULTI_SZ value consider using the `RegMulti` command to insert and delete values without overwriting the entire value list.
 
+PEBakery has a known issue with writing registry keys who's value contains a `#` hash sign followed by one or more digits. This issue only affects `RegWrite` commands outside of the `[Process]` section and is due to PEBakery interpreting the hash as a parameter. **See Example 2** for more details.
+
 ## Related
 
 [RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md), [RegMulti](./RegMulti.md)
@@ -92,12 +94,14 @@ In cases where a registry key contains a `#` character followed by numbers PEBak
 ```pebakery
 
 [Variables]
-%hash%=#
 
 [Process]
 Run,%ScriptFile%,Test
 
 [Test]
+System,SetLocal
+Set,%hash%,#
+
 RegHiveLoad,Tmp_System,%RegSystem%
 
 // Intended Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
@@ -110,4 +114,5 @@ RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394%h
 RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394%hash%609E&10483,Service,sbp2port
 
 RegHiveUnLoad,Tmp_System
+System,EndLocal
 ```
