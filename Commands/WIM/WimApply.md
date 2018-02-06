@@ -2,7 +2,7 @@
 
 Extracts ("applies") an image from a Windows Imaging (.wim) file.
 
-Note that `WimApply` is designed to extract, or "apply", entire WIM images. If you want to extract specific files or directories use the `WimExtract` or `WimExtractList` command instead.
+Note that `WimApply` is designed to extract, or "apply", entire WIM images. If you want to extract specific files or directories use the `WimExtract` or `WimExtractBulk` command instead.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ This command uses the the open source [Windows Imaging library (wimlib)](https:/
 
 ## Related
 
-[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimExtract](./WimExtract.md), [WimExtractList](./WimExtractList.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimExtract](./WimExtract.md), [WimExtractBulk](./WimExtractBulk.md)
 
 ## Examples
 

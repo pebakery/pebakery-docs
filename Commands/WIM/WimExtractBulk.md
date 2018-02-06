@@ -1,15 +1,15 @@
-# WimExtractList
+# WimExtractBulk
 
 Extracts one or more files or directory trees from a Windows Imaging (.wim) file.
 
 Wildcards are supported, allowing multiple files or directories to be copied at one time.
 
-Note that `WimExtractList` is intended for extracting only a subset of a WIM image. If you want to extract or "apply" a full WIM image use the `WimApply` command instead.
+Note that `WimExtractBulk` is intended for extracting only a subset of a WIM image. If you want to extract or "apply" a full WIM image use the `WimApply` command instead.
 
 ## Syntax
 
 ```pebakery
-WimExtractList,<SrcWim>,<ImageIndex>,<DestDir>,<ListFile>,[CHECK],[NOACL],[NOATTRIB]
+WimExtractBulk,<SrcWim>,<ImageIndex>,<DestDir>,<ListFile>,[CHECK],[NOACL],[NOATTRIB]
 ```
 
 ### Arguments
@@ -88,7 +88,7 @@ This example extracts multiple files and directories from the 4th image of *C:\T
 
 ```pebakery
 Echo,"Extracting from ListFile..."
-WimExtractList,%install.wim%,4,C:\Temp\Target\Extract,C:\Temp\Target\FileList.txt,NOACL
+WimExtractBulk,%install.wim%,4,C:\Temp\Target\Extract,C:\Temp\Target\FileList.txt,NOACL
 ```
 
 FileList.txt

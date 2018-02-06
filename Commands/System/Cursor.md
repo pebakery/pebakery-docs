@@ -13,7 +13,7 @@ System,Cursor,<State>
 | Argument | Description |
 | --- | --- |
 | State | The following cursor states are available: |
-|| NORMAL - Shows a normal cursor as defined by your operating system. (Usually and arrow)|
+|| NORMAL - Shows a normal cursor as defined by your operating system. (Usually an arrow.)|
 || WAIT - Shows a wait cursor as defined by your operating system. (Usually an hourglass or spinner) |
 
 ## Remarks

@@ -13,7 +13,7 @@ StrFormat,RTrim,<String>,<Count>,<%DestVar%>
 | Argument | Description |
 | --- | --- |
 | String | The string to read. |
-| Count | The number of characters to return. |
+| Count | The number of characters to remove. |
 | DestVar | The variable where the result will be saved. |
 
 ## Remarks

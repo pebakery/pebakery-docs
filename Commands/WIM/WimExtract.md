@@ -43,7 +43,7 @@ This command uses the the open source [Windows Imaging library (wimlib)](https:/
 
 ## Related
 
-[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimApply](./WimApply.md), [WimExtractList](./WimExtractList.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimApply](./WimApply.md), [WimExtractBulk](./WimExtractBulk.md)
 
 ## Examples
 

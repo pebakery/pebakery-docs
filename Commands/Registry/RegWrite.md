@@ -42,11 +42,13 @@ PEBakery does not permit use of variables in `HKey` and `ValueType`.
 
 If you need to modify the value of an ***existing*** REG_MULTI_SZ value consider using the `RegMulti` command to insert and delete values without overwriting the entire value list.
 
-PEBakery has a known issue with writing registry keys who's value contains a `#` hash sign followed by one or more digits. This issue only affects `RegWrite` commands outside of the `[Process]` section and is due to PEBakery interpreting the hash as a parameter. **See Example 2** for more details.
+If you are calling RegWrite outside of the `[Process]` section and the registry value contains a `#` hash sign followed by one or more digits you should always use the escaped form `##` in order to prevent PEBakery from interpreting the hash as a parameter. **See Example 2** for more details.
+
+If you have a large number of keys to import it may be feasible to encode a _.reg_ file within the script and use the `RegImport` command to load the values into the PE's registry.
 
 ## Related
 
-[RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md), [RegMulti](./RegMulti.md)
+[RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md), [RegImport](./RegImport), [RegMulti](./RegMulti.md)
 
 ## Examples
 
@@ -89,7 +91,7 @@ RegHiveUnLoad,Tmp_System
 
 ### Example 2
 
-In cases where a registry key contains a `#` character followed by numbers PEBakery can mistakenly interpret this as a parameter passed from a `Run` command, even when this is not intended. The following example demonstrates when this behavior can occur and a workaround that can be used to ensure the intended result.
+In cases where a registry key contains a `#` character followed by numbers PEBakery can mistakenly interpret this as a parameter passed from a `Run` command, even when this is not intended. The following example demonstrates when this behavior can occur and the correct action to take to ensure the intended result.
 
 ```pebakery
 
@@ -99,20 +101,16 @@ In cases where a registry key contains a `#` character followed by numbers PEBak
 Run,%ScriptFile%,Test
 
 [Test]
-System,SetLocal
-Set,%hash%,#
-
 RegHiveLoad,Tmp_System,%RegSystem%
 
 // Intended Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
 // Due to #609 being interpreted as a parameter
 // Actual Result : HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394E&10483\Service
-RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394%hash%609E&10483,Service,sbp2port
+RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483,Service,sbp2port
 
-// Workaround uses a variable to write the # character into the registry path
+// Use the escaped form of the # character `##`
 // Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
-RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394%hash%609E&10483,Service,sbp2port
+RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483,Service,sbp2port
 
 RegHiveUnLoad,Tmp_System
-System,EndLocal
 ```
