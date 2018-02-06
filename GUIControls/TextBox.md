@@ -15,7 +15,7 @@ An input box that accepts a single line of text.
 | Name | Unique name used to reference this control. |
 | Caption | The Label displayed over the text box. Use `""` for none. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `0` - The control ID specifying that this is a Text Box. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |

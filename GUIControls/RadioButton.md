@@ -15,13 +15,13 @@ A circular button that can have only one radio button selected on the interface 
 | Name | Unique name used to reference this control. |
 | Caption | Label displayed next to the radio button. Use `""` for none. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `11` - The control ID specifying that this is a Radio Button. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |
 | Height | Height of the control. |
 | Value | True/False - Selected `True` Deselected `False` |
-| SectionToRun | **(Optional)** Defines the [Section] that will be processed when the button is pressed or the value of the control is changed. The section name must be enclosed in underscore `_` characters. *Example:* `_RunMe_` |
+| SectionToRun | **(Optional)** Defines the [Section] within the script that will be processed when the button is pressed or the value of the control is changed. The section name must be enclosed in underscore `_` characters. *Example:* `_RunMe_` |
 | ShowProgress | **(Optional)** True/False - Show the Build progress screen while `SectionToRun` is being executed. This argument must always follow the `SectionToRun` argument. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 

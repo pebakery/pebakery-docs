@@ -15,7 +15,7 @@ Displays a line of text.
 | Name | Unique name used to reference this control. |
 | Caption | Text displayed on the control. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `1` - The control ID specifying that this is a Text Label. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |

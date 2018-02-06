@@ -15,12 +15,12 @@ A simple button that can be used to run a section of code within the script.
 | Name | Unique name used to reference this control. |
 | Caption | The text shown on the button. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `8` - The control ID specifying that this is a Button. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |
 | Height | Height of the control. |
-| SectionToRun | Defines the [Section] that will be processed when the button is pressed. |
+| SectionToRun | Defines the [Section] within the script that will be processed when the button is pressed. The specified section must reside within the current script. |
 | Image | The name of the encoded image to display on the control. Use `0` for no image. |
 | ShowProgress | True/False - Show the *Build progress* screen while `SectionToRun` is being executed. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |

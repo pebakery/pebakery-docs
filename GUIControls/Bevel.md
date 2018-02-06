@@ -15,7 +15,7 @@ A rectangular frame used to organize controls.
 | Name | Unique name used to reference this control. |
 | Caption | Label displayed on the top of the bevel. Use `""` for none. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `12` - The control ID specifying that this is a Bevel. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |

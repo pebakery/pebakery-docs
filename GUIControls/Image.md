@@ -15,7 +15,7 @@ Displays an image embedded within the script.
 | Name | Unique name used to reference this control. |
 | Image | The name of the encoded image to display on the control. `BMP` `JPG` `PNG` `GIF` `ICO` `SVG` formats are supported. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `5` - The control ID specifying that this is an Image. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |

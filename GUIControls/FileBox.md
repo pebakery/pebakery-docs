@@ -15,7 +15,7 @@ An input box with a browse button that allows you to select a file or directory.
 | Name | Unique name used to reference this control. |
 | Value | The path currently entered in the File Box. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `13` - The control ID specifying that this is a File Box. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |

@@ -15,7 +15,7 @@ Displays a text file embedded within the script.
 | Name | Unique name used to reference this control. |
 | FileName | The name of the encoded file to display. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `6` - The control ID specifying that this is a Text File. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |

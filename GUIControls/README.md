@@ -1,6 +1,6 @@
 # Script Interface Controls
 
-Interface Controls allow you to dynamically interact with the script.
+Interface Controls allow you to dynamically interact with a script.
 
 Controls must be placed in one or more dedicated interface `[Sections]` and cannot be mixed with other commands.
 
@@ -12,21 +12,21 @@ Click on the control's name in the table below for details on each control.
 
 | ID | Name | Description |
 | :---: | --- | --- |
-| 0 | [Text Box](../Controls/TextBox.md) | An input box that accepts a single line of text. |
-| 1 | [Text Label](../Controls/TextLabel.md) | Displays a line of text. |
-| 2 | [Number Box](../Controls/NumberBox.md) | An input box that accepts a number between a given minimum and maximum range. |
-| 3 | [Check Box](../Controls/CheckBox.md) | A box that can be "checked" or "unchecked". |
-| 4 | [Combo Box](../Controls/ComboBox.md) | A drop-down list allowing you to select a single value. |
-| 5 | [Image](../Controls/Image.md) | Displays an image embedded within the script. |
-| 6 | [Text File](../Controls/TextFile.md) | Displays a text file embedded within the script. |
+| 0 | [Text Box](./TextBox.md) | An input box that accepts a single line of text. |
+| 1 | [Text Label](./TextLabel.md) | Displays a line of text. |
+| 2 | [Number Box](./NumberBox.md) | An input box that accepts a number between a given minimum and maximum range. |
+| 3 | [Check Box](./CheckBox.md) | A box that can be "checked" or "unchecked". |
+| 4 | [Combo Box](./ComboBox.md) | A drop-down list allowing you to select a single value. |
+| 5 | [Image](./Image.md) | Displays an image embedded within the script. |
+| 6 | [Text File](./TextFile.md) | Displays a text file embedded within the script. |
 | 7 | Text Edit | **Not Implemented** - Alternatives, such as launching the file with *notepad.exe* are more flexible. |
-| 8 | [Button](../Controls/Button.md) | A simple button that can be used to run a section of code within the script. |
+| 8 | [Button](./Button.md) | A simple button that can be used to run a section of code within the script. |
 | 9 | Check List | **Not Implemented** - Not enough interest. Limited use cases. |
-| 10 | [Web Label](../Controls/WebLabel.md) | A hyperlink that will open a webpage in the default browser. |
-| 11 | [Radio Button](../Controls/RadioButton.md) | A circular button that can have only one radio button selected on the interface at a time. |
-| 12 | [Bevel](../Controls/Bevel.md) | A rectangular frame used to organize controls. |
-| 13 | [File Box](../Controls/FileBox.md) | An input box with a browse button that allows you to select a file or directory. |
-| 14 | [Radio Group](../Controls/RadioGroup.md) | A group of radio buttons. Only one radio button per group may be selected at a time. |
+| 10 | [Web Label](./WebLabel.md) | A hyperlink that will open a webpage in the default browser. |
+| 11 | [Radio Button](./RadioButton.md) | A circular button that can have only one radio button selected on the interface at a time. |
+| 12 | [Bevel](./Bevel.md) | A rectangular frame used to organize controls. |
+| 13 | [File Box](./FileBox.md) | An input box with a browse button that allows you to select a file or directory. |
+| 14 | [Radio Group](./RadioGroup.md) | A group of radio buttons. Only one radio button per group may be selected at a time. |
 
 ## Remarks
 
@@ -34,7 +34,7 @@ Z-Index: PEBakery draws controls in the order they are defined in the interface 
 
 ## Related
 
-[AddInterface](/Commands/Interface/AddInterface), [RefreshInterface](/Commands/System/RefreshInterface) [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[AddInterface](/Commands/Interface/AddInterface), [RefreshInterface](/Commands/System/RefreshInterface), [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
 
 ## Examples
 

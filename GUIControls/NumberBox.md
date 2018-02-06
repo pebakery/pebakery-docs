@@ -14,17 +14,19 @@ An input box that accepts a number between a given minimum and maximum range.
 | --- | --- |
 | Name | Unique name used to reference this control. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | The control ID specifying the type of the control. |
+| ControlID | `2` - The control ID specifying that this is a Number Box. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |
 | Height | Height of the control. |
 | Min | The minimum value the number box will allow. |
 | Max | The maximum value the number box will allow. |
-| Increment | Clicking the up/down arrows on the number box will increase the value by a factor of X. |
+| Increment | Clicking the up/down arrows on the number box will increase the value by a factor of *n*. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
 ## Remarks
+
+The `Value` of the number box can be read by referencing the control `Name` as a variable. Ex. `%NumberBox1%` or by using the `ReadInterface` command.
 
 ## Related
 
