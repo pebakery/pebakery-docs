@@ -28,6 +28,8 @@ A group of radio buttons. Only one radio button per group may be selected at a t
 
 ## Remarks
 
+The `Value` of the radio group can be read by referencing the control `Name` as a variable. Ex. `%RadioGroup1%` or by using the `ReadInterface` command.
+
 ## Related
 
 [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)

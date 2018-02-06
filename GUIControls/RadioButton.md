@@ -27,6 +27,8 @@ A circular button that can have only one radio button selected on the interface 
 
 ## Remarks
 
+The `Value` of the radio button can be read by referencing the control `Name` as a variable. Ex. `%RadioButton1%` or by using the `ReadInterface` command.
+
 ## Related
 
 [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)

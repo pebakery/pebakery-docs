@@ -25,6 +25,8 @@ An input box that accepts a single line of text.
 
 ## Remarks
 
+The `Value` of the text box can be read by referencing the control `Name` as a variable. Ex. `%TextBox1%` or by using the `ReadInterface` command.
+
 ## Related
 
 [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
