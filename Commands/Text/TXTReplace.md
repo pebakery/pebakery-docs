@@ -13,8 +13,8 @@ TXTReplace,<FileName>,<OldString>,<NewString>
 | Argument | Description |
 | --- | --- |
 | FileName | The full path of the file. |
-| OldString | String to be replaced in the file. `OldString` is **not** Case Sensitive.
-| NewString | String that will replace `OldString`
+| OldString | String to be replaced in the file. `OldString` is **not** Case Sensitive. |
+| NewString | String that will replace `OldString`. |
 
 ## Remarks
 

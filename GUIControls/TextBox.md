@@ -20,7 +20,7 @@ An input box that accepts a single line of text.
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |
 | Height | Height of the control. |
-| Value | The value of of the text box. |
+| Value | The value of the text box. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
 ## Remarks
