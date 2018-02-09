@@ -16,9 +16,11 @@ DirMake,<DestDir>
 
 ## Remarks
 
-[DirCopy](./DirCopy.md), [DirDelete](./DirDelete.md), [DirMove](/DirMove.md)
+None.
 
 ## Related
+
+[DirCopy](./DirCopy.md), [DirDelete](./DirDelete.md), [DirMove](/DirMove.md)
 
 ## Examples
 
