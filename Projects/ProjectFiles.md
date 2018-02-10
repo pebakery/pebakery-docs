@@ -45,12 +45,12 @@ For more details about encoded files see `Script Commands`.
 | Section | Description |
 | --- | --- |
 | EncodedFolders | Contains a list of folders containing encoded files. |
-| `_<FolderName>_` | Contains a list of files contained within the specified folder. |
-| `EncodedFile-_<FolderName>_-_<FileName>_` | Contains an encoded file. |
+| _\<FolderName>_ | Contains a list of files contained within the specified folder. |
+| EncodedFile-_\<FolderName>_-_\<FileName>_ | Contains an encoded file. |
 | InterfaceEncoded | Contains a list of encoded files used by the script's Graphical User Interface |
-| `EncodedFile-InterfaceEncoded-<FileName>` | Contains the encoded file referenced by `FileName` from the `InterfaceEncoded` section. |
+| EncodedFile-InterfaceEncoded-_\<FileName>_ | Contains the encoded file referenced by `FileName` from the `InterfaceEncoded` section. |
 | AuthorEncoded | Defines the script's logo image. |
-| `EncodedFile-AuthorEncoded-<FileName>` | Contains the encoded file for the script's logo image. |
+| EncodedFile-AuthorEncoded-_\<FileName>_ | Contains the encoded file for the script's logo image. |
 
 ## Remarks
 
