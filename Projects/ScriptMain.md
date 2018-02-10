@@ -25,7 +25,7 @@ The following values are used by PEBakery to define a script and it's behavior. 
 || True - The script is selected in the project tree and will be processed. |
 || False - The script is deselected in the project tree and will not be processed. |
 || None - The script is not allowed to be selected/deselected and will not be processed. Used primarily for configuration and utility scripts. |
-| [Interface](../GUIControls/README.md) | **(Optional)** Specifies the section that contains the currently displayed Graphical User Interface of the script. Default is `Interface`. |
+| Interface | **(Optional)** Specifies the section that contains the currently displayed Graphical User Interface of the script. Default is `Interface`. |
 | Mandatory | **(Optional)** The script will be processed and cannot be disabled. **Default** is `False`.|
 
 ## Remarks

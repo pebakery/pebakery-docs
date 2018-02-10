@@ -4,7 +4,23 @@
 
 Each .script file may contain variables, macros, commands, encoded files, and possibly a Graphical User Interface (GUI) that work together to perform various tasks; from building the core of the project to adding additional applications and configuring settings.
 
-The file must be located in PEBakery’s `Projects` directory, under the respective project folder.
+## File Location
+
+The .script files must be located in PEBakery’s `Projects` directory, under the respective project folder.
+
+```
+C:\PEBakery\
+|--- Projects\
+     |--- myProject\
+          |--- script.project
+          |--- Build\
+               |--- myScript1.script
+               |--- myScript2.script
+          |--- myScript3.script
+     |--- Tools\
+|--- Launcher.exe
+|--- PEBakery.ini
+```
 
 ## File Format
 
@@ -16,7 +32,9 @@ The structure of a .script file consists of 4 major sections. Additional section
 
 ### Main Sections
 
-The following sections define the behavior and actions of the script. Click on a `Section` name for more details.
+The following sections define the behavior and actions of the script.
+
+Click on a `Section` name for more details.
 
 | Section | Description |
 | --- | --- |
@@ -33,8 +51,8 @@ For more details about encoded files see `Script Commands`.
 | Section | Description |
 | --- | --- |
 | EncodedFolders | Contains a list of folders containing encoded files. |
-| _<FolderName>_ | Contains a list of files contained within the specified folder. |
-| EncodedFile-_<FolderName>_-_<FileName>_ | Contains an encoded file. |
+| `_<FolderName>_` | Contains a list of files contained within the specified folder. |
+| `EncodedFile-_<FolderName>_-_<FileName>_` | Contains an encoded file. |
 | InterfaceEncoded | Contains a list of encoded files used by the script's Graphical User Interface |
 | `EncodedFile-InterfaceEncoded-<FileName>` | Contains the encoded file referenced by `FileName` from the `InterfaceEncoded` section. |
 | AuthorEncoded | Defines the script's logo image. |
@@ -46,4 +64,4 @@ None.
 
 ## Related
 
-[Project File (script.project)](./ProjectFiles.md)
+[Script Levels](.ScriptLevels.md), [Project File (script.project)](./ProjectFiles.md)

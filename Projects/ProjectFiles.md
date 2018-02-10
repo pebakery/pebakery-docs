@@ -4,7 +4,19 @@ The `Script.Project` file defines a project.
 
 Each project has one, and only one script.project file that may contain variables, macros, commands, encoded files, and possibly a Graphical User Interface (GUI) that make up the base of the project.
 
+## File Location
+
 The file must be located in a sub-folder (usually matching the `Title` of the project) of PEBakery's `Projects` directory.
+
+```
+C:\PEBakery\
+|--- Projects\
+     |--- myProject\
+          |--- script.project
+     |--- Tools\
+|--- Launcher.exe
+|--- PEBakery.ini
+```
 
 ## File Format
 
@@ -33,8 +45,8 @@ For more details about encoded files see `Script Commands`.
 | Section | Description |
 | --- | --- |
 | EncodedFolders | Contains a list of folders containing encoded files. |
-| _<FolderName>_ | Contains a list of files contained within the specified folder. |
-| EncodedFile-_<FolderName>_-_<FileName>_ | Contains an encoded file. |
+| `_<FolderName>_` | Contains a list of files contained within the specified folder. |
+| `EncodedFile-_<FolderName>_-_<FileName>_` | Contains an encoded file. |
 | InterfaceEncoded | Contains a list of encoded files used by the script's Graphical User Interface |
 | `EncodedFile-InterfaceEncoded-<FileName>` | Contains the encoded file referenced by `FileName` from the `InterfaceEncoded` section. |
 | AuthorEncoded | Defines the script's logo image. |
@@ -46,4 +58,4 @@ None.
 
 ## Related
 
-[Script Files (.script)](./ScriptFiles.md)
+[Script Commands](/Commands/Script/README.md), [Script Files (.script)](./ScriptFiles.md)

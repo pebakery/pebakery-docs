@@ -6,7 +6,11 @@ Welcome to the PEBakery Manual!
 
 1. Scripting Reference
     * [.Script Syntax](./LangRef/Syntax.md)
-    * [Project Files](./Projects/README.md)
+    * [Project Components](./Projects/README.md)
+         * Scripts
+         * Links
+         * Folders
+         * Projects
     * [Commands](./Commands/README.md)
     * [GUI Controls](./GUIControls/README.md)
 1. Appendix
