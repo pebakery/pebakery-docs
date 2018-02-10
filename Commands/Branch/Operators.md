@@ -27,11 +27,14 @@ These tests are used in conjunction with the `If` command to determine if a file
 | ExistSection | Checks to see if a [Section] exists within a file. |
 | ExistRegSubKey<br/>ExistRegSection | Checks to see if a key exists within a registry hive. |
 | ExistRegValue<br/>ExistRegKey | Checks to see if a value exists within a registry hive. |
+| ExistRegMulti | Checks for the existence of a substring in a multiple string value. |
 | ExistVar | Checks to see if a variable is defined. |
 | ExistMacro | Checks to see if a macro is defined. |
-| ExistRegMulti | Checks for the existence of a substring in a multiple string value. |
 | Online | Checks to see if the computer has an active network connection. |
 | Ping | Checks to see if a remote host can be reached by sending an ICMP echo-request to a specified host. Returns true if a valid ICMP echo-response is received. *Note: The presence and configuration of proxies, network address translation (NAT) equipment, or firewalls can prevent Ping from succeeding.* |
+| WimExistIndex | Checks to see if the specified Index exists within a WIM file. Split WIMs (.swm) are supported. |
+| WimExistFile | Checks to see if a file exists within a WIM file. Split WIMs (.swm) are supported. |
+| WimExistDir | Checks to see if a directory exists within a WIM file. Split WIMs (.swm) are supported. |
 
 ## Logic Operators
 
@@ -115,7 +118,7 @@ If,ExistRegSubKey,HKLM,SOFTWARE\Microsoft\Windows NT\CurrentVersion,Message,"Reg
 If,ExistSection,%ScriptFile%,Process,Message,"Process section exists in %ScriptFile%"
 
 // Syntax: If,ExistVar,<Variable>,<Command>
-If,ExistVar,%Value1%,Message,"Variable: #$pValue1#$p Exists"
+If,ExistVar,%Value1%,Message,"Variable: #$pValue1#$p exists"
 
 // Syntax: If,Online,<Command>
 If,Online,Message,"Network Connection Found"
@@ -124,4 +127,14 @@ If,Online,Message,"Network Connection Found"
 // Syntax: If,Ping,<Dest>,<Command>
 If,Ping,127.0.0.1,Message,"I can ping 127.0.0.1"
 If,Ping,google.com,Message,"I can ping google.com"
+
+// Syntax: If,WimExistIndex,<SrcWim>,<ImageIndex>
+If,WimExistIndex,C:\Temp\boot.wim,1,Message,"The Index exists"
+
+// Syntax: If,WimExistDir,<SrcWim>,<ImageIndex>,<DirPath>
+If,WimExistDir,C:\Temp\boot.wim,1,Windows\System32,Message,"The Directory exists within the WIM image."
+
+// Syntax: If,WimExistFile,<SrcWim>,<ImageIndex>,<FilePath>
+If,WimExistFile,C:\Temp\boot.wim,1,Windows\regedit.exe,Message,"The File exists within the WIM image."
+
 ```

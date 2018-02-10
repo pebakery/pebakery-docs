@@ -19,7 +19,7 @@ RegDelete,<HKEY>,<KeyPath>[,ValueName]
 || HKEY_CURRENT_USER or HKCU |
 || HKEY_USERS or HKU |
 | KeyPath | The full path of the registry key. |
-| ValueName | **[optional]** If specified only the value will be deleted. |
+| ValueName | **(Optional)** The value to be deleted. If `ValueName` is not specified the entire registry key will be removed. |
 
 ## Remarks
 
