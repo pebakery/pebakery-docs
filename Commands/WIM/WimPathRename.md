@@ -1,6 +1,6 @@
 # WimPathRename
 
-Move or Rename a file or directory tree in a Windows Imaging (.wim) file.
+Moves or Renames a file or directory tree in a Windows Imaging (.wim) file.
 
 ## Syntax
 

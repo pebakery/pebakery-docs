@@ -2,7 +2,7 @@
 
 Rebuilds a Windows Imaging (.wim) file.
 
-The new WIM is written to a temporary file, and renamed to the original filename once the rebuild is complete. Rebuilding will remove any holes that have been left in the WIM as a result of appending or deleting files or images, so the new WIM may be smaller than the old WIM.
+Rebuilding will remove any holes that have been left in the WIM as a result of appending or deleting files or images, so the new WIM may be smaller than the old WIM.
 
 By default, `WimOptimize` will reuse existing compressed data however, it is also possible to re-compress the WIM file using another algorithm during the rebuild process.
 

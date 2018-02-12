@@ -1,6 +1,6 @@
 # WimPathAdd
 
-Add a file or directory tree to a Windows Imaging (.wim) file.
+Adds a file or directory tree to a Windows Imaging (.wim) file.
 
 ## Syntax
 
