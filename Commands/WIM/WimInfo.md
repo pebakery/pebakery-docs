@@ -5,15 +5,15 @@ Retrieves information about a Windows Imaging (.wim) file.
 ## Syntax
 
 ```pebakery
-WimInfo,<SrcWim>,<ImageIndex>,<Property>,<%DestVar%>
+WimInfo,<WimFile>,<ImageIndex>,<Property>,<%DestVar%>
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcWim | The full path to the source files to be captured. |
-| ImageIndex | The index of the image within the .wim file to retrieve info from. |
+| WimFile | The full path to the .wim file. |
+| ImageIndex | The index of the image within the WIM file to retrieve info from. |
 || 0 - Retrieve basic information about the WIM file. See **WIM File Properties**. |
 || 1 - Retrieve information about the 1st image in the WIM file. See **Image Properties**. |
 || _n_ - Retrieve information about the _nth_ image in the WIM file. |

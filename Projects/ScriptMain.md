@@ -45,7 +45,7 @@ A typical `Main` section for an application script.
 ```pebakery
 [Main]
 Title=My App Script
-Description=Adds myApp the the project.
+Description=Adds myApp to the project.
 Author=Homes32
 Credits=Thanks to ied206 for creating PEBakery!
 Selected=True

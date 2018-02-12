@@ -13,4 +13,8 @@ Click on a Command name for a detailed description.
 | [WimExtractBulk](./WimExtractBulk.md) | Uses a "list file" to extract one or more files or directory trees from a Windows Imaging file. |
 | [WimInfo](./WimInfo.md) | Retrieves information about a Windows Imaging file. |
 | [WimMount](./WimMount.md) | Mounts an image in a Windows Imaging file to the specified directory. |
+| [WimOptimize](./WimOptimize.md) | Rebuilds a Windows Imaging (.wim) file. |
+| [WimPathAdd](./WimPathAdd.md) | Add a file or directory tree to a Windows Imaging (.wim) file. |
+| [WimPathDelete](./WimPathDelete.md) | Removes a file or directory tree from a Windows Imaging (.wim) file. |
+| [WimPathRename](./WimPathRename.md) | Move or Rename a file or directory tree in a Windows Imaging (.wim) file. |
 | [WimUnmount](./WimUnmount.md) | Unmounts a mounted image in a Windows Imaging file from the specified directory. |

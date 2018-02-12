@@ -5,14 +5,14 @@ Adds an image to an existing Windows Imaging (.wim) file.
 ## Syntax
 
 ```pebakery
-WimAppend,<SrcDir>,<DestWim>,<Compress>[,ImageName=<String>][,ImageDesc=<String>][,Flags=<String>][,DeltaIndex=<Integer>][,BOOT][,CHECK][,NOACL]
+WimAppend,<SrcDir>,<DestWim>[,ImageName=<String>][,ImageDesc=<String>][,Flags=<String>][,DeltaIndex=<Integer>][,BOOT][,CHECK][,NOACL]
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcWim | The full path to the source files to be captured. |
+| SrcDir | The full path to the source files to be captured. |
 | DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist it will be created. |
 | ImageName= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
 | ImageDesc= | **(Optional)** Additional information about the image. |
@@ -33,17 +33,17 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-Data integrity: WIM files include checksums of all file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+**Data integrity:** WIM files include checksums of all file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-Note: It has been observed that wimlib's `--update-of` mode used by the `DeltaIndex` argument is not completely reliable at detecting changes in file contents, sometimes causing the old contents of a few files to be archived rather than the current contents. The cause of this problem is that Windows does not immediately update a file’s last modification timestamp after every write to that file. Unfortunately, there is no known way for applications like wimlib to automatically work around this bug. Manual workarounds are possible; theoretically, taking any action that causes the problematic files to be closed, such as restarting applications or the computer itself, should cause the file's last modification timestamps to be updated. Also note that wimlib compares file sizes as well as timestamps in determining whether a file has changed, which helps make the problem less likely to occur.
+**Warning:** It has been observed that wimlib's `--update-of` mode used by the `DeltaIndex` argument is not completely reliable at detecting changes in file contents, sometimes causing the old contents of a few files to be archived rather than the current contents. The cause of this problem is that Windows does not immediately update a file’s last modification time-stamp after every write to that file. Unfortunately, there is no known way for applications like wimlib to automatically work around this bug. Manual workarounds are possible; theoretically, taking any action that causes the problematic files to be closed, such as restarting applications or the computer itself, should cause the file's last modification timestamps to be updated. Also note that wimlib compares file sizes as well as timestamps in determining whether a file has changed, which helps make the problem less likely to occur.
 
-Split WIMs: PEBakery does not support appending to split WIM files (.swm).
+**Split WIMs:** PEBakery does not support appending to split WIM files (.swm).
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
-[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimCapture](./WimCapture.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimCapture](./WimCapture.md), [WimPathAdd](./WimPathAdd.md), [WimPathDelete](./WimPathDelete.md), [WimPathRename](./WimPathRename.md)
 
 ## Examples
 

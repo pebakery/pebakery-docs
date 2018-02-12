@@ -12,7 +12,7 @@ WimCapture,<SrcDir>,<DestWim>,<Compress>[,ImageName=<String>][,ImageDesc=<String
 
 | Argument | Description |
 | --- | --- |
-| SrcWim | The full path to the source files to be captured. |
+| SrcDir | The full path to the source files to be captured. |
 | DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist it will be created. |
 | Compress | Supported Compression levels: |
 || NONE - No Compression. |
@@ -37,13 +37,13 @@ The following flags can be used independently and can be specified in any order.
 
 ## Remarks
 
-Data integrity: WIM files include checksums of all file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+**Data integrity:** WIM files include checksums of all file data. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
-[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimAppend](./WimAppend.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimAppend](./WimAppend.md), [WimPathAdd](./WimPathAdd.md), [WimPathDelete](./WimPathDelete.md), [WimPathRename](./WimPathRename.md)
 
 ## Examples
 

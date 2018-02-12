@@ -1,6 +1,6 @@
 # WimExtractBulk
 
-Extracts one or more files or directory trees from a Windows Imaging (.wim) file.
+Uses a "list file" to extract one or more files or directory trees from a Windows Imaging (.wim) file.
 
 Wildcards are supported, allowing multiple files or directories to be copied at one time.
 
@@ -69,11 +69,11 @@ Windows\System32\en-US\*
 
 ## Remarks
 
-Data integrity: In order to detect accidental (non-malicious) data corruption, the checksum of every file extracted is calculated and an error is returned if it does not match the checksum included in the WIM file. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
+**Data integrity:** In order to detect accidental (non-malicious) data corruption, the checksum of every file extracted is calculated and an error is returned if it does not match the checksum included in the WIM file. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not check the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-ESD files: PEBakery can extract files from solid-compressed WIMs, or "ESD" (.esd) files, just like from normal WIM (.wim) files. However, Microsoft sometimes distributes ESD files with encrypted segments; PEBakery cannot extract such files until they have been decrypted.
+**ESD files:** PEBakery can extract files from solid-compressed WIMs, or "ESD" (.esd) files, just like from normal WIM (.wim) files. However, Microsoft sometimes distributes ESD files with encrypted segments; PEBakery cannot extract such files until they have been decrypted.
 
-Split WIMs: PEBakery supports extracting from split WIM files (.swm) using the `Split=` argument.
+**Split WIMs:** PEBakery supports extracting from split WIM files (.swm) using the `Split=` argument.
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
