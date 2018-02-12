@@ -9,6 +9,7 @@ Click on a Command name for a detailed description.
 | [WimAppend](./WimAppend.md) | Adds an image to an existing Windows Imaging file. |
 | [WimApply](./WimApply.md) | Extracts ("applies") an image from a Windows Imaging file. |
 | [WimCapture](./WimCapture.md) | Creates a new Windows Imaging file. |
+| [WimDelete](./WimDelete.md) | Deletes an image from a Windows Imaging (.wim) file. |
 | [WimExtract](./WimExtract.md) | Extracts one or more files or directory trees from a Windows Imaging file. |
 | [WimExtractBulk](./WimExtractBulk.md) | Uses a "list file" to extract one or more files or directory trees from a Windows Imaging file. |
 | [WimInfo](./WimInfo.md) | Retrieves information about a Windows Imaging file. |
