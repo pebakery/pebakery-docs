@@ -33,7 +33,7 @@ This command uses the the open source [Windows Imaging library (wimlib)](https:/
 
 ## Related
 
-[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimPathAdd](./WimPathAdd.md), [WimPathRename](./WimPathRename.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimDelete](./WimDelete.md), [WimPathAdd](./WimPathAdd.md), [WimPathRename](./WimPathRename.md)
 
 ## Examples
 

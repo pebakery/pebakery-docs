@@ -74,7 +74,7 @@ The following is a non-exhaustive list of custom image properties used by the Mi
 
 ## Remarks
 
-Split WIMs: PEBakery does not support retrieving info from split WIM files (.swm).
+**Split WIMs:** PEBakery does not support retrieving info from split WIM files (.swm).
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 

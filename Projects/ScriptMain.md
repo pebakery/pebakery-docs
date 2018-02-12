@@ -20,7 +20,7 @@ The following values are used by PEBakery to define a script and it's behavior. 
 | Credits | **(Optional)** Acknowledgment of people or teams that contributed to the script's development. |
 | Date | **(Optional)** Date the script was released. (Recommended format is YYYY-MM-DD.) |
 | Version | **(Optional)** Version number of the script. |
-| [Level](./ScriptLevel.md) | Defines the sequence in which the script is processed. **Default** is `0`.|
+| [Level](./ScriptLevels.md) | Defines the sequence in which the script is processed. **Default** is `0`.|
 | Selected | **(Optional)** Defines how the script can be selected for processing. **Default** is `True`. |
 || True - The script is selected in the project tree and will be processed. |
 || False - The script is deselected in the project tree and will not be processed. |
