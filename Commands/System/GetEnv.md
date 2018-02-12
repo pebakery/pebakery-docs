@@ -27,7 +27,7 @@ The following is a list of commonly used environment variables defined in modern
 | COMPUTERNAME | The name of the computer. |
 | NUMBER_OF_PROCESSORS | The number of processor cores in your CPU. |
 | OS | Operating System Family. Ex. `Windows_NT`. |
-| PROCESSOR_ARCHITECTURE=AMD64 | CPU Architecture. Ex. `x86` or `AMD64`. |
+| PROCESSOR_ARCHITECTURE | CPU Architecture. Ex. `x86` or `AMD64`. |
 | ProgramData | The path to the folder containing Shared Application Data. Usually `C:\ProgramData`. |
 | ProgramFiles | The path to the folder containing installed applications. Usually `C:\Program Files`. |
 | ProgramFiles(x86) | On 64bit operating systems this is the path to the folder containing installed 32bit applications. Usually `C:\Program Files (x86)`. |
