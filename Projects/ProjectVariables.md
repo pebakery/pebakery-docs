@@ -29,13 +29,15 @@ The following variables may be used within the _script.project_ Variables sectio
 myMacro=Run,%PluginFile%,DoSomething
 ```
 
+Note that the macro name is **not** enclosed in `%` signs.
+
 ## Remarks
 
-Note: With Winbuilder it was necessary to load a "Macro Library" by placing the `AddVariables,%API%,ApiVar,GLOBAL` command in the process section of _script.project_. In PEBakery this is not required. Macros defined in the `%API` `APIVAR` section will automatically be loaded in to the GLOBAL scope.
+Note: With Winbuilder it was necessary to load a "Macro Library" by placing the `AddVariables,%API%,ApiVar,GLOBAL` command in the process section of _script.project_. In PEBakery this is not required. Macros defined in the `%API%` file's `%APIVAR%` section will automatically be loaded in to the GLOBAL scope.
 
 ## Related
 
-[Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess), [Script Variables](./ScriptVariables.md)
+[Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess), [Script Variables](./ScriptVariables.md), [Macros](/LangRef/Macros.md)
 
 ## Examples
 

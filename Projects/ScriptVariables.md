@@ -20,13 +20,15 @@ Script variables and macros are defined using the .INI style `Key=Value` format.
 myMacro=Run,%PluginFile%,DoSomething
 ```
 
+Note that the macro name is **not** enclosed in `%` signs.
+
 ## Remarks
 
 None.
 
 ## Related
 
-[AddVariables](/Commands/Control/AddVariables.md), [Exec](/Commands/Branch/Exec.md), [Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Project Variables](./ProjectVariables.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess)
+[AddVariables](/Commands/Control/AddVariables.md), [Exec](/Commands/Branch/Exec.md), [Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Project Variables](./ProjectVariables.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess), [Macros](/LangRef/Macros.md)
 
 ## Examples
 
