@@ -17,7 +17,7 @@ WimApply,<SrcWim>,<ImageIndex>,<DestDir>[,Split=<String>][,CHECK][,NOACL][,NOATT
 | SrcWim | The full path of the .wim file to be extracted. |
 | ImageIndex | The index of the image in the .wim file to be extracted. |
 | DestDir | The full path to the directory where the .wim file is to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
-| Split= | A string consisting of a shell-style file "GLOB" that specifies the additional parts of the split WIM. The GLOB must expand to include all parts of the split WIM. Wildcards (? *) are supported. |
+| Split= | **(Optional)** A string consisting of a shell-style file "GLOB" that specifies the additional parts of the split WIM. The GLOB must expand to include all parts of the split WIM. Wildcards (? *) are supported. |
 
 ### Flags
 

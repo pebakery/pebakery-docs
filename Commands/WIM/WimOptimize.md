@@ -9,7 +9,7 @@ By default, `WimOptimize` will reuse existing compressed data however, it is als
 ## Syntax
 
 ```pebakery
-WimOptimize,<WimFile>[,RECOMPRESS[=<STR>]][,CHECK|NOCHECK]
+WimOptimize,<WimFile>[,ReComp[=<STR>]][,CHECK|NOCHECK]
 ```
 
 ### Arguments
@@ -17,7 +17,8 @@ WimOptimize,<WimFile>[,RECOMPRESS[=<STR>]][,CHECK|NOCHECK]
 | Argument | Description |
 | --- | --- |
 | WimFile | The full path of the .wim file to optimize. |
-| RECOMPRESS= | **(Optional)** Re-compress all data in the WIM. This will significantly increase the time needed to optimize the WIM, but it may result in a better compression ratio if the original image was not created using Wimlib. To rebuild the WIM with the existing compression format use `RECOMPRESS`. To change the compression algorithm use `RECOMPRESS=` and specify one of the following compression algorithms: |
+| ReComp= | **(Optional)** Re-compress all data in the WIM. This will significantly increase the time needed to optimize the WIM, but it may result in a better compression ratio if the original image was not created using Wimlib. Specify one of the following compression algorithms: |
+|| KEEP - Retain the existing compression format. |
 || NONE - No Compression. |
 || XPRESS - Fast compression and decompression, but results in a larger image size. _(Similar to DISM.exe  /compress:fast )_ |
 || LZX - Zip style DEFLATE compression. _(Similar to DISM.exe: /compress:maximum)_ |
@@ -36,13 +37,13 @@ The following flags are mutually exclusive.
 
 **Data integrity:** In order to detect accidental (non-malicious) data corruption, the checksum of every file extracted is calculated and an error is returned if it does not match the checksum included in the WIM file. In addition, a WIM file can include an integrity table (extra checksums) over the raw data of the entire WIM file. For performance reasons PEBakery does not verify or create the integrity table by default, but the `CHECK` flag can be specified to make it do so.
 
-**Split WIMs:** `WimOptimize` does not support split WIMs or delta WIMs.
+**Split WIMs:** `WimOptimize` does not support split WIMs or delta WIMs. For such files, consider using `WimExport` instead.
 
 This command uses the the open source [Windows Imaging library (wimlib)](https://wimlib.net/).
 
 ## Related
 
-[WimAppend](./WimAppend.md), [WimCapture](./WimCapture.md), [WimPathAdd](./WimPathAdd.md), [WimPathDelete](./WimPathDelete.md), [WimPathRename](./WimPathRename.md)
+[WimAppend](./WimAppend.md), [WimCapture](./WimCapture.md), [WimExport](./WimExport.md), [WimPathAdd](./WimPathAdd.md), [WimPathDelete](./WimPathDelete.md), [WimPathRename](./WimPathRename.md)
 
 ## Examples
 
@@ -59,15 +60,15 @@ WimOptimize,C:\Temp\Install.wim
 Rebuild and re-compress *install.wim*.
 
 ```pebakery
-WimOptimize,C:\Temp\Install.wim,RECOMPRESS
+WimOptimize,C:\Temp\Install.wim,ReComp=KEEP
 ```
 
 ### Example 3
 
-Rebuild and re-compress *install.wim* using LZX compression.
+Rebuild and re-compress *install.wim* using LZMS compression.
 
 ```pebakery
-WimOptimize,C:\Temp\Install.wim,RECOMPRESS=LXZ
+WimOptimize,C:\Temp\Install.wim,ReComp=LZMS
 // Rename to a install.esd
 FileRename,C:\Temp\install.wim,C:\Temp\install.esd
 ```
