@@ -9,7 +9,7 @@ Note that `WimExtract` is intended for extracting only a subset of a WIM image. 
 ## Syntax
 
 ```pebakery
-WimExtract,<SrcWim>,<ImageIndex>,<DestDir>,<ExtractPath>[,Split=<String>][,CHECK][,NOACL][,NOATTRIB]
+WimExtract,<SrcWim>,<ImageIndex>,<ExtractPath>,<DestDir>[,Split=<String>][,CHECK][,NOACL][,NOATTRIB]
 ```
 
 ### Arguments
@@ -18,8 +18,8 @@ WimExtract,<SrcWim>,<ImageIndex>,<DestDir>,<ExtractPath>[,Split=<String>][,CHECK
 | --- | --- |
 | SrcWim | The full path of the .wim file to extract files from. |
 | ImageIndex | The index of the image within the .wim file containing the files to be extracted. |
-| DestDir | The full path to the directory where the files are to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
 | ExtractPath | The full path of the file(s) within the image to be extracted. All paths are relative to the image's root directory. Wildcards (* ?) are allowed. |
+| DestDir | The full path to the directory where the files are to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
 | Split= | **(Optional)** A string consisting of a shell-style file "GLOB" that specifies the additional parts of the split WIM. The GLOB must expand to include all parts of the split WIM. Wildcards (? *) are supported. |
 
 ### Flags
@@ -54,7 +54,7 @@ This example extracts a single file from the 1st image of *C:\Temp\boot.wim* to 
 
 ```pebakery
 Echo,"Extracting Regedit..."
-WimExtract,C:\Temp\boot.wim,1,C:\Temp\Target,Windows\regedit.exe
+WimExtract,C:\Temp\boot.wim,1,Windows\regedit.exe,C:\Temp\Target
 ```
 
 ### Example 2
@@ -63,5 +63,5 @@ This example will extract all .dll files from the *Windows\System32* directory i
 
 ```pebakery
 Echo,"Extracting all dll files from [boot.wim] [Index: 1] to Windows\System32..."
-WimExtract,C:\Temp\boot.wim,1,C:\Temp\Target,Windows\System32\*.dll,NOACL
+WimExtract,C:\Temp\boot.wim,1,Windows\System32\*.dll,C:\Temp\Target,NOACL
 ```
