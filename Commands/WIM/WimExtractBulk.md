@@ -9,7 +9,7 @@ Note that `WimExtractBulk` is intended for extracting only a subset of a WIM ima
 ## Syntax
 
 ```pebakery
-WimExtractBulk,<SrcWim>,<ImageIndex>,<DestDir>,<ListFile>[,Split=<String>][,CHECK][,NOACL][,NOATTRIB]
+WimExtractBulk,<SrcWim>,<ImageIndex>,<ListFile>,<DestDir>[,Split=<String>][,CHECK][,NOACL][,NOATTRIB]
 ```
 
 ### Arguments
@@ -18,8 +18,8 @@ WimExtractBulk,<SrcWim>,<ImageIndex>,<DestDir>,<ListFile>[,Split=<String>][,CHEC
 | --- | --- |
 | SrcWim | The full path of the .wim file to extract files from. |
 | ImageIndex | The index of the image within the .wim file containing the files to be extracted. |
-| DestDir | The full path to the directory where the files are to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
 | ListFile | The full path a text file that contains a list of paths to extract. See the _List File Specification_ below for more details. |
+| DestDir | The full path to the directory where the files are to be extracted. Any existing duplicate files will be overwritten. If the directory structure does not exist it will be created. |
 | Split= | **(Optional)** A string consisting of a shell-style file "GLOB" that specifies the additional parts of the split WIM. The GLOB must expand to include all parts of the split WIM. Wildcards (? *) are supported. |
 
 ### Flags
@@ -89,7 +89,7 @@ This example extracts multiple files and directories from the 4th image of *C:\T
 
 ```pebakery
 Echo,"Extracting from ListFile..."
-WimExtractBulk,%install.wim%,4,C:\Temp\Target\Extract,C:\Temp\Target\FileList.txt,NOACL
+WimExtractBulk,%install.wim%,4,C:\Temp\Target\FileList.txt,C:\Temp\Target\Extract,NOACL
 ```
 
 FileList.txt
