@@ -40,6 +40,8 @@ This statement can be written anywhere inside the running part of **any** script
 
 ### Example 1
 
+This interactive script allows you to see how the OnScriptExit and OnBuildExit commands react under different circumstances.
+
 ```pebakery
 [Main]
 Title=OnScriptExit/OnBuildExit
@@ -125,5 +127,37 @@ Echo,"End of Cleanup."
 
 [CLEANUP-2]
 Echo,"We can run commands from other sections as well..."
+
+```
+
+### Example 2
+
+This example shows how to use a cleanup function in your `script.project` file to perform actions when a build exits.
+
+```pebakery
+[Main]
+Title=MyProject
+Description=MyProject OnBuildExit Example
+Author=Homes32
+Level=0
+Selected=None
+
+[Variables]
+// Registry Globals
+%RegSystem%=%TargetDir%\Windows\System32\config\System
+%RegSoftware%=%TargetDir%\Windows\System32\config\Software
+%RegDefault%=%TargetDir%\Windows\System32\config\Default
+%RegComponents%=%TargetDir%\Windows\System32\config\Components
+
+[Process]
+Echo,"Starting %ProjectTitle% Build..."
+System,OnBuildExit,Exec,%ProjectDir%\script.project,CleanupProject
+
+[CleanupProject]
+// Make sure hives are unloaded even if the build fails.
+If,ExistRegSubKey,HKLM,Tmp_Software,RegHiveUnload,Tmp_Software
+If,ExistRegSubKey,HKLM,Tmp_System,RegHiveUnload,Tmp_System
+If,ExistRegSubKey,HKLM,Tmp_Default,RegHiveUnload,Tmp_Default
+If,ExistRegSubKey,HKLM,Tmp_Components,RegHiveUnload,Tmp_Components
 
 ```
