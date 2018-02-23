@@ -2,6 +2,8 @@
 
 ## Categories
 
+Click on a Category below for a list of supported commands.
+
 | Category | Description |
 | --- | --- |
 | [Archive](./Archive/README.md) | Commands for extracting and compressing files to and from various archive formats. |
