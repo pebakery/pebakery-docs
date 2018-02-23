@@ -1,6 +1,8 @@
 # Deprecated Commands
 
-## Deprecated from WinBuilder 082
+## Deprecated from WinBuilder 082:
+
+These commands not implemented in PEBakery.
 
 ### FileByteExtract
 
@@ -46,7 +48,9 @@ No longer used, PEBakery will always split parameters.
 
 No longer used.
 
-## Commands will be deprecated
+## Commands that will be deprecated:
+
+These commands are fully functional within PEBakery but will be removed in a future release.
 
 ### ExtractAndRun
 
