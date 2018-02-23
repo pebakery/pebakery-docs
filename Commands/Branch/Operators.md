@@ -25,8 +25,8 @@ These tests are used in conjunction with the `If` command to determine if a file
 | ExistFile | Checks to see if a file exists. |
 | ExistDir | Checks to see if a directory exists. |
 | ExistSection | Checks to see if a [Section] exists within a file. |
-| ExistRegSubKey<br/>ExistRegSection | Checks to see if a key exists within a registry hive. |
-| ExistRegValue<br/>ExistRegKey | Checks to see if a value exists within a registry hive. |
+| ExistRegSubKey<br/>ExistRegSection | Checks to see if a key exists within a registry hive. `ExistRegSection` is supported for backwards compatibility with Winbuilder scripts, however newer scripts should use the more accurately named `ExistRegSubKey` command instead. |
+| ExistRegValue<br/>ExistRegKey | Checks to see if a value exists within a registry hive. `ExistRegKey` is supported for backwards compatibility with Winbuilder scripts, however newer scripts should use the more accurately named `ExistRegValue` command instead. |
 | ExistRegMulti | Checks for the existence of a substring in a multiple string value. |
 | ExistVar | Checks to see if a variable is defined. |
 | ExistMacro | Checks to see if a macro is defined. |

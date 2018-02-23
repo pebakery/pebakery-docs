@@ -20,9 +20,11 @@ AddInterface,<ScriptFile>,<Interface>,<Prefix>
 
 The `AddInterface` command is required in order to read all the components in your script in the event you make use of multiple interface "pages". You can also use `AddInterface` to access the values of components in another script, as long as you know the component names.
 
+As long as your control names are unique or you use a `Prefix` you can load as many interfaces at once as you need.
+
 ## Related
 
-[Script Interface](#)
+[Script Interface](/Projects/ScriptInterface.md)
 
 ## Examples
 
