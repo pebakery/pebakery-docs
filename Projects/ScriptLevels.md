@@ -12,7 +12,7 @@ PEBakery will use the following properties to determine the processing order of 
 
 ### Levels
 
-There are 10 levels defined by PEBakery. Processing starts at level 1 and continues on to the subsequent level after all scripts under the current level are processed.
+PEBakery will recognize up to 256 levels, however for practical reasons most projects categorize their scripts into 10 levels. Processing starts at level 1 and continues on to the subsequent level after all scripts under the current level are processed.
 
 Scripts with negative levels will be hidden from the project tree and will not be processed. These scripts are intended to be used as a library to store configuration, macros, code, or attached files used by other scripts when such items do not need to be directly accessed by the end user.
 

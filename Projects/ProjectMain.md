@@ -26,6 +26,8 @@ The following values are used by PEBakery to define a project. Project developer
 | TargetDir | Full path to the directory where the project will be built. The value is copied to `GLOBAL` variable `%TargetDir%` at build time. |
 | IsoFile | Full path to the .iso file to be generated. The value is copied to `GLOBAL` variable `%IsoFile%` at build time. |
 
+`SourceDir`, `TargetDir`, and `IsoFile` are included for compatibility with Winbuilder 082. They are not required for PEBakery projects, which generally store their paths in a GLOBAL variable.
+
 ## Remarks
 
 None.
@@ -38,7 +40,21 @@ None.
 
 ### Example 1
 
-A typical `Main` section for an project.
+A typical project `Main` section.
+
+```pebakery
+[Main]
+Title=MyWinPE
+Description=My PEBakery project
+Author=James Bond
+Version=1
+Date=2018.02.10
+PathSetting=False
+```
+
+### Example 2
+
+A typical "legacy project" `Main` section.
 
 ```pebakery
 [Main]
