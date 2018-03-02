@@ -9,7 +9,7 @@ By default, `WimOptimize` will reuse existing compressed data however, it is als
 ## Syntax
 
 ```pebakery
-WimOptimize,<WimFile>[,ReComp[=<STR>]][,CHECK|NOCHECK]
+WimOptimize,<WimFile>[,ReComp=<STR>][,CHECK|NOCHECK]
 ```
 
 ### Arguments
