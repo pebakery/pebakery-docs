@@ -13,7 +13,7 @@ StrFormat,Round,<%Integer%>,<RoundTo>
 | Argument | Description |
 | --- | --- |
 | Integer | Variable containing the number to round. |
-| FloorTo | Size to round to. Can be one of the following: |
+| RoundTo | Size to round to. Can be one of the following: |
 || <Integer> - An positive integer representing the number of bytes to round to. |
 || K - Round to the Kilobyte |
 || M - Round to the Megabyte |
