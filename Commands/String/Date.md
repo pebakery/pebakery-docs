@@ -7,7 +7,7 @@ This command uses Winbuilder's Date/Time formatting rules. For Date/Time formatt
 ## Syntax
 
 ```pebakery
-StrFormat,Round,<%DestVar%>,<FormatString>
+StrFormat,Date,<%DestVar%>,<FormatString>
 ```
 
 ### Arguments
