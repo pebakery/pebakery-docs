@@ -2,12 +2,12 @@
 
 Embeds files inside a script.
 
-PEBakery allows you to embed files into your scripts for easy distribution. Encoded files are compressed with zlib2 (if they are not already compressed), encoded to base64 and stored as text inside the script.
+PEBakery allows you to embed files into your scripts for easy distribution. Encoded files are compressed (if they are not already compressed), encoded to base64 and stored as text inside the script.
 
 ## Syntax
 
 ```pebakery
-Encode,<ScriptFile>,<DirName>,<FilePath>
+Encode,<ScriptFile>,<DirName>,<FilePath>[,Compression]
 ```
 
 ### Arguments
@@ -17,10 +17,14 @@ Encode,<ScriptFile>,<DirName>,<FilePath>
 | ScriptFile | The full path to the script. **Hint:** Use `%scriptFile%` to reference the current script. |
 | DirName | The folder the encoded file will be placed in. If `DirName` does not exist it will be created. If the files to be encoded already exist in the script's `DestDir` they will be overwritten.|
 | FilePath | The full path of the file(s) to be encoded. Wildcards are accepted. |
+| Compression | One of the following algorithms: |
+|| None - No compression. Files are encoded directly to base64. (Recommended only for compressed files. Ex. .7z, Zip, Rar) |
+|| Deflate - **(Default)** Uses ZLib2 Compression. |
+|| LZMA - Uses XZ (LZMA/LZMA2) compression. Superior compression ratio at the cost of slower encoding time. **(Not compatible with Winbuilder)** |
 
 ## Remarks
 
-**Warning:** Make sure `DirName` does not have the same name as other sections in your script or they will be corrupted.
+**Warning:** If `DirName` has the same name as another section inside your script that section will be corrupted.
 
 Script files do not support nested directories. If you require a complex directory structure consider compressing the files with 7zip and encoding the resulting archive.
 
@@ -48,13 +52,21 @@ root/
      |---mySrc.au3
 ```
 
-Encode the file `readme.txt` into the `Help` directory inside the script.
+Encode the file `readme.txt` into the `Help` directory inside the script. Because no compression was specified, the default `Deflate` compression will be used.
 
 ```pebakery
 Encode,%ScriptFile%,Folder,c:\readme.txt
 ```
 
 ### Example 2
+
+Encode the file `mySettings.reg` into the `Reg` directory inside the script using `LZMA` compression.
+
+```pebakery
+Encode,%ScriptFile%,Reg,c:\mySettings.reg,LZMA
+```
+
+### Example 3
 
 Example script showing the file `readme.txt` embedded in the script file.
 
