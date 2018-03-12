@@ -5,7 +5,7 @@ Downloads files from the Internet.
 ## Syntax
 
 ```pebakery
-WebGet,<URL>,<DestPath>[,<HashType>,<HashDigest>]
+WebGet,<URL>,<DestPath>[,Hash=<HashType>,<HashDigest>],[NOERR]
 ```
 
 ### Arguments
@@ -14,10 +14,24 @@ WebGet,<URL>,<DestPath>[,<HashType>,<HashDigest>]
 | --- | --- |
 | URL | URL of the file to download.|
 | DestPath | The full path where the downloaded file will be saved. If the path does not exist it will be created. If the file exists it will be overwritten. |
-| HashType   | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
+| Hash=   | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
 | HashDigest | **(Optional)** The Hash digest used to verify the downloaded file. |
 
-`HashType` and `HashDigest` must be used at same time.
+`Hash=` and `HashDigest` must be used at same time.
+
+### Flags
+
+Flags may be specified in any order.
+
+| Flag | Description |
+| --- | --- |
+| NOERR | **(Optional)** Do not halt the build if the download fails. It will be the script developer's responsibility to handle the situation gracefully. |
+
+### Return Codes
+
+| Variable | Description |
+| --- | --- |
+| %StatusCode% | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occures. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
 
 ## Remarks
 
