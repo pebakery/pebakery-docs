@@ -9,7 +9,7 @@ Note that `WimExtractBulk` is intended for extracting only a subset of a WIM ima
 ## Syntax
 
 ```pebakery
-WimExtractBulk,<SrcWim>,<ImageIndex>,<ListFile>,<DestDir>[,Split=<String>][,CHECK][,NOACL][,NOATTRIB]
+WimExtractBulk,<SrcWim>,<ImageIndex>,<ListFile>,<DestDir>[,Split=<String>][,CHECK][,NOACL][,NOATTRIB][,NOERR]
 ```
 
 ### Arguments
@@ -31,6 +31,7 @@ The following flags can be used independently and can be specified in any order.
 | CHECK | **(Optional)** Verify the integrity of `SrcWim` if it contains extra integrity information. |
 | NOACL | **(Optional)** Do not restore security descriptors on extracted files and directories. |
 | NOATTRIB | **(Optional)** Do not restore Windows file attributes such as read-only, hidden, etc. |
+| NOERR | **(Optional)** Do not fail if a path or GLOB does not exist in the `SrcWim`. A warning will be logged for the failed match and processing will continue with the next path. |
 
 ### List File Specification
 
