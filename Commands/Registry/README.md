@@ -6,6 +6,7 @@ Click on a Command name for a detailed description.
 
 | Command | Description |
 | --- | --- |
+| [RegCopy](./RegCopy.md) | Copies all subkeys and values from one registry key to another. |
 | [RegDelete](./RegDelete.md) | Deletes a key or value from the registry. |
 | [RegExport](./RegExport.md) | Exports the contents of a registry key to a *.reg file. |
 | [RegHiveLoad](./RegHiveLoad.md) | Loads an external registry hive onto your local registry. |
