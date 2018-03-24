@@ -16,10 +16,6 @@ Not needed. PEBakery has native support for QWORDs and Unicode strings in RegRea
 
 No longer used. Can be accomplished via other methods.
 
-### ExtractAndRun
-
-Due to limitations of the original Winbuilder command this can be better accomplished via a macro.
-
 ### StrFormat,CharToOEM / OEMToChar
 
 DOS charset is no longer used.

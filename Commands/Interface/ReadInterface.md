@@ -20,6 +20,7 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
+|| ToolTip - Text that will be displayed when the user hovers over the control. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |

@@ -2,8 +2,6 @@
 
 Extracts a single file from inside a script and executes it.
 
-**This command has been deprecated and will be removed in a future version. It is recommended that you update your code as soon as possible to avoid breaking your script. See Example 3 for a more flexible alternative.**
-
 ## Syntax
 
 ```pebakery
@@ -21,7 +19,7 @@ ExtractAndRun,<ScriptFile>,<DirName>,<FileName>[,Parameters]
 
 ## Remarks
 
-`FileName` is extracted to the %TEMP% directory defined by the OS (usually *C:\Users\username\AppData\Local\Temp*) and is deleted when execution terminates.
+`FileName` is extracted to the a randomly named subdirectory under the %TEMP% directory defined by the OS (usually *C:\Users\username\AppData\Local\Temp*) and is deleted when execution terminates.
 
 `FileName` is executed in the foreground and blocks the script from further action until the process terminates. If you require more control over the process's execution use the **ExtractFile** and **ShellExecute/ShellExecuteDelete** commands instead.
 

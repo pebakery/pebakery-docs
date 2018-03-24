@@ -20,6 +20,7 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
+|| ToolTip - Text that will be displayed when the user hovers over the control. Tooltips my be removed by specifying an empty string `""` or `NIL` as the tooltip value. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface control you wish to modify. |
 | ControlName | The name of the control to modify. |
@@ -282,5 +283,4 @@ WriteInterface,Value,%ScriptFile%,Interface,pFileBox1,D:\PEBakery\Launcher.exe
 // Source : pRadioGroup1=pRadioGroup1,1,14,20,160,150,60,Option1,Option2,Option3,2
 // Result : pRadioGroup1=pRadioGroup1,1,14,20,160,150,60,Option1,Option2,Option3,0
 WriteInterface,Value,%ScriptFile%,Interface,pRadioGroup1,0
->>>>>>> develop
 ```
