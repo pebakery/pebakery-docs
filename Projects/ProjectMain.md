@@ -22,9 +22,9 @@ The following values are used by PEBakery to define a project. Project developer
 | Version | **(Optional)** Version number of the project. |
 | Interface | **(Optional)** Specifies the section that contains the currently displayed Graphical User Interface. Default value is `Interface`. |
 | PathSetting | `True`/`False` - Enable modifying `SourceDir`, `TargetDir`, and `IsoFile` from PEBakery's Settings dialog. |
-| SourceDir | Full path to the Windows source files used to build the project. The value is copied to `GLOBAL` variable `%SourceDir%` at build time. |
-| TargetDir | Full path to the directory where the project will be built. The value is copied to `GLOBAL` variable `%TargetDir%` at build time. |
-| IsoFile | Full path to the .iso file to be generated. The value is copied to `GLOBAL` variable `%IsoFile%` at build time. |
+| SourceDir | **(Legacy)** Full path to the Windows source files used to build the project. If `PathSetting=True` the value is copied to `GLOBAL` variable `%SourceDir%` at build time. |
+| TargetDir | **(Legacy)** Full path to the directory where the project will be built. If `PathSetting=True` the value is copied to `GLOBAL` variable `%TargetDir%` at build time. |
+| IsoFile | **(Legacy)** Full path to the .iso file to be generated. If `PathSetting=True` the value is copied to `GLOBAL` variable `%IsoFile%` at build time. |
 
 `SourceDir`, `TargetDir`, and `IsoFile` are included for compatibility with Winbuilder 082. They are not required for PEBakery projects, which generally store their paths in a GLOBAL variable.
 
