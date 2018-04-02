@@ -13,7 +13,7 @@ WimCapture,<SrcDir>,<DestWim>,<Compress>[,ImageName=<String>][,ImageDesc=<String
 | Argument | Description |
 | --- | --- |
 | SrcDir | The full path to the source files to be captured. |
-| DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist it will be created. |
+| DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist the operation will fail. |
 | Compress | Supported Compression levels: |
 || NONE - No Compression. |
 || XPRESS - Fast compression and decompression, but results in a larger image size. _(Similar to DISM.exe  /compress:fast )_ |

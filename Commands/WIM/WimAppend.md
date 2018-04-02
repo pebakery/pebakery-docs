@@ -13,7 +13,7 @@ WimAppend,<SrcDir>,<DestWim>[,ImageName=<String>][,ImageDesc=<String>][,Flags=<S
 | Argument | Description |
 | --- | --- |
 | SrcDir | The full path to the source files to be captured. |
-| DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist it will be created. |
+| DestWim | The full path to the .wim file being created. If the file exists it will be overwritten. If the directory structure does not exist the operation will fail. |
 | ImageName= | **(Optional)** The unique name for the image being captured. If not specified it will default to the filename component of `SrcWim`. |
 | ImageDesc= | **(Optional)** Additional information about the image. |
 | Flags= | **(Optional)** Specify a string to use in the `<FLAGS>` element of the XML data for the new image. |
