@@ -17,7 +17,6 @@ The following values are used by PEBakery to define a script and it's behavior. 
 | Title | The title of your script. |
 | Description | **(Optional)** A short description of the scripts intended purpose. |
 | Author | **(Optional)** The author of the script. |
-| Credits | **(Optional)** Acknowledgment of people or teams that contributed to the script's development. |
 | Date | **(Optional)** Date the script was released. (Recommended format is YYYY-MM-DD.) |
 | Version | **(Optional)** Version number of the script. |
 | [Level](./ScriptLevels.md) | Defines the sequence in which the script is processed. **Default** is `0`.|
