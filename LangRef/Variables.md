@@ -50,7 +50,7 @@ When the compatability option `Overridable Fixed Variables` is enabled the follo
 
 ### Fixed Variables
 
-Fixed Variables are reserved variables that are populated when PEBakery starts and cannot be overwritten*.
+Fixed Variables are reserved variables that are populated by PEBakery and cannot be overwritten*.
 
 _*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enabled for compatability with older projects in transition from Winbuilder to PEBakery, however it is recommended that the project be updated as quickly as possible to remove this unsafe behavior._
 
@@ -76,7 +76,7 @@ _*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enab
 
 #### Fixed Environment Variables
 
-Fixed envionment variabes are included only for compatability with Winbuilder and must be enabled with the compatability option `Enable Environment Variables`. If you need to retrieve information from the local operating system it is recommended to use the more flexable `System,GetEnv` command instead.
+Fixed envionment variabes are included only for compatability with Winbuilder and must be enabled with the compatability option `Enable Environment Variables`. If you need to retrieve information about the local operating system's envionment it is recommended to use the more flexable `System,GetEnv` command instead.
 
 | Variable | Description |
 | --- | --- |
@@ -126,4 +126,4 @@ If `PathSetting=True` is defined in `script.project` then the following variable
 
 ## Related
 
-[AddVariables](/Commands/Control/AddVariables.md), [Set](/Commands/Control/Set.md), [ProjectVariables](/Commands/Projects/ProjectVariables.md), [ScriptVariables](/Commands/Control/ScriptVariables.md)
+[AddVariables](/Commands/Control/AddVariables.md), [Set](/Commands/Control/Set.md), [Project Variables](/Projects/ProjectVariables.md), [Script Variables](/Projects/ScriptVariables.md)
