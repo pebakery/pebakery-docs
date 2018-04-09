@@ -5,7 +5,7 @@ Retrieves information about a Windows Imaging (.wim) file.
 ## Syntax
 
 ```pebakery
-WimInfo,<WimFile>,<ImageIndex>,<Property>,<%DestVar%>
+WimInfo,<WimFile>,<ImageIndex>,<Property>,<%DestVar%>[,NOERR]
 ```
 
 ### Arguments
@@ -19,6 +19,14 @@ WimInfo,<WimFile>,<ImageIndex>,<Property>,<%DestVar%>
 || _n_ - Retrieve information about the _nth_ image in the WIM file. |
 | Property | The property to query from the image's XML data. Use the `/` character to access nested properties. Multiple nested properties can be accessed by using brackets. (Ex. _WINDOWS/LANGUAGES/LANGUAGE[2]_ indicates the second _LANGUAGE_ element nested within the _WINDOWS/LANGUAGES_ element.) |
 | DestVar | The variable where the value of the specified `Property` will be stored. |
+
+### Flags
+
+The following flags can be used independently and can be specified in any order.
+
+| Argument | Description |
+| --- | --- |
+| NOERR | **(Optional)** Do not fail if a property does not exist in the `SrcWim` XML data. |
 
 ### WIM File Properties
 

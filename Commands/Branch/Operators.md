@@ -33,6 +33,7 @@ These tests are used in conjunction with the `If` command to determine if a file
 | Online | Checks to see if the computer has an active network connection. |
 | Ping | Checks to see if a remote host can be reached by sending an ICMP echo-request to a specified host. Returns true if a valid ICMP echo-response is received. *Note: The presence and configuration of proxies, network address translation (NAT) equipment, or firewalls can prevent Ping from succeeding.* |
 | WimExistIndex | Checks to see if the specified Index exists within a WIM file. Split WIMs (.swm) are supported. |
+| WimExistImageInfo | Checks to see if the specified XML Property exists within a WIM file. Split WIMs (.swm) are supported. |
 | WimExistFile | Checks to see if a file exists within a WIM file. Split WIMs (.swm) are supported. |
 | WimExistDir | Checks to see if a directory exists within a WIM file. Split WIMs (.swm) are supported. |
 
@@ -130,6 +131,9 @@ If,Ping,google.com,Message,"I can ping google.com"
 
 // Syntax: If,WimExistIndex,<SrcWim>,<ImageIndex>
 If,WimExistIndex,C:\Temp\boot.wim,1,Message,"The Index exists"
+
+// Syntax: If,WimExistImageInfo,<SrcWim>,<ImageIndex>,<Property>
+If,WimExistImageInfo,C:\Temp\boot.wim,1,WINDOWS/LANGUAGES/FALLBACK,Message,"The Property exists"
 
 // Syntax: If,WimExistDir,<SrcWim>,<ImageIndex>,<DirPath>
 If,WimExistDir,C:\Temp\boot.wim,1,Windows\System32,Message,"The Directory exists within the WIM image."
