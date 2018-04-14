@@ -105,6 +105,6 @@ Second WimExtract tries to extract non-existent file, so it will throw an error.
 
 ```pebakery
 WimExtract,%WimDir%\LZX.wim,1,Z.txt,%DestDir%,CHECK
-WimExtract,%WimDir%\LZX.wim,1,B.txt,%DestDir%,CHECK
 WimExtract,%WimDir%\LZX.wim,1,A.txt,%DestDir%,CHECK
+WimExtract,%WimDir%\LZX.wim,1,B.txt,%DestDir%,CHECK
 ```
