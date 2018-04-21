@@ -29,11 +29,7 @@ The structure of a folder.project file consists of 1 major section. Additional s
 
 While `Folder.project` files can technically contain code that can be executed with the `Run` or `Exec` commands, using `Folder.Project` files as a code library is strongly discouraged.
 
-### Main Sections
-
-The following sections define the behavior and actions of the folder.
-
-#### [Links]
+### [Links]
 
 Contains a list of paths to import. Multiple paths may be specified, one per line. Link paths are considered to be relitive to the `%BaseDir%` unless an absolute path is specified.
 
@@ -41,7 +37,7 @@ All scripts in the specified folder and any sub-folders will be added to the fol
 
 ## Related
 
-[.Link Files](./Projects/LinkFiles.md)
+[.Link Files](./LinkFiles.md)
 
 ## Examples
 

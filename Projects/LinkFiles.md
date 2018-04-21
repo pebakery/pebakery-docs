@@ -31,11 +31,7 @@ The structure of a link file consists of 1 major section. Additional sections ma
 
 While link files can technically contain code that can be executed with the `Run` or `Exec` commands, using link files as a code library is strongly discouraged.
 
-### Main Sections
-
-The following sections define the behavior and actions of the folder.
-
-#### [Main]
+### [Main]
 
 The following values are used by PEBakery to define a link and it's behavior. Script developers may define additional values under the `[Main]` section for other uses. These values will be ignored by PEBakery.
 
@@ -53,7 +49,7 @@ With the exception of toggling the selected state via the Project Tree any chang
 
 ## Related
 
-[.Folder Files](./Projects/FolderFiles.md)
+[.Folder Files](./FolderFiles.md)
 
 ## Examples
 
