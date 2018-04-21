@@ -1,6 +1,6 @@
 # .Link Files
 
-`.Link` files are "symbolic links" used to include individual scripts from another location in a PEBakery project.
+`.Link` files are "symbolic links" that allow you to reference individual script files that are not located under your project's directory.
 
 ## File Location
 

@@ -35,6 +35,10 @@ Contains a list of paths to import. Multiple paths may be specified, one per lin
 
 All scripts in the specified folder and any sub-folders will be added to the folder containing the `folder.project` file. If any linked scripts are disabled then that script will also be disabled in the source project. Wildcard characters `*.*` at the end of the path are supported for compatibility with Winbuilder but are not required.
 
+## Remarks
+
+Any changes made to a linked script will modify the original .script file.
+
 ## Related
 
 [.Link Files](./LinkFiles.md)
