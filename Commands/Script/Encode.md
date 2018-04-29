@@ -20,7 +20,7 @@ Encode,<ScriptFile>,<DirName>,<FilePath>[,Compression]
 | Compression | One of the following algorithms: |
 || None - No compression. Files are encoded directly to base64. (Recommended only for compressed files. Ex. .7z, Zip, Rar) |
 || Deflate - **(Default)** Uses ZLib2 Compression. |
-|| LZMA - Uses XZ (LZMA/LZMA2) compression. Superior compression ratio at the cost of slower encoding time. **(Not compatible with Winbuilder)** |
+|| LZMA2 - Uses XZ (LZMA2) compression. Superior compression ratio at the cost of slower encoding time. **(Not compatible with Winbuilder)** |
 
 ## Remarks
 
