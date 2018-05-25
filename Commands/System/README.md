@@ -12,7 +12,7 @@ Click on a Command name for a detailed description.
 | [System,GetFreeSpace](./GetFreeSpace.md) | Returns the free disk space of a path in Megabytes. |
 | [System,IsAdmin](./IsAdmin.md) | Checks to see if PEBakery was started by an account with "Admin" privileges. |
 | [System,Load](./Load.md) | Scans the specified path for new/modified projects and scripts and adds them to the project tree. |
-| [System,LoadAll](./LoadAll.md) | Scans the *Projects* directory for new/modified projects and scripts and adds them to the project tree. |
+| [System,RefreshAllScripts](./RefreshAllScripts.md) | Scans the *Projects* directory for new/modified projects and scripts and adds them to the project tree. |
 | [System,OnBuildExit](./OnBuildExit.md) | Specifies the command to be executed before the current project build terminates. |
 | [System,OnScriptExit](./OnScriptExit.md) | Specifies the command to be executed before the current script terminates. |
 | [System,RefreshInterface](./RefreshInterface.md) | Refreshes the Graphical Interface of the current script. |

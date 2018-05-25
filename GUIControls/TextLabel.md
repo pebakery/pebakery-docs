@@ -5,7 +5,7 @@ Displays a line of text.
 ## Syntax
 
 ```pebakery
-<Name>=<Caption>,<Visibility>,1,<PosX>,<PosY>,<Width>,<Height>,<FontSize>,<FontWeight>[,<ToolTip>]
+<Name>=<Caption>,<Visibility>,1,<PosX>,<PosY>,<Width>,<Height>,<FontSize>,<FontWeight>[,<FontStyle>][,<ToolTip>]
 ```
 
 ### Arguments
@@ -21,7 +21,8 @@ Displays a line of text.
 | Width | Width of the control. |
 | Height | Height of the control. |
 | Font Size | Font Size in points. (ex. 12) |
-| Font Weight | Can be `Normal`, `Bold`, `Italic`, `Underline`, or `Strike`. |
+| Font Weight | Can be `Normal`, `Bold`. |
+| Font Style | **(Optional)** Can be `Italic`, `Underline`, `Strike`. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
 ## Remarks
@@ -36,4 +37,5 @@ Text labels will wrap text, allowing multiple lines to be displayed within the `
 
 ```pebakery
 pTextLabel1="Hello World!",1,1,20,50,230,18,8,Normal
+pTextLabel2="Goodbye World!",1,1,20,100,230,18,8,Bold,Underline
 ```

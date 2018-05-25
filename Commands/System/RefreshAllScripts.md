@@ -1,13 +1,13 @@
-# System,LoadAll
+# System,RefreshAllScripts
 
-**Alias:** `System,ReScanScripts`
+**Alias:** `System,RescanScripts`
 
 Scans the *Projects* directory for new/modified projects and scripts and adds them to the project tree.
 
 ## Syntax
 
 ```pebakery
-System,LoadAll
+System,RefreshAllScripts
 ```
 
 ### Arguments
@@ -28,9 +28,9 @@ This command can be used to rebuild the project tree when a script is added or m
 
 ```pebakery
 [Main]
-Title=LoadAll Example
+Title=RefreshAllScripts Example
 Author=Homes32
-Description=Demonstrate usage of the System,LoadAll command.
+Description=Demonstrate usage of the System,RefreshAllScripts command.
 Version=1
 Level=5
 Selected=True
@@ -45,7 +45,7 @@ BTN_Clean=Cleanup,1,8,100,60,80,25,Clean,0,True,_Clean_,True
 [Clean]
 Echo,"Removing myProject Example..."
 If,EXISTDIR,%BaseDir%\Projects\myProject\,DirDelete,%BaseDir%\Projects\myProject\
-System,LoadAll
+System,RefreshAllScripts
 
 [process]
 If,Not,ExistFile,%myProject%,FileCreateBlank,%myProject%
@@ -79,5 +79,5 @@ TXTAddLine,%myScript%,"[Interface]",Append
 TXTAddLine,%myScript%,"",Append
 
 // Now we need to call the following command to get our new project and script to show up in the main window.
-System,LoadAll
+System,RefreshAllScripts
 ```
