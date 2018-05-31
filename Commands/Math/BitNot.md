@@ -5,7 +5,7 @@ Performs a bitwise NOT operation.
 ## Syntax
 
 ```pebakery
-Math,BitNot,<%DestVar%>,<Vaue>
+Math,BitNot,<%DestVar%>,<Value>[,Size]
 ```
 
 ### Arguments
@@ -14,10 +14,11 @@ Math,BitNot,<%DestVar%>,<Vaue>
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
 | Value | The value to operate on. |
+| Size | **(Optional)** Size of the `Value` in bits: `8` `16` `32` `64` |
 
 ## Remarks
 
-None.
+Default bit size is 32bit.
 
 ## Related
 
