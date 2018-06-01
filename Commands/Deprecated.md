@@ -1,6 +1,6 @@
 # Deprecated Commands
 
-## Deprecated from WinBuilder 082:
+## Deprecated from WinBuilder 082
 
 These commands not implemented in PEBakery.
 
@@ -44,13 +44,9 @@ No longer used, PEBakery will always split parameters.
 
 No longer used.
 
-## Commands that will be deprecated:
+## Commands that will be deprecated
 
-These commands are fully functional within PEBakery but will be removed in a future release.
-
-### ExtractAndRun
-
-Due to the limitations of the original Winbuilder command this is better off implemented as a macro using standard Extract and ShellExecuteDelete
+These commands are fully functional within PEBakery but will be removed in a future release. It is advised to avoid these commands in your projects.
 
 ### WebGetIfNotExist
 
@@ -70,9 +66,9 @@ User Account Control (UAC) is enabled by default in all supported versions of Wi
 
 ### System,RebuildVars
 
-While WB082 manual claims this command will refresh variables to use newer value, it just clear variables in real WB082.
+Different from its name implies, this command just clear variables in WB082.
 
-Currently PEBakery reset variables to default plugin variables.
+Currently PEBakery reset variables to default script variables.
 
 ### GetParam / PackParam
 
