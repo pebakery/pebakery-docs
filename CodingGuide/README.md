@@ -16,7 +16,7 @@ If `Auto Syntax Check Error` setting is enabled, the button's icon and color rep
 
 ## Optimization
 
-PEBakery automatically optimizes some commands related to text manipulation.
+PEBakery automatically optimizes some commands related to file manipulation.
 
 - TXTAddLine
 - TXTReplace
@@ -29,6 +29,8 @@ PEBakery automatically optimizes some commands related to text manipulation.
 - INIDeleteSection
 - INIWriteTextLine
 - Visible
+- ReadInterface
+- WriteInterface
 - WimExtract
 - WimPathAdd, WimPathDelete, WimPathRename
 
