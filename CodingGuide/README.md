@@ -8,9 +8,9 @@ PEBakery supports syntax checking.
 
 Copy codes into `Syntax Checker` provided in `Utility`.
 
-### Checking Plugin
+### Checking Script
 
-Make sure your plugin is visible in project tree. Open plugin's interface, and click the question button near script title.
+Make sure your script is visible in project tree. Open script's interface, and click the question button near script title.
 
 If `Auto Syntax Check Error` setting is enabled, the button's icon and color reports if error exists.
 
@@ -47,7 +47,7 @@ TXTAddLine writes multiple lines into same file `%ProjectTemp%\Korean_IME_Refere
 ```pebakery
 Set,%w%,%ProjectTemp%\Korean_IME_Reference.txt
 FileCreateBlank,%w%
-TXTAddLine,%w%,"<Korean IME Plugin - Reference>",Append
+TXTAddLine,%w%,"<Korean IME Script - Reference>",Append
 TXTAddLine,%w%,,Append
 TXTAddLine,%w%," [TechNet] Add Input Method Editor (IME) to Windows PE 3.0",Append
 TXTAddLine,%w%,"  - https://technet.microsoft.com/en-us/library/dd744589%28v=ws.10%29.aspx",Append
@@ -56,7 +56,7 @@ TXTAddLine,%w%," [Blog] Add Hangul IME support on Windows PE 4.0",Append
 TXTAddLine,%w%,"  - http://cappleblog.co.kr/549",Append
 ```
 
-Visible command only affects plugin itself.
+Visible command only affects script itself.
 
 ```pebakery
 Visible,%pBevel3%,True,PERMANENT
