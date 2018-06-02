@@ -13,6 +13,7 @@ Click on a Command name for a detailed description.
 | [System,IsAdmin](./IsAdmin.md) | Checks to see if PEBakery was started by an account with "Admin" privileges. |
 | [System,Load](./Load.md) | Scans the specified path for new/modified projects and scripts and adds them to the project tree. |
 | [System,RefreshAllScripts](./RefreshAllScripts.md) | Scans the *Projects* directory for new/modified projects and scripts and adds them to the project tree. |
+| [System,RefreshScript](./RefreshScript.md) | Reload/Refresh an existing script or path. |
 | [System,OnBuildExit](./OnBuildExit.md) | Specifies the command to be executed before the current project build terminates. |
 | [System,OnScriptExit](./OnScriptExit.md) | Specifies the command to be executed before the current script terminates. |
 | [System,RefreshInterface](./RefreshInterface.md) | Refreshes the Graphical Interface of the current script. |
