@@ -1,6 +1,6 @@
 # System,RefreshScript
 
-Refresh a specific script in the project.
+Refresh a specific script or path in the project.
 
 Wildcards (* ?) are supported and can be used to refresh multiple scripts at one time.
 
@@ -28,7 +28,7 @@ This command can be used to refresh a specific script the project tree and perfo
 
 The specified script must currently exist in the project tree or the operation will fail. If you need to load a new script into the project use the `LoadNewScript` command instead.
 
-Due to a system limitation PEBakery cannot `Refresh` the current script `%ScriptFile%` during a project build. The command will take affect after the current build finishes.
+Due to a system limitation PEBakery cannot Refresh the current script `%ScriptFile%` during a project build. The command will take affect after the current build finishes.
 
 When using wildcards all directories under `FilePath` are scanned for the specified pattern. Use the `NOREC` flag to disable this behavior. 
 
@@ -61,7 +61,6 @@ If,EXISTFILE,%myScript%,FileDelete,%myScript%
 System,RefreshAllScripts
 
 [process]
-
 If,Not,ExistFile,%myScript%,FileCreateBlank,%myScript%
 
 // Create a new Script
