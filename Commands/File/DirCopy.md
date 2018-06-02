@@ -21,7 +21,7 @@ DirCopy,<SrcDir>,<DestDir>
 
 If `DestDir` is a file, DirCopy fails.
 
-WinBuilder 082 has a bug that DirCopy works similar to FileCopy when wildcards are used. Turning on compatibility option `Simulate WinBuilder's DirCopy Asterisk Bug` emulates this bug. See Example 2 for more details.
+WinBuilder 082 has a bug that DirCopy works similar to FileCopy when wildcards are used. Turning on compatibility option `Simulate WinBuilder's *.* bug in DirCopy` emulates this bug. See Example 2 for more details.
 
 ## Related
 
@@ -90,7 +90,7 @@ C:\Temp\Dest\
 |--- AEE\
 ```
 
-**Result when using the compatibility option to simulate WinBuilder's DirCopy Asterisk Bug**
+**Result when using the compatibility option to Simulate WinBuilder's *.* bug in DirCopy**
 
 ```pebakery
 C:\Temp\Dest\
