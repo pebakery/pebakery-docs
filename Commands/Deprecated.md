@@ -2,6 +2,8 @@
 
 ## Deprecated from WinBuilder 082
 
+These commands not implemented in PEBakery.
+
 ### FileByteExtract
 
 No longer used.
@@ -13,10 +15,6 @@ Not needed. PEBakery has native support for QWORDs and Unicode strings in RegRea
 ### ExtractAllFilesIfNotExist
 
 No longer used. Can be accomplished via other methods.
-
-### ExtractAndRun
-
-Due to limitations of the original Winbuilder command this can be better accomplished via a macro.
 
 ### StrFormat,CharToOEM / OEMToChar
 
@@ -46,11 +44,9 @@ No longer used, PEBakery will always split parameters.
 
 No longer used.
 
-## Commands will be deprecated
+## Commands that will be deprecated
 
-### ExtractAndRun
-
-Due to the limitations of the original Winbuilder command this is better off implemented as a macro using standard Extract and ShellExecuteDelete
+These commands are fully functional within PEBakery but will be removed in a future release. It is advised to avoid these commands in your projects.
 
 ### WebGetIfNotExist
 
@@ -64,15 +60,15 @@ Thus this commands cannot be guaranteed to work properly in every system.
 
 ### System,HasUAC
 
-Turning off UAC in Windows is very dangerous, and turning UAC by force in Windows 10 will break UWP apps.
+Currently PEBakery always returns `True` to this command.
 
-Currently PEBakery return always true to this command.
+User Account Control (UAC) is enabled by default in all supported versions of Windows making this command largely unnecessary. Furthermore many users are not aware of the dangers of disabling UAC, therefore it is better to design your project to work on UAC enabled systems rather then encourage users to disable security features in order to build a project.
 
 ### System,RebuildVars
 
-While WB082 manual claims this command will refresh variables to use newer value, it just clear variables in real WB082.
+Different from its name implies, this command just clear variables in WB082.
 
-Currently PEBakery reset variables to default plugin variables.
+Currently PEBakery reset variables to default script variables.
 
 ### GetParam / PackParam
 
