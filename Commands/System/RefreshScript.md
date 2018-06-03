@@ -72,7 +72,7 @@ IniWrite,%myScript%,Main,Level,5
 IniWrite,%myScript%,Main,Selected,False
 
 // load it into our project
-System,LoadNewScript,%myScript%,%ProjectName%
+System,LoadNewScript,%myScript%,Extra
 
 // Make some modifications to our script
 TXTAddLine,%myScript%,"[Variables]",Append

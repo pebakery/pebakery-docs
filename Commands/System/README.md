@@ -11,7 +11,7 @@ Click on a Command name for a detailed description.
 | [System,GetFeeDrive](./GetFeeDrive.md) | Returns the highest available free drive letter, Usually the "Z:" drive. |
 | [System,GetFreeSpace](./GetFreeSpace.md) | Returns the free disk space of a path in Megabytes. |
 | [System,IsAdmin](./IsAdmin.md) | Checks to see if PEBakery was started by an account with "Admin" privileges. |
-| [System,Load](./Load.md) | Scans the specified path for new/modified projects and scripts and adds them to the project tree. |
+| [System,LoadNewScript](./LoadNewScript.md) | Scans the specified path for new projects and scripts and adds them to the project tree. |
 | [System,RefreshAllScripts](./RefreshAllScripts.md) | Scans the *Projects* directory for new/modified projects and scripts and adds them to the project tree. |
 | [System,RefreshScript](./RefreshScript.md) | Reload/Refresh an existing script or path. |
 | [System,OnBuildExit](./OnBuildExit.md) | Specifies the command to be executed before the current project build terminates. |
