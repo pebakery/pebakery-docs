@@ -12,7 +12,7 @@ PEBakery supports the C++ Style `//` single line comments as well as _.ini_ styl
 ; This is another comment!
 ```
 
-Single line comments can also be used to comment out block comments.
+Single line comments can also be used to comment out block-style comments.
 
 ```pebakery
 // /*
@@ -22,11 +22,9 @@ Echo,"This code will be executed..."
 
 ## Multi-Line/Block Comments
 
-Block comments are defined by the C Style `/* */` character sequence and can span multiple lines of code. A comment begins with the `/*` sequence and must end with the `*/` sequence. Everything in between is regarded as a comment.
+Block comments are defined by the C Style `/* */` character sequence and can span multiple lines of code. A comment begins with the `/*` sequence and must end with the `*/` sequence. Everything in between will be ignored by PEBakery. Block comments cannot be nested.
 
 ```pebakery
-/* Block comment used as a single line comment */
-
 /* Echo,"This code never gets to run"
 Echo,"This code will not run either" */
 
@@ -35,6 +33,13 @@ Echo,"This code never gets to run"
 Echo,"This code will not run either"
 */
 ```
+
+It is also possible to use a block comment as a single line comment, but this is considered bad practice and will result in build errors if you block comment a section of code containing other block-style comments, single line or otherwise. For this reason it is reccomended to use single line comments where possible and and reserve block comments for documentation and/or debugging large sections of code.
+
+```pebakery
+/* Block comment used as a single line comment. */
+```
+
 
 **Note:** Comment end `*/` must always be placed at the end of a line.
 
