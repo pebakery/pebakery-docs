@@ -8,7 +8,7 @@ Click on a Command name for a detailed description.
 | [System,EndLocal](./EndLocal.md) | Ends localization of variables within a script. |
 | [System,ErrorOff](./ErrorOff.md) | Prevents a process from failing in the event an error occurs. |
 | [System,GetEnv](./GetEnv.md) | Gets the value of environment variable from the host operating system. |
-| [System,GetFeeDrive](./GetFeeDrive.md) | Returns the highest available free drive letter, Usually the "Z:" drive. |
+| [System,GetFreeDrive](./GetFeeDrive.md) | Returns the highest available free drive letter, Usually the "Z:" drive. |
 | [System,GetFreeSpace](./GetFreeSpace.md) | Returns the free disk space of a path in Megabytes. |
 | [System,IsAdmin](./IsAdmin.md) | Checks to see if PEBakery was started by an account with "Admin" privileges. |
 | [System,LoadNewScript](./LoadNewScript.md) | Scans the specified path for new projects and scripts and adds them to the project tree. |
