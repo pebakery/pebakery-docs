@@ -18,18 +18,6 @@ Advanced functionality includes the ability to define macros and execute externa
 
 PEBakery commands consist of a keyword followed by one or more parameters separated by commas. The commands are organized into "sections" similar to a standard _.ini_ file.
 
-## Comments
-
-Comments can be used to provide an explanation or annotation in the script in order to make it easier for other developers to understand what your script is doing. They can also be used to "comment out" lines of code while debugging a script.
-
-PEBakery supports the C++ Style `//` comments as well as _.ini_ style comments using the hash `#` or semicolon `;` delimiters. Each comment must be placed on its own line and begin with a supported comment delimiter. A comment ends when a newline is started. PEBakery does not support multi-line "block" comments.
-
-```text
-// This is a comment
-# This is also a comment
-; This is another comment!
-```
-
 ## Escape Characters
 
 At times a comma, quote, or other reserved character may need to be used inside a string or parameter. In this situation the character must be "escaped".

@@ -6,6 +6,7 @@ Welcome to the PEBakery Manual!
 
 1. Scripting Reference
     * [.Script Syntax](./LangRef/Syntax.md)
+	* [Comments](./LangRef/Comments.md)
 	* [Variables](./LangRef/Variables.md)
 	* [Macros](./LangRef/Macros.md)
     * [Project Components](./Projects/README.md)
