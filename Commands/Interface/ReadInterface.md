@@ -20,12 +20,13 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>[,Del
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
+|| Items - List of the items the control contains. |
 || ToolTip - Text that will be displayed when the user hovers over the control. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |
 | DestVar | The variable that will contain the value of the selected property. |
-| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` retrived from a ComboBox or RadioGroup control. **Default:** `|` |
+| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` retrived from a ComboBox or RadioGroup control. **Default:** ```|``` |
 
 ## Remarks
 

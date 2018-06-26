@@ -20,12 +20,13 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
+|| Items - List of the items the control contains. |
 || ToolTip - Text that will be displayed when the user hovers over the control. Tooltips my be removed by specifying an empty string `""` or `NIL` as the tooltip value. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface control you wish to modify. |
 | ControlName | The name of the control to modify. |
 | Value | The new value to write. |
-| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` that will be written to a ComboBox or RadioGroup control. **Default:** `|` |
+| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` that will be written to a ComboBox or RadioGroup control. **Default:** ```|``` |
 
 ## Remarks
 

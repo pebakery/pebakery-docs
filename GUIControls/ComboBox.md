@@ -5,7 +5,7 @@ A drop-down list allowing you to select a single value.
 ## Syntax
 
 ```pebakery
-<Name>=<Value>,<Visibility>,4,<PosX>,<PosY>,<Width>,<Height>,<Option1>,<Option2>,<OptionN>[,<SectionToRun>,<ShowProgress>][,<ToolTip>]
+<Name>=<Value>,<Visibility>,4,<PosX>,<PosY>,<Width>,<Height>,<Item1>,<Item2>,<ItemN>[,<SectionToRun>,<ShowProgress>][,<ToolTip>]
 ```
 
 ### Arguments
@@ -20,7 +20,7 @@ A drop-down list allowing you to select a single value.
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |
 | Height | Height of the control. |
-| Option | Options to display in the combo box. Multiple values are separated by commas. |
+| Items | Options to display in the combo box. Multiple values are separated by commas. |
 | SectionToRun | **(Optional)** Defines the [Section] within the script that will be processed when the button is pressed or the value of the control is changed. The section name must be enclosed in underscore `_` characters. *Example:* `_RunMe_` |
 | ShowProgress | **(Optional)** True/False - Show the Build progress screen while `SectionToRun` is being executed. This argument must always follow the `SectionToRun` argument. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
