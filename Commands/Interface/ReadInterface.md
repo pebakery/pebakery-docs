@@ -26,7 +26,7 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>[,Del
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |
 | DestVar | The variable that will contain the value of the selected property. |
-| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` retrived from a ComboBox or RadioGroup control. **Default:** ```|``` |
+| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` retrived from a ComboBox or RadioGroup control. **Default:** `\|` |
 
 ## Remarks
 
