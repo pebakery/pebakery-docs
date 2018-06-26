@@ -70,7 +70,7 @@ WriteInterface,Value,%ScriptFile%,Interface,pCheckBox1,Joveler
 
 ## Related
 
-[Script Interface Controls](/GUIControls/README.md), [Set](../Control/Set.md), [Visible](./Visible.md)
+[ReadInterface](./ReadInterface.md), [Script Interface Controls](/GUIControls/README.md), [Set](../Control/Set.md), [Visible](./Visible.md)
 
 ## Examples
 
