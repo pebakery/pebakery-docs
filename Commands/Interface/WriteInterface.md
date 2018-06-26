@@ -26,7 +26,7 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=
 | Interface | The name of the section containing the interface control you wish to modify. |
 | ControlName | The name of the control to modify. |
 | Value | The new value to write. |
-| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` that will be written to a ComboBox or RadioGroup control. **Default:** ```|``` |
+| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` that will be written to a ComboBox or RadioGroup control. **Default:** `\|` |
 
 ## Remarks
 
