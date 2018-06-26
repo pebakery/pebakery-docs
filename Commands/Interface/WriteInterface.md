@@ -26,7 +26,7 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=
 | Interface | The name of the section containing the interface control you wish to modify. |
 | ControlName | The name of the control to modify. |
 | Value | The new value to write. |
-| Delim= | **(Optional)** Delimiter used to seperate the list of `Items` that will be written to a ComboBox or RadioGroup control. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the list of `Items` that will be written to a ComboBox or RadioGroup control. **Default:** `\|` |
 
 ## Remarks
 
@@ -38,6 +38,7 @@ The `Items` Property is only supported in these controls:
 | RadioGroup   | (Delimited String) List of options to be assigned to the control. |
 
 PEBakery assumes the `Items` list passed to the `WriteInterface` command is pipe `|` delimited unless otherwise specified by the `Delim=` argument.
+
 Attempting to read `Items` from an unsupported control will result in an error.
 
 The `Value` Property is only supported in these controls:
