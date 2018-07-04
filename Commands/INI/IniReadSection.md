@@ -1,11 +1,13 @@
 # IniReadSection
 
-Reads the contents of a section in a standard .ini file.
+Reads the contents of a section in a standard .ini file and outputs the result as a list structure.
+
+The string returned is a 1-dimensional list with the `Keys` in the Odd position and the `Values` in the even position.
 
 ## Syntax
 
 ```pebakery
-IniReadSection,<FileName>,<Section>,<%DestVar%>
+IniReadSection,<FileName>,<Section>,<%DestVar%>[,Delim=<str>]
 ```
 
 ### Arguments
@@ -15,12 +17,11 @@ IniReadSection,<FileName>,<Section>,<%DestVar%>
 | FileName | The full path of the file to read. |
 | Section | The section to be read. |
 | DestVar | The value will be saved to this variable. |
+| Delim= | **(Optional)** Delimiter used to separate the `Items` in the list. **Default:** `\|` |
 
 ## Remarks
 
-This command was designed to log more information to assist troubleshooting.
-
-The string to be stored in %DestVar% is human-readable rather than coding friendly, and it is intended to be used with `Echo`.
+Note: Special characters such as comma's `,` must be escaped `#$c` when specifying the `Delim=` argument.
 
 PEBakery will optimize multiple `IniReadSection` commands in a row to single read command.
 
@@ -41,16 +42,16 @@ Let's assume a file `%SrcFile%` contains these lines:
 
 ### Example 1
 
-In the following example the section `English` will be stored inside `%Dest%`.
+In the following example the contents of the section `English` will be stored inside `%Dest%`.
 
 ```pebakery
 IniReadSection,%SrcFile%,English,%Dest%
+```
 
-// IniReadSection will return these lines into %Dest%.
-[English]
-1=One
-2=Two
-3=Three
+Returns:
+
+```pebakery
+1|One|2|Two|3|Three
 ```
 
 ### Example 2
@@ -58,10 +59,11 @@ IniReadSection,%SrcFile%,English,%Dest%
 IniReadSection will return the section `Korean` into `%Dest%`.
 
 ```pebakery
-IniReadSection,%SrcFile%,Korean,%Dest%
+IniReadSection,%SrcFile%,Korean,%Dest%,Delim=#$c
+```
 
-// IniReadSection will return these lines into %Dest%.
-[Korean]
-1=하나
-2=둘
+Returns:
+
+```pebakery
+1,하나,2,둘
 ```
