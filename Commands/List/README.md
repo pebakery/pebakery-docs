@@ -2,7 +2,20 @@
 
 List commands allow you to create and manipulate list structures.
 
-PEBakery Lists consist of a one dimensional array of strings separated by a chosen delimiter. The first element of the array is indexed by subscript of 1 (1-based index) and incremented for each additional item in the list.
+A PEBakery `List` consists of a one dimensional array of strings separated by a chosen delimiter. The first element of the array is indexed by subscript of 1 (1-based index) and incremented for each additional item in the list.
+
+Example:
+
+```pebakery
+%myList%=Home|Professional|Enterprise|Starter|Ultimate
+```
+
+Translates logically into:
+
+| | | | | | | 
+| --- | :---: | :---: | :---: | :---: | :---: |
+| **Index** | 1 | 2 | 3 | 4 | 5 |
+| **Value** | Home | Professional | Enterprise | Starter | Ultimate |
 
 Click on a Command name for a detailed description.
 
@@ -20,5 +33,7 @@ Click on a Command name for a detailed description.
 | [List,RemoveAt](./RemoveAt.md) | Removes a value from a specific index in a list. |
 | [List,RemoveX](./RemoveX.md) | Removes all occurrences of a value from a list. **Case Sensitive.** |
 | [List,Set](./Set.md) | Writes a value to a specific index in a list. |
-| [List,Sort](./Sort.md) | |
-| [List,SortX](./SortX.md)  | |
+| [List,Sort](./Sort.md) | Sorts a list into alphabetical/lexicographical order. **Case Insensitive.** |
+| [List,SortN](./SortN.md) | Sorts a list into natural order. **Case Insensitive.** |
+| [List,SortNX](./SortNX.md) | Sorts a list into natural order. **Case Sensitive.** |
+| [List,SortX](./SortX.md)  | Sorts a list into alphabetical/lexicographical order. **Case Sensitive.** |

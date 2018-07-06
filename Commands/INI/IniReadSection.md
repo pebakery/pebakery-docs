@@ -1,8 +1,8 @@
 # IniReadSection
 
-Reads the contents of a section in a standard .ini file and outputs the result as a list structure.
+Reads the contents of a section in a standard .ini file and outputs the result as a list.
 
-The string returned is a 1-dimensional list with the `Keys` in the Odd position and the `Values` in the even position.
+The string returned is a 1-dimensional list with the `Keys` in the Odd position and the `Values` in the even position. You can then use any of the `List` or `StrFormat` commands to interact with the data.
 
 ## Syntax
 
@@ -53,6 +53,14 @@ Returns:
 ```pebakery
 1|One|2|Two|3|Three
 ```
+
+This translates logically into:
+
+| | | | | | | |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Index** | 1 | 2 | 3 | 4 | 5 | 6 |
+| **Value** | 1 | One | 2 | Two | 3 | Three |
+
 
 ### Example 2
 

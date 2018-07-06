@@ -1,11 +1,11 @@
-# List,Sort
+# List,SortX
 
-Sorts a list into alphabetical/lexicographical order. **Case Insensitive.**
+Sorts a list into alphabetical/lexicographical order. **Case Sensitive.**
 
 ## Syntax
 
 ```pebakery
-List,Sort,<%ListVar%>,<Order>[,Delim=<Str>]
+List,SortX,<%ListVar%>,<Order>[,Delim=<Str>]
 ```
 
 ### Arguments
@@ -30,7 +30,7 @@ If you need to sort a list in natural/numeric order consider using the `List,Sor
 
 ## Related
 
-[List,SortN](./SortN.md), [List,SortNX](./SortNX.md), [List,SortX](./SortX.md) 
+[List,Sort](./Sort.md), [List,SortN](./SortN.md), [List,SortNX](./SortNX.md)
 
 ## Examples
 
@@ -40,8 +40,8 @@ Sort a list of strings.
 
 ```pebakery
 [Main]
-Title=List-Sort Example 1
-Description=Demonstrate usage of List,Sort.
+Title=List-SortX Example 1
+Description=Demonstrate usage of List,SortX.
 Level=5
 Version=1
 Author=Homes32
@@ -50,7 +50,7 @@ Author=Homes32
 %myList%=Home|UlTiMaTe|StarteR|enterprise|Professional|starter|Enterprise|PrOfEsSiOnAl|Starter|Ultimate
 
 [Process]
-List,Sort,%myList%,ASC
+List,SortX,%myList%,ASC
 Message,"myList: %myList%"
 ```
 
@@ -60,8 +60,8 @@ Sort a numerical list.
 
 ```pebakery
 [Main]
-Title=List-Sort Example 2
-Description=Demonstrate usage of List,Sort.
+Title=List-SortX Example 2
+Description=Demonstrate usage of List,SortX.
 Level=5
 Version=1
 Author=Homes32
@@ -70,7 +70,7 @@ Author=Homes32
 %myList%=10|98|50|32|0|1|5|2|4|3
 
 [Process]
-List,Sort,%myList%,ASC
+List,SortX,%myList%,ASC
 Message,"myList: %myList%"
 ```
 
@@ -80,8 +80,8 @@ Sort a mixed list.
 
 ```pebakery
 [Main]
-Title=List-Sort Example 3
-Description=Demonstrate usage of List,Sort.
+Title=List-SortX Example 3
+Description=Demonstrate usage of List,SortX.
 Level=5
 Version=1
 Author=Homes32
@@ -90,6 +90,6 @@ Author=Homes32
 %myList%=Home|UlTiMaTe|10|StarteR|enterprise|50|Professional|2|98|0|4|starter|Enterprise|1|PrOfEsSiOnAl|2|5|3|Starter|Ultimate
 
 [Process]
-List,Sort,%myList%,DESC
+List,SortX,%myList%,DESC
 Message,"myList: %myList%"
 ```
