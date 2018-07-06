@@ -1,11 +1,11 @@
-# List,Get
+# List,Count
 
-Extracts a specific item from a list structure.
+Returns the number of items in a list.
 
 ## Syntax
 
 ```pebakery
-List,Get,<%ListVar%>,<Index>,<%DestVar%>[,Delim=<Str>]
+List,Count,<%ListVar%>,<%DestVar%>[,Delim=<Str>]
 ```
 
 ### Arguments
@@ -13,50 +13,25 @@ List,Get,<%ListVar%>,<Index>,<%DestVar%>[,Delim=<Str>]
 | Argument | Description |
 | --- | --- |
 | ListVar | The variable containing the list. |
-| Index | The index where the item to retrieve is located. |
 | DestVar | The variable where the result will be saved. |
 | Delim= | **(Optional)** Delimiter used to separate the items in the list. **Default:** `\|` |
 
 ## Remarks
 
-The `List,Count` command can be used to retrieve the number of items in the list.
-
-Specifying an `Index` greater or less then the number of items in the list will result in an error.
+The first element of a list is indexed by subscript of 1 (1-based index) and incremented for each additional item in the list.
 
 ## Related
-
-[List,Count](./Count.md)
 
 ## Examples
 
 ### Example 1
 
-Get the 3rd item in a list.
+Use `List,Count` to retrieve the last item in a list.
 
 ```pebakery
 [Main]
-Title=List-Get Example 1
-Description=Demonstrate usage of List,Get.
-Level=5
-Version=1
-Author=Homes32
-
-[Variables]
-%myList%=Home|Professional|Enterprise|Starter|Ultimate
-
-[Process]
-List,Get,%myList%,3,%DestVar%
-Message,"Item #3: %DestVar%"
-```
-
-### Example 2
-
-Get the last item in a list.
-
-```pebakery
-[Main]
-Title=List-Get Example 2
-Description=Demonstrate usage of List,Get.
+Title=List-Count Example 1
+Description=Demonstrate usage of List,Count.
 Level=5
 Version=1
 Author=Homes32
@@ -70,14 +45,14 @@ List,Get,%myList%,%n%,%DestVar%
 Message,"Last Item: %DestVar%"
 ```
 
-### Example 3
+### Example 2
 
 Loop through an entire list.
 
 ```pebakery
 [Main]
-Title=List-Get Example 3
-Description=Demonstrate usage of List,Get.
+Title=List-Count Example 2
+Description=Demonstrate usage of List,Count.
 Level=5
 Version=1
 Author=Homes32
