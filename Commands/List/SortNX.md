@@ -26,7 +26,7 @@ If you need to sort a list in lexicographical order consider using the `List,Sor
 
 ## Related
 
-[List,Sort](./Sort.md), [List,SortN](./SortN.md), [List,SortX](./SortX.md) 
+[List,Sort](./Sort.md), [List,SortN](./SortN.md), [List,SortX](./SortX.md)
 
 ## Examples
 

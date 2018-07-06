@@ -20,7 +20,7 @@ List,Sort,<%ListVar%>,<Order>[,Delim=<Str>]
 
 ## Remarks
 
-Lexicographical order is not the same as natural order. When sorting a list containing numbers `10|98|50|32|0|1|5|2|4|3` the result will be `0|1|10|2|3|32|4|5|50|98`. This is because in a lexicographical sort each character sorted individually. 
+Lexicographical order is not the same as natural order. When sorting a list containing numbers `10|98|50|32|0|1|5|2|4|3` the result will be `0|1|10|2|3|32|4|5|50|98`. This is because in a lexicographical sort each character sorted individually.
 
 >To determine which of two strings comes first in alphabetical order, their first letters are compared. If they differ, then the string whose first letter comes earlier in the alphabet is the one which comes first in alphabetical order. If the first letters are the same, then the second letters are compared, and so on. If a position is reached where one string has no more letters to compare while the other does, then the first (shorter) string is deemed to come first in alphabetical order. [-Wikipedia](https://en.wikipedia.org/wiki/Alphabetical_order)
 
@@ -30,7 +30,7 @@ If you need to sort a list in natural/numeric order consider using the `List,Sor
 
 ## Related
 
-[List,SortN](./SortN.md), [List,SortNX](./SortNX.md), [List,SortX](./SortX.md) 
+[List,SortN](./SortN.md), [List,SortNX](./SortNX.md), [List,SortX](./SortX.md)
 
 ## Examples
 

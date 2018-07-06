@@ -12,7 +12,7 @@ Example:
 
 Translates logically into:
 
-| | | | | | | 
+| | | | | | |
 | --- | :---: | :---: | :---: | :---: | :---: |
 | **Index** | 1 | 2 | 3 | 4 | 5 |
 | **Value** | Home | Professional | Enterprise | Starter | Ultimate |
