@@ -14,7 +14,7 @@ List,Count,<%ListVar%>,<%DestVar%>[,Delim=<Str>]
 | --- | --- |
 | ListVar | The variable containing the list. |
 | DestVar | The variable where the result will be saved. |
-| Delim= | **(Optional)** Delimiter used to separate the items in the list. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 

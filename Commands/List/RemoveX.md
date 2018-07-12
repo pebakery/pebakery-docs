@@ -14,7 +14,7 @@ List,RemoveX,<%ListVar%>,<Value>[,Delim=<Str>]
 | --- | --- |
 | ListVar | The variable containing the list. |
 | Value | The value to remove. |
-| Delim= | **(Optional)** Delimiter used to separate the items in the list. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 

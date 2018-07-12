@@ -15,7 +15,7 @@ List,Insert,<%ListVar%>,<Index>,<Value>[,Delim=<Str>]
 | ListVar | The variable containing the list. |
 | Index | The index where the item will be written. |
 | Value | The value to insert. |
-| Delim= | **(Optional)** Delimiter used to separate the items in the list. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 

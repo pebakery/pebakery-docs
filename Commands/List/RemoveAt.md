@@ -14,7 +14,7 @@ List,RemoveAt,<%ListVar%>,<Index>[,Delim=<Str>]
 | --- | --- |
 | ListVar | The variable containing the list. |
 | Index | The index containing the value to be removed. |
-| Delim= | **(Optional)** Delimiter used to separate the items in the list. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 

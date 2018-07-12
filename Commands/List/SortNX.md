@@ -16,7 +16,7 @@ List,SortNX,<%ListVar%>,<Order>[,Delim=<Str>]
 | Order | One of the following: |
 || ASC - Sort in Ascending order. |
 || DESC - Sort in Descending order. |
-| Delim= | **(Optional)** Delimiter used to separate the items in the list. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 
