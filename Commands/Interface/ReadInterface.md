@@ -26,7 +26,7 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>[,Del
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |
 | DestVar | The variable that will contain the value of the selected property. |
-| Delim= | **(Optional)** Delimiter used to separate the list of `Items` retrieved from a ComboBox or RadioGroup control. **Default:** `\|` |
+| Delim= | **(Optional)** Delimiter used to separate the list of `Items` retrieved from a ComboBox or RadioGroup control. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 
@@ -37,7 +37,7 @@ The `Items` Property is only supported in these controls:
 | ComboBox     | (Delimited String) List of items assigned to the control. |
 | RadioGroup   | (Delimited String) List of options assigned to the control. |
 
-PeBakery will return the list of items in pipe delimited `|` format unless the `Delim=` argument specifies otherwise.
+PEBakery will return the items as a pipe delimited `|` list unless the `Delim=` argument specifies otherwise.
 Attempting to read `Items` from an unsupported control will result in an error.
 
 The `Value` Property is only supported in these controls:
