@@ -40,6 +40,10 @@ No longer used.
 
 No longer used, PEBakery will always split parameters.
 
+### TXTAddLine - **PLACE**
+
+WinBuilder's implementation of `TxtAddLine` allowed for an `Action` called **Place** which would allow the developer to specify a line number where the text should be inserted. This feature was depreciated in PEBakery due to lack of perceived usefulness.
+
 ### If,License
 
 No longer used.
@@ -50,7 +54,7 @@ These commands are fully functional within PEBakery but will be removed in a fut
 
 ### WebGetIfNotExist
 
-This commmand is broken in WB082, and it is better to implement this as macro.
+This command is broken in WB082, and it is better to implement this as macro.
 
 ### StrFormat,ShortPath / LongPath
 
