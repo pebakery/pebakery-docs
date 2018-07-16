@@ -6,7 +6,7 @@ These commands not implemented in PEBakery.
 
 ### FileByteExtract
 
-No longer used.
+No longer used. Can be accomplished with other tools.
 
 ### RegReadBin / RegWriteBin
 
@@ -35,6 +35,7 @@ No longer used.
 ### System,Log
 
 No longer used.
+This command was originally was intended to allow a developer to disable logging of API/Macro commands in order to keep the build log from inflating. PEBakery has a global option in Settings > Logging > `Log Macro` that allows the user to toggle logging of Macro commands.
 
 ### System,SplitParameters
 
