@@ -2,7 +2,11 @@
 
 ## Deprecated from WinBuilder 082
 
-These commands not implemented in PEBakery.
+These Winbuilder commands are not implemented in PEBakery.
+
+### Run - OUT:
+
+Winbuilder's implementation of the `Run` command allows for passing a parameter _by reference_ using the `OUT:<var>` directive. At the time of this writing there are no known projects using this functionality so implementation has been deferred. If you feel you need this functionality please open a support ticket.
 
 ### FileByteExtract
 
