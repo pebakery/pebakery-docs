@@ -4,7 +4,7 @@ Variables are used to store a value in memory while a script is processing.
 
 ## Declaring Variables
 
-Variables consist of a unique name used to identify the variable and must be encloded in percent signs `%`. Variable names are case insensitive, so `%myVar%` is the same as `%MYVAR%`.
+Variables consist of a unique name used to identify the variable and must be enclosed in percent signs `%`. Variable names are case insensitive, so `%myVar%` is the same as `%MYVAR%`.
 
 Variables can be defined in several different ways:
 
@@ -52,7 +52,7 @@ When the compatability option `Overridable Fixed Variables` is enabled the follo
 
 Fixed Variables are reserved variables that are populated by PEBakery and cannot be overwritten*.
 
-_*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enabled for compatability with older projects in transition from Winbuilder to PEBakery, however it is recommended that the project be updated as quickly as possible to remove this unsafe behavior._
+_*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enabled for compatibility with older projects in transition from Winbuilder to PEBakery, however it is recommended that the project be updated as quickly as possible to remove this unsafe behavior._
 
 #### Fixed System Variables
 
@@ -76,17 +76,23 @@ _*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enab
 
 #### Fixed Environment Variables
 
-Fixed envionment variabes are included only for compatability with Winbuilder and must be enabled with the compatability option `Enable Environment Variables`. If you need to retrieve information about the local operating system's envionment it is recommended to use the more flexable `System,GetEnv` command instead.
+Fixed environment variables are included only for compatibility with Winbuilder and must be enabled with the compatibility option `Enable Environment Variables`. If you need to retrieve information about the local operating system's environment it is recommended to use the more flexible and accurate `System,GetEnv` command instead.
 
 | Variable | Description |
 | --- | --- |
-| %ProgramFilesDir% | The path of the local operating sytem's `Program Files` directory. |
-| %ProgramFilesDir_x86% | If The path of the local operating sytem's `Program Files (x86)` directory (x64 OS only). |
-| %TempDir% | The path of the local operating sytem's `Temp` directory. |
+| %ProcessorType% | One of the following: |
+|| 586 - Intel-based 32-bit processor architecture. |
+|| 8664 - Intel-based 64-bit processor architecture. |
+|| Arm - 32-bit ARM processor architecture. **PEBakery Only** |
+|| Arm64 - 64-bit ARM processor architecture. **PEBakery Only** |
+|| Unknown - Any other architecture. |
+| %ProgramFilesDir% | The path of the local operating system's `Program Files` directory. |
+| %ProgramFilesDir_x86% | If The path of the local operating system's `Program Files (x86)` directory (x64 OS only). |
+| %TempDir% | The path of the local operating system's `Temp` directory. |
 | %UserName% | The name of the currently logged in user. |
 | %UserProfile% | The path of the logged in user's home directory. |
-| %WindowsDir% | The path of the local operating sytem's `Windows` directory. |
-| %WindowsVersion% | The local operating sytem's version number. |
+| %WindowsDir% | The path of the local operating system's `Windows` directory. |
+| %WindowsVersion% | The local operating system's version number. |
 
 ### Local Variables
 
