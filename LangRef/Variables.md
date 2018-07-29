@@ -30,7 +30,7 @@ StrFormat,Left,"Hello World!",5,%result%
 
 ## Variables Search Order
 
-It is possible that local variable may share the same name with a project global variable. In the event a name collision occures the following order will be used to determine the value to be use within the script.
+It is possible that local variable may share the same name with a project global variable. In the event a name collision occurs the following order will be used to determine the value to be use within the script.
 
 ### PEBakery standard
 
@@ -40,7 +40,7 @@ It is possible that local variable may share the same name with a project global
 
 ### WinBuilder Compatible
 
-When the compatability option `Overridable Fixed Variables` is enabled the following search order is used.
+When the compatibility option `Overridable Fixed Variables` is enabled the following search order is used.
 
 1. Local Variables
 1. Global Variables
