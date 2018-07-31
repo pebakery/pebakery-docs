@@ -4,6 +4,18 @@ Welcome to the PEBakery Manual!
 
 ## Table of Contents
 
+1. Using PEBakery
+    * Main Window
+    * Settings
+	    * Projects
+		* General
+		* Interface
+		* Script
+		* Log
+		* [Compatibility](./Usage/Settings-Compatibility.md)
+	* Log
+    * Utilities	
+	* Update
 1. Scripting Reference
     * [.Script Syntax](./LangRef/Syntax.md)
 	* [Comments](./LangRef/Comments.md)
@@ -19,4 +31,6 @@ Welcome to the PEBakery Manual!
 1. Appendix
     * [Bug Reports](./BugReport/README.md)
     * [Coding Guide](./CodingGuide/README.md)
+	* [Deprecated Commands](./Deprecated.md)
     * [License](LICENSE)
+    * [Migrating from Winbuilder](./CodingGuide/Migrating.md)
