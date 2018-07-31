@@ -17,6 +17,8 @@ RegHiveLoad,<KeyPath>,<HiveFile>
 
 ## Remarks
 
+If the `HiveFile` does not exist an empty registry hive will be created with the specified name.
+
 `RegHiveLoad` will always load the `KeyPath` under the local registry **HKLM** key.
 
 A registry hive mounted with `RegHiveLoad` should be unmounted with `RegHiveUnload`.
