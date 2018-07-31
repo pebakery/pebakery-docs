@@ -2,11 +2,11 @@
 
 ## Deprecated from WinBuilder 082
 
-These Winbuilder commands have not implemented in PEBakery.
+These Winbuilder commands have not been implemented in PEBakery.
 
 ### DirCopy `[SHOW]`
 
-When the `SHOW` flag was supplied with the `DirCopy` command Winbuilder would show the operating systems file copy progress dialog.
+When the `SHOW` flag was supplied with the `DirCopy` command Winbuilder would show the operating system's file copy progress dialog.
 
 ### DirDelete `[FAST]`
 
@@ -18,11 +18,11 @@ No longer used. Can be accomplished with other commands.
 
 ### FileByteExtract
 
-This command was originally designed for extracting resources from executable files and is no longer used. Resource extraction can be accomplished better with other tools (eg. Resource Hacker).
+This command was originally designed for extracting resources from executable files and is no longer used. Resource extraction can be accomplished more effectively with other tools (eg. Resource Hacker).
 
 ### Hive,Delete/Load/Read/UnLoad/Write
 
-These commands have been replaced by RegHiveLoad/RegRead/RegWrite/etc.
+These commands are no longer used in Winbuilder and have been replaced by RegHiveLoad/RegRead/RegWrite/etc.
 
 ### If,License
 
@@ -34,11 +34,11 @@ This command would perform an user defined action if a specified executable was 
 
 ### RegGetNext
 
-This command was introduced in Winbuilder 071 in order to provide a way to enumerate driver classes in the registry. It has not been used an any active projects.
+This command was introduced in Winbuilder 071/072 in order to provide a way to enumerate driver classes in the registry. It has not been used an any active projects.
 
 ### RegReadBin / RegWriteBin
 
-This command was a hack to allow writing unchecked values to the registry via a binary format because Delphi 7 doesn't support Unicode or 64bit QWORDS. It never did work correctly in Winbuilder and is not needed anymore because PEBakery has native support for QWORDs and Unicode strings in RegRead and RegWrite.
+This command was a hack to allow writing unchecked values to the registry via a binary format because Delphi 7 doesn't support Unicode or 64bit QWORDS. It never did work correctly in Winbuilder and is no longer required as PEBakery has native support for QWORDs and Unicode strings in RegRead and RegWrite.
 
 ### Run [OUT:]
 
@@ -58,7 +58,7 @@ PEBakery uses the .NET framework and will run in either x86 or x64 (AnyCPU), the
 
 ### System,IsTerminal
 
-Was used in older projects to detect in Winbuilder was running in a terminal server session. No longer used by any active projects.
+Was used in older projects to detect if Winbuilder was running in a terminal server session. This was problematic because of the way older versions of Terminal server handled writing certain configuration files. No longer used by any active projects and should not be necessary with modern versions of Windows.
 
 ### System,Log
 
@@ -72,7 +72,7 @@ Following Winbuilder's default behavior PEBakery will always split parameters.
 
 WinBuilder's implementation of `TxtAddLine` allowed for an `Action` called **Place** which would allow the developer to specify a line number where the text should be inserted. This feature was depreciated in PEBakery due to lack of perceived usefulness.
 
-## WebGet `[MD5]` `[Comment]` `[Timeout]`
+### WebGet `[MD5]` `[Comment]` `[Timeout]`
 
 Winbuilder's Webget implementation had multiple issues and was completely rewritten for PEBakery. The MD5/Command/Timeout flags were depreciated and modern hash verification commands implemented.
 
@@ -82,15 +82,15 @@ These commands are fully functional within PEBakery but will be removed in a fut
 
 ### GetParam / PackParam
 
-Those commands were added to Winbuilder in an attempt to work around the limit of 9 parameters that could be passed to a Run/Exec command.
+These commands were added to Winbuilder in an attempt to work around the limit of 9 parameters that could be passed to a Run/Exec command.
 
-The intention was that multiple parameters could be "packed" into an array/list and passed as a single parameter to the called _section_ where they could be expanded back to their original variables, however the command is totally broken in WB082 so projects never made use of the functionality.
+The intention was that multiple parameters could be "packed" into an array/list and passed as a single parameter to the called _section_ where they could be expanded back to their original variables, however the command is totally broken in Winbuilder 082 so projects never made use of the functionality.
 
 PEBakery supports an infinite number of section parameters, as well as list structures via the `List` command so Get/Pack Param are no longer necessary.
 
 ### Legacy Branch Conditions
 
-Legacy branch conditions such as `NOTEXISTFILE` and `NOTEXISTDIR` are deprecated in favor of using the `Not` operator (eg. `If,Not,EXISTDIR...). This is the recommended syntax in Winbuilder as well so legacy branch conditions are disabled by default in PEBakery. They can be enabled with a compatibility option.
+Legacy branch conditions such as `NOTEXISTFILE` and `NOTEXISTDIR` are deprecated in favor of using the `Not` operator (eg. `If,Not,EXISTDIR`...). This is the recommended syntax in Winbuilder so legacy branch conditions are disabled by default in PEBakery. They can be enabled with a compatibility option.
 
 ### Loop - `<Letter>`
 
@@ -102,9 +102,7 @@ Winbuilder allows the `Set` command to modify interface control values, however 
 
 ### StrFormat,ShortPath / LongPath
 
-Success of conversion to short path depends on registry value `HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation`.
-
-Thus this commands cannot be guaranteed to work properly in every system.
+Success of conversion to short path depends on registry value `HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation`, thus this command cannot be guaranteed to work properly in every system.
 
 ### System,HasUAC
 
@@ -114,13 +112,13 @@ User Account Control (UAC) is enabled by default in all supported versions of Wi
 
 ### System,RebuildVars
 
-This command is obsolete in Winbuilder 082 as was originally implemented in version 075/076 for compatibility reasons replacing `System,RefreshVars` after engine improvements made the command largely unnecessary. Prior to Winbuilder 075 variables required a manual Refresh/Rebuild once they were dynamically modified. For further reading check out [this post](http://reboot.pro/topic/4663-variables/).
+This command is obsolete in Winbuilder 082 as was originally implemented in version 075/076 for compatibility reasons replacing `System,RefreshVars` after engine improvements made the command largely unnecessary. Prior to Winbuilder 075 variables defined in the `[Variables]` section required a manual Refresh/Rebuild once they were dynamically modified with the `Set` command. For further reading check out [this post](http://reboot.pro/topic/4663-variables/).
 
-Currently PEBakery resets variables to default script variables.
+Currently PEBakery resets variables to the original value as it was defined in the `[Variables]` section.
 
 ### WebGetIfNotExist
 
-This command is broken in WB082, and it is better to implement this as a macro.
+This command is broken in Winbuilder 082, and it was thought it would be better to implement this as a macro.
 
 ### Visible
 
@@ -128,7 +126,7 @@ Winbuilder's `Visible,<control>,PERMENENT` command will be deprecated in favor o
 
 ## Depreciated Constant/Fixed Variables
 
-Winbuilder pre-sets a number of constant/fixed variables. Most of these variables contain information that can be easily obtain through other means and some don't have any use at all. The PEBakery team believes that the project/script author should be the one to decide what variables they want defined and what they should be named, not PEBakery. For this reason PEBakery limits itself to defining essential variables such as `%BaseDir%, %ProjectDir%, %ScriptFile%` and leaves the rest to the project/script author.
+Winbuilder presets a number of constant/fixed variables. Most of these variables contain information that can be easily obtain through other means and some don't have any use at all. The PEBakery team believes that the project/script author should be the one to decide what variables they want defined and what they should be named, not PEBakery. For this reason PEBakery limits itself to defining essential variables such as `%BaseDir%, %ProjectDir%, %ScriptFile%` and leaves the decision to define additional variables up to the project/script author to implement as they see fit.
 
 The following variables have been deprecated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use alternative methods.
 
