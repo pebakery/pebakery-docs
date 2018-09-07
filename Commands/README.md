@@ -13,6 +13,7 @@ Click on a Category below for a list of supported commands.
 | [Hash](./Hash/README.md) | Commands for hashing and verifying files. |
 | [INI](./INI/README.md) | Commands that allow you to read and write standard _.ini_ formatted files, including PEBakery .script files. |
 | [Interface](./Interface/README.md) | Interface commands allow your scripts to interact with the user. |
+| [List](./List/README.md) | Commands for creating and manipulating list structures. |
 | [Math](./Math/README.md) | Commands for performing mathematical operations. |
 | [Network](./Network/README.md) | Commands that allow you to perform network related tasks such as downloading files from the Internet. |
 | [Script](./Script/README.md) | Script commands allow you to modify a .script file, including encoding and extracting attachments. |

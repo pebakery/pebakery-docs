@@ -24,6 +24,8 @@ Click on a Command name for a detailed description.
 | [StrFormat,LTrim](./LTrim.md) | Removes a number of characters from the left-hand side of a string. |
 | [StrFormat,Mult](./Mult.md) | Multiplies two numbers. |
 | [StrFormat,NTrim](./NTrim.md) | Removes any and all numbers from the end of a string. |
+| [StrFormat,PadLeft](./PadLeft.md) | Right-aligns the characters in a string by padding them with a specified character on the left, up to a specified total length. |
+| [StrFormat,PadRight](./PadRight.md) | Left-aligns the characters in a string by padding them with a specified character on the right, up to a specified total length. |
 | [StrFormat,PathCombine](./PathCombine.md) | Combines a path with a filename to form a full path. |
 | [StrFormat,Pos](./Pos.md) | Returns the position of the given SubString inside the specified String. **Case Insensitive.** |
 | [StrFormat,PosX](./PosX.md) | Returns the position of the given SubString inside the specified String. **Case Sensitive.** |

@@ -46,7 +46,7 @@ PEBakery allows an unlimited number of parameters to be passed to the `[section]
 
 Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
-*Note:* Winbuilder allows looping through characters A-Z in addition to integers. The PEBakery `LoopLetter` command replaces this functionality.
+*Note:* Winbuilder allows looping through characters A-Z in addition to integers. The PEBakery `LoopLetter` command replaces this functionality. For backwards compatibility with legacy projects you can enable the _Allow Letter in Loop's Arugment_ compatibility option in PEBakery's settings.
 
 ## Related
 

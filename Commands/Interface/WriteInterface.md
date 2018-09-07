@@ -5,7 +5,7 @@ Changes the properties of an interface control.
 ## Syntax
 
 ```pebakery
-WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>
+WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=]
 ```
 
 ### Arguments
@@ -20,15 +20,28 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
+|| Items - List of the items the control contains. |
 || ToolTip - Text that will be displayed when the user hovers over the control. Tooltips my be removed by specifying an empty string `""` or `NIL` as the tooltip value. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface control you wish to modify. |
 | ControlName | The name of the control to modify. |
 | Value | The new value to write. |
+| Delim= | **(Optional)** Delimiter used to separate the list of `Items` that will be written to a ComboBox or RadioGroup control. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 
-The `Value` `Property` is only supported in these controls:
+The `Items` Property is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| ComboBox     | (Delimited String) List of items to be assigned to the control. |
+| RadioGroup   | (Delimited String) List of options to be assigned to the control. |
+
+PEBakery assumes the `Items` list passed to the `WriteInterface` command is pipe `|` delimited unless otherwise specified by the `Delim=` argument.
+
+Attempting to read `Items` from an unsupported control will result in an error.
+
+The `Value` Property is only supported in these controls:
 
 | Control | Read Value |
 | --- | --- |
@@ -58,7 +71,7 @@ WriteInterface,Value,%ScriptFile%,Interface,pCheckBox1,Joveler
 
 ## Related
 
-[Script Interface](#), [Set](../Control/Set.md), [Visible](./Visible.md)
+[ReadInterface](./ReadInterface.md), [Script Interface Controls](/GUIControls/README.md), [Set](../Control/Set.md), [Visible](./Visible.md)
 
 ## Examples
 
@@ -243,6 +256,28 @@ pTextLabel2=Hidden,0,1,20,50,280,18,8,Normal
 // Source : pTextBox1=Display,1,0,20,20,200,21,StringValue
 // Result : pTextBox1=PEBakery,1,0,20,20,200,21,StringValue
 WriteInterface,Text,%ScriptFile%,Interface,pTextBox1,PEBakery
+```
+
+#### Write Items
+
+Replace `A,B,C,D` items with `D,C,B,A`
+
+```pebakery
+// Source : pComboBox1=A,1,4,20,130,150,21,A,B,C,D
+// Result : pComboBox1=B,1,4,20,130,150,21,D,C,B,A
+WriteInterface,Items,%ScriptFile%,Interface,pComboBox1,D|C|B|A
+```
+
+Append  `D,C,B,A` to the existing list of items
+
+```pebakery
+// Source : pComboBox1=A,1,4,20,130,150,21,A,B,C,D
+// Result : pComboBox1=B,1,4,20,130,150,21,A,B,C,D,D,C,B,A
+
+// Get the current items in pComboBox1
+ReadInterface,Items,%ScriptFile%,Interface,pComboBox1,%ExistingItems%
+// Append to our new list and write
+WriteInterface,Items,%ScriptFile%,Interface,pComboBox1,%ExistingItems%|D|C|B|A
 ```
 
 #### Write Visibility

@@ -14,10 +14,10 @@ Message,<Message>,<Icon>[,Timeout]
 | --- | --- |
 | Message | The text that will be displayed to the user. |
 | Icon | **(Optional)** Defines the Icon to display. Valid options are: |
-|| Information - **(Default)** Displays an Information Icon |
-|| Confirmation - Displays a Question Icon |
+|| Information/Info - **(Default)** Displays an Information Icon |
+|| Confirmation/Confirm - Displays a Question Icon |
 || Error - Displays a Error Icon |
-|| Warning - Displays a Warning Icon |
+|| Warning/Warn - Displays a Warning Icon |
 | Timeout | **(Optional)** Time in seconds before the message automatically closes. |
 
 ## Remarks

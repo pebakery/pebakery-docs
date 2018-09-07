@@ -14,3 +14,4 @@ Click on a Command name for a detailed description.
 | [LoopLetter](./LoopLetter.md) | Loops through a range of letters in alphabetical order. |
 | [Operators](./Operators.md) | Supported comparison and logical operators. |
 | [Run](./Run.md) | Runs the commands found in a named `[Section]` of a script file. |
+| [RunEx](./RunEx.md) | Runs the commands found in a named `[Section]` of a script file. Supports passing parameters by reference. |

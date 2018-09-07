@@ -5,7 +5,7 @@ Reads the properties of an interface control.
 ## Syntax
 
 ```pebakery
-ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>
+ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>[,Delim=]
 ```
 
 ### Arguments
@@ -20,15 +20,27 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>
 || Width - Width of the control. |
 || Height - Height of the control. |
 || Value - Value of the control. |
+|| Items - List of the items the control contains. |
 || ToolTip - Text that will be displayed when the user hovers over the control. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |
 | DestVar | The variable that will contain the value of the selected property. |
+| Delim= | **(Optional)** Delimiter used to separate the list of `Items` retrieved from a ComboBox or RadioGroup control. Case Insensitive. **Default:** `\|` |
 
 ## Remarks
 
-The `Value` `Property` is only supported in these controls:
+The `Items` Property is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| ComboBox     | (Delimited String) List of items assigned to the control. |
+| RadioGroup   | (Delimited String) List of options assigned to the control. |
+
+PEBakery will return the items as a pipe delimited `|` list unless the `Delim=` argument specifies otherwise.
+Attempting to read `Items` from an unsupported control will result in an error.
+
+The `Value` Property is only supported in these controls:
 
 | Control | Value |
 | --- | --- |
@@ -40,16 +52,11 @@ The `Value` `Property` is only supported in these controls:
 | FileBox     | (String) Content of the control. |
 | RadioGroup  | (Integer) Zero-Based Index of the selected item. |
 
-Trying to read `Value` from an unsupported control will result in an error.
-
-```pebakery
-// Error! You cannot read the value of a TextLabel.
-ReadInterface,Value,%ScriptFile%,Interface,pTextLabel1,%Dest%
-```
+Attempting to read `Value` from an unsupported control will result in an error.
 
 ## Related
 
-[Script Interface](#), [WriteInterface](./WriteInterface.md)
+[Script Interface Controls](/GUIControls/README.md), [WriteInterface](./WriteInterface.md)
 
 ## Examples
 
@@ -232,6 +239,16 @@ pTextLabel2=Hidden,0,1,20,50,280,18,8,Normal
 ```pebakery
 // Return "Display"
 ReadInterface,Text,%ScriptFile%,Interface,pTextBox1,%Dest%
+```
+
+#### Read Items
+
+```pebakery
+// Return "A|B|C|D"
+ReadInterface,Items,%ScriptFile%,Interface,pComboBox1,%Dest%
+
+// Return "A$B$C$D"
+ReadInterface,Items,%ScriptFile%,Interface,pComboBox1,%Dest%,Delim=$
 ```
 
 #### Read Visibility
