@@ -23,7 +23,7 @@ For the most part deprecated commands fall into the following categories:
 * Have no practical use case in PE building.
 * Were completely broken in Winbuilder itself and not used in any active projects.
 
-[A full list of depreciated commands is maintained here](/Commands/Depreciated.md).
+[A full list of depreciated commands is maintained here](/Commands/Deprecated.md)
 
 ## Compatibility Issues
 
