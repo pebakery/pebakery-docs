@@ -7,24 +7,29 @@ Compress a file or directory into archive.
 ## Syntax
 
 ```pebakery
-Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel],[Encoding]
+Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel]
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| Format | Archive format. Only `Zip` is supported at this time. |
+| Format | Archive format: |
+|| `7z` - Use the 7-Zip archive format. (Best Compression) |
+|| `Zip` - Use the standard Zip format. (Maximum Portability) |
 | SrcPath | Full path of the file/directory to compress. |
 | DestArchive | Full path where the archive will be created. |
-| CompressLevel | **(Optional)** This effects archive size and compression time. Supported compression: `Store`, `Fastest`, `Normal`, `Best`. **Default** is `Normal`. |
-| Encoding | **(Optional)** Encoding to be used in filename. Supported options: `UTF8`, `UTF16`, `UTF16BE`, `ANSI`. **Default** is `UTF8`. |
-
-`CompressLevel` and `Encoding` can be used independently.
+| CompressLevel | **(Optional)** Supported compression levels: |
+|| `Store` -  No compression. Best performance for files that don't benefit from compression. |
+|| `Fastest` - Fast compression but results in a larger archive size. |
+|| `Normal` - **(Default)** Balance between speed and archive size. |
+|| `Best` - Maximum compression results in the smallest archive size at the expense of slower compression/decompression. |
 
 ## Remarks
 
-This command depends on [SharpCompress](https://github.com/adamhathcock/sharpcompress)
+All filenames are encoded to UTF-8.
+
+Compression is handled using [Squid-Box.SevenZipSharp](https://github.com/squid-box/SevenZipSharp) and 7z.dll.
 
 ## Related
 
@@ -38,6 +43,6 @@ Compress,Zip,%BaseDir%\PEBakery.ini,%BaseDir%\Setting.zip
 ```
 
 ```pebakery
-// PEBakery.ini will be stored into Setting.zip.
-Compress,Zip,%BaseDir%\PEBakery.ini,%BaseDir%\Setting.zip,Store
+// PEBakery.ini will be stored into Setting.7z.
+Compress,7z,%BaseDir%\PEBakery.ini,%BaseDir%\Setting.7z,Store
 ```
