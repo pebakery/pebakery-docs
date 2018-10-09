@@ -49,11 +49,11 @@ Button2="Image Button",1,8,360,66,99,25,pButton2,if_hammer_screwdriver_11945.bmp
 The following is an example of a button control that was generated using Winbuilder's built-in interface editor.
 
 ```pebakery
-// Name=<Caption>,<Visibility>,8,<PosX>,<PosY>,<Width>,<Height>,<SectionToRun>,<Image>,<ShowProgress>,<False>,<_SectionToRun_>,<ShowProgress>][,<__ToolTip>]
+// Name=<Caption>,<Visibility>,8,<PosX>,<PosY>,<Width>,<Height>,<SectionToRun>,<Image>,<ShowProgress>,<False>,<_SectionToRun_>,<ShowProgress>,<__ToolTip>
 pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True,False,_runMe_,True,"__Launch this program."
 ```
 
-#### Cavets
+#### Caveats
 
 Parameter #11 is always created by Winbuilder's interface editor with a value of `False` but it is not used by either Winbuilder or PEBakery. Winbuilder 077b2 through 078 used parameter #11 for for the button's tooltip before the universal `__Tooltip` syntax was implemented.
 

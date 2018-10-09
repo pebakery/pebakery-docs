@@ -29,7 +29,7 @@ Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel]
 
 All filenames are encoded to UTF-8.
 
-Compression is handled using [Squid-Box.SevenZipSharp](https://github.com/squid-box/SevenZipSharp) and 7z.dll.
+Compression is performed using 7z.dll.
 
 ## Related
 
