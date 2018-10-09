@@ -36,6 +36,7 @@ Buttons created with Winbuilder 082's internal interface editor have additional 
 ## Examples
 
 ### Example 1
+
 ```pebakery
 // Button without image
 Button1=Button,1,8,361,27,98,25,pButton1,0,False
@@ -45,12 +46,25 @@ Button2="Image Button",1,8,360,66,99,25,pButton2,if_hammer_screwdriver_11945.bmp
 
 ### Example 2
 
-The following button control was generated using Winbuilder's built-in interface editor.
+The following is an example of a button control that was generated using Winbuilder's built-in interface editor.
 
 ```pebakery
-// Name=<Caption>,<Visibility>,8,<PosX>,<PosY>,<Width>,<Height>,<SectionToRun>,<Image>,<ShowProgress>,<False>,<_SectionToRun_>,<ShowProgress>][,<ToolTip>]
-// Winbuilder's interface editor creates parameters #12 and #13 for _SectionToRun,ShowProgress  but doesn't actually use them, instead using parameters #8 and #10.
-// Parameter #11 is always created by Winbuilder's interface editor with a value of False but it is not used in either Winbuilder or PEBakery.
-// Winbuilder 077b2 through 078 used this parameter for the button's tooltip.
+// Name=<Caption>,<Visibility>,8,<PosX>,<PosY>,<Width>,<Height>,<SectionToRun>,<Image>,<ShowProgress>,<False>,<_SectionToRun_>,<ShowProgress>][,<__ToolTip>]
 pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True,False,_runMe_,True
+```
+
+#### Cavets
+
+Parameter #11 is always created by Winbuilder's interface editor with a value of `False` but it is not used by either Winbuilder or PEBakery. Winbuilder 077b2 through 078 used parameter #11 for for the button's tooltip before the universal `__Tooltip` syntax was implemented.
+
+Winbuilder's interface editor creates parameters #12 and #13 for `_SectionToRun_,ShowProgress`  but doesn't actually use them, instead referencing parameters #8 and #10.
+
+#### Cleanup & Migration
+
+When migrating scripts to PEBakery it is safe (and backwards compatible with Winbuilder) to remove all parameters after #10, unless the parameter begins with a double underscore eg. `__SomeText` indicating it's a tooltip.
+
+In this example the above button definition can be simplified to:
+
+```pebakery
+pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True
 ```
