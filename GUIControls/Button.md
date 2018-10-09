@@ -50,7 +50,7 @@ The following is an example of a button control that was generated using Winbuil
 
 ```pebakery
 // Name=<Caption>,<Visibility>,8,<PosX>,<PosY>,<Width>,<Height>,<SectionToRun>,<Image>,<ShowProgress>,<False>,<_SectionToRun_>,<ShowProgress>][,<__ToolTip>]
-pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True,False,_runMe_,True
+pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True,False,_runMe_,True,"__Launch this program."
 ```
 
 #### Cavets
@@ -66,5 +66,9 @@ When migrating scripts to PEBakery it is safe (and backwards compatible with Win
 In this example the above button definition can be simplified to:
 
 ```pebakery
+// with tooltip
+pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True,"__Launch this program."
+
+//without tooltip
 pButton2="Button 2",1,8,23,75,80,25,runMe,tools.bmp,True
 ```
