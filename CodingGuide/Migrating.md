@@ -10,23 +10,25 @@ PEBakery was designed to be backwards compatible with Winbuilder 082's .script s
 
 ## Caching
 
-In order to reduce build and load times PEBakery reads all scripts into memory and caches them in a sql-lite database. This dramatically speeds up PEBakery but does require that you refresh the script each time changes are made to the physical script file. A running script cannot refresh itself, so this also means that new values set by commands such as `IniRead`/`IniWrite` will not update the script already in memory until the script or project is manually refreshed. Enhancements to PEBakery's interface handling including the implementation of the `ReadInterface` and `WriteInterface` commands make using `Ini` commands to set script interface values completely unnecessary.
+In order to reduce build and load times PEBakery reads all scripts into memory and caches them in a sql-lite database. This dramatically speeds up PEBakery but does require that you refresh the script each time changes are made to the physical script file. A running script cannot refresh itself, so this also means that new values set by commands such as `IniRead`/`IniWrite` will not update the script already in memory until the script or project is manually refreshed. 
+
+Enhancements to PEBakery's interface handling, including the implementation of the `ReadInterface` and `WriteInterface` commands make using `Ini` commands to set script interface values completely unnecessary.
 
 ## Depreciated Commands
 
 A handful Winbuilder commands have been depreciated, if you have scripts that depend on these commands (which should be rare in modern projects) they will need to be updated before they will work in PEBakery.
 
-For the most part deprecated commands fall into the following categories:
+For the most part depreciated commands fall into one of the following categories:
 
-* Worked around specific platform issues/limitations in Winbuilder's architecture. (eg. no x64 support, Delphi bugs, etc.) These workarounds are not necessary in PEBakery.
-* Implemented for a specific use case or project that is no longer active and/or better solutions now exist.
+* Were created to work-around specific platform issues/limitations in Winbuilder's architecture. (eg. no x64 support, various Delphi bugs, no Unicode support, etc.) These workarounds are not necessary in PEBakery.
+* Implemented for a specific use case or project that is no longer active. In many cases a better solution exists.
 * Have no practical use case in PE building.
-* Were completely broken in Winbuilder itself and not used in any active projects.
+* Were completely broken in Winbuilder itself and therefore not used in any active projects.
 
-[A full list of depreciated commands is maintained here](/Commands/Deprecated.md)
+[A full list of depreciated commands is maintained here](/Commands/depreciated.md)
 
 ## Compatibility Issues
 
-Winbuilder has a number of bugs and unexpected behavior and over the years developers have learned to work around the bugs and quirks. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented several compatibility options allowing you to revert to the old buggy Winbuilder behavior while you rewrite your scripts and make the transition to the PEBakery experience.
+Winbuilder has a number of bugs and unexpected behaviors that over the years developers have learned to work-around. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
 
 [A list of compatibility options can be found here](/Usage/Settings-Compatibility.md).

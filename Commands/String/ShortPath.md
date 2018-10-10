@@ -2,7 +2,7 @@
 
 Converts a path into `DOS 8.3` compatible format.
 
-**This command has been deprecated and will be removed in a future release.**
+**This command has been depreciated and will be removed in a future release.**
 
 ## Syntax
 

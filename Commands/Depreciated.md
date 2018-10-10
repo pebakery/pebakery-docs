@@ -1,6 +1,6 @@
-# Deprecated Commands & Features
+# Depreciated Commands & Features
 
-## Deprecated from WinBuilder 082
+## Depreciated from WinBuilder 082
 
 These Winbuilder commands have not been implemented in PEBakery.
 
@@ -76,7 +76,7 @@ WinBuilder's implementation of `TxtAddLine` allowed for an `Action` called **Pla
 
 Winbuilder's Webget implementation had multiple issues and was completely rewritten for PEBakery. The MD5/Command/Timeout flags were depreciated and modern hash verification commands implemented.
 
-## Commands that will be deprecated
+## Commands that will be depreciated
 
 These commands are fully functional within PEBakery but will be removed in a future release. Some commands are disabled by default but can be enabled by a compatibility option. It is advised to avoid using these commands in your projects and replace them as soon as possible.
 
@@ -90,7 +90,7 @@ PEBakery supports an infinite number of section parameters, as well as list stru
 
 ### Legacy Branch Conditions
 
-Legacy branch conditions such as `NOTEXISTFILE` and `NOTEXISTDIR` are deprecated in favor of using the `Not` operator (eg. `If,Not,EXISTDIR`...). This is the recommended syntax in Winbuilder so legacy branch conditions are disabled by default in PEBakery. They can be enabled with a compatibility option.
+Legacy branch conditions such as `NOTEXISTFILE` and `NOTEXISTDIR` are depreciated in favor of using the `Not` operator (eg. `If,Not,EXISTDIR`...). This is the recommended syntax in Winbuilder so legacy branch conditions are disabled by default in PEBakery. They can be enabled with a compatibility option.
 
 ### Loop - `<Letter>`
 
@@ -100,9 +100,17 @@ WinBuilder's `Loop` implementation allows incrementing alphabetically as well as
 
 Winbuilder allows the `Set` command to modify interface control values, however usage is inconsistent with other behavior of the `Set` command. PEBakery depreciated this behavior in favor of the more flexible `WriteInterface` command. Winbuilder's `Set` behavior can be toggled with a compatibility option.
 
+### StrFormat,Div
+
+Replaced by `Math,Div`
+
 ### StrFormat,ShortPath / LongPath
 
 Success of conversion to short path depends on registry value `HKLM\System\CurrentControlSet\Control\FileSystem\NtfsDisable8dot3NameCreation`, thus this command cannot be guaranteed to work properly in every system.
+
+### StrFormat,Mult
+
+Replaced by `Math,Mul`
 
 ### System,HasUAC
 
@@ -122,13 +130,13 @@ This command is broken in Winbuilder 082, and it was thought it would be better 
 
 ### Visible
 
-Winbuilder's `Visible,<control>,PERMENENT` command will be deprecated in favor of PEBakery's `WriteInterface,Visible` command.
+Winbuilder's `Visible,<control>,PERMENENT` command will be depreciated in favor of PEBakery's `WriteInterface,Visible` command.
 
 ## Depreciated Constant/Fixed Variables
 
 Winbuilder presets a number of constant/fixed variables. Most of these variables contain information that can be easily obtain through other means and some don't have any use at all. The PEBakery team believes that the project/script author should be the one to decide what variables they want defined and what they should be named, not PEBakery. For this reason PEBakery limits itself to defining essential variables such as `%BaseDir%, %ProjectDir%, %ScriptFile%` and leaves the decision to define additional variables up to the project/script author to implement as they see fit.
 
-The following variables have been deprecated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use alternative methods.
+The following variables have been depreciated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use alternative methods.
 
 | Variable | Description | PEBakery Alternative |
 | --- | --- | --- |

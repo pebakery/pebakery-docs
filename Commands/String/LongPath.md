@@ -2,7 +2,7 @@
 
 Converts a `DOS 8.3` path to a long `NT` path.
 
-**This command has been deprecated and will be removed in a future release.**
+**This command has been depreciated and will be removed in a future release.**
 
 ## Syntax
 
