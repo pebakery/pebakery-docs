@@ -7,7 +7,7 @@ Extract files from a archive.
 ## Syntax
 
 ```pebakery
-Decompress,<FileName>,<DestDir>,[Encoding]
+Decompress,<FileName>,<DestDir>
 ```
 
 ### Arguments
@@ -15,19 +15,21 @@ Decompress,<FileName>,<DestDir>,[Encoding]
 | Argument | Description |
 | --- | --- |
 | FileName | Full path of the archive to extract. |
-| DestDir | Full path to the directory where the archive will be extracted. |
-| Encoding | **(Optional)** Encoding used in the filename. Supported types are: `UTF8`, `UTF16`, `UTF16BE`, `ANSI`. Only available with *Managed* archive types specified below. |
+| DestDir | Full path to the directory where the archive will be extracted. If the directory does not exist it will be created. |
 
 ## Supported Archive Formats
 
-If the `Encoding` argument is not specified, *Native* mode will be used in order to achieve maximum performance. Otherwise *Managed* mode will be used.
+Only `7z`, `RAR`, and `ZIP` are officially tested with PEBakery, however any archive supported by [7-Zip](https://www.7-Zip.org) should also work fine.
 
-| Mode | Supported Archive Formats |
-| --- | --- |
-| Native (7z.dll) | 7z, APM, AR, ARJ, BZIP2, CAB, CHM, CPIO, CramFS, DEB, DMG, EXT, FAT, GPT, GZIP, HFS, IHEX, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, QCOW2, RAR, RPM, SquashFS, TAR, UDF, UEFI, VDI, VHD, VMDK, WIM, XAR, XZ, Z, ZIP |
-| Managed (SharpCompress.dll) | 7z, BZIP2, CAB, GZIP, RAR (RAR5 is **not** supported), TAR, ZIP |
+7z, APM, AR, ARJ, BZIP2, CAB, CHM, CPIO, CramFS, DEB, DMG, EXT, FAT, GPT, GZIP, HFS, IHEX, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, QCOW2, RAR, RPM, SquashFS, TAR, UDF, UEFI, VDI, VHD, VMDK, WIM, XAR, XZ, Z, ZIP
+
+Split archives are supported.
+
+Extracting from encrypted/password protected archives is not currently supported.
 
 ## Remarks
+
+Decompression is performed using 7z.dll.
 
 ## Related
 

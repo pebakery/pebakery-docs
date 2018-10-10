@@ -35,7 +35,7 @@ PEBakery searches for files in the following order:
 
 This command is mainly used to extract compressed EXE (\*.EX\_) and DLL (\*.DL\_) files from NT5 (WindowsXP) sources.
 
-Depends on `cabinet.dll`. (Included with Windows)
+Expansion is performed using 7z.dll.
 
 ## Related
 
