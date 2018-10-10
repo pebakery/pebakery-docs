@@ -134,9 +134,9 @@ Winbuilder's `Visible,<control>,PERMENENT` command will be depreciated in favor 
 
 ## Depreciated Constant/Fixed Variables
 
-Winbuilder presets a number of constant/fixed variables. Most of these variables contain information that can be easily obtain through other means and some don't have any use at all. The PEBakery team believes that the project/script author should be the one to decide what variables they want defined and what they should be named, not PEBakery. For this reason PEBakery limits itself to defining essential variables such as `%BaseDir%, %ProjectDir%, %ScriptFile%` and leaves the decision to define additional variables up to the project/script author to implement as they see fit.
+Winbuilder presets a number of constant/fixed variables. Most of these variables contain information that can be easily obtain through other means and some don't have any practical use at all. The PEBakery team believes that the project/script author should be the one to decide what variables they want defined and what they should be named, not PEBakery. For this reason PEBakery limits itself to defining essential variables such as `%BaseDir%, %ProjectDir%, %ScriptFile%` and leaves the decision to define additional variables up to the project/script author to implement as they see fit.
 
-The following variables have been depreciated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use alternative methods.
+The following variables have been depreciated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use the alternative methods listed in the table below.
 
 | Variable | Description | PEBakery Alternative |
 | --- | --- | --- |
@@ -156,6 +156,6 @@ The following variables have been depreciated. A small subset of environment var
 | %UserProfile% | The current user's home directory. | Use `System,GetENV,"USERPROFILE",%UserProfile%` |
 | %ProcessorType% | Winbuilder returns the operating system architecture as defined by SYSTEM_INFO. | Use `System,GetENV,"PROCESSOR_ARCHITECTURE",%ProcessorType%` |
 | %HostOS% | Winbuilder returns a string representing the current OS (Ex. Win7). Returns an empty string in recent versions of Windows. | Consider checking the Windows version/build number instead. |
-| %Wow64% | Winbuilder returns `True` if it is running under a 64bit operating system. | Modern operating systems are all 64bit. If you still need to test this condition consider useing `System,GetENV,"PROCESSOR_ARCHITECTURE",%ProcessorType%` |
+| %Wow64% | Winbuilder returns `True` if it is running under a 64bit operating system. | Modern operating systems are all 64bit. If you still need to test this condition consider using `System,GetENV,"PROCESSOR_ARCHITECTURE",%ProcessorType%` |
 | %Wow64Dir% | Winbuilder returns the path of the WindowsOnWindows64 subsystem. Typically `C:\Windows\SysWOW64` | Use `System,GenENV,"windir",%WindowsDir%    Set,%Wow64Dir%,"%WindowsDir%\SysWOW64` |
 | %Programs64% | Winbuilder returns the path where 64bit Program Files are stored. | Use `System,GetENV,"ProgramFiles",%ProgramFilesDir%` |
