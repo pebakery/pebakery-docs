@@ -13,11 +13,11 @@
 | --- | --- |
 | FileRename and DirMove work like PathMove | Allows `FileRename` and `DirMove` command to move files. |
 | Allow letter in Loop | Allows the Loop command to increment alphabetically as well as numerically.|
-| Enable depreciated legacy branch conditions | Allow legacy conditions such as `NOTEXISTFILE`, `NOTEXISTDIR`, etc. (Replaced by `If,Not,ExistFile`)|
+| Enable deprecated legacy branch conditions | Allow legacy conditions such as `NOTEXISTFILE`, `NOTEXISTDIR`, etc. (Replaced by `If,Not,ExistFile`)|
 | Allow variables in RegWrite's `<HKey>`, `<ValueType>` argument | Allows variables to be used as arguments in RegWrite. |
 | Allow Set to modify interface controls | Allows the `Set` command to write values to interface controls. (eg. Textlabel value). (Replaced by `WriteInterface,Value...`) |
 | Enable legacy interface commands (eg. Visible) | Enable legacy commands such as `Visible`. (Replaced by `WriteInterface,Visible...`)|
-| Enable legacy section parameter commands e.g. GetParam, PackParam) | Allows you to use the depreciated `GetParam` and `PackParam` commands. |
+| Enable legacy section parameter commands e.g. GetParam, PackParam) | Allows you to use the deprecated `GetParam` and `PackParam` commands. |
 
 ## Script Interface
 

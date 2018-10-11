@@ -23,4 +23,4 @@ Click on a Category below for a list of supported commands.
 | [Text](./Text/README.md) |  Commands that allow you to add and remove lines from standard text files. |
 | [WIM](./WIM/README.md) | Commands for working with Windows Imaging (.wim) files. |
 
-[Depreciated Commands](./Depreciated.md)
+[Deprecated Commands](./Deprecated.md)

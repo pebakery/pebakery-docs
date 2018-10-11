@@ -13,7 +13,7 @@ C:\PEBakery\
      |--- Build\
               |---my.script
               |---myOtherScript.link
-              |--- folder.project
+              |---folder.project
      |--- Tools\
 |--- Launcher.exe
 |--- PEBakery.ini

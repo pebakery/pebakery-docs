@@ -40,7 +40,7 @@ Global and Permanent macros can only be deleted if the respective `GLOBAL` or `P
 
 ### Example 1
 
-The following example creates a macro to replicate the depreciated WebGetIfNotExist command. This allows us to call our macro multiple times within the script or call it from another script while maintaining the code in one central location.
+The following example creates a macro to replicate the deprecated WebGetIfNotExist command. This allows us to call our macro multiple times within the script or call it from another script while maintaining the code in one central location.
 
 ```pebakery
 [Main]

@@ -1,6 +1,6 @@
-# Depreciated Commands & Features
+# Deprecated Commands & Features
 
-## Depreciated from WinBuilder 082
+## Deprecated from WinBuilder 082
 
 These Winbuilder commands have not been implemented in PEBakery.
 
@@ -70,13 +70,13 @@ Following Winbuilder's default behavior PEBakery will always split parameters.
 
 ### TXTAddLine - **PLACE**
 
-WinBuilder's implementation of `TxtAddLine` allowed for an `Action` called **Place** which would allow the developer to specify a line number where the text should be inserted. This feature was depreciated in PEBakery due to lack of perceived usefulness.
+WinBuilder's implementation of `TxtAddLine` allowed for an `Action` called **Place** which would allow the developer to specify a line number where the text should be inserted. This feature was deprecated in PEBakery due to lack of perceived usefulness.
 
 ### WebGet `[MD5]` `[Comment]` `[Timeout]`
 
-Winbuilder's Webget implementation had multiple issues and was completely rewritten for PEBakery. The MD5/Command/Timeout flags were depreciated and modern hash verification commands implemented.
+Winbuilder's Webget implementation had multiple issues and was completely rewritten for PEBakery. The MD5/Command/Timeout flags were deprecated and modern hash verification commands implemented.
 
-## Commands that will be depreciated
+## Commands that will be deprecated
 
 These commands are fully functional within PEBakery but will be removed in a future release. Some commands are disabled by default but can be enabled by a compatibility option. It is advised to avoid using these commands in your projects and replace them as soon as possible.
 
@@ -90,7 +90,7 @@ PEBakery supports an infinite number of section parameters, as well as list stru
 
 ### Legacy Branch Conditions
 
-Legacy branch conditions such as `NOTEXISTFILE` and `NOTEXISTDIR` are depreciated in favor of using the `Not` operator (eg. `If,Not,EXISTDIR`...). This is the recommended syntax in Winbuilder so legacy branch conditions are disabled by default in PEBakery. They can be enabled with a compatibility option.
+Legacy branch conditions such as `NOTEXISTFILE` and `NOTEXISTDIR` are deprecated in favor of using the `Not` operator (eg. `If,Not,EXISTDIR`...). This is the recommended syntax in Winbuilder so legacy branch conditions are disabled by default in PEBakery. They can be enabled with a compatibility option.
 
 ### Loop - `<Letter>`
 
@@ -98,7 +98,7 @@ WinBuilder's `Loop` implementation allows incrementing alphabetically as well as
 
 ### Set,`<%interfaceControl%>`
 
-Winbuilder allows the `Set` command to modify interface control values, however usage is inconsistent with other behavior of the `Set` command. PEBakery depreciated this behavior in favor of the more flexible `WriteInterface` command. Winbuilder's `Set` behavior can be toggled with a compatibility option.
+Winbuilder allows the `Set` command to modify interface control values, however usage is inconsistent with other behavior of the `Set` command. PEBakery deprecated this behavior in favor of the more flexible `WriteInterface` command. Winbuilder's `Set` behavior can be toggled with a compatibility option.
 
 ### StrFormat,Div
 
@@ -130,13 +130,13 @@ This command is broken in Winbuilder 082, and it was thought it would be better 
 
 ### Visible
 
-Winbuilder's `Visible,<control>,PERMENENT` command will be depreciated in favor of PEBakery's `WriteInterface,Visible` command.
+Winbuilder's `Visible,<control>,PERMENENT` command will be deprecated in favor of PEBakery's `WriteInterface,Visible` command.
 
-## Depreciated Constant/Fixed Variables
+## Deprecated Constant/Fixed Variables
 
 Winbuilder presets a number of constant/fixed variables. Most of these variables contain information that can be easily obtain through other means and some don't have any practical use at all. The PEBakery team believes that the project/script author should be the one to decide what variables they want defined and what they should be named, not PEBakery. For this reason PEBakery limits itself to defining essential variables such as `%BaseDir%, %ProjectDir%, %ScriptFile%` and leaves the decision to define additional variables up to the project/script author to implement as they see fit.
 
-The following variables have been depreciated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use the alternative methods listed in the table below.
+The following variables have been deprecated. A small subset of environment variables can be enabled using the compatibility option _Enable Environment Variables_ however it is strongly advised to use the alternative methods listed in the table below.
 
 | Variable | Description | PEBakery Alternative |
 | --- | --- | --- |
