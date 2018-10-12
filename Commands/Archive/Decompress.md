@@ -1,6 +1,6 @@
 # Decompress
 
-Extract files from a archive.
+Extract files from an archive.
 
 **Warning!** This command is unstable and may be changed in a future release.
 
@@ -19,9 +19,9 @@ Decompress,<FileName>,<DestDir>
 
 ## Supported Archive Formats
 
-Only `7z`, `RAR`, and `ZIP` are officially tested with PEBakery, however any archive supported by [7-Zip](https://www.7-Zip.org) should also work fine.
-
 7z, APM, AR, ARJ, BZIP2, CAB, CHM, CPIO, CramFS, DEB, DMG, EXT, FAT, GPT, GZIP, HFS, IHEX, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, QCOW2, RAR, RPM, SquashFS, TAR, UDF, UEFI, VDI, VHD, VMDK, WIM, XAR, XZ, Z, ZIP
+
+**Note:** Only `7z`, `CAB`, `RAR`, and `ZIP` are officially tested.
 
 Split archives are supported.
 
@@ -29,7 +29,7 @@ Extracting from encrypted/password protected archives is not currently supported
 
 ## Remarks
 
-Decompression is performed using 7z.dll.
+Decompression is performed using [7-Zip](https://www.7-Zip.org).
 
 ## Related
 

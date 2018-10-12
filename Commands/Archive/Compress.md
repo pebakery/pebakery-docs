@@ -1,6 +1,6 @@
 # Compress
 
-Compress a file or directory into archive.
+Compress a file or directory into an archive.
 
 **Warning!** This command is unstable and may be changed in a future release.
 
@@ -29,7 +29,7 @@ Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel]
 
 All filenames are encoded to UTF-8.
 
-Compression is performed using 7z.dll.
+Compression is performed using [7-Zip](https://www.7-Zip.org).
 
 ## Related
 

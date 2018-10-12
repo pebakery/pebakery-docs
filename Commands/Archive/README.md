@@ -6,7 +6,7 @@ Click on a Command name for a detailed description.
 
 | Command | Description |
 | --- | --- |
-| [Compress](./Compress.md) | Compress a file or directory into archive. |
+| [Compress](./Compress.md) | Compress a file or directory into an archive. |
 | [CopyOrExpand](./CopyOrExpand.md) | Copy or Extract files from a Microsoft Cabinet Archive (*.CAB). |
-| [Decompress](./Decompress.md) | Extract files from a archive. |
+| [Decompress](./Decompress.md) | Extract files from an archive. |
 | [Expand](./Expand.md) | Extract files from a Microsoft Cabinet Archive (*.CAB). |
