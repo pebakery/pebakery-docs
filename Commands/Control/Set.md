@@ -13,7 +13,7 @@ Set,<%Variable%>,<Value>[,GLOBAL | PERMANENT]
 | Argument | Description |
 | --- | --- |
 | %Variable% | The name of our variable. |
-| Value | The value of the variable. |
+| Value | The value of the variable. Setting this argument to `NIL` will delete the variable. |
 
 ### Flags
 

@@ -23,6 +23,7 @@ Click on a Command name for a detailed description.
 | [Math,Mul](./Mul.md) | Multiplies two numbers. |
 | [Math,Neg](./Neg.md) | Calculates the additive inverse of a value. |
 | [Math,Pow](./Pow.md) | Raises a number to the power. |
+| [Math,Rand](./Rand.md) | Generates a pseudo-random positive integer. |
 | [Math,Round](./Round.md) | Returns a integer rounded to the nearest whole number. |
 | [Math,Sub](./Sub.md) | Subtracts two numbers. |
 | [Math,ToSign](./ToSign.md) | Converts an Unsigned Integer to a Signed Integer. |

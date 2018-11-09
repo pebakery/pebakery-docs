@@ -12,7 +12,7 @@ FileCreateBlank,<FilePath>,[Encoding],[PRESERVE],[NOWARN]
 
 | Argument | Description |
 | --- | --- |
-| FilePath | Path to create empty file. |
+| FilePath | Path to create empty file. The directory structure will be created if it does not exist. |
 | Encoding | **(Optional)** Character encoding to use in the new file. Supported encodings are : `UTF8`, `UTF16`, `UTF16BE`, `ANSI`. **Default** is `ANSI`. |
 
 ### Flags

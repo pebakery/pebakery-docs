@@ -28,6 +28,18 @@ These commands are no longer used in Winbuilder and have been replaced by RegHiv
 
 No longer used. Originally this command would display a dialog containing a license agreement and force the user to accept or reject the license. Because this required user interaction during the build it was rarely used because it slowed down the build process.
 
+### `[OnProcessEntry]` section in script.project
+
+This section was an optional section exclusive to script.project. If it is present, during build the section was processed before the first [Process] command/line of every script.
+
+This command is largely a duplicate of the functionality of the [Process] section of script.project.
+
+### `[OnProcessExit]` section in script.project
+ 
+This section was an optional section exclusive to script.project. If it is present, during build this section was processed after the last [Process] line of every script.
+
+If required this functionality can be reproduced on a script-by-script basis with the `System,OnScriptExit` command.
+
 ### If,Runs
 
 This command would perform an user defined action if a specified executable was found to be running. It has not been used in any active projects.
@@ -36,13 +48,15 @@ This command would perform an user defined action if a specified executable was 
 
 This command was introduced in Winbuilder 071/072 in order to provide a way to enumerate driver classes in the registry. It has not been used an any active projects.
 
-### RegReadBin / RegWriteBin
+### RegReadBin(Ex) / RegWriteBin(Ex)
 
 This command was a hack to allow writing unchecked values to the registry via a binary format because Delphi 7 doesn't support Unicode or 64bit QWORDS. It never did work correctly in Winbuilder and is no longer required as PEBakery has native support for QWORDs and Unicode strings in RegRead and RegWrite.
 
 ### Run [OUT:]
 
-Winbuilder's implementation of the `Run` command allows for passing a parameter _by reference_ using the `OUT:<var>` directive. At the time of this writing there are no known projects using this functionality so implementation has been deferred. If you feel you need this functionality please open a support ticket.
+Winbuilder's implementation of the `Run` command allows for passing a parameter _by reference_ using the `OUT:<var>` directive.
+
+This functionality has been replaced by the `RunEx`, `LoopEx`, and `LoopLetterEx` commands.
 
 ### StrFormat,CharToOEM / OEMToChar
 
