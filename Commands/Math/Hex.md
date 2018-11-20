@@ -14,7 +14,7 @@ Math,Hex,<%DestVar%>,<Integer>[,BitSize]
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
 | Integer | The Integer to be converted to Hex. |
-| Size | **(Optional)** Size of the number in bits: `8` `16` `32` `64` |
+| Size | **(Optional)** Size of the number in bits: `8` `16` `32` `64` (Default is 32) |
 
 ## Remarks
 
@@ -22,7 +22,7 @@ Negative integer conversion is supported.
 
 ## Related
 
-[StrFormat,Hex](../String/Hex.md)
+[Math,Dec](./Dec.md), [StrFormat,Hex](../String/Hex.md)
 
 ## Examples
 
