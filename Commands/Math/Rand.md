@@ -14,7 +14,7 @@ Math,Rand,<%DestVar%>[,<Min>,<Max>]
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
 | Min | **(Optional)** A positive integer representing the minimum range. (Default is 0) |
-| Max | **(Optional)** A positive integer representing the maximum range. (Default is 65535) |
+| Max | **(Optional)** A positive integer representing the maximum range. (Default is 65536) |
 
 If you choose to define a range you must specify both `Min` and `Max` values.
 
