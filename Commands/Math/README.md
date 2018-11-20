@@ -16,6 +16,7 @@ Click on a Command name for a detailed description.
 | [Math,BoolOr](./BoolOr.md) | Performs an OR test on two boolean values. |
 | [Math,BoolXor](./BoolXor.md) | Performs an exclusive OR test on two boolean values. |
 | [Math,Ceil](./Ceil.md) | Returns a number rounded up to the next integer. |
+| [Math,Dec](./Dec.md) | Converts a a hexadecimal string to it's numeric representation. |
 | [Math,Div](./Div.md) | Divides two numbers. |
 | [Math,Floor](./Floor.md) | Returns a number rounded down to the closest integer. |
 | [Math,Hex](./Hex.md) | Convert an integer to it's hexadecimal representation. |
