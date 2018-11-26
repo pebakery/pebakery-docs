@@ -7,14 +7,14 @@ Wildcards are supported, allowing multiple files to be copied at one time.
 ## Syntax
 
 ```pebakery
-FileCopy,<SrcFile>,<DestPath>,[PRESERVE],[NOWARN],[NOREC]
+FileCopy,<SrcFile>,<DestPath>[,PRESERVE][,NOWARN][,NOREC]
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| SrcFile | File(s) to copy. Wildcards (*, ?) are allowed. |
+| SrcFile | File(s) to copy. Wildcards (* ?) are allowed. |
 | DestPath | Destination path. This can be either a file name or a directory if multiple files are to be copied. The directory structure will be created if it does not exist. |
 
 ### Flags
@@ -24,12 +24,14 @@ Flags may be specified in any order.
 | Flag | Description |
 | --- | --- |
 | PRESERVE | **(Optional)** Do not overwrite existing files. |
-| NOWARN | **(Optional)** Do not log a warning if a file is overwritten. |
+| NOWARN | **(Optional)** Do not log a warning if a file is overwritten or if `SrcFile` contains a wildcard pattern resulting in no matching files. |
 | NOREC | **(Optional)** Do not copy files in subdirectories when using wildcards. |
 
 ## Remarks
 
-When wildcard is used in filename, `FileCopy` copies subdirectories by default. To prevent this, use the `NOREC` flag. Wildcards cannot be used in directories.
+When wildcard is used in filename, `FileCopy` copies subdirectories by default. To prevent this, use the `NOREC` flag.
+
+Wildcards cannot be used in directory names.
 
 ## Related
 
@@ -37,7 +39,7 @@ When wildcard is used in filename, `FileCopy` copies subdirectories by default. 
 
 ## Examples
 
-Let us assume a directory `%SrcDir%` *C:\Temp\Src* contains these files:
+Let us assume a directory `%SrcDir%` _C:\Temp\Src_ contains these files:
 
 ```pebakery
 C:\Temp\Src\
