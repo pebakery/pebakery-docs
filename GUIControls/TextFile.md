@@ -22,6 +22,16 @@ Displays a text file embedded within the script.
 | Height | Height of the control. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
+## Supported File Types
+
+The TextFile control is capable of displaying rich text and plain text. 
+
+Supported file types are:
+
+TXT, RTF
+
+Text based files with alternate file extensions (ex. CFG, CONF, INI, INF, LOG, SCRIPT) are also supported.
+
 ## Remarks
 
 Text files are encoded and embedded in the script's `InterfaceEncoded` folder.

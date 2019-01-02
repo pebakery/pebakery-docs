@@ -2,8 +2,6 @@
 
 Extract files from an archive.
 
-**Warning!** This command is unstable and may be changed in a future release.
-
 ## Syntax
 
 ```pebakery

@@ -69,4 +69,4 @@ RegHiveUnLoad,Tmp_System
 
 Strings containing white space must be enclosed in double quotes ("String with spaces").
 
-PEBakery ignores white space at the beginning and end of lines, as well as blank lines. Where feasible, the use of blank lines is encouraged in order to keep your code organized and readable.
+PEBakery ignores white space at the beginning and end of lines, as well as blank lines. Where feasible, the use of white space is encouraged in order to keep your code organized and readable.
