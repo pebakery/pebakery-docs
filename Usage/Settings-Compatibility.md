@@ -1,5 +1,11 @@
 # Compatibility Settings
 
+Compatibility options are designed to emulate various WinBuilder bugs and quirks.
+
+Whenever possible PEBakery development attempts to keep backward compatibility with WinBuilder 082 commands, however in order to fix serious Winbuilder bugs, improve syntax, and promote consistency across commands, breaking changes cannot always be avoided.
+
+The the event a script breaking change is made to a Winbuilder era command PEBakery provides compatibility options to revert to the previous behavior in order to provide developers the opportunity to update their projects/scripts without suffering downtime.
+
 ## Asterisk Bug
 
 | Setting | Description |
@@ -30,5 +36,6 @@
 | Setting | Description |
 | --- | --- |
 | Overridable fixed variables | Allow constant/fixed variables to be overwritten. |
+| Overridable loop counter (#c) | Winbuilder allows overwriting of the loop counter `#c` during a loop, but then resets the value on the next iteration. Some poorly written scripts use this token as a 'disposable' variable. |
 | Enable environment variables | Enable a limited set of pre-define environment variables. |
-| Disable extended section parameters (g.g. #a, #r) | Disables the `#a` and `#r` tokens. This may be desirable if you use statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token.   |
+| Disable extended section parameters (e.g. #a, #r) | Disables the `#a` and `#r` tokens. This may be desirable if you use statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token.   |
