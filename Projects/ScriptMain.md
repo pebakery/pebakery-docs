@@ -25,6 +25,7 @@ The following values are used by PEBakery to define a script and it's behavior. 
 || False - The script is deselected in the project tree and will not be processed. |
 || None - The script is not allowed to be selected/deselected and will not be processed. Used primarily for configuration and utility scripts. |
 | Interface | **(Optional)** Specifies the section that contains the currently displayed Graphical User Interface of the script. Default is `Interface`. |
+| InterfaceList | **(Optional)** A comma separated list of alternate script interfaces. PEBakery's syntax checker and internal interface editor will reference this list as a fall-back to automatic interface detection. |
 | Mandatory | **(Optional)** The script will be processed and cannot be disabled. **Default** is `False`.|
 
 ## Remarks
