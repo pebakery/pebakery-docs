@@ -6,12 +6,12 @@ Welcome to the PEBakery Manual!
 
 1. Using PEBakery
     * Main Window
-    * Settings
-	    * Projects
-		* General
-		* Interface
-		* Script
-		* Log
+    * [Settings](./Usage/README.md)
+	    * [Projects](./Usage/Settings-Projects.md)
+		* [General](./Usage/Settings-General.md)
+		* [Interface](./Usage/Settings-Interface.md)
+		* [Script](./Usage/Settings-Script.md)
+		* [Log](./Usage/Settings-Log.md)
 		* [Compatibility](./Usage/Settings-Compatibility.md)
 	* Log
     * Utilities	
