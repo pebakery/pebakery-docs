@@ -4,7 +4,7 @@ So, you have decided to migrate your project and/or scripts over to PEBakery. Gr
 
 ## Backwards Compatibility
 
-PEBakery was designed to be backwards compatible with Winbuilder 082's .script syntax for the express purpose of making it easy to migrate scripts and projects to the PEBakery platform. Most well designed scripts _should_ run without issues out of the box, however as with any complex application there a couple exceptions.
+PEBakery was designed to be backwards compatible with Winbuilder 082's .script syntax for the express purpose of making it easy to migrate scripts and projects to the PEBakery platform. Most well designed scripts _should_ run without issues out of the box, however as with any complex application or project there may be exceptions.
 
 **It is important to note that _Backwards Compatibility_ refers to the ability to run _most_ Winbuilder scripts in PEBakery and does not mean that scripts designed for PEBakery will continue to work in Winbuilder.**
 
@@ -14,9 +14,19 @@ In order to reduce build and load times PEBakery reads all scripts into memory a
 
 Enhancements to PEBakery's interface handling, including the implementation of the `ReadInterface` and `WriteInterface` commands make using `Ini` commands to set script interface values completely unnecessary.
 
-## Depreciated Commands
+## Script Breaking Changes
 
-A handful Winbuilder commands have been depreciated, if you have scripts that depend on these commands (which should be rare in modern projects) they will need to be updated before they will work in PEBakery.
+This section contains a list of changes made during the development of PEBakery that will almost certainly break existing Winbuilder scripts. Please read this section carefully when migrating. If any of these changes affect you then you will need to modify your scripts.
+
+### Compatibility Issues
+
+Winbuilder has a number of bugs and unexpected behaviors that over the years developers have learned to work-around. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
+
+[A list of compatibility options can be found here](/Usage/Settings-Compatibility.md).
+
+### Depreciated Commands
+
+A handful Winbuilder commands and/or command arguments have been depreciated, if you have scripts that depend on these commands (which should be rare in modern projects) they will need to be updated before they will work in PEBakery.
 
 For the most part depreciated commands fall into one of the following categories:
 
@@ -26,9 +36,3 @@ For the most part depreciated commands fall into one of the following categories
 * Were completely broken in Winbuilder itself and therefore not used in any active projects.
 
 [A full list of depreciated commands is maintained here](/Commands/depreciated.md)
-
-## Compatibility Issues
-
-Winbuilder has a number of bugs and unexpected behaviors that over the years developers have learned to work-around. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
-
-[A list of compatibility options can be found here](/Usage/Settings-Compatibility.md).
