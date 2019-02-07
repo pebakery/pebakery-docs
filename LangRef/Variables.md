@@ -98,6 +98,15 @@ Fixed environment variables are included only for compatibility with Winbuilder 
 
 Local variables are "visible" only to the currently running script. All variables are created in the local scope unless explicitly defined otherwise.
 
+#### Reserved Local Variables
+
+Some PEBakery commands return the status of various commands via pre-defined variables. It is advised not to use these variable names in your scripts in order to prevent them from being overwritten.
+
+| Variable | Command | Description |
+| --- | --- |
+| %StatusCode% | [WebGet](.Commands/Network/WebGet.md) | Contains the HTTP Status code from the most recent WebGet operation. |
+| %ExitCode% | [ShellExecute](.Commands/System/ShellExecute.md), [ShellExecuteDelete](.Commands/System/ShellExecuteDelete.md) | Contains the *Exit Code* returned by the most recent `ShellExecute` command. |
+
 ### Global Variables
 
 Global variables are available to the entire project and can be defined by:

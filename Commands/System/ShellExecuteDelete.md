@@ -40,7 +40,7 @@ Using the `Hide` action with an application that does not exit automatically whe
 
 ## Related
 
-[ShellExecute](./ShellExecute.md), [ShellExecuteEx](./ShellExecuteEx.md)
+[ShellExecute](./ShellExecute.md), [ShellExecuteEx](./ShellExecuteEx.md), [Variables](./LangRef/Variables.md)
 
 ## Examples
 

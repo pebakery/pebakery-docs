@@ -12,7 +12,7 @@ WebGet,<URL>,<DestPath>[,Hash=<HashType>,<HashDigest>],[NOERR]
 
 | Argument | Description |
 | --- | --- |
-| URL | URL of the file to download.|
+| URL | URL of the file to download. Supported URI's are `HTTP`, `HTTPS` |
 | DestPath | The full path where the downloaded file will be saved. If the path does not exist it will be created. If the file exists it will be overwritten. |
 | Hash=   | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
 | HashDigest | **(Optional)** The Hash digest used to verify the downloaded file. |
@@ -31,7 +31,7 @@ Flags may be specified in any order.
 
 | Variable | Description |
 | --- | --- |
-| %StatusCode% | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occures. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
+| %StatusCode% | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
 
 ## Remarks
 
@@ -39,7 +39,7 @@ No checks are done to ensure that the local machine has a valid Internet connect
 
 ## Related
 
-[Conditional Operators](../Branch/Operators.md)
+[Conditional Operators](../Branch/Operators.md), [Variables](./LangRef/Variables.md)
 
 ## Examples
 

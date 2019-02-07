@@ -29,6 +29,8 @@ A simple button that can be used to run a section of code within the script.
 
 Buttons created with Winbuilder 082's internal interface editor have additional arguments including duplicate parameters for `_SectionToRun_` and `ShowProgress`. These fields are ignored by PEBakery. See Example 2.
 
+Some buttons created in older versions of Winbuilder's internal interface editor omit the `Image` argument **and** suffers from duplicate `_SectionToRun_` and `ShowProgress` parameters. In this case you must update the control to include a value of `0` for the image argument.
+
 ## Related
 
 [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
@@ -41,7 +43,7 @@ Buttons created with Winbuilder 082's internal interface editor have additional 
 // Button without image
 Button1=Button,1,8,361,27,98,25,pButton1,0,False
 // Button with image
-Button2="Image Button",1,8,360,66,99,25,pButton2,if_hammer_screwdriver_11945.bmp,False
+Button2="Image Button",1,8,360,66,99,25,pButton2,tools.bmp,False
 ```
 
 ### Example 2
