@@ -47,8 +47,7 @@ Repeat the following steps for each project.
 1. Save your changes.
 1. **IMPORTANT**: Delete project temp files.
 
-
-[A full list of compatibility options can be found here](/Usage/Settings-Compatibility.md).
+[A full list of compatibility options can be found here](/Usage/Settings-Compatibility.md)
 
 ### Depreciated Commands
 
@@ -62,3 +61,16 @@ For the most part depreciated commands fall into one of the following categories
 * Were completely broken in Winbuilder itself and therefore not used in any active projects.
 
 [A full list of depreciated commands is maintained here](/Commands/depreciated.md)
+
+## Syntax Errors
+
+In order to reduce the possibility for errors and unexpected behavior (that was notorious in Winbuilder) PEBakery includes a built-in syntax checker and utilizes a strict command parser. By default all scripts are automatically checked for errors whenever they are refreshed.
+
+Because Winbuilder did not have a syntax checker and utilized a lazy parser that sometimes didn't even follow its own rules you may notice PEBakery complaining about errors in your script/project that seemed to work fine in Winbuilder (even though, by Winbuilder's own rules they are incorrect). These errors should be corrected to ensure the script always works the way it was intended to, both in PEBakery and Winbuilder.
+
+### Common Syntax Errors in existing projects
+
+#### Button Controls
+
+Some buttons created in older versions of Winbuilder's internal interface editor omit the `Image` argument **and** suffer from duplicate `_SectionToRun_` and `ShowProgress` parameters. In this case you must update the control to include a value of `0` for the image argument or PEBakery will throw a syntax error. See the [Button Control](./GUIControls/Button.md) documentation for more details.
+

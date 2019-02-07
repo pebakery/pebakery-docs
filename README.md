@@ -6,7 +6,7 @@ Welcome to the PEBakery Manual!
 
 1. Using PEBakery
     * Main Window
-    * [Settings](./Usage/README.md)
+    * Settings
 	    * [Projects](./Usage/Settings-Projects.md)
 		* [General](./Usage/Settings-General.md)
 		* [Interface](./Usage/Settings-Interface.md)
