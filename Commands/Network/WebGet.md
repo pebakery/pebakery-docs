@@ -31,7 +31,7 @@ Flags may be specified in any order.
 
 | Variable | Description |
 | --- | --- |
-| %StatusCode% | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
+| #r | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
 
 ## Remarks
 
