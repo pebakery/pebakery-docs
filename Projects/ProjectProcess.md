@@ -2,7 +2,12 @@
 
 This sections contains commands that will be executed every time a script in the project is processed.
 
-Commands placed in this section will be executed during a project build or when the `Run` button on the Graphical User Interface is pressed.
+Commands placed in this section will be executed whenever one of the following events occurs:
+
+* The build button is pressed, starting a project build.
+* When a codebox is executed
+* When the `Run` button on an individual script is pressed
+* When a button the scripts Graphical User Interface is pressed
 
 This documentation refers to the `Process` section located within the `script.project` file. For documentation relating to the `Process` section of individual scripts refer to `Script Process`.
 
