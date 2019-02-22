@@ -17,16 +17,10 @@ Interface settings may be configured via the **PEBakery > Settings > Interface**
 | | Standard | Force PEBakery's top menu to use standard size buttons. |
 | | Small | Force PEBakery's top menu to use small buttons. |
 | Script Scale Factor (%) | 100% | Adjust the scaling of the scripts interface. |
-| Monospaced Font | Configure the font used by PEBakery. |
+| Monospaced Font | Configure the font used by various portions of PEBakery. (ShellExecute output, combobox, codebox, etc.) |
 
-### Path Length Limit
-
-| Setting | Default | Description |
-| --- | --- | --- |
-| Enable long file path support | False | Allow PEBakery to override the Windows 260 character path limit and recognize filenames up to 32767 characters. |
-
-### User-Agent
+### External Code Editor
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| Custom User-Agent for WebGet | False | Allows you to override the default user-agent string used in WebGet operations. |
+| Custom Editor | False | Allows you to specify the program used to edit the script source. If this option is disabled PEBakery will attempt to launch an editor using the current operating system's default file associations. |

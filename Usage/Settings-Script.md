@@ -1,6 +1,6 @@
 # Script Settings
 
-Settings related to the engines script handling.
+Settings related to PEBakery's script handling.
 
 ## Settings
 
@@ -10,7 +10,7 @@ Script settings may be configured via the **PEBakery > Settings > Script** tab o
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| Enable script cache | True | When enabled PEBakery caches all scripts in memory to improve performance. Cached scripts are saved to a SQLLite database to improve load times. |
+| Enable script cache | True | When enabled PEBakery serializes and caches all scripts in a SQLLite database (located in `%BaseDir%\Database`) in order to improve load times. |
 | Clear Cache | | Pressing this button clears the database. The script cache will be rebuilt when the project is Refreshed. |
 
 ### Syntax Check

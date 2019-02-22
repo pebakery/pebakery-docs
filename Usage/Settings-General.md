@@ -10,9 +10,9 @@ General settings may be configured via the **PEBakery > Settings > General** tab
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| Optimize code | True | Allows PEBakery to automatically optimize some commands related to file manipulation. |
+| [Optimize code](/CodingGuide/CommandOp.md) | True | Allows PEBakery to automatically optimize some commands related to file manipulation. |
 | Show LogWindow after build | True | Show the log dialog when a build finishes. |
-| Stop build on error | True | When enabled the build will halt on all errors.|
+| Stop build on error | True | When enabled the build will halt on all errors. |
 
 ### Path Length Limit
 
@@ -24,4 +24,4 @@ General settings may be configured via the **PEBakery > Settings > General** tab
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| Custom User-Agent for WebGet | False | Allows you to override the default user-agent string used in WebGet operations. |
+| Custom User-Agent for WebGet | False | Allows you to override the default user-agent string (`PEBakery/<Version>`) used in WebGet operations. |

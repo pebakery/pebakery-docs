@@ -2,7 +2,7 @@
 
 Settings related to PEBakery's log handling.
 
-PEBakery stores all system and build logs in a SQLLite database.
+PEBakery stores all system and build logs in a SQLLite database located in `%BaseDir%\Database`.
 
 ## Settings
 
