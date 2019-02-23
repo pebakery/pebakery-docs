@@ -1,6 +1,8 @@
 # System,LoadNewScript
 
-Refresh a specific script or path in the project.
+Temporarily load a specific script or path into the project.
+
+The scripts will stay loaded until PEBakery is closed or the project is refreshed.
 
 Wildcards (* ?) are supported and can be used to load multiple scripts at one time.
 
@@ -35,7 +37,7 @@ This command is intended for loading **new** scripts into the project tree. If y
 
 Due to a system limitation PEBakery cannot load scripts from another project into the current project.
 
-When using wildcards all directories under `FilePath` are scanned for the specified pattern. Use the `NOREC` flag to disable this behavior. 
+When using wildcards all directories under `FilePath` are scanned for the specified pattern. Use the `NOREC` flag to disable this behavior.
 
 ## Related
 
