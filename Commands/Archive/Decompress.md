@@ -5,7 +5,7 @@ Extract files from an archive.
 ## Syntax
 
 ```pebakery
-Decompress,<FileName>,<DestDir>
+Decompress,<FileName>,<DestDir>[,Password=<Str>]
 ```
 
 ### Arguments
@@ -14,6 +14,7 @@ Decompress,<FileName>,<DestDir>
 | --- | --- |
 | FileName | Full path of the archive to extract. |
 | DestDir | Full path to the directory where the archive will be extracted. If the directory does not exist it will be created. |
+| Password= | **(Optional)** If the archive is encrypted supply the plain-text password that will used to extract the files. |
 
 ## Supported Archive Formats
 
@@ -23,7 +24,7 @@ Decompress,<FileName>,<DestDir>
 
 Split archives are supported.
 
-Extracting from encrypted/password protected archives is not currently supported.
+Extracting from encrypted/password protected archives is supported using the `Password=` argument.
 
 ## Remarks
 
