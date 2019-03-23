@@ -30,7 +30,7 @@ These tests are used in conjunction with the `If` command to determine if a file
 | ExistRegMulti | Checks for the existence of a substring in a multiple string value. |
 | ExistVar | Checks to see if a variable is defined. |
 | ExistMacro | Checks to see if a macro is defined. |
-| Online | Checks to see if the computer has an active network connection. |
+| Online | Checks to see if the computer has an active network connection. It does not guarantee that the computer can reach the Internet over the connection. |
 | Ping | Checks to see if a remote host can be reached by sending an ICMP echo-request to a specified host. Returns true if a valid ICMP echo-response is received. *Note: The presence and configuration of proxies, network address translation (NAT) equipment, or firewalls can prevent Ping from succeeding.* |
 | WimExistIndex | Checks to see if the specified Index exists within a WIM file. Split WIMs (.swm) are supported. |
 | WimExistImageInfo | Checks to see if the specified XML Property exists within a WIM file. Split WIMs (.swm) are supported. |
