@@ -16,11 +16,11 @@ Enhancements to PEBakery's interface handling, including the implementation of t
 
 ## Script Breaking Changes
 
-This section contains a list of changes made during the development of PEBakery that will almost certainly break existing Winbuilder scripts. Please read this section carefully when migrating. If any of these changes affect you then you will need to modify your scripts.
+This section contains a list of changes made during the development of PEBakery that will almost certainly break existing Winbuilder scripts. **Please read this section carefully when migrating.** If any of these changes affect you then you will need to modify your scripts.
 
 ### Compatibility Issues
 
-Winbuilder has a number of bugs and unexpected behaviors, and over the years developers have developed various work-rounds to achieve the desired results in their projects. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
+Winbuilder has a number of bugs and unexpected behaviors, and over the years developers have implemented various work-rounds to achieve the desired results in their projects. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
 
 By default, PEBakery turns off all compatibility options in order to make Winbuilder bugfixes and enhancements immediately available for new scripts and projects.
 
@@ -39,7 +39,7 @@ As of Feb 2019, the following projects require enabling various compatibility op
 
 #### Enabling Compatibility Options
 
-Repeat the following steps for each project.
+To enable compatibility options repeat the following steps for each project listed below.
 
 1. Launch PEBakery, open `Settings`, and select the `Compat` tab.
 1. Make sure the correct project is selected in the drop-down.
