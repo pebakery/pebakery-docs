@@ -5,7 +5,7 @@ Downloads files from the Internet.
 ## Syntax
 
 ```pebakery
-WebGet,<URL>,<DestPath>[,Hash=<HashType>,<HashDigest>][,TimeOut=<Int>][,NOERR]
+WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,TimeOut=<Int>][,NOERR]
 ```
 
 ### Arguments
@@ -32,7 +32,7 @@ Flags may be specified in any order.
 
 | Variable | Description |
 | --- | --- |
-| #r | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
+| #r | Contains the HTTP Status code from the most recent WebGet operation. Exceptionally it is set to 0 if a request could not be established (e.g. timeout), and set to 1 if a request succeeded but given hash digest mismatched. When used in conjunction with the NOERR flag the status code can be tested and corrective action is taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
 
 ## Remarks
 
