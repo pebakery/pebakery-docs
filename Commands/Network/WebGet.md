@@ -14,11 +14,11 @@ WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,TimeOut=<Int>][,NOERR]
 | --- | --- |
 | URL | URL of the file to download. Supported URI's are `HTTP`, `HTTPS` |
 | DestPath | The full path where the downloaded file will be saved. If the path does not exist it will be created. If the file exists it will be overwritten. |
-| Hash=   | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
+| HashType= | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
 | HashDigest | **(Optional)** The Hash digest used to verify the downloaded file. |
 | TimeOut= | **(Optional)** The timespan (in seconds) to wait for a response before the request times out. **Default:** 10 |
 
-`Hash=` and `HashDigest` must be used at same time.
+`HashType=` and `HashDigest` must be used at same time.
 
 ### Flags
 
