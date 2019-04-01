@@ -17,7 +17,7 @@ Math,BoolNot,<%DestVar%>,<Vaue>
 
 ## Remarks
 
-None.
+PEBakery supports standard boolean `True`, `False` comparisons, as well as C-Style integer `Non-Zero = True` and `Zero = False` comparisons.
 
 ## Related
 
@@ -40,6 +40,10 @@ Level=5
 Math,BoolNot,%result1%,True
 Math,BoolNot,%result2%,False
 
+// Int Bool
+Math,BoolNot,%result3%,0x132
+Math,BoolNot,%result4%,0
+   
 // Output Result
-Message,"Boolean Not Comparison:#$x[True] Return: %result1%#$x[False] Return: %result2%"
+Message,"Boolean Not Comparison:#$x[True] Return: %result1%#$x[False] Return: %result2%#$x[0x132] Return: %result3%#$x[0] Return: %result4%"
 ```
