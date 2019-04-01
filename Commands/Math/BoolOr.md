@@ -20,7 +20,7 @@ Math,BoolOr,<%DestVar%>,<Vaue1>,<Value2>
 
 ## Remarks
 
-None.
+PEBakery supports standard boolean `True`, `False` comparisons, as well as C-Style integer `Non-Zero = True` and `Zero = False` comparisons.
 
 ## Related
 
