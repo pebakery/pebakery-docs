@@ -32,7 +32,10 @@ Flags may be specified in any order.
 
 | Variable | Description |
 | --- | --- |
-| #r | Contains the HTTP Status code from the most recent WebGet operation. Exceptionally it is set to 0 if a request could not be established (e.g. timeout), and set to 1 if a request succeeded but given hash digest mismatched. When used in conjunction with the NOERR flag the status code can be tested and corrective action is taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
+| #r | When used in conjunction with the NOERR flag the return code can be tested and corrective action taken when a failure occurs. |
+| | 0 - The request could not be established (e.g. timeout). |
+| | 1 - The request succeeded but the downloaded file does not match the hash digest provided. |
+| | Otherwise it will return the HTTP Status code from the most recent WebGet operation. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
 
 ## Remarks
 
