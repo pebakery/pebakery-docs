@@ -18,7 +18,7 @@ Math,BitOr,<%DestVar%>,<Vaue1>,<Value2>
 
 ## Remarks
 
-None.
+Hint: You can input Hex values directly into `<Value>` and they will be automatically converted to decimal. ex. `Math,BitOr,%Result%,0xC,0x2F`
 
 ## Related
 
