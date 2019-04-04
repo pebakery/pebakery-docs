@@ -31,7 +31,7 @@ Specifying an `Index` greater or less then the number of items in the list will 
 
 ### Example 1
 
-Get the 3rd item in a list.
+Get the 3rd item in a comma delimited list.
 
 ```pebakery
 [Main]
@@ -42,10 +42,11 @@ Version=1
 Author=Homes32
 
 [Variables]
-%myList%=Home|Professional|Enterprise|Starter|Ultimate
+%myList%=Home,Professional,Enterprise,Starter,Ultimate
 
 [Process]
-List,Get,%myList%,3,%DestVar%
+// Comma's are reserved, so we must escape (#$c) or quote ("Delim=,") them.
+List,Get,%myList%,3,%DestVar%,Delim=#$c
 Message,"Item #3: %DestVar%"
 ```
 
