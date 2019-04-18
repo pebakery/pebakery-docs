@@ -5,7 +5,7 @@ Downloads files from the Internet.
 ## Syntax
 
 ```pebakery
-WebGet,<URL>,<DestPath>[,Hash=<HashType>,<HashDigest>][,TimeOut=<Int>][,NOERR]
+WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,TimeOut=<Int>][,NOERR]
 ```
 
 ### Arguments
@@ -14,11 +14,11 @@ WebGet,<URL>,<DestPath>[,Hash=<HashType>,<HashDigest>][,TimeOut=<Int>][,NOERR]
 | --- | --- |
 | URL | URL of the file to download. Supported URI's are `HTTP`, `HTTPS` |
 | DestPath | The full path where the downloaded file will be saved. If the path does not exist it will be created. If the file exists it will be overwritten. |
-| Hash=   | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
+| HashType= | **(Optional)** Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
 | HashDigest | **(Optional)** The Hash digest used to verify the downloaded file. |
 | TimeOut= | **(Optional)** The timespan (in seconds) to wait for a response before the request times out. **Default:** 10 |
 
-`Hash=` and `HashDigest` must be used at same time.
+`HashType=` and `HashDigest` must be used at same time.
 
 ### Flags
 
@@ -32,7 +32,10 @@ Flags may be specified in any order.
 
 | Variable | Description |
 | --- | --- |
-| #r | Contains the HTTP Status code from the most recent WebGet operation. When used in conjunction with the `NOERR` flag the status code can be tested and corrective action taken when a failure occurs. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
+| #r | When used in conjunction with the NOERR flag the return code can be tested and corrective action taken when a failure occurs. |
+| | 0 - The request could not be established (e.g. timeout). |
+| | 1 - The request succeeded but the downloaded file does not match the hash digest provided. |
+| | Otherwise it will return the HTTP Status code from the most recent WebGet operation. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
 
 ## Remarks
 

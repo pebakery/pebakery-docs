@@ -20,7 +20,7 @@ Math,BoolAnd,<%DestVar%>,<Vaue1>,<Value2>
 
 ## Remarks
 
-None.
+PEBakery supports standard boolean `True`, `False` comparisons, as well as C-Style integer `Non-Zero = True` and `Zero = False` comparisons.
 
 ## Related
 
@@ -45,6 +45,12 @@ Math,BoolAnd,%result2%,True,False
 Math,BoolAnd,%result3%,False,True
 Math,BoolAnd,%result4%,False,False
 
+// Int Bool
+Math,BoolAnd,%result5%,1,1
+Math,BoolAnd,%result6%,1,0
+Math,BoolAnd,%result7%,0,123
+Math,BoolAnd,%result8%,0,0
+
 // Output Result
-Message,"Boolean AND Comparison:#$x[True/True] Return: %result1%#$x[True/False] Return: %result2%#$x[False/True] Return: %result3%#$x[False/False] Return: %result4%"
+Message,"Boolean AND Comparison:#$x[True/True] Return: %result1%#$x[True/False] Return: %result2%#$x[False/True] Return: %result3%#$x[False/False] Return: %result4%#$x[1/1] Return: %result5%#$x[1/0] Return: %result6%#$x[0/123] Return: %result7%#$x[0/0] Return: %result8%"
 ```

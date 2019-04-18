@@ -21,7 +21,7 @@ Math,BitShift,<%DestVar%>,<Value>,<Direction>,<Shift>[,Size][,UNSIGNED]
 
 ## Remarks
 
-None.
+Hint: You can input Hex values directly into `<Value>` and they will be automatically converted to decimal. ex. `Math,BitShift,%Result%,0x2C,LEFT,2`
 
 ## Related
 

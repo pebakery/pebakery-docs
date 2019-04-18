@@ -20,6 +20,8 @@ Math,BitNot,<%DestVar%>,<Value>[,Size]
 
 Default bit size is 32bit.
 
+Hint: You can input Hex values directly into `<Value>` and they will be automatically converted to decimal. ex. `Math,BitNot,%Result%,0x2F`
+
 ## Related
 
 [BitAnd](./BitAnd.md), [BitOr](./BitOr.md), [BitShift](./BitShift.md), [BitXor](./BitXor.md)
