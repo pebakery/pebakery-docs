@@ -41,6 +41,8 @@ RegCopy,<SrcKey>,<SrcKeyPath>,<DestKey>,<DestKeyPath>[,WILDCARD]
 
 The Windows registry allows the use of wildcard characters (? \*) in key names (eg. _HKLM\Software\PEBakery*?_ or _HKLM\Software\My*Registry?Key_). Keep this in mind when using the `WILDCARD` flag and limit the scope of your search as much as possible in order to avoid unintended results.
 
+**Important:** `RegCopy` does not duplicate the security attributes of the keys and values that it copies. Rather, all security attributes in the destination key are the default attributes.
+
 ## Related
 
 [RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md)
