@@ -1,19 +1,19 @@
 # Project [Process] Section
 
-This sections contains commands that will be executed every time a script in the project is processed.
+This sections contains commands that will be executed at the beginning of a build before any other processing occurs.
 
 Commands placed in this section will be executed whenever one of the following events occurs:
 
-* The build button is pressed, starting a project build.
-* When a codebox is executed
+* The `Build` button is pressed, starting a project build.
+* When a Codebox is executed
 * When the `Run` button on an individual script is pressed
-* When a button the scripts Graphical User Interface is pressed
+* When a control on the script's Graphical User Interface triggers a code section to run
 
 This documentation refers to the `Process` section located within the `script.project` file. For documentation relating to the `Process` section of individual scripts refer to `Script Process`.
 
 ## Remarks
 
-Because this section is processed **every time** a script in the project is executed, usage of this section should be limited to functions that are Global in nature and are essential to the project. Failure to do so may result in performance penalties and slower build times.
+Because this section is processed **every time** a project build is started or a script in the project is executed manually, usage of this section should be limited to functions that are Global in nature and are essential to the project. Failure to do so may result in performance penalties and slower build times.
 
 ## Related
 

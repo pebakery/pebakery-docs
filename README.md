@@ -13,7 +13,7 @@ Welcome to the PEBakery Manual!
 		* [Script](./Usage/Settings-Script.md)
 		* [Log](./Usage/Settings-Log.md)
 		* [Compatibility](./Usage/Settings-Compatibility.md)
-	* Log
+	* [Logs](./Usage/Logs.md)
     * Utilities	
 	* Update
 1. Scripting Reference
