@@ -48,7 +48,7 @@ If you have a large number of keys to import it may be feasible to encode a _.re
 
 ## Related
 
-[RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md), [RegImport](./RegImport), [RegMulti](./RegMulti.md)
+[RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md), [RegImport](./RegImport), [RegMulti](./RegMulti.md), [RegWriteEx](./RegWriteEx.md)
 
 ## Examples
 

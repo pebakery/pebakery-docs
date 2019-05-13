@@ -15,3 +15,4 @@ Click on a Command name for a detailed description.
 | [RegMulti](./RegMulti.md) | Modify a multi-string value in the registry. |
 | [RegRead](./RegRead.md) | Reads a value from the registry. |
 | [RegWrite](./RegWrite.md) | Create or modify a key or value in the registry. |
+| [RegWriteEx](./RegWriteEx.md) | Create or modify a key or value in the registry without verifying the ValueType. |
