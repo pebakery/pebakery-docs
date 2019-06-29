@@ -49,7 +49,7 @@ Displays the full detailed log of the currently selected log. Information is bro
 | Depth | Position in the processing tree. Each branch condition (Run, Exec, Loop, etc.) increases the depth. |
 | State | Error State - Valid states include:
 || Error - Critical events that cause a script or build to fail. |
-|| Ignore - Events that may have been triggered by a Warning or Error but were suppressed. (eg. NOWARN) |
+|| Ignore - Events that may have been triggered by a Warning or Error but were suppressed by the script. (eg. `NOWARN` flag) |
 || Info - Informational events such as comments and `Echo` commands. |
 || Overwrite - An existing file or registry value has been overwritten. |
 || Success - The command executed successfully. | 

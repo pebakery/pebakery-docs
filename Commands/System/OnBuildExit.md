@@ -32,7 +32,7 @@ If the `Command` is `Run`, the *reason* for the exit is passed as parameter #1. 
 
 This statement can be written anywhere inside the running part of **any** script, but is typically defined by the project developer inside `script.project`. Calling this command additional times will overwrite the last value of `Command`.
 
-Please note that when you set `OnBuildExit` in script.project it will not be processed for individual script runs such as Codebox or pressing the `Run` button on a script's interface, as these are considered Script Events, not Build Events.
+Note that when you set `OnBuildExit` in script.project it will not be processed for individual script executions such as Codebox or pressing the `Run` button on a script's interface, as these are considered Script Events, not Build Events.
 
 ## Related
 

@@ -8,6 +8,8 @@
     * [Script](./Settings-Script.md)
     * [Log](./Settings-Log.md)
     * [Compatibility](./Settings-Compatibility.md)
-* Log
+* [Logs](./Logs.md)
 * Utilities	
-* Update
+* [Update](./Update.md)
+    * [Script Update](./ScriptUpdate.md)
+	* [Project Update](./ProjectUpdate.md)
