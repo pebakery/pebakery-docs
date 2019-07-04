@@ -25,7 +25,7 @@ Compatibility settings may be configured via the **PEBakery > Settings > Compat*
 | Allow variables in RegWrite's `<HKey>`, `<ValueType>` argument | LegacyRegWrite | Allows variables to be used as arguments in RegWrite. |
 | Allow Set to modify interface controls | AllowSetModifyInterface | Allows the `Set` command to write values to interface controls. (eg. Textlabel value). (Replaced by `WriteInterface,Value...`) |
 | Enable legacy interface commands (eg. Visible) | LegacyInterfaceCommand | Enable legacy commands such as `Visible`. (Replaced by `WriteInterface,Visible...`)|
-| Enable legacy section parameter commands e.g. GetParam, PackParam) | LegacySectionParamCommand | Allows you to use the deprecated `GetParam` and `PackParam` commands. |
+| Enable legacy section parameter commands e.g. PackParam) | LegacySectionParamCommand | Allows you to use the deprecated `PackParam` command. |
 
 ### Script Interface
 

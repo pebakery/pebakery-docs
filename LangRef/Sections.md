@@ -4,7 +4,7 @@ Sections are specific blocks of code or other information within a script file. 
 
 ## Defining a Section
 
-Sections are defined by specifying the name of the section within `[]`brackets, (Ex.: `[mySection]`) and end when either another section starts or the "end of file" is reached.
+Sections are defined by specifying the name of the section within `[]`brackets, (Ex. `[mySection]`) and end when either another section starts or the "end of file" is reached.
 
 ## Examples
 

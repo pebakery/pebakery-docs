@@ -1,6 +1,6 @@
 # GetParam
 
-Retrieve parameters passed to a section and convert them into variables.
+Retrieves parameters passed to a section and convert them into variables.
 
 ## Syntax
 
@@ -53,13 +53,13 @@ pTextLabel1="Select your source directory:",1,1,23,25,230,18,8,Bold
 
 ### Example 2
 
-Using GetParam can also be an easy way to make your code more readable, since it allows you to assign a meaningful variable name to the parameters, espically when you have many of them.
+Using GetParam can also be an easy way to make your code more readable, since it allows you to assign a meaningful variable name to the parameters, especially when you have many of them.
 
 ```
 GetParam,5,%SomeValue%
 If,%SomeValue%,Equal,True,Run,%ScriptFile%,DoSomething
 ````
 
-is more readable then
+is more easily understood then
 
 `If,#5,Equal,True,Run,%ScriptFile%,DoSomething`
