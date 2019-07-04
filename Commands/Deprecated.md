@@ -94,13 +94,13 @@ Winbuilder's Webget implementation had multiple issues and was completely rewrit
 
 These commands are fully functional within PEBakery but will be removed in a future release. Some commands are disabled by default but can be enabled by a compatibility option. It is advised to avoid using these commands in your projects and replace them as soon as possible.
 
-### GetParam / PackParam
+### PackParam
 
-These commands were added to Winbuilder in an attempt to work around the limit of 9 parameters that could be passed to a Run/Exec command.
+This command was added to Winbuilder in an attempt to work around the limit of 9 parameters that could be passed to a Run/Exec command.
 
 The intention was that multiple parameters could be "packed" into an array/list and passed as a single parameter to the called _section_ where they could be expanded back to their original variables, however the command is totally broken in Winbuilder 082 so projects never made use of the functionality.
 
-PEBakery supports an infinite number of section parameters, as well as list structures via the `List` command so Get/Pack Param are no longer necessary.
+PEBakery supports an infinite number of section parameters, as well as list structures via the `List` command so Pack Param is no longer necessary.
 
 ### Legacy Branch Conditions
 

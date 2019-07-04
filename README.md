@@ -29,6 +29,7 @@ Welcome to the PEBakery Manual!
          * [Folders](./Projects/FolderFiles.md)
          * [Projects](./Projects/ProjectFiles.md)
     * [Commands](./Commands/README.md)
+	* [Sections](./LangRef/Sections.md)
     * [GUI Controls](./GUIControls/README.md)
 1. Appendix
     * [Bug Reports](./BugReport/README.md)
