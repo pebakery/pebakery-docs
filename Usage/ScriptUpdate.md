@@ -2,7 +2,7 @@
 
 **Warning: Update functionality is in active development and may change without notice!**
 
-PEBakery contains built-in update functionality for scripts that can be used by individual developers or project authors alike. It is triggered by the "Script update" button.
+PEBakery contains built-in update functionality for scripts that can be used by individual developers and project authors alike. It is triggered by the "Script update" button.
 
 ## Update Configuration
 
@@ -22,7 +22,7 @@ When the Script Update button is pressed PEBakery performs the following steps t
 1. Read the value of URl from the scrip's `[UpdateScript]` section.
 1. Download script's meta-data from `<url>/<scriptTitle>.meta.json`.
 1. Read the script's meta-data to determine if an update is necessary. PEBakery compares the version number from the scripts `[Main]` section to the version property in the script's update configuration.
-1. Backup the current scripts interface values.
-1. Download the updated script to a temporary location.
-1. Upon successful download the old script is removed and the updated script copied to take its place.
+1. Backup the current script's interface values.
+1. Download the new script to a temporary location.
+1. Upon successful download the old script is removed and the new script copied in it's place.
 1. Restore the script's previous interface values to the best of our ability.

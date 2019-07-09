@@ -10,8 +10,9 @@ As of Schema v0.1 the following meta-data fields are supported in the meta.json 
 
 | Property| Description |
 | --- | --- |
-| meta_schema_ver | The version of the schema used for this meta.json file. PEBakery uses this information to determin which data values are supported. |
+| meta_schema_ver | The version of the schema used for this meta.json file. PEBakery uses this information to determine which data values are supported. |
 | pebakery_min_ver | The minimum version of PEBakery required by the script. This is used to ensure compatibility. |
+| hash_sha256 | SHA256 Hash of the script. Used to verify the script's integrety during an update. |
 | script_main | An object that contains information about the script as defined in the script's `[Main]` section.
 
 ### script_main Object
@@ -25,10 +26,14 @@ As of Schema v0.1 the following meta-data fields are supported in the meta.json 
 
 ### Example meta.json file
 
+Meta file *myScript.meta.json* for the script *myScript.script*.
+
+
 ```json
 {
   "meta_schema_ver": "0.1",
   "pebakery_min_ver": "0.9.6",
+  "hash_sha256": "ObyT2vDKEsNzvEPNCrd7TTwXtmsYvbxXr3kKY4obXsE=",
   "script_main": {
     "title": "myScript",
     "desc": "A simple script that does absolutely nothing.",
