@@ -90,7 +90,7 @@ WinBuilder's implementation of `TxtAddLine` allowed for an `Action` called **Pla
 
 Winbuilder's Webget implementation had multiple issues and was completely rewritten for PEBakery. The MD5/Command/Timeout flags were deprecated and modern hash verification commands implemented.
 
-## Commands that will be deprecated
+## Commands that are deprecated
 
 These commands are fully functional within PEBakery but will be removed in a future release. Some commands are disabled by default but can be enabled by a compatibility option. It is advised to avoid using these commands in your projects and replace them as soon as possible.
 

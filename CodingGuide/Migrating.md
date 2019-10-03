@@ -20,9 +20,9 @@ This section contains a list of changes made during the development of PEBakery 
 
 ### Compatibility Issues
 
-Winbuilder has a number of bugs and unexpected behaviors, and over the years developers have implemented various work-rounds to achieve the desired results in their projects. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
+Winbuilder has a number of bugs and unexpected behaviors, and over the years developers have implemented various workarounds to achieve the desired results in their projects. PEBakery has fixed the bugs that plagued Winbuilder, however some .scripts may still be written with the expectation that the bugs exist. In this case, the correctly functioning commands may produce different results then the author intended (like in the case of Winbuilder's ```DirCopy``` ```*.*``` bug). PEBakery has implemented various compatibility options allowing you to revert to the old buggy Winbuilder behavior while you update your scripts and make the transition to the PEBakery experience.
 
-By default, PEBakery turns off all compatibility options in order to make Winbuilder bugfixes and enhancements immediately available for new scripts and projects.
+By default, PEBakery turns off all compatibility options in order to make Winbuilder bug fixes and enhancements immediately available for new scripts and projects.
 
 Projects that meet the following criteria are encouraged to enable all Compatibility Options until it can be certified working under PEBakery.
 
@@ -39,7 +39,7 @@ As of Feb 2019, the following projects require enabling various compatibility op
 
 #### Enabling Compatibility Options
 
-To enable compatibility options repeat the following steps for each project listed below.
+To enable compatibility options repeat the following steps for each project. Compatibility settings are stored in a file called `PEBakeryCompat.ini`. This file must reside in the same directory as `script.project` (eg `Projects\Win10XPE\PEBakeryCompat.ini`).
 
 1. Launch PEBakery, open `Settings`, and select the `Compat` tab.
 1. Make sure the correct project is selected in the drop-down.
@@ -60,7 +60,7 @@ For the most part depreciated commands fall into one of the following categories
 * Have no practical use case in PE building.
 * Were completely broken in Winbuilder itself and therefore not used in any active projects.
 
-[A full list of depreciated commands is maintained here](/Commands/depreciated.md)
+[A full list of depreciated commands is maintained here](/Commands/Deprecated.md)
 
 ## Syntax Errors
 
