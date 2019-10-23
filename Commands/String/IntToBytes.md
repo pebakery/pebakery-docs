@@ -19,6 +19,22 @@ StrFormat,IntToBytes,<Bytes>,<%DestVar%>
 | Bytes | Bytes to format. |
 | DestVar | Variable where the resulting string will be stored. |
 
+## Alternate Syntax
+
+Backwards compatible with Winbuilder's `StrFormat,Bytes` command
+
+```pebakery
+StrFormat,Bytes,<SrcDestVar>
+```
+
+_`StrFormat,IntToBytes,<SrcDestVar>` can also be used, but is not compatible with Winbuilder._
+
+### Arguments
+
+| Argument | Description |
+| --- | --- |
+| SrcDestVar | Variable containing the bytes to convert. The resulting string will overwrite the contents of this variable. |
+
 ## Remarks
 
 PEBakery commands such as `DirSize`, `FileSize`, and `System,GetFreeSpace` return the size in bytes. This function is useful for converting the size in bytes to a more human readable format.

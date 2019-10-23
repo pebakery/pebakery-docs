@@ -22,5 +22,6 @@ Log settings may be configured via the **PEBakery > Settings > Log** tab or by m
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| Deferred Logging | True | This setting dramatically increases performance by deferring log writes to the database until after the script execution has completed. **Disabling this setting is not recommended.** |
+| Deferred Logging | True | This setting dramatically increases performance by deferring log writes to the database until after the current script's execution has finished. **Disabling this setting is not recommended**, though may be useful for debugging as it allows you to follow the log in real-time during a build. |
 | Compact exported HTML log | True | Enable compacting the HTML logs to save space. |
+
