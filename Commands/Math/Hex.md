@@ -5,7 +5,7 @@ Convert an integer to it's hexadecimal representation.
 ## Syntax
 
 ```pebakery
-Math,Hex,<%DestVar%>,<Integer>[,BitSize]
+Math,Hex,<%DestVar%>,<Integer>,<Size>
 ```
 
 ### Arguments
@@ -14,7 +14,7 @@ Math,Hex,<%DestVar%>,<Integer>[,BitSize]
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
 | Integer | The Integer to be converted to Hex. |
-| Size | **(Optional)** Size of the number in bits: `8` `16` `32` `64` (Default is 32) |
+| Size | Size of the number in bits: `8` `16` `32` `64` |
 
 ## Remarks
 
@@ -39,9 +39,9 @@ Author=Homes32
 [Variables]
 
 [process]
-Math,Hex,%result1%,3735928559
-Math,Hex,%result2%,88888888
-Math,Hex,%result3%,2343432205
+Math,Hex,%result1%,3735928559,32
+Math,Hex,%result2%,88888888,32
+Math,Hex,%result3%,2343432205,32
 Math,Hex,%result4%,-2,64
 Math,Hex,%result5%,-2,32
 

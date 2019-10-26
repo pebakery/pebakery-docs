@@ -5,7 +5,7 @@ Converts a a hexadecimal string to it's numeric representation.
 ## Syntax
 
 ```pebakery
-Math,Dec,<%DestVar%>,<Hex>[,BitSize]
+Math,Dec,<%DestVar%>,<Hex>,<BitSize>
 ```
 
 ### Arguments
@@ -14,7 +14,7 @@ Math,Dec,<%DestVar%>,<Hex>[,BitSize]
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
 | Hex | The hex string to be converted. Strings must be prefixed with `0x`. |
-| Size | **(Optional)** Size of the number in bits: `8` `16` `32` `64`. (Default is 32) |
+| Size | Size of the number in bits: `8` `16` `32` `64`. |
 
 ## Remarks
 
@@ -39,9 +39,9 @@ Author=Homes32
 [Variables]
 
 [process]
-Math,Dec,%result1%,0xDEADBEEF
-Math,Dec,%result2%,0x054C5638
-Math,Dec,%result3%,0x8BADF00D
+Math,Dec,%result1%,0xDEADBEEF,32
+Math,Dec,%result2%,0x054C5638,32
+Math,Dec,%result3%,0x8BADF00D,32
 
 Message,"Input: [0xDEADBEEF] Dec: [%result1%]#$x#$xInput: [0x054C5638] Dec: [%result2%]#$x#$xInput: [0x8BADF00D] Dec: [%result3%]"
 ```

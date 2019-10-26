@@ -5,7 +5,7 @@ Converts an Signed Integer to an Unsigned Integer.
 ## Syntax
 
 ```pebakery
-Math,ToUnsign,<%DestVar%>,<Integer>[,Size]
+Math,ToUnsign,<%DestVar%>,<Integer>,<Size>
 ```
 
 ### Arguments
@@ -14,7 +14,7 @@ Math,ToUnsign,<%DestVar%>,<Integer>[,Size]
 | --- | --- |
 | DestVar | The variable where the result will be stored. |
 | Integer | The Integer to be converted to Unsigned Integer. |
-| Size | **(Optional)** Size of the number in bits: `8` `16` `32` `64` |
+| Size | Size of the number in bits: `8` `16` `32` `64` |
 
 ## Remarks
 
@@ -38,6 +38,6 @@ Level=5
 [Variables]
 
 [Process]
-Math,ToUnSign,%result%,-32768
+Math,ToUnSign,%result%,-32768,32
 Message,"%result%"
 ```
