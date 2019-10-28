@@ -7,6 +7,7 @@ Click on a Command name for a detailed description.
 | Command | Description |
 | --- | --- |
 | [IniAddSection](./IniAddSection.md) | Adds a new empty section inside a standard .ini file. |
+| [IniCompact](./IniCompact.md) | Compacts an .ini file, removing extra whitespace such as leading/trailing spaces and padding between key=value pairs. |
 | [IniDelete](./IniDelete.md) | Deletes a key from a standard .ini file. |
 | [IniDeleteSection](./IniDeleteSection.md) | Deletes a section from a standard .ini file. |
 | [IniMerge](./IniMerge.md) | Combines the contents of two .ini files. |
