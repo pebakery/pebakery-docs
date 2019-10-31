@@ -72,5 +72,5 @@ Because Winbuilder did not have a syntax checker and utilized a lazy parser that
 
 #### Button Controls
 
-Some buttons created in older versions of Winbuilder's internal interface editor omit the `Image` argument **and** suffer from duplicate `_SectionToRun_` and `ShowProgress` parameters. In this case you must update the control to include a value of `0` for the image argument or PEBakery will throw a syntax error. See the [Button Control](./GUIControls/Button.md) documentation for more details.
+Some buttons created in older versions of Winbuilder's internal interface editor omit the `Image` argument **and** suffer from duplicate `_SectionToRun_` and `ShowProgress` parameters. In this case you must update the control to include a value of `0` for the image argument or PEBakery will throw a syntax error. See the [Button Control](../GUIControls/Button.md) documentation for more details.
 
