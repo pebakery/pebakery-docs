@@ -28,6 +28,10 @@ These commands are no longer used in Winbuilder and have been replaced by RegHiv
 
 No longer used. Originally this command would display a dialog containing a license agreement and force the user to accept or reject the license. Because this required user interaction during the build it was rarely used because it slowed down the build process.
 
+### IniReadEsc
+
+No documented use. Origionally this command would read winbuilder style escaped characters `#$p` and `#$q` as literal strings rather then escaping them as `##$p` and `##$q)`.
+
 ### `[OnProcessEntry]` section in script.project
 
 This section was an optional section exclusive to script.project. If it is present, during build the section was processed before the first [Process] command/line of every script.

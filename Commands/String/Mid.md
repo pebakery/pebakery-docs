@@ -1,11 +1,11 @@
-# StrFormat,SubStr
+# StrFormat,Mid
 
 Extracts a number of characters from a specific starting point in a string.
 
 ## Syntax
 
 ```pebakery
-StrFormat,SubStr,<String>,<StartPos>,<Count>,<%DestVar%>
+StrFormat,Mid,<String>,<StartPos>,<Count>,<%DestVar%>
 ```
 
 ### Arguments
@@ -31,8 +31,8 @@ If `Count` exceeds the string length then the entire remainder of the string is 
 
 ```pebakery
 [Main]
-Title=StrFormat-SubStr Example
-Description=Demonstrate usage of StrFormat,SubStr.
+Title=StrFormat-Mid Example
+Description=Demonstrate usage of StrFormat,Mid.
 Level=5
 Version=1
 Author=Homes32
@@ -43,6 +43,6 @@ Author=Homes32
 %count%=10
 
 [process]
-StrFormat,SubStr,%string%,%start%,%count%,%result%
+StrFormat,Mid,%string%,%start%,%count%,%result%
 Message,"The %count% characters starting from %start% are: %result%"
 ```

@@ -22,6 +22,7 @@ Click on a Command name for a detailed description.
 | [StrFormat,Len](./Len.md) | Returns the number of characters in a string. |
 | [StrFormat,LongPath](./LongPath.md) | Converts a `DOS 8.3` path to a long `NT` path. |
 | [StrFormat,LTrim](./LTrim.md) | Removes a number of characters from the left-hand side of a string. |
+| [StrFormat,Mid](./Mid.md) | Extracts a number of characters from a specific starting point in a string. |
 | [StrFormat,Mult](./Mult.md) | Multiplies two numbers. |
 | [StrFormat,NTrim](./NTrim.md) | Removes any and all numbers from the end of a string. |
 | [StrFormat,PadLeft](./PadLeft.md) | Right-aligns the characters in a string by padding them with a specified character on the left, up to a specified total length. |
@@ -36,5 +37,4 @@ Click on a Command name for a detailed description.
 | [StrFormat,RTrim](./RTrim.md) | Removes a number of characters from the right-hand side of a string. |
 | [StrFormat,ShortPath](./ShortPath.md) | Converts a path into `DOS 8.3` compatible format. |
 | [StrFormat,Split](./Split.md) | Splits up a string into substrings based on the given delimiters. |
-| [StrFormat,SubStr](./SubStr.md) | Extracts a number of characters from a specific starting point in a string. |
 | [StrFormat,UCase](./UCase.md) | Converts a string to uppercase. |
