@@ -1,6 +1,6 @@
 # TXTDelSpaces
 
-Delete all spaces from the beginning of each line inside a text file.
+Delete all spaces from the beginning and end of each line inside a text file.
 
 ## Syntax
 

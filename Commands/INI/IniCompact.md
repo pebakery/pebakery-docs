@@ -16,7 +16,7 @@ IniCompact,<FileName>
 
 ## Remarks
 
-If `FileName` does not exist the command will fail.
+If `FileName` does not exist the operation will fail.
 
 ## Example 1
 

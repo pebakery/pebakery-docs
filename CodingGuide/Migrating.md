@@ -49,6 +49,15 @@ To enable compatibility options repeat the following steps for each project. Com
 
 [A full list of compatibility options can be found here](/Usage/Settings-Compatibility.md)
 
+#### Noteworthy Winbuilder Bugs
+
+Some winbuilder bugs exist that are not covered by a compatibility option. Below is a non-exhaustive list of serious bugs that may require you to rewrite portions of your scripts.
+
+| Bug | Description | Workaround |
+| --- | --- | --- |
+| Illegal characters in path | When performing path operations in Winbuilder such as `If,FileExist`, `If,DirExist` `ShellExecute` Winbuilder does not properly handle paths with illegal characters. | You must remove the illegal characters. |
+| INIWrite Compact Behavior | Whenever Winbuilder performs an `IniWrite` or `Set,%someVar%,Permanent` command it will delete any contents found before the first section header in the file. It also strips comments beginning with the `;` character and extra whitespace, including spaces between key/value pairs (`key = value` becomes `key=value`. | If desired, PEBakery includes the `IniCompact` command, which can be used as a drop in compatibility measure to remove exra whitepsace including padding between key/value pairs. Simply add the line `If,%PEBakery%,Equal,True,IniCompact,<ScriptFile>` once to the beginning of your script. `IniCompact` will NOT remove comments or delete other code from your file. |
+
 ### Depreciated Commands
 
 A handful Winbuilder commands and/or command arguments have been depreciated, if you have scripts that depend on these commands (which should be rare in modern projects) they will need to be updated before they will work in PEBakery.
