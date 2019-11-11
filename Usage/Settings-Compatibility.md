@@ -8,17 +8,17 @@ Whenever possible PEBakery development attempts to keep backward compatibility w
 
 Compatibility settings may be configured via the **PEBakery > Settings > Compat** tab or by manually editing `PEBakeryCompat.ini` in the project's root directory *(eg. C:\PEBakery\Projects\Win10PE\PEBakeryCompat.ini)*.
 
-### Asterisk Bug
+### Script Tree
 
 | Setting | Ini Key | Description |
 | --- | --- | --- |
-| Simulate WinBuilder's *.* bug in DirCopy | AsteriskBugDirCopy | When using wildcards to copy subdirectories, files that exist at the same level are copied as well. |
 | Simulate WinBuilder's *.* bug in folder.project | AsteriskBugDirLink | When using wildcards to find folder links, scripts in the root of the specified folder are ignored and only scripts in sub-folders are loaded. |
 
 ### Command
 
 | Setting | Ini Key | Description |
 | --- | --- | --- |
+| Simulate WinBuilder's *.* bug in DirCopy | AsteriskBugDirCopy | When using wildcards to copy subdirectories, files that exist at the same level are copied as well. |
 | FileRename and DirMove work like PathMove | FileRenameCanMoveDir | Allows `FileRename` and `DirMove` command to move files. |
 | Allow letter in Loop | AllowLetterInLoop | Allows the Loop command to increment alphabetically as well as numerically.|
 | Enable deprecated legacy branch conditions | LegacyBranchCondition | Allow legacy conditions such as `NOTEXISTFILE`, `NOTEXISTDIR`, etc. (Replaced by `If,Not,ExistFile`)|
@@ -26,7 +26,7 @@ Compatibility settings may be configured via the **PEBakery > Settings > Compat*
 | Allow Set to modify interface controls | AllowSetModifyInterface | Allows the `Set` command to write values to interface controls. (eg. Textlabel value). (Replaced by `WriteInterface,Value...`) |
 | Enable legacy interface commands (eg. Visible) | LegacyInterfaceCommand | Enable legacy commands such as `Visible`. (Replaced by `WriteInterface,Visible...`)|
 | Enable legacy section parameter commands e.g. PackParam) | LegacySectionParamCommand | Allows you to use the deprecated `PackParam` command. |
-
+| Auto compact .ini Files in some commands (e.g. IniWrite, IniDelete, IniMerge) | AutoCompactIniWriteCommand | Whenever Winbuilder performs an `IniWrite` or `Set,%someVar%,Permanent` command it will delete any contents found before the first section header in the file. It also strips comments beginning with the `;` character and extra whitespace, including spaces between key/value pairs (`key = value` becomes `key=value`. If this option is enabled, PEBakery will remove extra whitepsace including padding between key/value pairs (similar to the `IniCompact` command). PEBakery will NOT remove comments or delete other code from your file. **Note:** Because the .ini file will be compacted every time an `IniWrite`, `IniDelete`, or `IniMerge` command is run there is a performance penalty if you enable this compatibility option. |
 ### Script Interface
 
 | Setting |Ini Key | Description |
