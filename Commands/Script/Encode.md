@@ -63,7 +63,7 @@ Encode,%ScriptFile%,Folder,c:\readme.txt
 Encode the file `mySettings.reg` into the `Reg` directory inside the script using `LZMA` compression.
 
 ```pebakery
-Encode,%ScriptFile%,Reg,c:\mySettings.reg,LZMA
+Encode,%ScriptFile%,Reg,c:\mySettings.reg,LZMA2
 ```
 
 ### Example 3

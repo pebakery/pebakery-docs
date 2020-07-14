@@ -19,7 +19,7 @@ IniWrite,<FileName>,<Section>,<Key>,<Value>
 
 ## Remarks
 
-If `FileName` does not exist it will be created.
+If `FileName` does not exist it will be created using UTF-8 encoding.
 
 PEBakery will optimize multiple `IniWrite` commands in a row into a single write command.
 

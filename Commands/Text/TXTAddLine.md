@@ -20,7 +20,7 @@ TXTAddLine,<FileName>,<String>,<Action>
 
 ## Remarks
 
-If `FileName` does not exist the operation will fail.
+If `FileName` does not exist it will be created using UTF-8 encoding.
 
 WinBuilder's implementation of TxtAddLine allowed for an `Action` called **Place** which would allow the developer to specify a line number where the text should be inserted. This feature was depreciated in PEBakery due to lack of perceived usefulness.
 

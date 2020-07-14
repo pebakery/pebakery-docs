@@ -24,6 +24,8 @@ IniWriteTextLine,<FileName>,<Section>,<Line>[,APPEND]
 
 ## Remarks
 
+If `FileName` does not exist it will be created using UTF-8 encoding.
+
 Unless the `APPEND` flag is specified the `Line` will be inserted at the beginning of the section.
 
 PEBakery will optimize multiple `IniWriteTextLine` commands in a row into a single write operation.

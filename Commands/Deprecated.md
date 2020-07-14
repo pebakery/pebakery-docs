@@ -30,7 +30,7 @@ No longer used. Originally this command would display a dialog containing a lice
 
 ### IniReadEsc
 
-No documented use. Origionally this command would read winbuilder style escaped characters `#$p` and `#$q` as literal strings rather then escaping them as `##$p` and `##$q)`.
+No documented use. Originally this command would read Winbuilder style escaped characters `#$p` and `#$q` as literal strings rather then escaping them as `##$p` and `##$q`.
 
 ### `[OnProcessEntry]` section in script.project
 
