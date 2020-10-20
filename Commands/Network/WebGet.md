@@ -16,7 +16,7 @@ Optional arguments may be specified in any order.
 | --- | --- |
 | URL | URL of the file to download. Supported URI's are `HTTP`, `HTTPS` |
 | DestPath | The full path where the downloaded file will be saved. If the path does not exist it will be created. If the file exists it will be overwritten. |
-| Hash Verification **(Optional)** | Downloads can be verified by validating the hash value of the downloaded file in the form of `<HashType>=<HashDigest>`. |
+| Hash Verification | **(Optional)** Downloads can be verified by validating the hash value of the downloaded file in the form of `<HashType>=<HashDigest>`. |
 | | HashType= | Hash type to calculate. Supported hash types: `MD5`, `SHA1`, `SHA256`, `SHA384`, `SHA512`. |
 | | HashDigest | The Hash digest used to verify the downloaded file. |
 | Referer= | **(Optional)** Set an http referrer (Referer). |
