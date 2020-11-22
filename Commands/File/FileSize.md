@@ -19,11 +19,11 @@ FileSize,<FilePath>,<DestVar>
 
 ## Remarks
 
-You can use `StrFormat,Bytes` to convert the size to a more human readable format. (Ex. 3.5MB)
+You can use `StrFormat,BytesToInt` to convert the size to a more human readable format. (Ex. 3.5MB)
 
 ## Related
 
-[DirSize](./DirSize), [StrFormat,Bytes](../String/Bytes.md)
+[DirSize](./DirSize.md), [StrFormat,BytesToInt](../String/BytesToInt.md)
 
 ## Examples
 

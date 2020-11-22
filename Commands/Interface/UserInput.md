@@ -7,7 +7,7 @@ Prompts the user to select a file or directory path.
 ## Syntax
 
 ```pebakery
-UserInput,<BrowserType>,<InitPath>,<%DestVar%>
+UserInput,<BrowserType>,<InitPath>,<%DestVar%>[,Title=<Text>]
 ```
 
 ### Arguments
@@ -19,6 +19,7 @@ UserInput,<BrowserType>,<InitPath>,<%DestVar%>
 || DirPath - Display a Directory Browser. |
 | InitPath | The starting path and filter for the browse dialog. |
 | %DestVar% | The variable that will contain the full path of the selected file or directory. |
+| Title= | **(Optional)** Text that will be displayed in the dialog's title bar. **(Default)** If this argument is not defined the title bar will display `Open` (FilePath) or `Select Folder` (DirPath). |
 
 ## Remarks
 
@@ -53,5 +54,9 @@ Message,"You selected: %var%"
 
 // Directory Browser
 UserInput,DirPath,C:\,%var%
+Message,"You selected: %var%"
+
+// Directory Browser
+UserInput,DirPath,C:\,%var%,"Title=Please select a directory..."
 Message,"You selected: %var%"
 ```
