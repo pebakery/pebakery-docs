@@ -88,7 +88,7 @@ This command uses the the open source [Windows Imaging library (wimlib)](https:/
 
 ## Related
 
-[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimCapture](./WimCapture.md), [WimAppend](./WimAppend.md), [WimApply](./WimApply.md), [WimExtract](./WimExtract.md), [WimExtractList](./WimExtractList.md)
+[WimMount](./WimMount.md), [WimUnmount](./WimUnmount.md), [WimCapture](./WimCapture.md), [WimAppend](./WimAppend.md), [WimApply](./WimApply.md), [WimExtract](./WimExtract.md), [WimExtractBulk](./WimExtractBulk.md)
 
 ## Examples
 

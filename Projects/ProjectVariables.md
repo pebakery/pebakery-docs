@@ -37,7 +37,7 @@ Note: With Winbuilder it was necessary to load a "Macro Library" by placing the 
 
 ## Related
 
-[Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess), [Script Variables](./ScriptVariables.md), [Macros](/LangRef/Macros.md)
+[Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess.md), [Script Variables](./ScriptVariables.md), [Macros](../LangRef/Macros.md)
 
 ## Examples
 

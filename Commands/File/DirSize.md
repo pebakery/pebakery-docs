@@ -25,7 +25,7 @@ You can use `StrFormat,Bytes` to convert the size to a more human readable forma
 
 ## Related
 
-[FileSize](./FileSize.md), [StrFormat,Bytes](../String/Bytes.md)
+[FileSize](./FileSize.md), [StrFormat,BytesToInt](../String/BytesToInt.md)
 
 ## Examples
 

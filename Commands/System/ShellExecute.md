@@ -38,7 +38,7 @@ ShellExecute,<Action>,<FilePath>[,Params][,WorkDir][,%ExitOutVar%]
 
 ## Related
 
-[ShellExecuteDelete](./ShellExecuteDelete.md), [ShellExecuteEx](./ShellExecuteEx.md), [Variables](./LangRef/Variables.md)
+[ShellExecuteDelete](./ShellExecuteDelete.md), [ShellExecuteEx](./ShellExecuteEx.md), [Variables](../../LangRef/Variables.md)
 
 ## Examples
 

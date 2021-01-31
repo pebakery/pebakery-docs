@@ -31,7 +31,7 @@ Text labels will wrap text, allowing multiple lines to be displayed within the `
 
 ## Related
 
-[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 

@@ -37,7 +37,7 @@ For batch files (*.bat, *.cmd), use `ANSI` encoding. For normal text files, `UTF
 
 ## Related
 
-[TXTAddLine](../TXT/TXTAddLine.md)
+[TXTAddLine](../Text/TXTAddLine.md)
 
 ## Examples
 

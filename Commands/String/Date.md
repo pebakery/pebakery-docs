@@ -2,8 +2,6 @@
 
 Returns the current Date and Time in the specified format.
 
-This command uses Winbuilder's Date/Time formatting rules. For Date/Time formatting using Standard Formatting options use `StrFormat,DateTime`.
-
 ## Syntax
 
 ```pebakery
@@ -38,8 +36,6 @@ StrFormat,Date,<%DestVar%>,<FormatString>
 PEBakery returns all date/time formats using Invariant Culture.
 
 ## Related
-
-[StrFormat,DateTime](./DateTime.md)
 
 ## Examples
 

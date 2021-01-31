@@ -23,11 +23,11 @@ Macros are defined using the .INI style `Key=Value` format. Unlike variables the
 myMacro=Run,%PluginFile%,DoSomething
 ```
 
-For more details see [Script Variables](/Projects/ScriptVariables.md) and [Project Variables](/Projects/ProjectVariables.md).
+For more details see [Script Variables](../Projects/ScriptVariables.md) and [Project Variables](../Projects/ProjectVariables.md).
 
 ### Defining a Macro with the `SetMacro` command
 
-See the documentation for the [SetMacro](/Commands/Control/SetMacro.md) command.
+See the documentation for the [SetMacro](../Commands/Control/SetMacro.md) command.
 
 ### Defining a "Macro Library"
 
@@ -38,4 +38,4 @@ The following variables may be used within the _script.project_ Variables sectio
 | %API% | The full path to a script file containing a "Macro Library". |
 | %APIVAR% | The name of the section within the script defined by `%API%` that contains the Macro Definitions to be loaded into the GLOBAL project scope. |
 
-For more details see [Project Variables](/Projects/ProjectVariables.md).
+For more details see [Project Variables](../Projects/ProjectVariables.md).

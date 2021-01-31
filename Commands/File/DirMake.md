@@ -20,7 +20,7 @@ None.
 
 ## Related
 
-[DirCopy](./DirCopy.md), [DirDelete](./DirDelete.md), [DirMove](/DirMove.md)
+[DirCopy](./DirCopy.md), [DirDelete](./DirDelete.md), [DirMove](./DirMove.md)
 
 ## Examples
 

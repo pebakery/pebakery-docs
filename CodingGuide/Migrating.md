@@ -47,7 +47,7 @@ To enable compatibility options repeat the following steps for each project. Com
 1. Save your changes.
 1. **IMPORTANT**: Delete project temp files.
 
-[A full list of compatibility options can be found here](/Usage/Settings-Compatibility.md)
+[A full list of compatibility options can be found here](../Usage/Settings-Compatibility.md)
 
 #### Noteworthy Winbuilder Bugs
 
@@ -68,7 +68,7 @@ For the most part depreciated commands fall into one of the following categories
 * Have no practical use case in PE building.
 * Were completely broken in Winbuilder itself and therefore not used in any active projects.
 
-[A full list of depreciated commands is maintained here](/Commands/Deprecated.md)
+[A full list of depreciated commands is maintained here](../Commands/Deprecated.md)
 
 ## Syntax Errors
 

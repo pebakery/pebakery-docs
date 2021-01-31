@@ -25,7 +25,7 @@ Whitespace in the string is discarded, so `5.123GB` is treated the same as `5.12
 
 ## Related
 
-[DirSize](../File/DirSize.md), [FileSize](../File/FileSize.md), [StrFormat, IntToBytes](./IntToBytes), [System,GetFreeSpace](../System/GetFreeSpace.md)
+[DirSize](../File/DirSize.md), [FileSize](../File/FileSize.md), [StrFormat, IntToBytes](./IntToBytes.md), [System,GetFreeSpace](../System/GetFreeSpace.md)
 
 ## Examples
 

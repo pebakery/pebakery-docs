@@ -31,7 +31,7 @@ In order for the `Caption` to be displayed, a `Font Size` must be specified.
 
 ## Related
 
-[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 

@@ -47,7 +47,7 @@ The WebGet command uses the PEBakery default user agent of `PEBakery/%VERSION` w
 
 ## Related
 
-[Conditional Operators](../Branch/Operators.md), [Variables](./LangRef/Variables.md)
+[Conditional Operators](../Branch/Operators.md), [Variables](../../LangRef/Variables.md)
 
 ## Examples
 

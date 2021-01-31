@@ -65,4 +65,4 @@ None.
 
 ## Related
 
-[Link Files](./LinkFiles.md), [Script Levels](.ScriptLevels.md), [Project File (script.project)](./ProjectFiles.md)
+[Link Files](./LinkFiles.md), [Script Levels](./ScriptLevels.md), [Project File (script.project)](./ProjectFiles.md)

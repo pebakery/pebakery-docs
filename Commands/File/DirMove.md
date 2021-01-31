@@ -21,7 +21,7 @@ WinBuilder 082 allows DirMove to move files. Turning on the compatibility option
 
 ## Related
 
-[DirCopy](./DirCopy), [DirDelete](./DirDelete), [PathMove](./PathMove.md)
+[DirCopy](./DirCopy.md), [DirDelete](./DirDelete.md), [PathMove](./PathMove.md)
 
 ## Examples
 

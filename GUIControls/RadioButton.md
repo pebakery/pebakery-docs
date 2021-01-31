@@ -31,7 +31,7 @@ The `Value` of the radio button can be read by referencing the control `Name` as
 
 ## Related
 
-[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 

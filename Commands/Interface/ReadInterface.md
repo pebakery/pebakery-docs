@@ -56,7 +56,7 @@ Attempting to read `Value` from an unsupported control will result in an error.
 
 ## Related
 
-[Script Interface Controls](/GUIControls/README.md), [WriteInterface](./WriteInterface.md)
+[Script Interface Controls](../../GUIControls/README.md), [WriteInterface](./WriteInterface.md)
 
 ## Examples
 

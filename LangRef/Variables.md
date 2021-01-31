@@ -104,7 +104,7 @@ Some PEBakery commands return the status of various commands via pre-defined var
 
 | Variable | Command | Description |
 | --- | --- | --- |
-| %ExitCode% | [ShellExecute](.Commands/System/ShellExecute.md), [ShellExecuteDelete](.Commands/System/ShellExecuteDelete.md) | Contains the *Exit Code* returned by the most recent `ShellExecute` command. |
+| %ExitCode% | [ShellExecute](../Commands/System/ShellExecute.md), [ShellExecuteDelete](../Commands/System/ShellExecuteDelete.md) | Contains the *Exit Code* returned by the most recent `ShellExecute` command. |
 
 ### Global Variables
 
@@ -140,4 +140,4 @@ If `PathSetting=True` is defined in `script.project` then the following variable
 
 ## Related
 
-[AddVariables](/Commands/Control/AddVariables.md), [Set](/Commands/Control/Set.md), [Project Variables](/Projects/ProjectVariables.md), [Script Variables](/Projects/ScriptVariables.md)
+[AddVariables](../Commands/Control/AddVariables.md), [Set](../Commands/Control/Set.md), [Project Variables](../Projects/ProjectVariables.md), [Script Variables](../Projects/ScriptVariables.md)

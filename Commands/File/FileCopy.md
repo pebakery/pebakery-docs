@@ -35,7 +35,7 @@ Wildcards cannot be used in directory names.
 
 ## Related
 
-[DirCopy](./DirCopy.md), [DirCreate](./DirCreate.md), [FileDelete](./FileDelete.md), [FileMove](./FileMove.md), [PathMove](./PathMove.md)
+[DirCopy](./DirCopy.md), [DirMake](./DirMake.md), [FileDelete](./FileDelete.md), [PathMove](./PathMove.md)
 
 ## Examples
 

@@ -34,7 +34,7 @@ Z-Index: PEBakery draws controls in the order they are defined in the interface 
 
 ## Related
 
-[AddInterface](/Commands/Interface/AddInterface), [RefreshInterface](/Commands/System/RefreshInterface), [ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[AddInterface](../Commands/Interface/AddInterface.md), [RefreshInterface](../Commands/System/RefreshInterface.md), [ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 

@@ -58,4 +58,4 @@ None.
 
 ## Related
 
-[Script Commands](/Commands/Script/README.md), [Script Files (.script)](./ScriptFiles.md)
+[Script Commands](../Commands/Script/README.md), [Script Files (.script)](./ScriptFiles.md)

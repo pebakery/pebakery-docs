@@ -38,7 +38,7 @@ Text files are encoded and embedded in the script's `InterfaceEncoded` folder.
 
 ## Related
 
-[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 

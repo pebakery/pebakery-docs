@@ -20,7 +20,7 @@ This command can be used to rebuild the project tree when a script is added or m
 
 ## Related
 
-[System,Load](./Load.md)
+[System,LoadNewScript](./LoadNewScript.md)
 
 ## Examples
 

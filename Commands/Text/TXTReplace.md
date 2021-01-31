@@ -26,7 +26,7 @@ PEBakery will optimize multiple `TXTReplace` in a row to single command.
 
 ## Related
 
-[TXTAddLine](./TXTAddLine.md), [TXTDelEmptyLines](./TXTDelEmptyLines.md), [TXTDelLines](./TXTDelLines.md), [TXTDelSpaces](./TXTDelSpaces.md) 
+[TXTAddLine](./TXTAddLine.md), [TXTDelEmptyLines](./TXTDelEmptyLines.md), [TXTDelLine](./TXTDelLine.md), [TXTDelSpaces](./TXTDelSpaces.md) 
 
 ## Examples
 

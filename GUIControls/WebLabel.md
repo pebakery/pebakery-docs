@@ -29,7 +29,7 @@ PEBakery will always display the first 47 characters of the `URL` in the `ToolTi
 
 ## Related
 
-[ReadInterface](/Commands/Interface/ReadInterface.md), [WriteInterface](/Commands/Interface/WriteInterface.md)
+[ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 

@@ -43,7 +43,7 @@ The operation can be reversed using the `StrFormat,BytesToInt` command.
 
 ## Related
 
-[DirSize](../File/DirSize.md), [FileSize](../File/FileSize.md), [StrFormat, BytesToInt](./BytesToInt), [System,GetFreeSpace](../System/GetFreeSpace.md)
+[DirSize](../File/DirSize.md), [FileSize](../File/FileSize.md), [StrFormat, BytesToInt](./BytesToInt.md), [System,GetFreeSpace](../System/GetFreeSpace.md)
 
 ## Examples
 

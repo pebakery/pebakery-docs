@@ -15,7 +15,7 @@ Welcome to the PEBakery Manual!
 		* [Compatibility](./Usage/Settings-Compatibility.md)
 	* [Logs](./Usage/Logs.md)
     * Utilities	
-    * [Update](./Usage/Update.md)
+    * Update
        * [Script Update](./Usage/ScriptUpdate.md)
 	   * [Project Update](./Usage/ProjectUpdate.md)
 1. Scripting Reference

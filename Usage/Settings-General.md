@@ -10,7 +10,7 @@ General settings may be configured via the **PEBakery > Settings > General** tab
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| [Optimize code](/CodingGuide/CommandOp.md) | True | Allows PEBakery to automatically optimize some commands related to file manipulation. |
+| [Optimize code](../CodingGuide/CommandOp.md) | True | Allows PEBakery to automatically optimize some commands related to file manipulation. |
 | Show LogWindow after build | True | Show the log dialog when a build finishes. |
 | Stop build on error | True | When enabled the build will halt on all errors. |
 

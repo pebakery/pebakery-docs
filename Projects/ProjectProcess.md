@@ -17,7 +17,7 @@ Because this section is processed **every time** a project build is started or a
 
 ## Related
 
-[Project Main](./ProjectMain.md), [Project Variables](./ProjectVariables.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess), [Script Variables](./ScriptVariables.md)
+[Project Main](./ProjectMain.md), [Project Variables](./ProjectVariables.md), [Script Interface](./ScriptInterface.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess.md), [Script Variables](./ScriptVariables.md)
 
 ## Examples
 

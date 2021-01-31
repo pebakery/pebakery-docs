@@ -14,7 +14,7 @@ A script can have multiple interfaces and it is possible to toggle between them 
 
 ## Related
 
-[GUI Controls](/GUIControls/README.md), [Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Project Variables](./ProjectVariables.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess), [Script Variables](./ScriptVariables.md), [System,RefreshInterface](/Commands/System/RefreshInterface.md)
+[GUI Controls](../GUIControls/README.md), [Project Main](./ProjectMain.md), [Project Process](./ProjectProcess.md), [Project Variables](./ProjectVariables.md), [Script Main](./ScriptMain.md), [Script Process](./ScriptProcess.md), [Script Variables](./ScriptVariables.md), [System,RefreshInterface](../Commands/System/RefreshInterface.md)
 
 ## Examples
 

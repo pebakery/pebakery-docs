@@ -20,7 +20,7 @@ DirDelete,<DirPath>
 
 ## Related
 
-[FileDelete](./FileDelete)
+[FileDelete](./FileDelete.md)
 
 ## Examples
 

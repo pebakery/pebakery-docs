@@ -23,7 +23,7 @@ Specifying an `Index` greater or less then the number of items in the list will 
 
 ## Related
 
-[List,Append](./Append.md), [List,Insert](./Insert)
+[List,Append](./Append.md), [List,Insert](./Insert.md)
 
 ## Examples
 

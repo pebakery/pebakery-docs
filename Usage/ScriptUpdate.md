@@ -6,7 +6,7 @@ PEBakery contains built-in update functionality for scripts that can be used by 
 
 ## Update Configuration
 
-Script updates are configured via the [[UpdateScript]](/Projects/ScriptUpdateScript.md) section in each individual script file.
+Script updates are configured via the [[UpdateScript]](../Projects/ScriptUpdateScript.md) section in each individual script file.
 
 ### Update Metadata
 

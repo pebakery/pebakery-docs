@@ -21,7 +21,7 @@ As a result of PEBakery's backwards compatible Winbuilder syntax, parameters pas
 
 ## Related
 
-[Sections](/LangRef/Sections.md)
+[Sections](../../LangRef/Sections.md)
 
 ## Examples
 

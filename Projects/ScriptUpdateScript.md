@@ -23,7 +23,7 @@ None.
 
 ## Related
 
-[UpdateProject Section](./ProjectUpdateProject.md), [Project Update](/Usage/ProjectUpdate.md), [Script Update](/Usage/ScriptUpdate.md)
+[UpdateProject Section](./ProjectUpdateProject.md), [Project Update](../Usage/ProjectUpdate.md), [Script Update](../Usage/ScriptUpdate.md)
 
 ## Examples
 

@@ -24,7 +24,7 @@ As long as your control names are unique or you use a `Prefix` you can load as m
 
 ## Related
 
-[Script Interface](/Projects/ScriptInterface.md)
+[Script Interface](../../Projects/ScriptInterface.md)
 
 ## Examples
 
