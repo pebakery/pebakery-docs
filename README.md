@@ -14,7 +14,7 @@ Welcome to the PEBakery Manual!
 		* [Log](./Usage/Settings-Log.md)
 		* [Compatibility](./Usage/Settings-Compatibility.md)
 	* [Logs](./Usage/Logs.md)
-    * Utilities	
+    * [Utilities](./Usage/Utilities.md)
     * Update
        * [Script Update](./Usage/ScriptUpdate.md)
 	   * [Project Update](./Usage/ProjectUpdate.md)
