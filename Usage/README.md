@@ -10,6 +10,6 @@
     * [Compatibility](./Settings-Compatibility.md)
 * [Logs](./Logs.md)
 * Utilities	
-* [Update](./Update.md)
+* Update
     * [Script Update](./ScriptUpdate.md)
 	* [Project Update](./ProjectUpdate.md)
