@@ -5,7 +5,7 @@ Downloads files from the Internet.
 ## Syntax
 
 ```pebakery
-WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,TimeOut=<Int>][,NOERR]
+WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,Referer=<URL>][,TimeOut=<Int>][,NOERR]
 ```
 
 ### Arguments
