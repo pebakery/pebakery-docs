@@ -1,4 +1,4 @@
-# Script [UpdateScript] Section
+# Script [ScriptUpdate] Section
 
 This sections controls how PEBakery will perform script updates.
 
@@ -23,7 +23,7 @@ None.
 
 ## Related
 
-[UpdateProject Section](./ProjectUpdateProject.md), [Project Update](../Usage/ProjectUpdate.md), [Script Update](../Usage/ScriptUpdate.md)
+[ProjectUpdate Section](./ProjectUpdate.md), [Project Update](../Usage/ProjectUpdate.md), [Script Update](../Usage/ScriptUpdate.md)
 
 ## Examples
 
@@ -39,7 +39,7 @@ Selected=True
 Level=5
 Version=1
 
-[UpdateScript]
+[ScriptUpdate]
 UpdateType=Standalone
 Url=https://myproject.org/pebakery/myScript.script
 

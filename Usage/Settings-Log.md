@@ -14,9 +14,9 @@ Log settings may be configured via the **PEBakery > Settings > Log** tab or by m
 | --- | --- | --- |
 | Clear Logs | | Pressing this button will clear the log database. |
 | Debug Level | Production | This setting can be adjusted to provide more detailed debug logging. |
-| | Production | Normal logging. |
-| | PrintException | Include runtime exceptions in the log. |
-| | PrintExceptionStackTrace | Include runtime exceptions and a full stack trace in the log. |
+| | | Production - Normal logging. |
+| | | PrintException - Include .NET runtime exceptions in the log. |
+| | | PrintExceptionStackTrace - Include .NET runtime exceptions and a full stack trace in the log. |
 
 ### Optimization
 

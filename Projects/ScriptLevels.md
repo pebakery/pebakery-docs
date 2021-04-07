@@ -14,9 +14,9 @@ PEBakery will use the following properties to determine the processing order of 
 
 PEBakery will recognize up to 256 levels, however for practical reasons most projects categorize their scripts into 10 levels. Processing starts at level 1 and continues on to the subsequent level after all scripts under the current level are processed.
 
-Scripts with negative levels will be hidden from the project tree and will not be processed. These scripts are intended to be used as a library to store configuration, macros, code, or attached files used by other scripts when such items do not need to be directly accessed by the end user.
+Scripts with level 0 and negative levels will be hidden from the project tree and will not be processed. These scripts are intended to be used as a library to store configuration, macros, code, or attached files used by other scripts when such items do not need to be directly accessed by the end user.
 
-The following table shows the various script levels and their recommended use. Strict adherence to this policy is not enforced by PEBakery, but is strongly encouraged in order to maximize interoperability between projects.
+The following table is an example of common script levels and their typical use. Strict adherence to this guide is not enforced by PEBakery, but is strongly encouraged in order to maximize interoperability between projects.
 
 | Level | Usage | Description |
 | ---: | --- | --- |
@@ -26,7 +26,7 @@ The following table shows the various script levels and their recommended use. S
 | 4<br/>-4 | Settings/Tweaks | Settings such as wallpaper, theme, power options, computer name, system local, etc. |
 | 5<br/>-5 | Applications | Programs and tools to be used in the PE environment. |
 | 6<br/>-6 | Drivers | Additional drivers needed. (Chipset/LAN/SATA/RAID/VGA/WLAN) |
-| 7<br/>-7 | OtherOS | Bootable OS images to be added to the target. Typically used to include pre-built bootable images such as chntpw, Hirens, Memtest86+, PartedMagic, UBCD, etc. that can be loaded using a boot manager such as grub4dos or syslinux. |
+| 7<br/>-7 | Other | Sometimes used to include pre-built bootable images such as chntpw, Hirens, Memtest86+, PartedMagic, UBCD, etc. that can be loaded using a boot manager such as grub4dos or syslinux. |
 | 8<br/>-8 | Post-Processing | Creating shortcuts, Capture WIMs, Cleanup, etc. |
 | 9<br/>-9 | Emulation & Media Creation | Create/Burn ISO, Copy to USB, Test with Qemu/vmWare/VirtualPC |
 | 10<br/>-10 | Project Tools | Additional tools for working with a project but usually not part of the build process. (WIM manipulation, Hive editing, Target tweaking, etc.) 

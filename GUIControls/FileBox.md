@@ -5,7 +5,7 @@ An input box with a browse button that allows you to select a file or directory.
 ## Syntax
 
 ```pebakery
-<Name>=<Value>,<Visibility>,13,<PosX>,<PosY>,<Width>,<Height>[,FLAG][,<ToolTip>]
+<Name>=<Value>,<Visibility>,13,<PosX>,<PosY>,<Width>,<Height>[,FLAG][,<ToolTip>][,Title=<Text>]
 ```
 
 ### Arguments
@@ -21,6 +21,9 @@ An input box with a browse button that allows you to select a file or directory.
 | Width | Width of the control. |
 | Height | Height of the control. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
+| Title= | **(Optional)** Text that will be displayed in the dialog's title bar. **(Default)** If this argument is not defined the title bar will display `Open` (FilePath) or `Select Folder` (DirPath). |
+
+Optional arguments may be specified in any order.
 
 ### Flags
 
@@ -44,6 +47,7 @@ The `Value` of the File Box can be read by referencing the control `Name` as a v
 ```pebakery
 //Select a file
 FileBox1=,1,13,330,219,172,20,file
+FileBox2=,1,13,330,219,172,20,file,"Title=Please select another file"
 
 // Select a directory
 FileBox2=,1,13,330,262,172,20,dir
