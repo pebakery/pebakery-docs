@@ -5,11 +5,11 @@ Loops through a range of letters in alphabetical order.
 ## Syntax
 
 ```pebakery
-Loop,<FileName>,<Section>,<StartLetter>,<EndLetter>[,Parameters]
+LoopLetter,<FileName>,<Section>,<StartLetter>,<EndLetter>[,Parameters]
 ```
 
 ```pebakery
-Loop,BREAK
+LoopLetter,BREAK
 ```
 
 ### Arguments
@@ -21,14 +21,14 @@ Loop,BREAK
 | FileName | The full path to the script containing the `Section` to execute. Hint: Use %ScriptFile% to reference the current script. |
 | Section | The [Section] to execute. |
 | StartLetter | The initial letter to start from. Each time the loop finishes the letter will be incremented lexicographically. |
-| EndLetter |  The final letter to be reached by incrementing `StartLetter`. Once this letter is reached the loop stops. |
+| EndLetter |  The final letter to be reached by increment `StartLetter`. Once this letter is reached the loop stops. |
 | Parameters | **(Optional)** Parameters to pass to the `Section` being executed. |
 
 #### Version 2
 
 | Argument | Description |
 | --- | --- |
-| BREAK | Immediately exits the loop. The script will continue processing with the next line following the `Loop` command. |
+| BREAK | Immediately exits the loop. The script will continue processing with the next line following the `LoopLetter` command. |
 
 ### Tokens
 

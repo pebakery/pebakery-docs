@@ -13,7 +13,7 @@ System,GetFreeSpace,<Path>,<%DestVar%>
 | Argument | Description |
 | --- | --- |
 | Path | The full Path of drive or directory to receive information from. |
-| %DestVar% | The variable where the drive letter will be stored. |
+| DestVar | The variable where the drive letter will be stored. |
 
 ## Remarks
 

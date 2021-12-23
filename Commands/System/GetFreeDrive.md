@@ -12,7 +12,7 @@ System,GetFreeDrive,<%DestVar%>
 
 | Argument | Description |
 | --- | --- |
-| %DestVar% | The variable where the drive letter will be stored. |
+| DestVar | The variable where the drive letter will be stored. |
 
 ## Remarks
 

@@ -1,6 +1,6 @@
 # IniCompact
 
-Compacts an .ini file, removing extra whitespace such as leading/trailing spaces and padding between key=value pairs.
+Compacts an .ini file, removing extra white space such as leading/trailing spaces and padding between key=value pairs.
 
 ## Syntax
 

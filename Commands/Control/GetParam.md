@@ -1,11 +1,11 @@
 # GetParam
 
-Retrieves parameters passed to a section and convert them into variables.
+Retrieves parameters passed to a section and converts them into variables.
 
 ## Syntax
 
 ```pebakery
-GetParam,<Index>,<%Variable%>
+GetParam,<Index>,<%DestVar%>
 ```
 
 ### Arguments
@@ -13,7 +13,7 @@ GetParam,<Index>,<%Variable%>
 | Argument | Description |
 | --- | --- |
 | Index | The 1-based index of the parameter to retrieve. |
-| %Variable% | The name of variable where the value will be saved. |
+| DestVar | The name of variable where the value will be saved. |
 
 ## Remarks
 

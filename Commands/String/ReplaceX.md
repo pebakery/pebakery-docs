@@ -19,7 +19,7 @@ StrFormat,ReplaceX,<String>,<SearchString>,<ReplaceString>,<%DestVar%>
 
 ## Remarks
 
-If the `SubString` is not found `%DestVar%` will not be modified.
+If the `SubString` is not found `%DestVar%` will contain the unmodified source string.
 
 ## Related
 

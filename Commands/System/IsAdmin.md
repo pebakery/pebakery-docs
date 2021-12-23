@@ -12,7 +12,7 @@ System,IsAdmin,<%DestVar%>
 
 | Argument | Description |
 | --- | --- |
-| %DestVar% | The variable will return one of the following values: |
+| DestVar | The variable will return one of the following values: |
 || True - PEBakery was started with "Admin" privileges. |
 || False - PEBakery was not started with "Admin" privileges. |
 

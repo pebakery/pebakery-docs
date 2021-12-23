@@ -7,7 +7,7 @@ Retrieves the version number of the specified file.
 ## Syntax
 
 ```pebakery
-FileVersion,<FilePath>,<DestVar>
+FileVersion,<FilePath>,<%DestVar%>
 ```
 
 ### Arguments

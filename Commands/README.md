@@ -16,8 +16,8 @@ Click on a Category below for a list of supported commands.
 | [List](./List/README.md) | Commands for creating and manipulating list structures. |
 | [Math](./Math/README.md) | Commands for performing mathematical operations. |
 | [Network](./Network/README.md) | Commands that allow you to perform network related tasks such as downloading files from the Internet. |
-| [Script](./Script/README.md) | Script commands allow you to modify a .script file, including encoding and extracting attachments. |
 | [Registry](./Registry/README.md) | Commands that allow you to read and write values from the local registry. You can also load and modify off-line registry hives belonging to the project. |
+| [Script](./Script/README.md) | Script commands allow you to modify a .script file, including encoding and extracting attachments. |
 | [String](./String/README.md) | Commands that allow you to perform string manipulation. |
 | [System](./System/README.md) | Commands for controlling how PEBakery behaves, as well as for executing external processes. |
 | [Text](./Text/README.md) |  Commands that allow you to add and remove lines from standard text files. |

@@ -7,14 +7,14 @@ Click on a Command name for a detailed description.
 | [Math,Abs](./Abs.md) | Calculates the absolute value of a number. |
 | [Math,Add](./Add.md) | Adds two numbers. |
 | [Math,BitAnd](./BitAnd.md) | Performs a bitwise AND operation. |
-| [Math,BoolNot](./BoolNot.md) | Performs an Not test on two boolean values. |
+| [Math,BitNot](./BitNot.md) | Performs a bitwise NOT operation. |
 | [Math,BitOr](./BitOr.md) | Performs a bitwise OR operation. |
 | [Math,BitShift](./BitShift.md) | Performs a bit shifting operation. |
 | [Math,BitXor](./BitXor.md) | Performs a bitwise exclusive OR operation. |
-| [Math,BoolAnd](./BoolAnd.md) | Performs an AND test on two boolean values. |
-| [Math,BitNot](./BitNot.md) | Performs a bitwise NOT operation. |
-| [Math,BoolOr](./BoolOr.md) | Performs an OR test on two boolean values. |
-| [Math,BoolXor](./BoolXor.md) | Performs an exclusive OR test on two boolean values. |
+| [Math,BoolAnd](./BoolAnd.md) | Performs an AND test on two Boolean values. |
+| [Math,BoolNot](./BoolNot.md) | Performs an Not test on two Boolean values. |
+| [Math,BoolOr](./BoolOr.md) | Performs an OR test on two Boolean values. |
+| [Math,BoolXor](./BoolXor.md) | Performs an exclusive OR test on two Boolean values. |
 | [Math,Ceil](./Ceil.md) | Returns a number rounded up to the next integer. |
 | [Math,Dec](./Dec.md) | Converts a a hexadecimal string to it's numeric representation. |
 | [Math,Div](./Div.md) | Divides two numbers. |

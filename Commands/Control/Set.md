@@ -1,6 +1,6 @@
 # Set
 
-Changes or Defines the value of a variable.
+Changes or defines the value of a variable.
 
 ## Syntax
 
@@ -12,7 +12,7 @@ Set,<%Variable%>,<Value>[,GLOBAL | PERMANENT]
 
 | Argument | Description |
 | --- | --- |
-| %Variable% | The name of our variable. |
+| Variable | The name of our variable. |
 | Value | The value of the variable. Setting this argument to `NIL` will delete the variable. |
 
 ### Flags

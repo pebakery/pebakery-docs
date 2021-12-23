@@ -17,7 +17,7 @@ Encode,<ScriptFile>,<DirName>,<FilePath>[,Compression]
 | ScriptFile | The full path to the script. **Hint:** Use `%scriptFile%` to reference the current script. |
 | DirName | The folder the encoded file will be placed in. If `DirName` does not exist it will be created. If the files to be encoded already exist in the script's `DestDir` they will be overwritten.|
 | FilePath | The full path of the file(s) to be encoded. Wildcards are accepted. |
-| Compression | One of the following algorithms: |
+| Compression | **(Optional)** One of the following algorithms: |
 || None - No compression. Files are encoded directly to base64. (Recommended only for compressed files. Ex. .7z, Zip, Rar) |
 || Deflate - **(Default)** Uses ZLib2 Compression. |
 || LZMA2 - Uses XZ (LZMA2) compression. Superior compression ratio at the cost of slower encoding time. **(Not compatible with Winbuilder)** |

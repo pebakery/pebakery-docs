@@ -13,7 +13,7 @@ System,SaveLog,<DestPath>[,Format]
 | Argument | Description |
 | --- | --- |
 | DestPath | The full path where the log will be saved. If the file exists it will be overwritten. |
-| Format | Logs can be exported to the following formats: |
+| Format | **(Optional)**Logs can be exported to the following formats: |
 || HTML - **(Default)** Exports the log as an html document that can be easily viewed in a web browser. |
 || Text - Exports the log as a machine readable UTF8 .txt file. |
 

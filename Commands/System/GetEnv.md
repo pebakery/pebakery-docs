@@ -13,7 +13,7 @@ System,GetEnv,<EnvVar>,<%DestVar%>
 | Argument | Description |
 | --- | --- |
 | EnvVar | The name of the environment variable to read. Do **not** include surrounding `%` signs. |
-| %DestVar% | The variable where the value of the environment variable will be stored. |
+| DestVar | The variable where the value of the environment variable will be stored. |
 
 ### Common Environment Variables
 

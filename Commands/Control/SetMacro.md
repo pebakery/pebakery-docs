@@ -7,15 +7,15 @@ Macros make script maintenance easier as the code is written only once but can b
 ## Syntax
 
 ```pebakery
-SetMacro,<MacroName>,<MacroCommand>[,GLOBAL | PERMANENT]
+SetMacro,<Name>,<Command>[,GLOBAL | PERMANENT]
 ```
 
 ### Arguments
 
 | Argument | Description |
 | --- | --- |
-| MacroName | The name of our macro. `MacroName` can only consist of following characters `a-z A-Z 0-9 _ ( ) .` Because macros are parsed before run-time using %Variables% in the macro name is not supported.|
-| MacroCommand | The command to be executed when the macro is called. `MacroCommand` must be enclosed in double quotes. Setting this argument to `NIL` will delete the macro. |
+| Name | The name of our macro. `Name` can only consist of following characters `a-z A-Z 0-9 _ ( ) .` Because macros are parsed before run-time using %Variables% in the macro name is not supported.|
+| Command | The command to be executed when the macro is called. `Command` must be enclosed in double quotes. Setting this argument to `NIL` will delete the macro. |
 
 ### Flags
 

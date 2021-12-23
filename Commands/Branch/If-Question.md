@@ -9,7 +9,7 @@ If,QUESTION,<Question>,<Command>
 ```
 
 ```pebakery
-If,QUESTION,<Question>,<Timeout>,<DefaultAnswer>
+If,QUESTION,<Question>,<Timeout>,<DefaultAnswer>,<Command>
 ```
 
 ### Arguments
@@ -19,18 +19,18 @@ If,QUESTION,<Question>,<Timeout>,<DefaultAnswer>
 | Argument | Description |
 | --- | --- |
 | Question | The text that will be displayed to the user. |
-| Command | The command to be executed if the user choses `Yes`. |
+| Command | The command to be executed if the user chooses `Yes`. |
 
 #### Version 2
 
 | Argument | Description |
 | --- | --- |
 | Question | The text that will be displayed to the user. |
-| Command | The command to be executed if the user choses `Yes`. |
 | Timeout | Time in seconds before the `DefaultAnswer` is selected. |
 | DefaultAnswer | The answer that will be automatically selected after the `Timeout` period expires.
 || Yes<br/>True - The `Command` is executed. |
 || No<br/>False - The `Command` is not executed. |
+| Command | The command to be executed if the user chooses `Yes`. |
 
 ## Remarks
 

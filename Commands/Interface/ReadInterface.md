@@ -12,7 +12,7 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>[,Del
 
 | Argument | Description |
 | --- | --- |
-| Property | The Property value to read:
+| Property | The Property value to read. Not all properties are applicable to all controls. See Control Specific Properties for details.
 || Text - Text value of the control. |
 || Visible - `True`/`False` - Show or Hide the control. |
 || PosX - Horizontal Position measured from the control's top left corner. |
@@ -21,14 +21,20 @@ ReadInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<%DestVar%>[,Del
 || Height - Height of the control. |
 || Value - Value of the control. |
 || Items - List of the items the control contains. |
+|| Image - The picture assigned to the control. |
+|| URL - Url assigned to the control. |
+|| SectionName - Name of the section to run when a button is pushed or a value is changed. |
+|| HideProgress - If `True` hide the run progress screen. If `False` show the run progress. |
 || ToolTip - Text that will be displayed when the user hovers over the control. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface you wish to read. |
 | ControlName | The name of the control to read. |
-| DestVar | The variable that will contain the value of the selected property. |
+| %DestVar% | The variable that will contain the value of the selected property. |
 | Delim= | **(Optional)** Delimiter used to separate the list of `Items` retrieved from a ComboBox or RadioGroup control. Case Insensitive. **Default:** `\|` |
 
-## Remarks
+### Control Specific Properties
+
+#### Items Property
 
 The `Items` Property is only supported in these controls:
 
@@ -39,6 +45,22 @@ The `Items` Property is only supported in these controls:
 
 PEBakery will return the items as a pipe delimited `|` list unless the `Delim=` argument specifies otherwise.
 Attempting to read `Items` from an unsupported control will result in an error.
+
+#### Resource Property
+
+The `Resource` Property is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Button    | (String) The name of the embedded picture assigned to the control. |
+| Image     | (String) The name of the embedded picture assigned to the control. |
+| TextFile  | (String) The name of the embedded .txt/.rtf file assigned to the control. |
+
+Resources must be embedded in the current script's `InterfaceEncoded` section.
+
+Attempting to read `Resource` from an unsupported control will result in an error.
+
+#### Value Property
 
 The `Value` Property is only supported in these controls:
 
@@ -53,6 +75,45 @@ The `Value` Property is only supported in these controls:
 | RadioGroup  | (Integer) Zero-Based Index of the selected item. |
 
 Attempting to read `Value` from an unsupported control will result in an error.
+
+#### URL Property
+
+The `Url` Property is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Image       | (String) URL. |
+| WebLabel    | (String) URL. |
+
+Attempting to read `Url` from an unsupported control will result in an error.
+
+#### SectionName Property
+
+The `SectionName` property used for the Optional Engine Run is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Button        | (String) Name of the script section to execute. |
+| CheckBox      | (String) Name of the script section to execute. |
+| ComboBox      | (String) Name of the script section to execute. |
+| RadioButton   | (String) Name of the script section to execute. |
+| RadioGroup    | (String) Name of the script section to execute. |
+
+Attempting to read the `SectionName` property from an unsupported control will result in an error.
+
+#### HideProgress Property
+
+The `HideProgress` property used for the Optional Engine Run is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Button        | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| CheckBox      | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| ComboBox      | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| RadioButton   | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| RadioGroup    | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+
+Attempting to read the `HideProgress` property from an unsupported control will result in an error.
 
 ## Related
 

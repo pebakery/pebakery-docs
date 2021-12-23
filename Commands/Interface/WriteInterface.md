@@ -12,7 +12,7 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=
 
 | Argument | Description |
 | --- | --- |
-| Property | The Property value to edit:
+| Property | The Property value to edit. Not all properties are applicable to all controls. See Control Specific Properties for details.
 || Text - Text value of the control. |
 || Visible - `True`/`False` - Show or Hide the control. |
 || PosX - Horizontal Position measured from the control's top left corner. |
@@ -21,6 +21,10 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=
 || Height - Height of the control. |
 || Value - Value of the control. |
 || Items - List of the items the control contains. |
+|| Resource - The encoded file/picture assigned to the control. |
+|| URL - Url assigned to the control. |
+|| SectionName - Name of the section to run when a button is pushed or a value is changed. |
+|| HideProgress - If `True` hide the run progress screen. If `False` show the run progress. |
 || ToolTip - Text that will be displayed when the user hovers over the control. Tooltips my be removed by specifying an empty string `""` or `NIL` as the tooltip value. |
 | ScriptFile | The full path to the script. **Hint:** Use `%ScriptFile%` to reference the current script. |
 | Interface | The name of the section containing the interface control you wish to modify. |
@@ -28,7 +32,9 @@ WriteInterface,<Property>,<ScriptFile>,<Interface>,<ControlName>,<Value>[,Delim=
 | Value | The new value to write. |
 | Delim= | **(Optional)** Delimiter used to separate the list of `Items` that will be written to a ComboBox or RadioGroup control. Case Insensitive. **Default:** `\|` |
 
-## Remarks
+### Control Specific Properties
+
+#### Items Property
 
 The `Items` Property is only supported in these controls:
 
@@ -40,6 +46,24 @@ The `Items` Property is only supported in these controls:
 PEBakery assumes the `Items` list passed to the `WriteInterface` command is pipe `|` delimited unless otherwise specified by the `Delim=` argument.
 
 Attempting to read `Items` from an unsupported control will result in an error.
+
+#### Resource Property
+
+The `Resource` Property is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Button    | (String) The name of the embedded picture assigned to the control. |
+| Image     | (String) The name of the embedded picture assigned to the control. |
+| TextFile  | (String) The name of the embedded .txt/.rtf file assigned to the control. |
+
+Resources must be embedded in the `InterfaceEncoded` section of the script where the Interface resides.
+
+To clear the resource set the value to `Nil` or empty string `""`.
+
+Attempting to read `Resource` from an unsupported control will result in an error.
+
+#### Value Property
 
 The `Value` Property is only supported in these controls:
 
@@ -53,19 +77,48 @@ The `Value` Property is only supported in these controls:
 | FileBox     | (String) Content of the control. |
 | RadioGroup  | (Integer) Zero-Based Index of selected item. |
 
-Trying to write a `Value` to unsupported control will result an error.
+Attempting to write a `Value` to unsupported control will result an error.
 
-```pebakery
-// Error! You cannot write a value to a TextLabel.
-WriteInterface,Value,%ScriptFile%,Interface,pTextLabel1,PEBakery
-```
+#### URL Property
 
-Attempting to write an invalid type will also result an error.
+The `Url` Property is only supported in these controls:
 
-```pebakery
-// Error! CheckBox accepts only True or False.
-WriteInterface,Value,%ScriptFile%,Interface,pCheckBox1,Joveler
-```
+| Control | Read Value |
+| --- | --- |
+| Image       | (String) URL. |
+| WebLabel    | (String) URL. |
+
+Attempting to write a `Url` to unsupported control will result an error.
+
+#### SectionName Property
+
+The `SectionName` property used for the Optional Engine Run is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Button        | (String) Name of the script section to execute. |
+| CheckBox      | (String) Name of the script section to execute. |
+| ComboBox      | (String) Name of the script section to execute. |
+| RadioButton   | (String) Name of the script section to execute. |
+| RadioGroup    | (String) Name of the script section to execute. |
+
+Attempting to read the `SectionName` property from an unsupported control will result in an error.
+
+#### HideProgress Property
+
+The `HideProgress` property used for the Optional Engine Run is only supported in these controls:
+
+| Control | Value |
+| --- | --- |
+| Button        | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| CheckBox      | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| ComboBox      | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| RadioButton   | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+| RadioGroup    | (Boolean) If `True` hide the run progress screen. If `False` show the run progress. |
+
+Attempting to read the `HideProgress` property from an unsupported control will result in an error.
+
+## Remarks
 
 **Note:** It is not necessary to call `System,REFRESHINTERFACE` after a `WriteInterface` command.
 
