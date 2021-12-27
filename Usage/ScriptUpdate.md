@@ -6,7 +6,7 @@ PEBakery contains built-in update functionality for scripts that can be used by 
 
 ## Update Configuration
 
-Script updates are configured via the [[UpdateScript]](../Projects/ScriptUpdateScript.md) section in each individual script file.
+Script updates are configured via the [[ScriptUpdate]](../Projects/ScriptUpdate.md) section in each individual script file.
 
 ### Update Metadata
 
@@ -18,8 +18,8 @@ More information about the `meta.json` file and the information it contains can 
 
 When the Script Update button is pressed PEBakery performs the following steps to determine if/how the script needs to be updated.
 
-1. Read the value of UpdateType from the script's `[UpdateScript]` section.
-1. Read the value of URl from the scrip's `[UpdateScript]` section.
+1. Read the value of UpdateType from the script's `[ScriptUpdate]` section.
+1. Read the value of URl from the scrip's `[ScriptUpdate]` section.
 1. Download script's meta-data from `<url>/<scriptTitle>.meta.json`.
 1. Read the script's meta-data to determine if an update is necessary. PEBakery compares the version number from the scripts `[Main]` section to the version property in the script's update configuration.
 1. Backup the current script's interface values.

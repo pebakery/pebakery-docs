@@ -42,7 +42,7 @@ Click on a `Section` name for more details.
 | [Interface](./ScriptInterface.md) | **(Optional)** The Interface section contains one ore more lines that define the controls of a script's Graphical User Interface.  |
 | [Process](./ScriptProcess.md) | **(Optional)** This sections contains the main logic of the script and is processed when you press the `Build` button. |
 | [Variables](./ScriptVariables.md) | **(Optional)** This section is used to declare predefined variables and macros used by the script at runtime. |
-| [UpdateScript](./ScriptUpdateScript.md) | **(Optional)** This section is used to define the method in which the script will be updated when the *Script Update* button is pressed. |
+| [ScriptUpdate](./ScriptUpdate.md) | **(Optional)** This section is used to define the method in which the script will be updated when the *Script Update* button is pressed. |
 
 ### Internal Sections
 
