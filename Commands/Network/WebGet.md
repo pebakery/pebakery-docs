@@ -5,7 +5,7 @@ Downloads files from the Internet.
 ## Syntax
 
 ```pebakery
-WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,Referer=<URL>][,TimeOut=<Int>][,NOERR]
+WebGet,<URL>,<DestPath>[,<HashType>=<HashDigest>][,Referer=<URL>][,TimeOut=<Int>][,UserAgent=<Agent>][,NOERR]
 ```
 
 ### Arguments
@@ -21,6 +21,7 @@ Optional arguments may be specified in any order.
 | | HashDigest - The Hash digest used to verify the downloaded file. |
 | Referer= | **(Optional)** Set an http referrer (Referer). |
 | TimeOut= | **(Optional)** The time-span (in seconds) to wait for a response before the request times out. **Default:** 10 |
+| UserAgent= | **(Optional)** Set a custom User-Agent string used to identify PEBakery to the website. |
 
 ### Flags
 
@@ -43,7 +44,14 @@ Flags may be specified in any order.
 
 No checks are done to ensure that the local machine has a valid Internet connection or that there is enough disk space to download the file. If required these tests can be made using PEBakery's *Conditional Operators*.
 
-The WebGet command uses the PEBakery default user agent of `PEBakery/%VERSION` where $VERSION is replaced by the PEBakery program version. If needed you can set a customized user agent string in PEBakery settings.
+
+It is normally not necessary to modify User-Agent strings used to identify an application or browser to the website, however some strict or poorly behaved websites may have issues with various User-Agent strings. If you encounter this situation you may set a custom User-Agent to work around the issue.
+
+The WebGet User-Agent is resolved in the following order:
+
+1 The User-Agent defined by the `UserAgent=` argument (per-command).
+1 The Global Custom User-Agent defined in PEBakey Settings.
+1 PEBakery default user agent of `PEBakery/%VERSION` where $VERSION is replaced by the PEBakery program version.
 
 ## Related
 

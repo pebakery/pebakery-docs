@@ -27,7 +27,7 @@ Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel]
 
 ## Remarks
 
-All filenames are encoded to UTF-8.
+All filenames are encoded using UTF-8.
 
 Compressing to encrypted/password protected archives is not currently supported.
 

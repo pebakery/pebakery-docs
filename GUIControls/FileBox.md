@@ -47,7 +47,7 @@ The following is an example of a filter string:
 
 You can add several filter patterns to a filter by separating the file types with semicolons, for example:
 
-`Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*`
+`Image files|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*`
 
 The filter order is defined by the order of the filter list, therefore the first filter in the list will be the default selected filtering option.
 

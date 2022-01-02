@@ -20,7 +20,7 @@ UserInput,<BrowserType>,<InitPath>,<%DestVar%>[,Title=<Text>][,Filter=<FilterStr
 | InitPath | The starting path for the browse dialog. Leave blank `""` to let Windows choose the initial directory. |
 | %DestVar% | The variable that will contain the full path of the selected file or directory. |
 | Title= | **(Optional)** Text that will be displayed in the dialog title bar. **(Default)** If this argument is not defined the title bar will display `Open` (FilePath) or `Select Folder` (DirPath). |
-| Filter= | **(Optional)** A filter string used to restrict the file type. **(File Browser Only)** |
+| Filter= | **(Optional)** A filter string used to restrict the file type a user may choose. **(File Browser Only)** |
 
 ## File Filter
 
@@ -50,7 +50,7 @@ The following is an example of a filter string:
 
 You can add several filter patterns to a filter by separating the file types with semicolons, for example:
 
-`Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*`
+`Image files|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*`
 
 The filter order is defined by the order of the filter list, therefore the first filter in the list will be the default selected filtering option.
 
@@ -58,7 +58,7 @@ If `Filter=` is defined any Winbuilder style filters will be ignored.
 
 ## Remarks
 
-If the user clicks the cancel button on the browser dialog the operation will fail. You may use `System,ErrorOff` to prevent the build from Halting.
+If the user clicks the cancel button on the browser dialog the operation will fail. You may use `System,ErrorOff` to prevent the build from halting.
 
 ## Related
 

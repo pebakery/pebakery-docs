@@ -5,7 +5,7 @@ Creates an empty file.
 ## Syntax
 
 ```pebakery
-FileCreateBlank,<FilePath>,[Encoding],[PRESERVE],[NOWARN]
+FileCreateBlank,<FilePath>,[Encoding=<Encoding>],[PRESERVE],[NOWARN]
 ```
 
 ### Arguments
@@ -13,10 +13,11 @@ FileCreateBlank,<FilePath>,[Encoding],[PRESERVE],[NOWARN]
 | Argument | Description |
 | --- | --- |
 | FilePath | Path to create empty file. The directory structure will be created if it does not exist. |
-| Encoding | **(Optional)** Character encoding to use in the new file. Supported encoding are : |
-|| **Default** - If no encoding is specified the file is encoded as UTF8 without BOM |
+| Encoding= | **(Optional)** Character encoding to use in the new file. Supported encodings are : |
+|| If no encoding is specified the file is encoded as UTF8 without BOM |
 || `ANSI` - ANSI |
-|| `UTF8` - UTF-8 BOM |
+|| `UTF8` - UTF-8 **(Default)** |
+|| `UTF8BOM` - UTF-8 BOM |
 || `UTF16` - UTF-16 Little Endian |
 || `UTF16BE` - UTF-16 Big Endian |
 

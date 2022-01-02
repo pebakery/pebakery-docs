@@ -34,6 +34,7 @@ Welcome to the PEBakery Manual!
 1. Appendix
     * [Bug Reports](./BugReport/README.md)
     * [Coding Guide](./CodingGuide/README.md)
+	* [Command Line Usage](./Usage/CommandLine.md)
 	* [Deprecated Commands](./Commands/Deprecated.md)
     * [License](LICENSE)
     * [Migrating from Winbuilder](./CodingGuide/Migrating.md)
