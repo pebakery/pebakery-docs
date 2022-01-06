@@ -18,7 +18,7 @@ FileCreateBlank,<FilePath>,[Encoding=<Encoding>],[PRESERVE],[NOWARN]
 || `ANSI` - ANSI |
 || `UTF8` - UTF-8 **(Default)** |
 || `UTF8BOM` - UTF-8 BOM |
-|| `UTF16` - UTF-16 Little Endian |
+|| `UTF16`, `UTF16LE` - UTF-16 Little Endian |
 || `UTF16BE` - UTF-16 Big Endian |
 
 ### Flags
