@@ -1,11 +1,13 @@
-# File Box Control
+# Path Box Control
 
-An input box with a browse button that allows you to select a file or directory.
+An read-only input box with a browse button that allows you to select a file or directory.
+
+PathBox is similar to the FileBox control with the difference being that PathBox does not allow editing the path directly; the user must select the file/dir with the browse button. PathBox also allows for processing a [Section] within the script when the value is changed. 
 
 ## Syntax
 
 ```pebakery
-<Name>=<Value>,<Visibility>,13,<PosX>,<PosY>,<Width>,<Height>[,<Type>][,Title=<Text>][,Filter=<FilterString>][,<ToolTip>]
+<Name>=<Value>,<Visibility>,20,<PosX>,<PosY>,<Width>,<Height>,<Type>,[Title=<String>][,Filter=<FilterString>][,<SectionToRun>,<ShowProgress>][,<ToolTip>]
 ```
 
 ### Arguments
@@ -13,9 +15,9 @@ An input box with a browse button that allows you to select a file or directory.
 | Argument | Description |
 | --- | --- |
 | Name | Unique name used to reference this control. |
-| Value | The path currently entered in the File Box. |
+| Value | The path currently entered in the Path Box. |
 | Visibility | `True`/`False` - Show or Hide the control. |
-| ControlID | `13` - The control ID specifying that this is a File Box. |
+| ControlID | `20` - The control ID specifying that this is a Path Box. |
 | PosX | Horizontal Position measured from the control's top left corner. |
 | PosY | Vertical Position measured from the control's top left corner. |
 | Width | Width of the control. |
@@ -25,6 +27,8 @@ An input box with a browse button that allows you to select a file or directory.
 || `FILE` - The browse button will display a file selection dialog. |
 | Title= | **(Optional)** Text that will be displayed in the dialog title bar. **(Default)** |
 | Filter= | **(Optional)** A filter string used to restrict the file type a user may choose. **(File Browser Only)** |
+| SectionToRun | **(Optional)** Defines the [Section] within the script that will be processed when the value of the control is changed. The section name must be enclosed in underscore `_` characters. *Example:* `_RunMe_` |
+| ShowProgress | **(Optional)** True/False - Show the Build progress screen while `SectionToRun` is being executed. This argument must always follow the `SectionToRun` argument. |
 | ToolTip | **(Optional)** Help Text that will be shown when the user hovers over the control. This argument must always begin with a double underscore `__`. *Example:* `"__Some useful info"` |
 
 Optional arguments may be specified in any order.
@@ -47,23 +51,23 @@ The filter order is defined by the order of the filter list, therefore the first
 
 ## Remarks
 
-The `Value` of the File Box can be read by referencing the control `Name` as a variable. Ex. `%FileBox1%` or by using the `ReadInterface` command.
+The `Value` of the File Box can be read by referencing the control `Name` as a variable. Ex. `%PathBox1%` or by using the `ReadInterface` command.
+
+`SectionToRun` will not be processed when the Clear button on the control or the Cancel button on the dialog is pressed.
 
 ## Related
 
-[PathBox](./PathBox.md), [ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
+[FileBox](./FileBox.md), [ReadInterface](../Commands/Interface/ReadInterface.md), [WriteInterface](../Commands/Interface/WriteInterface.md)
 
 ## Examples
 
 ```pebakery
 // Select a file
-FileBox1=,1,13,330,219,172,20,file
-FileBox2=,1,13,330,219,172,20,file,"Title=Please select another file"
-
-// Select a file, using the `Filter=` argument to only allow the user to pick ini/cfg files by default.
-FileBox1=,1,13,330,219,172,20,file,"Filter=Config Files|*.ini;*.cfg|All Files|*.*"
-
+PathBox01=PathBox01,1,20,10,10,200,20,file,"Title=select a file"
+// Select a file, using the `Filter` argument to only allow the user to pick ini/cfg files by default.
+PathBox02=PathBox02,1,20,10,40,200,20,file,"Filter=Config Files|*.ini;*.cfg|All Files|*.*"
 // Select a directory
-FileBox2=,1,13,330,262,172,20,dir
-
+PathBox03=PathBox03,1,20,10,70,200,20,dir
+// Select a directory and run the [RunMe] section when the value changes
+PathBox04=PathBox04,1,20,10,100,200,20,dir,"Title=select a directory",_RunMe_,True
 ```

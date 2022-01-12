@@ -19,7 +19,7 @@ System,SaveLog,<DestPath>[,Format]
 
 ## Remarks
 
-None.
+If the destination directory does not exist the operation will fail.
 
 ## Related
 
