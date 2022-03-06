@@ -19,9 +19,7 @@ Click on the control's name in the table below for details on each control.
 | 4 | [Combo Box](./ComboBox.md) | A drop-down list allowing you to select a single value. |
 | 5 | [Image](./Image.md) | Displays an image embedded within the script. |
 | 6 | [Text File](./TextFile.md) | Displays a text file embedded within the script. |
-| 7 | Text Edit | **Not Implemented** - Alternatives, such as launching the file with *notepad.exe* are more flexible. |
 | 8 | [Button](./Button.md) | A simple button that can be used to run a section of code within the script. |
-| 9 | Check List | **Not Implemented** - Not enough interest. Limited use cases. |
 | 10 | [Web Label](./WebLabel.md) | A hyperlink that will open a webpage in the default browser. |
 | 11 | [Radio Button](./RadioButton.md) | A circular button that can have only one radio button selected on the interface at a time. |
 | 12 | [Bevel](./Bevel.md) | A rectangular frame used to organize controls. |

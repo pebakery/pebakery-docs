@@ -29,7 +29,7 @@ End
 
 ## Related
 
-[If-Else](./If-Else.md), [If-Question](./If-Question.md)
+[If-Else](./If-Else.md), [If-Question](./If-Question.md), [Operators](./Operators.md)
 
 ## Examples
 
