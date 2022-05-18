@@ -35,9 +35,11 @@ RegMulti,<HKey>,<KeyPath>,<ValueName>,<Action>,<Arg1>[,Arg2]
 
 If the `string` already exists in `ValueName`, a warning is logged and the `Action` is ignored.
 
+If the `KeyPath` or `ValueName` does not exist the operation will fail.
+
 ## Related
 
-[RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md)
+[RegRead](./RegRead.md), [RegHiveLoad](./RegHiveLoad.md), [RegHiveUnload](./RegHiveUnload.md), [RegWrite](./RegWrite.md),
 
 ## Examples
 
@@ -47,8 +49,10 @@ Append a string to the end of the value list.
 
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
+// We need to make sure REG_MULTI values exist before we try and change them
+If,Not,ExistRegValue,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",RegWrite,HKLM,0x7,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",""
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,APPEND,<String>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,APPEND,snapman
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",APPEND,"snapman"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -59,7 +63,7 @@ Prepend a string to the beginning of the value list.
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,PREPEND,<String>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,PREPEND,snapman
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",PREPEND,"snapman"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -70,7 +74,7 @@ Write a string before a specified value. In this example we will write the value
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,BEFORE,<SearchString>,<String>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,BEFORE,rdyboost,snapman
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",BEFORE,"rdyboost,snapman"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -81,7 +85,7 @@ Write a string after a specified value. In this example we will write the value 
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,BEHIND,<SearchString>,<String>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,BEHIND,rdyboost,snapman
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",BEHIND,"rdyboost,snapman"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -92,7 +96,7 @@ Write a string at a specific index. In this example we will write the value `sna
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,PLACE,<Index>,<String>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,PLACE,3,snapman
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",PLACE,3,"snapman"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -103,7 +107,7 @@ Delete a string from the list.
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,DELETE,<String>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,DELETE,snapman
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",DELETE,"snapman"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -114,7 +118,7 @@ Find the position of a specified string if it exists in the list.
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
 // RegMulti,<HKEY>,<KeyPath>,<ValueName>,INDEX,<String>,<DestVar>
-RegMulti,HKLM,Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F},UpperFilters,INDEX,snapman,%varPos%
+RegMulti,HKLM,"Tmp_System\ControlSet001\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}","UpperFilters",INDEX,"snapman",%varPos%
 Echo,"snapman is located at position: %varPos%"
 RegHiveUnLoad,Tmp_System
 ```
