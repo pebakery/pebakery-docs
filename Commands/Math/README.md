@@ -19,6 +19,7 @@ Click on a Command name for a detailed description.
 | [Math,Dec](./Dec.md) | Converts a a hexadecimal string to it's numeric representation. |
 | [Math,Div](./Div.md) | Divides two numbers. |
 | [Math,Floor](./Floor.md) | Returns a number rounded down to the closest integer. |
+| [Math,FromChar](./FromChar.md) | Converts an mapped character to it's numerical code point (in Hex). |
 | [Math,Hex](./Hex.md) | Convert an integer to it's hexadecimal representation. |
 | [Math,IntDiv](./IntDiv.md) | Divides two integers and returns the quotient and remainder. |
 | [Math,Mul](./Mul.md) | Multiplies two numbers. |
@@ -27,5 +28,6 @@ Click on a Command name for a detailed description.
 | [Math,Rand](./Rand.md) | Generates a pseudo-random positive integer. |
 | [Math,Round](./Round.md) | Returns a integer rounded to the nearest whole number. |
 | [Math,Sub](./Sub.md) | Subtracts two numbers. |
+| [Math,ToChar](./ToChar.md) | Converts an numerical code point to it's mapped character. |
 | [Math,ToSign](./ToSign.md) | Converts an Unsigned Integer to a Signed Integer. |
 | [Math,ToUnsign](./ToUnsign.md) | Converts an Signed Integer to an Unsigned Integer. |
