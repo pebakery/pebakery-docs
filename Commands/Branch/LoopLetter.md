@@ -48,7 +48,7 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ## Related
 
-[Loop](./Loop.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
+[ForEach](./ForEach.md), [ForRange](./ForRange.md), [Loop](./Loop.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 

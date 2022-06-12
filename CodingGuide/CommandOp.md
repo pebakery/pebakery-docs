@@ -1,8 +1,6 @@
 # Command Optimization
 
-If enabled via **PEBakery >Settings > General > Optimize Code**, PEBakery will automatically optimize various commands related to file manipulation, however the optimization occurs only if the **same commands** that manipulate the **same file** are **placed in a row**.
-
-When commands are optimized, multiple file read/write operations are compacted into single read/write operation, dramatically improving performance. In order to take advantage of this performance boost, make sure to place these commands together in your script.
+If enabled via **PEBakery >Settings > General > Optimize Code**, PEBakery will automatically optimize various commands. When commands are optimized, multiple file read/write operations are compacted into single read/write operation, dramatically improving performance. In order to take advantage of this performance boost, make sure to place these commands together in your script.
 
 ## The following commands may be optimized
 
@@ -23,6 +21,15 @@ When commands are optimized, multiple file read/write operations are compacted i
 - WimPathAdd
 - WimPathDelete
 - WimPathRename
+
+## Criteria
+
+PEBakery will analyze the commands before optimization to determine if they meet specific conditions.
+
+Only commands that meet the following criteria will be optimized:
+
+* The **same commands** that manipulate the **same file** are **placed in a row**.
+* The command to be optimized does not reference the value of a variable set by any preceding optimized commands.
 
 ## Error Handling for Optimized Commands
 
@@ -84,6 +91,8 @@ TXTDelLine,%target_sys%\autorun.cmd,exit
 TXTAddLine,%target_sys%\autorun.cmd,"hiderun.exe IMEReg.cmd",Append
 ```
 
+### Example 4
+
 Multiple TXTAddLine are writing to same file, however they are not placed in a row therefore no optimization will be performed.
 
 ```pebakery
@@ -92,9 +101,27 @@ Echo,"Hello World!"
 TXTAddLine,%DestDir%\hello.txt,"Have a nice day.",Append
 ```
 
+### Example 5
+
 These WimExtract handle same file, however they have different flags therefore no optimization will be performed.
 
 ``` pebakery
 WimExtract,%WimDir%\LZX.wim,1,Z.txt,%DestDir%,CHECK
 WimExtract,%WimDir%\LZX.wim,1,A?.txt,%DestDir%,NOACL
+```
+
+### Example 6
+
+In the following example, IniReading the *Menus* section is dependent on the result of the IniRead of the *Options* section. In this case no optimization will be performed, as the value of *Option1* (menuKey) must be known before *Menus* can be read.
+
+``` pebakery
+IniRead, %ScriptFile%, Options, option1, %menuKey%
+IniRead, %ScriptFile%, Menus, %menuKey%, %Result%
+Message,%menuKey%#$x%Result%
+
+[Options]
+option1=menuKey
+
+[Menus]
+menuKey=MenuItem
 ```

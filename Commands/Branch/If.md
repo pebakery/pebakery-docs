@@ -10,9 +10,9 @@ If,<Condition>,<Command>
 
 ```pebakery
 If,<Condition>,Begin
- <Command>
- ...
- <Command>
+  <Command>
+  ...
+  <Command>
 End
 ```
 

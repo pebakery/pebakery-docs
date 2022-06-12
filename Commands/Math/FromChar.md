@@ -32,7 +32,7 @@ UCS-4 Unicode code points such as emoji are not supported at this time.
 
 ## Related
 
-[FromChar](./FromChar.md)
+[ToChar](./ToChar.md)
 
 ## Examples
 

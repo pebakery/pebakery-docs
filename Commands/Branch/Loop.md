@@ -50,7 +50,7 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ## Related
 
-[LoopLetter](./LoopLetter.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
+[ForEach](./ForEach.md), [ForRange](./ForRange.md), [LoopLetter](./LoopLetter.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 

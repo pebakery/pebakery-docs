@@ -15,14 +15,14 @@ Else,<AltCommand>
 
 ```pebakery
 If,<Condition>,Begin
- <Command>
- ...
- <Command>
+  <Command>
+  ...
+  <Command>
 End
 Else,Begin
- <Command>
- ...
- <Command>
+  <Command>
+  ...
+  <Command>
 End
 ```
 

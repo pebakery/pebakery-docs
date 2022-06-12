@@ -29,6 +29,7 @@ Click on a Command name for a detailed description.
 | [List,LastPosX](./LastPosX.md) | Returns the last position of the given value inside the specified list. **Case Sensitive.** |
 | [List,Pos](./Pos.md) | Returns the position of the given value inside the specified list. **Case Insensitive.** |
 | [List,PosX](./PosX.md) | Returns the position of the given value inside the specified list. **Case Sensitive.** |
+| [List,Range](./Range.md) | Generate a list of values from a given range. |
 | [List,Remove](./Remove.md) | Removes all occurrences of a value from a list. **Case Insensitive.** |
 | [List,RemoveAt](./RemoveAt.md) | Removes a value from a specific index in a list. |
 | [List,RemoveX](./RemoveX.md) | Removes all occurrences of a value from a list. **Case Sensitive.** |
