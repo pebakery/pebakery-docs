@@ -1,4 +1,4 @@
-# Exit
+# Return
 
 Stop running a section immediately and return to the calling script/section.
 
