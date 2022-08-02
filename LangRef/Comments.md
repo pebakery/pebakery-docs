@@ -15,3 +15,14 @@ PEBakery supports the C++ Style `//` single line comments as well as _.ini_ styl
 ## Multi-Line/Block Comments
 
 Block comments are not supported.
+
+## Comment Sections
+
+Section names that begin and end with a hash mark `#` will be treated as a comment section and will be ignored by PEBakery's script engine and syntax checker.
+
+Unlike Single Line Comments, the contents of a Comment Section will not be displayed in the build log.
+
+```pebakery
+[#Info#]
+This section will be ignored by PEBakery.
+```

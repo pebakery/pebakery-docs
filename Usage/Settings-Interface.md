@@ -10,7 +10,7 @@ Interface settings may be configured via the **PEBakery > Settings > Interface**
 
 | Setting | Default | Description |
 | --- | --- | --- |
-| Display console output in ShellExectue | True | When enabled the build process will display the output from programs executed with `ShellExecute,Hide` in the progress window. |
+| Display console output in ShellExectue | True | When enabled the build process will display the output from programs executed with `ShellExecute,Hide` in the progress window. StdOut will be displayed in black text, StdErr will be displayed in red text. |
 | Custom Title | False | Allows you to change the caption on PEBakery's main window. |
 | Interface Size | Adaptive | Configures the interface resizing method. |
 | | Adaptive | Automatically scale PEBakery's top menu based on the screen resolution. |

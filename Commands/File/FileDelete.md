@@ -29,7 +29,7 @@ Flags may be specified in any order.
 
 When wildcards are used files in subdirectories will also be deleted. To prevent this, use `NOREC` flag.
 
-**Deleted folders are permanently removed can not be recovered from the recycle bin.**
+**Deleted files/folders are permanently removed can not be recovered from the recycle bin.**
 
 ## Related
 

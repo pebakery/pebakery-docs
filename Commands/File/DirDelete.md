@@ -16,6 +16,8 @@ DirDelete,<DirPath>
 
 ## Remarks
 
+If `DirPath` does not exist the build will halt.
+
 **Deleted folders are permanently removed can not be recovered from the recycle bin.**
 
 ## Related
