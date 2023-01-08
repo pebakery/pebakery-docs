@@ -25,6 +25,7 @@ Click on the control's name in the table below for details on each control.
 | 12 | [Bevel](./Bevel.md) | A rectangular frame used to organize controls. |
 | 13 | [File Box](./FileBox.md) | An input box with a browse button that allows you to select a file or directory. |
 | 14 | [Radio Group](./RadioGroup.md) | A group of radio buttons. Only one radio button per group may be selected at a time. |
+| 20 | [Path Box](./PathBox.md) | An read-only input box with a browse button that allows you to select a file or directory and optionally run commands after update.|
 
 ## Remarks
 
@@ -91,7 +92,8 @@ If,%RG_SelectControl%,Equal,11,Begin
   WriteInterface,Visible,%ScriptFile%,Interface,TextLabel7,True
 End
 If,%RG_SelectControl%,Equal,12,WriteInterface,Visible,%ScriptFile%,Interface,RadioGroup1,True
-If,%RG_SelectControl%,Equal,13,Run,%ScriptFile%,ShowEverything
+If,%RG_SelectControl%,Equal,13,WriteInterface,Visible,%ScriptFile%,Interface,PathBox01,True
+If,%RG_SelectControl%,Equal,14,Run,%ScriptFile%,ShowEverything
 System,Cursor,Normal
 
 [HideEverything]
@@ -119,6 +121,7 @@ WriteInterface,Visible,%ScriptFile%,Interface,FileBox2,False
 WriteInterface,Visible,%ScriptFile%,Interface,TextLabel6,False
 WriteInterface,Visible,%ScriptFile%,Interface,TextLabel7,False
 WriteInterface,Visible,%ScriptFile%,Interface,RadioGroup1,False
+WriteInterface,Visible,%ScriptFile%,Interface,PathBox01,False
 
 [ShowEverything]
 WriteInterface,Visible,%ScriptFile%,Interface,TextBox1,True
@@ -145,24 +148,31 @@ WriteInterface,Visible,%ScriptFile%,Interface,FileBox2,True
 WriteInterface,Visible,%ScriptFile%,Interface,TextLabel6,True
 WriteInterface,Visible,%ScriptFile%,Interface,TextLabel7,True
 WriteInterface,Visible,%ScriptFile%,Interface,RadioGroup1,True
+WriteInterface,Visible,%ScriptFile%,Interface,PathBox01,True
+
+[ButtonPress]
+Message,"You pressed a button!"
+
+[FileSelected]
+Message,"You selected a file:#$x#$x  %PathBox01%"
 
 [Interface]
-RG_SelectControl="Choose a Control",1,14,4,5,120,290,"Text Box","Text Label","Number Box","Check Box","Combo Box",Image,"Text File",Button,"Web Label","Radio Button",Bevel,Filebox,"Radio Group","Show All",13,_ShowSelectedControl_,True
-Bevel1=Bevel1,1,12,128,8,414,287
+RG_SelectControl="Choose a Control",1,14,4,5,120,290,"Text Box","Text Label","Number Box","Check Box","Combo Box",Image,"Text File",Button,"Web Label","Radio Button",Bevel,Filebox,"Radio Group",PathBox,"Show All",14,_ShowSelectedControl_,True
+Bevel1=Bevel1,1,12,128,8,414,316
 TextBox1=TextBox,1,0,138,179,171,21,abc..
 TextLabel1="Normal Text Label",1,1,138,18,103,20,8,Normal
 TextLabel2="Bold Text Label",1,1,137,36,99,20,8,Bold
-TextLabel3="Italic Text Label",1,1,137,53,94,18,8,Italic
-TextLabel4="Underline Text Label",1,1,136,71,97,18,8,Underline
-TextLabel5="Strike-Thru Text Label",1,1,136,89,106,18,8,Strike
+TextLabel3="Italic Text Label",1,1,137,53,94,18,8,Normal,Italic
+TextLabel4="Underline Text Label",1,1,136,71,97,18,8,Normal,Underline
+TextLabel5="Strike-Thru Text Label",1,1,136,89,106,18,8,Normal,Strike
 NumberBox1=pNumberBox1,1,2,473,31,56,22,0,0,256,1,"__Increment positive number by a factor of 1"
 NumberBox2=pNumberBox2,1,2,473,60,55,22,0,-256,256,2,"__Increment or decrement number by a factor of 2"
 CheckBox1=CheckBox,1,3,137,110,104,20,False
 ComboBox1="Option 1",1,4,136,134,115,21,"Option 1","Option 2","Option 3"
 Image1=FAQ.gif,1,5,265,30,71,60,http://www.google.com,"__Search for more info"
-TextFile1=TextFile.txt,1,6,135,209,175,76,
-Button1=Button,1,8,361,27,98,25,pButton1,0,False
-Button2="Image Button",1,8,360,66,99,25,pButton2,if_hammer_screwdriver_11945.bmp,False
+TextFile1=TextFile.txt,1,6,135,209,175,76
+Button1=Button,1,8,361,27,98,25,ButtonPress,0,True
+Button2="Image Button",1,8,360,66,99,25,ButtonPress,if_hammer_screwdriver_11945.bmp,False
 Weblabel1="Search Google",1,10,264,103,69,18,http://www.google.com
 RadioButton1=RadioButton1,1,11,324,124,100,20,True
 RadioButton2=RadioButton2,1,11,324,144,100,20,False
@@ -173,6 +183,7 @@ TextLabel6="Browse for File",1,1,331,202,179,18,12,Normal
 TextLabel7="Browse For Directory",1,1,332,245,202,18,7,Normal
 Bevel2=Bevel,1,12,250,19,104,82,8,Bold
 RadioGroup1=RadioGroup,1,14,433,115,90,69,Option1,Option2,Option3,1
+PathBox01=,1,20,135,295,367,20,file,"Title=Select a file","Filter=All Files|*.*",_FileSelected_,True
 
 [InterfaceEncoded]
 TextFile.txt=99,132
