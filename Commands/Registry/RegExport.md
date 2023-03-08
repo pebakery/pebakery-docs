@@ -25,7 +25,7 @@ RegExport,<HKey>,<KeyPath>,<RegFile>
 
 ## Remarks
 
-`RegImport` will export from your **local** registry, so you must ensure that `KeyPath` points to your mounted PE hive if you intend to export from the PE registry.
+`RegImport` will export from your **local** registry, so you must ensure that `KeyPath` points to your mounted PE hive (ex. _Tmp_Software_) if you intend to export from the PE registry.
 
 ## Related
 

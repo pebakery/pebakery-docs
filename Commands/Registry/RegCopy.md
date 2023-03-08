@@ -37,7 +37,7 @@ RegCopy,<SrcKey>,<SrcKeyPath>,<DestKey>,<DestKeyPath>[,WILDCARD]
 
 ## Remarks
 
-`RegCopy` will copy from your **local** registry, so you must ensure that `SrcKeyPath` and/or `DestKeyPath` point to your mounted PE hive if you intend to copy to/from the PE registry.
+`RegCopy` will copy from your **local** registry, so you must ensure that `SrcKeyPath` and/or `DestKeyPath` point to your mounted PE hive (ex. _Tmp_Software_) if you intend to copy to/from the PE registry.
 
 The Windows registry allows the use of wildcard characters (? \*) in key names (eg. _HKLM\Software\PEBakery*?_ or _HKLM\Software\My*Registry?Key_). Keep this in mind when using the `WILDCARD` flag and limit the scope of your search as much as possible in order to avoid unintended results.
 

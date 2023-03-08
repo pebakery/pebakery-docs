@@ -31,7 +31,7 @@ Because `RegImport` will imports the *.reg file into your **local** registry, yo
 
 ### Example 1
 
-Assume we have the following *myFile.reg* file we want to import into our PE Registry. Note that we have already modifed the registry keys to point to the path where we will mount the PE's SYSTEM hive.
+Assume we have the following *myFile.reg* file we want to import into our PE Registry. Note that we have already modified the registry keys to point to the path where we will mount the PE's SYSTEM hive.
 
 ```pebakery
 Windows Registry Editor Version 5.00
