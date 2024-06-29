@@ -47,7 +47,7 @@ For batch files (*.bat, *.cmd), use `ANSI` encoding. For normal text files, `UTF
 Create empty file Unicode.txt, write BOM (U+FEFF) encoded with UTF-16 Little Endian.
 
 ```pebakery
-FileCreateBlank,C:\Temp\Unicode.txt,UTF16
+FileCreateBlank,C:\Temp\Unicode.txt,Encoding=UTF16
 ```
 
 ### Example 2

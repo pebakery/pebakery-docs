@@ -6,11 +6,12 @@ Click on a Command name for a detailed description.
 | --- | --- |
 | [StrFormat,BytesToInt](./BytesToInt.md) | Converts a human readable string representing the size of a file or directory to a machine readable integer representing the size in bytes. |
 | [StrFormat,Ceil](./Ceil.md) | Rounds a value up to the next formatted "size" (KB/MB/GB/TB/PB). |
-| [StrFormat,CTrim](./CTrim.md) | Removes specific character(s) from the beginning or end of a string if they exist. |
+| [StrFormat,CTrim](./CTrim.md) | Removes specific character(s) from the beginning and end of a string. |
 | [StrFormat,Date](./Date.md) | Returns the current Date and Time in the specified format. |
 | [StrFormat,Dec](./Dec.md) | Decrements a number or letter by a value of *n*. |
 | [StrFormat,DirPath](./DirPath.md) | Returns a path without the filename or extension. |
 | [StrFormat,Div](./Div.md) | Divides two numbers. |
+| [StrFormat,EndTrim](./EndTrim.md) | Removes specific character(s) from the end of a string. |
 | [StrFormat,Ext](./Ext.md) | Returns the file extension from a path. |
 | [StrFormat,FileName](./FileName.md) | Returns the filename portion of a path. |
 | [StrFormat,Floor](./Floor.md) | Rounds a value down to the formatted "size" (KB/MB/GB/TB/PB). |
@@ -36,5 +37,6 @@ Click on a Command name for a detailed description.
 | [StrFormat,Round](./Round.md) | Rounds a value to the nearest formatted "size" (KB/MB/GB/TB/PB). |
 | [StrFormat,RTrim](./RTrim.md) | Removes a number of characters from the right-hand side of a string. |
 | [StrFormat,ShortPath](./ShortPath.md) | Converts a path into `DOS 8.3` compatible format. |
+| [StrFormat,StartTrim](./StartTrim.md) | Removes specific character(s) from the beginning of a string. |
 | [StrFormat,Split](./Split.md) | Splits up a string into substrings based on the given delimiters. |
 | [StrFormat,UCase](./UCase.md) | Converts a string to uppercase. |
