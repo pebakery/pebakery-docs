@@ -22,5 +22,6 @@ Click on a Category below for a list of supported commands.
 | [System](./System/README.md) | Commands for controlling how PEBakery behaves, as well as for executing external processes. |
 | [Text](./Text/README.md) |  Commands that allow you to add and remove lines from standard text files. |
 | [WIM](./WIM/README.md) | Commands for working with Windows Imaging (.wim) files. |
+| [XML](./XML/README.md) | Commands for working with XML files. |
 
 [Deprecated Commands](./Deprecated.md)
