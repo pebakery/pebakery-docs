@@ -15,8 +15,8 @@ XMLAdd,<Operation>,<XMLFile>,<XPath>,<Type>,<Name>[,<Value>]
 | Argument | Description |
 | --- | --- |
 | Operation |  One of the following: |
-| | `Insert`  - Insert a node at the the beginning of the XPath. |
-| | `Append`  - Append a node to the end of the XPath. |
+| | `Insert`  - Insert a node at the the beginning of the `XPath`. |
+| | `Append`  - Append a node to the end of the `XPath`. |
 | | `Subnode` - Add a new subnode to each `XPath` in the document. |
 | XMLFile | Full path to the .xml filed to edit. |
 | XPath | XPath (XML Path Language) query used to insert the Attribute/Element. |
@@ -25,7 +25,7 @@ XMLAdd,<Operation>,<XMLFile>,<XPath>,<Type>,<Name>[,<Value>]
 || `Element` or `elem` - Element
 || `Text` - Text
 | Name | Value Name. |
-| Value | **(Optional)** Value |
+| Value | **(Optional)** Value to add.|
 
 ## Return Codes
 
@@ -46,7 +46,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[[XMLDelete]], [[XMLRename]], [[XMLUpdate]]
+[XMLDelete](./XMLDelete.md), [XMLRename](./XMLRename.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

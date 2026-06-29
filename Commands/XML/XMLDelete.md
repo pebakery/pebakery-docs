@@ -30,9 +30,11 @@ Default namespaces are exposed with the `_` prefix.
 
 For more information about using XPath syntax check out this [XPath Tutorial](https://www.w3schools.com/xml/xpath_intro.asp).
 
+XML files are output as UTF-8 (no BOM).
+
 ## Related
 
-[[XMLAdd]], [[XMLRename]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLRename](./XMLRename.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

@@ -41,7 +41,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[[XMLAdd]], [[XMLCount]], [[XMLDelete]], [[XMLQuery]], [[XMLReadList]], [[XMLRename]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLCount](./XMLCount.md), [XMLDelete](./XMLDelete.md), [XMLQuery](./XMLQuery.md), [XMLReadList](./XMLReadList.md), [XMLRename](./XMLRename.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

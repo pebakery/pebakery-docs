@@ -27,7 +27,7 @@ None.
 
 ## Related
 
-[XMLAdd]], [XMLDelete]], [[XMLRead]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLDelete](./XMLDelete.md), [XMLRead](./XMLRead.md), [XMLValidate](./XMLValidate.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

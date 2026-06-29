@@ -5,7 +5,7 @@ Verify the integrity and structure of an XML file against either an XML Schema (
 ## Syntax
 
 ```pebakery
-XMLValidate,<XMLFile>,<%DestVar%>[,Schema=<XsdFile>|Dtd=<DtdFile>|NOERR]
+XMLValidate,<XMLFile>,<%DestVar%>[,Schema=<XsdFile>|Dtd=<DtdFile>][,NOERR]
 ```
 
 ### Arguments
@@ -14,10 +14,10 @@ XMLValidate,<XMLFile>,<%DestVar%>[,Schema=<XsdFile>|Dtd=<DtdFile>|NOERR]
 | --- | --- |
 | XMLFile | Full path to the XML filed to validate. |
 | DestVar | Variable where the result of the validation will be stored. |
-| Validation Method - **(Optional)** One of the following: |
+| Validation Method | **(Optional)** One of the following: |
 || `Schema=` - Validate the file with an XML Schema (XSD) where `XsdFile` is the full path to the schema file. |
 || `Dtd=` - Validate the file with an Document Type Definition (DTD) where `XsdFile` is the full path to the definition file. |
-| NOERR | **(Optional)** Don't Halt if validation fails. (Use if you intend to handle errors yourself).
+| NOERR | **(Optional)** Don't Halt if validation fails. (Use if you intend to handle errors yourself). |
 
 ## Return Codes
 
@@ -35,7 +35,7 @@ Omitting the Validation Method will parse the `XMLFile` and ensure it is "Well-F
 
 ## Related
 
-[XMLAdd]], [XMLDelete]], [[XMLRead]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLDelete](./XMLDelete.md), [XMLRead](./XMLRead.md), [XMLUpdate](XMLUpdate.md)
 
 ## Examples
 

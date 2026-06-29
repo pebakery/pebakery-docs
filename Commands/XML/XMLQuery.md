@@ -2,7 +2,7 @@
 
 Read XML values.
 
-XMLQuery can return multi-match XPath results as a delimited list.
+XMLQuery can return multi-match `XPath` results as a delimited list.
 
 ## Syntax
 
@@ -18,10 +18,10 @@ XMLQuery,<XMLFile>,<XPath>,<%DestVar%>[,Text|Xml][,NOERR][,Delim=<Str>]
 | XPath | XPath (XML Path Language) query used to locate the value to read. |
 | DestVar | Variable where the value of `XPath` will be stored. |
 | Format | **(Optional)** One of the following format options: |
-|| `Text` - (Default) Returns the values as a pipe `|` delimited list. |
+|| `Text` - (Default) Returns the values as a pipe `\|` delimited list. |
 || `XML` - Returns the values as raw XML fragments. |
 | NOERR | **(Optional)** Don't Halt if the query fails. (Use if you intend to handle errors yourself).
-| Delim= | **(Optional)** Delimiter used to separate the items in the list if multiple filter matches are found. Case Insensitive. **Default:** `|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list if multiple filter matches are found. Case Insensitive. **Default:** `\|` |
 
 ## Return Codes
 
@@ -42,7 +42,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[[XMLAdd]], [[XMLCount]], [[XMLDelete]], [[XMLRead]], [[XMLReadList]], [[XMLRename]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLCount](./XMLCount.md), [XMLDelete](./XMLDelete.md), [XMLRead](./XMLRead.md), [XMLReadList](./XMLReadList.md), [XMLRename](./XMLRename.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

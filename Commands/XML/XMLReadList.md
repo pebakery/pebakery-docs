@@ -17,7 +17,7 @@ XMLReadList,<XMLFile>,<XPath>,<%DestVar%>[,Delim=<Str>]
 | XMLFile | Full path to the XML filed to read. |
 | XPath | XPath (XML Path Language) query used to locate the value to read. |
 | DestVar | Variable where the value of `XPath` will be stored. |
-| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `|` |
+| Delim= | **(Optional)** Delimiter used to separate the items in the list. Case Insensitive. **Default:** `\|` |
 
 ## Return Codes
 
@@ -36,7 +36,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[[XMLAdd]], [[XMLCount]], [[XMLDelete]], [[XMLQuery]], [[XMLRead]], [[XMLRename]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLCount](./XMLCount.md), [XMLDelete](./XMLDelete.md), [XMLQuery](./XMLQuery.md), [XMLRead](./XMLRead.md), [XMLRename](./XMLRename.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

@@ -12,7 +12,7 @@ XMLCount,<XMLFile>,<%DestVar%>
 
 | Argument | Description |
 | --- | --- |
-| XMLFile | Full path to the XML filed to format. |
+| XMLFile | Full path to the XML filed to read. |
 | DestVar | Variable where the result will be stored. |
 
 ## Return Codes
@@ -31,7 +31,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[XMLAdd]], [XMLDelete]], [[XMLRead]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLDelete](./XMLDelete.md), [XMLRead](./XMLRead.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 

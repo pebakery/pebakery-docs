@@ -7,7 +7,7 @@ The `XPath` must exist in order for the value to be updated.
 ## Syntax
 
 ```pebakery
-XMLUpdate,<XMLFile>,<XPath>,<Value>,[NOERR]
+XMLUpdate,<XMLFile>,<XPath>,<Value>[,NOERR]
 ```
 
 ### Arguments
@@ -17,7 +17,7 @@ XMLUpdate,<XMLFile>,<XPath>,<Value>,[NOERR]
 | XMLFile | Full path to the .xml filed to edit. |
 | XPath | XPath (XML Path Language) query used to locate the Attribute/Element to update. |
 | Value | New Value. |
-| NOERR | NOERR - Don't Halt on errors. (Use if you intend to handle errors yourself). |
+| NOERR | **(Optional)** NOERR - Don't Halt on errors. (Use if you intend to handle errors yourself). |
 
 ## Return Codes
 
@@ -43,7 +43,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[[XMLAdd]], [[XMLDelete]], [[XMLRename]]
+[XMLAdd](./XMLAdd.md), [XMLDelete](./XMLDelete.md), [XMLRename](./XMLRename.md)
 
 ## Examples
 

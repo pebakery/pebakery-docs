@@ -37,7 +37,7 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 
 ## Related
 
-[[XMLAdd]], [[XMLDelete]], [[XMLUpdate]]
+[XMLAdd](./XMLAdd.md), [XMLDelete](./XMLDelete.md), [XMLUpdate](./XMLUpdate.md)
 
 ## Examples
 
