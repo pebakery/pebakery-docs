@@ -29,7 +29,7 @@ If the element is null, it will be added to the list as an empty string.
 
 If your array contains objects or nested arrays, `DestVar` might end up containing serialized JSON blobs if the array isn't a simple list of strings or numbers.
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 ## Related
 

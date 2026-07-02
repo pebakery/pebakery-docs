@@ -22,7 +22,7 @@ Click on a Command name for a detailed description.
 PEBakery supports JSON data manipulation using three distinct addressing schemes. Choose your scheme based on the operation (Read vs. Write/Modify).
 
 | Scheme | Primary Use | Specification |
-| --- | --- |
+| --- | --- | --- |
 | GJSON | Reading data. | [GJSON Syntax ](https://github.com/tidwall/gjson/blob/master/SYNTAX.md) |
 | SJSON | Adding/Modifying data. | [SJSON Syntax](https://github.com/tidwall/sjson#path-syntax) |
 | JSONPath | Reading/Modifying data. | [JSONPath](https://www.rfc-editor.org/info/rfc9535/) |
@@ -31,7 +31,7 @@ PEBakery supports JSON data manipulation using three distinct addressing schemes
 
 PEBakery utilizes a subset of the GJSON and SJSON formats, commonly found in tools like the [JSON Stream Editor](https://github.com/tidwall/jj).
 
-- Escaping: Use \ to escape dot (.) or colon (:) characters within keys.
+- Escaping: Use `\` to escape dot `.` or colon `:` characters within keys.
 - Root: `.` selects the root document.
 - Property Access: Use `.foo` or `foo` for properties; chain them (e.g., .foo.bar) for nested data.
 - Array Access: Both `.items[0]` and `.items.0` are supported for compatibility.

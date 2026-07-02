@@ -39,7 +39,7 @@ If the `Filter` does not find at least one match the operation will fail and the
 
 When using `Raw` formatting, if your `Filter` resolves to a node that is not a simple field value (bool/number/string), `DestVar` will return a serialized JSON blob containing the entire object or array.
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 ## Related
 

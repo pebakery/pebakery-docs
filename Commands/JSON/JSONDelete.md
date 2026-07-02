@@ -21,7 +21,7 @@ None.
 
 ## Remarks
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 When using JSONPath the path/value will only be deleted when it matches exactly one existing node.
 
@@ -29,7 +29,7 @@ Deleting a `Path` from a file that supports JSONC (JSON with comments) will auto
 
 ## Related
 
-[[JSONRead]], [[JSONQuery]], [[JSONWrite]]
+[JSONRead](./JSONRead.md), [JSONQuery](./JSONQuery.md), [JSONWrite](./JSONWrite.md)
 
 ## Examples
 

@@ -33,7 +33,7 @@ Once the node is found, the value stored in `DestVar` is determined based on the
 
 JSONType requires the `Path` to resolve to one effective node.
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 ## Related
 

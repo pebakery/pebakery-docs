@@ -25,11 +25,11 @@ None.
 
 If the node is not a JSONArray the build will halt.
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 ## Related
 
-[[JSONCount]], [[JSONDelete]], [[JSONQuery]], [[JSONReadKeys]], [[JSONType]], [[JSONWrite]]
+[JSONCount](./JSONCount.md), [JSONQuery](./JSONQuery.md), [JSONRead](./JSONRead.md), [JSONType](./JSONType.md)
 
 ## Examples
 

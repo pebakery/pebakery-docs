@@ -33,7 +33,7 @@ Once the node is found, the count stored in `DestVar` is determined based on the
 
 JSONCount requires the `Path` to resolve to one effective node.
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 ## Related
 

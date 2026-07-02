@@ -26,7 +26,7 @@ When using JSONPath the path/value will only be written when it matches exactly 
 
 When modifying files that support JSONC (JSON with comments), the system will automatically remove all comments and trailing commas during the write process and standardize the file to RFC 8259 compliant JSON.
 
-Additional Info: [Supported JSON addressing schemes](./README.md#JSON Path Notation)
+Additional Info: [Supported JSON addressing schemes](./README.md#json-path-notation)
 
 ## Related
 

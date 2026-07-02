@@ -28,7 +28,7 @@ Formatting a file that supports JSONC (JSON with comments) will automatically re
 
 ## Related
 
-[[JSONValidate]]
+[JSONValidate](./JSONValidate.md)
 
 ## Examples
 
