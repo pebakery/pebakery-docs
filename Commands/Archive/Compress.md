@@ -7,7 +7,7 @@ Wildcards are supported, allowing multiple files to be archived at one time.
 ## Syntax
 
 ```pebakery
-Compress,<Format>,<SrcPath>,<DestArchive>,[CompressLevel]
+Compress,<Format>,<SrcPath>,<DestArchive>[,CompressLevel]
 ```
 
 ### Arguments
@@ -43,6 +43,7 @@ Compression is performed using [7-Zip](https://www.7-Zip.org).
 
 Basic Compression
 
+```
 [Main]
 Title=Compress Example 1
 Author=Homes32
@@ -55,7 +56,7 @@ Level=5
 [variables]
 
 [process]
-```pebakery
+pebakery
 // PEBakery.ini will be compressed into Setting.zip.
 Compress,Zip,%BaseDir%\PEBakery.ini,%BaseDir%\Setting.zip
 
