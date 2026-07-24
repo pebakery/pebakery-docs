@@ -13,11 +13,11 @@ RegDelete,<HKEY>,<KeyPath>[,ValueName]
 | Argument | Description |
 | --- | --- |
 | HKEY | The root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | KeyPath | The full path of the registry key. |
 | ValueName | **(Optional)** The value to be deleted. If `ValueName` is not specified the entire registry key will be removed. |
 

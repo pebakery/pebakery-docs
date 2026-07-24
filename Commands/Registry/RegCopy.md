@@ -15,18 +15,18 @@ RegCopy,<SrcKey>,<SrcKeyPath>,<DestKey>,<DestKeyPath>[,WILDCARD]
 | Argument | Description |
 | --- | --- |
 | SrcKey | The source root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | SrcKeyPath | The full path of the registry key to copy. |
 | DestKey | The destination root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | DestKeyPath | The full path of the destination key. Existing values will be overwritten. |
 
 ### Flags

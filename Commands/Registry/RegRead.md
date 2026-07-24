@@ -13,13 +13,13 @@ RegRead,<HKey>,<KeyPath>,<ValueName>,<%DestVar%>
 | Argument | Description |
 | --- | --- |
 | HKEY | The root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | KeyPath | The full path of the registry key. |
-| ValueName | The name of the value. |
+| ValueName | The name of the value. For `(Default)` values use an empty string (`""`).|
 | DestVar | The %Variable% where the value will stored. |
 
 ## Remarks

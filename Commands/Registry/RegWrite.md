@@ -13,21 +13,21 @@ RegWrite,<HKey>,<ValueType>,<KeyPath>,<ValueName>,<Value>,[NOWARN]
 | Argument | Description |
 | --- | --- |
 | HKEY | The root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | ValueType   | The type of data the value contains. Supported types are: |
-||0x0 or REG_NONE - Empty Key |
-||0x1 or REG_SZ - String |
-||0x2 or REG_EXPAND_SZ - Expanded String - Will expand any variable value contained inside %%. (e.g. %temp%) |
-||0x3 or REG_BINARY - Binary data - Data is specified in HEX, with each byte being specified by groups of two digits splitting each value with commas. |
-||0x4 or REG_DWORD - 32bit integer |
-||0x7 or REG_MULTI_SZ - Multiple Null Separated Strings |
-||0x11 or REG_QWORD - 64bit integer |
-| KeyPath | The full path of the registry key. |
-| ValueName | The name of the value. |
+||`0x0` or `REG_NONE` - No defined value type. (Can be zero-length or Binary) |
+||`0x1` or `REG_SZ` - String |
+||`0x2` or `REG_EXPAND_SZ` - Expanded String - Will expand any variable value contained inside %%. (e.g. %temp%) |
+||`0x3` or `REG_BINARY` - Binary data - Data is specified in HEX, with each byte being specified by groups of two digits splitting each value with commas. |
+||`0x4` or `REG_DWORD` - 32bit integer |
+||`0x7` or `REG_MULTI_SZ` - Multiple Null Separated Strings |
+||`0x11` or `REG_QWORD` - 64bit integer |
+| KeyPath | The full path of the registry key. You can create an empty Key by omitting the `ValueName` and `Value` arguments or setting both to `""`. |
+| ValueName | The name of the value. For `(Default)` values use an empty string (`""`). |
 | Value | The value to write.<br/>Large values can be wrapped for easier reading by using the `\` character to indicate that the value continues on the next line, similar to the .reg file format. **Note:** If the `Value` to be written is the `\` character eg. `RegWrite,HKLM,0x1,Tmp_System\Setup,OsLoaderPath,"\"` be sure to wrap it in double quotes so it is not mistaken for a line continuation.  |
 
 _Note:_ For the ValueType argument you may use either the hex value `0x1` or name `REG_SZ` interchangeably.
@@ -64,13 +64,13 @@ RegWrite,HKLM,0x4,Tmp_System\ControlSet001\Services\VgaSave\Device0,DefaultSetti
 RegWrite,HKLM,REG_DWORD,Tmp_System\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution,1024
 
 // Write a BINARY value
-RegWrite,HKLM,0x3,Tmp_System\ControlSet001\Control\Network\{4d36e975-e325-11ce-bfc1-08002be10318}\{12F2EEA2-EE86-4933-8C0B-346E5E57F332},InstallTimeStamp,d9,07,07,00,02,00,0e,00,04,00,31,00,20,00,fd,00
+RegWrite,HKLM,REG_BINARY,Tmp_System\ControlSet001\Control\Network\{4d36e975-e325-11ce-bfc1-08002be10318}\{12F2EEA2-EE86-4933-8C0B-346E5E57F332},InstallTimeStamp,d9,07,07,00,02,00,0e,00,04,00,31,00,20,00,fd,00
 
 // Write a Multi-String value
-RegWrite,HKLM,0x7,Tmp_System\ControlSet001\Control\Network,FilterClasses,ms_firewall_upper,scheduler,encryption,compression,vpn,loadbalance,failover,diagnostic,custom
+RegWrite,HKLM,REG_MULTI_SZ,Tmp_System\ControlSet001\Control\Network,FilterClasses,ms_firewall_upper,scheduler,encryption,compression,vpn,loadbalance,failover,diagnostic,custom
 
 // Write a large BINARY value using multiple lines for easy reading
-RegWrite,HKLM,0x3,Tmp_Default\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop,TaskbarWinXP,0c,\
+RegWrite,HKLM,REG_BINARY,Tmp_Default\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop,TaskbarWinXP,0c,\
 00,00,00,08,00,00,00,02,00,00,00,00,00,00,00,b0,e2,2b,d8,64,57,d0,11,a9,6e,00,c0,4f,d7,05,a2,22,00,1c,00,0a,10,00,00,01,00,00,00,01,00,00,00,00,00,00,\
 00,00,00,00,00,00,00,00,00,4c,00,00,00,01,14,02,00,00,00,00,00,c0,00,00,00,00,00,00,46,81,01,00,00,11,00,00,00,64,54,7a,06,bd,b2,cb,01,ea,2f,16,74,ca,\
 b8,cb,01,ea,2f,16,74,ca,b8,cb,01,00,10,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,04,02,14,00,1f,44,47,1a,03,59,72,3f,a7,44,89,\
@@ -109,11 +109,11 @@ RegHiveLoad,Tmp_System,%RegSystem%
 // Intended Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
 // Due to #609 being interpreted as a parameter
 // Actual Result : HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394E&10483\Service
-RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483,Service,sbp2port
+RegWrite,HKLM,REG_SZ,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483,Service,sbp2port
 
 // Use the escaped form of the # character `##`
 // Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
-RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483,Service,sbp2port
+RegWrite,HKLM,REG_SZ,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483,Service,sbp2port
 
 RegHiveUnLoad,Tmp_System
 ```

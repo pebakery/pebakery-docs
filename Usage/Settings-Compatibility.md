@@ -41,7 +41,8 @@ Compatibility settings may be configured via the **PEBakery > Settings > Compat*
 | Overridable fixed variables | OverridableFixedVariables | Allow constant/fixed variables to be overwritten. |
 | Overridable loop counter (#c) | OverridableLoopCounter | Winbuilder allows overwriting of the loop counter `#c` during a loop, but then resets the value on the next iteration. Some poorly written scripts use this token as a 'disposable' variable. |
 | Enable environment variables | EnableEnvironmentVariables | Enable a limited set of pre-define environment variables. |
-| Disable extended section parameters (e.g. #a, #r) | DisableExtendedSectionParams | Disables the `#a` and `#r` tokens. This may be desirable if you use statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token. |
+| Enable legacy sharp-styled section parameters (e.g. #1, #2, ...) | EnableAllLegacySectionParams | Enables using legacy `#1` style section parameters. Modern projects should disable this setting and use the safer variable based section parameters. (ex. `%^SIPARAM_1%`)| |
+| Disable legacy sharp-styled extended section parameters (e.g. #a, #r) | DisableLegacyExtendedSectionParams | Disables the `#a` and `#r` tokens. This may be desirable if you use statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token. Modern projects should enable this setting and use the safer variable based section parameters. (ex. `%^RET%`) |
 
 ## Examples
 
@@ -64,5 +65,6 @@ IgnoreWidthOfWebLabel=True
 OverridableFixedVariables=True
 OverridableLoopCounter=True
 EnableEnvironmentVariables=True
-DisableExtendedSectionParams=True
+EnableAllLegacySectionParams=True
+DisableLegacyExtendedSectionParams=False
 ```

@@ -15,21 +15,21 @@ RegWriteEx,<HKey>,<ValueType>,<KeyPath>,<ValueName>,<Value>,[NOWARN]
 | Argument | Description |
 | --- | --- |
 | HKEY | The root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | ValueType   | The type of data the value contains. Can be one of the Standard types below or an arbitrary hex value. |
-||0x0 or REG_NONE - Empty Key |
-||0x1 or REG_SZ - String |
-||0x2 or REG_EXPAND_SZ - Expanded String - Will expand any variable value contained inside %%. (e.g. %temp%) |
-||0x3 or REG_BINARY - Binary data - Data is specified in HEX, with each byte being specified by groups of two digits splitting each value with commas. |
-||0x4 or REG_DWORD - 32bit integer |
-||0x7 or REG_MULTI_SZ - Multiple Null Separated Strings |
-||0x11 or REG_QWORD - 64bit integer |
-| KeyPath | The full path of the registry key. |
-| ValueName | The name of the value. |
+||`0x0` or `REG_NONE` - No defined value type. (Can be zero-length or Binary) |
+||`0x1` or `REG_SZ` - String |
+||`0x2` or `REG_EXPAND_SZ` - Expanded String - Will expand any variable value contained inside %%. (e.g. %temp%) |
+||`0x3` or `REG_BINARY` - Binary data - Data is specified in HEX, with each byte being specified by groups of two digits splitting each value with commas. |
+||`0x4` or `REG_DWORD` - 32bit integer |
+||`0x7` or `REG_MULTI_SZ` - Multiple Null Separated Strings |
+||`0x11` or `REG_QWORD` - 64bit integer |
+| KeyPath | The full path of the registry key. You can create an empty Key by omitting the `ValueName` and `Value` arguments or setting both to `""`. |
+| ValueName | The name of the value. For `(Default)` values use an empty string (`""`). |
 | Value | The value to write.<br/>Large values can be wrapped for easier reading by using the `\` character to indicate that the value continues on the next line, similar to the .reg file format. **Note:** If the `Value` to be written is the `\` character eg. `RegWriteEx,HKLM,0x1,Tmp_System\Setup,OsLoaderPath,"\"` be sure to wrap it in double quotes so it is not mistaken for a line continuation.  |
 
 _Note:_ For the ValueType argument you may use either the hex value `0x1` or name `REG_SZ` interchangeably.

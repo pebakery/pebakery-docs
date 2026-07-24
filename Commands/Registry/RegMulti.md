@@ -13,21 +13,21 @@ RegMulti,<HKey>,<KeyPath>,<ValueName>,<Action>,<Arg1>[,Arg2]
 | Argument | Description |
 | --- | --- |
 | HKEY | The root key must be one of the following: |
-|| HKEY_LOCAL_MACHINE or HKLM |
-|| HKEY_CURRENT_CONFIG or HKCC |
-|| HKEY_CLASSES_ROOT or HKCR |
-|| HKEY_CURRENT_USER or HKCU |
-|| HKEY_USERS or HKU |
+|| `HKEY_LOCAL_MACHINE` or `HKLM` |
+|| `HKEY_CURRENT_CONFIG` or `HKCC` |
+|| `HKEY_CLASSES_ROOT` or `HKCR` |
+|| `HKEY_CURRENT_USER` or `HKCU` |
+|| `HKEY_USERS` or `HKU` |
 | KeyPath | The full path of the registry key. |
 | ValueName | The multi-string value to modify. |
 | Action | Action must be one of the following keywords: |
-|| APPEND - Writes a string at the end of the specified value. |
-|| PREPEND - Writes a string at the start of the specified value. |
-|| BEFORE - Writes a string before the matching search string. |
-|| BEHIND - Writes a string after the matching search string. |
-|| PLACE - Writes a string at the specified index. |
-|| DELETE - Removes the specified string from the value list. |
-|| INDEX - Queries the index of the specified string. If the string does not exist, the returned value is 0. |
+|| `APPEND` - Writes a string at the end of the specified value. |
+|| `PREPEND` - Writes a string at the start of the specified value. |
+|| `BEFORE` - Writes a string before the matching search string. |
+|| `BEHIND` - Writes a string after the matching search string. |
+|| `PLACE` - Writes a string at the specified index. |
+|| `DELETE` - Removes the specified string from the value list. |
+|| `INDEX` - Queries the index of the specified string. If the string does not exist, the returned value is 0. |
 | Arg1 | String or Index |
 | Arg2 | String or %Variable% |
 

@@ -25,7 +25,7 @@ XMLAdd,<Operation>,<XMLFile>,<XPath>,<Type>,<Name>[,<Value>]
 || `Element` or `elem` - Element
 || `Text` - Text
 | Name | Value Name. |
-| Value | **(Optional)** Value to add.|
+| Value | **(Optional)** The value to add.|
 
 ## Return Codes
 
