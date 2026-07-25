@@ -60,9 +60,9 @@ _*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enab
 | --- | --- |
 | %PEBakery% | Always returns `TRUE` if the script is running with PEBakery. Used for cross-builder compatibility with scripts containing features not implemented in Winbuilder.  |
 | %BaseDir% | The directory where PEBakery was launched from. This variable is used extensively as a reference point for determining the relative paths of important directories such as  `Projects`, `Target`, and `Cache/Workbench`. Ex. `%BaseDir%\Target` |
-| %Version% | For compatibility with scripts designed for Winbuilder this variable always returns `082`. |
-| %EngineVersion% | Returns the machine friendly version of the PEBakery engine. |
-| %PEBakeryVersion% | Returns the human friendly version of the PEBakery engine. |
+| %Version% | For compatibility with scripts designed for Winbuilder this variable always returns `082`. Requires compatibility option `Enable legacy environment and %Version% variables` to be enabled. |
+| %EngineVersion% | Returns the machine friendly version of PEBakery's internal script engine. |
+| %PEBakeryVersion% | Returns the human friendly version of PEBakery. (e.g. 1.2.0) |
 | %ProjectTitle% | The name of the project as defined in script.projects `Main` section. |
 | %ProjectDir% | The full path to the directory containing the project (script.project). |
 
@@ -76,7 +76,7 @@ _*The Winbuilder compatibility option `Overrideable Fixed Variables` may be enab
 
 #### Fixed Environment Variables
 
-Fixed environment variables are included only for compatibility with Winbuilder and must be enabled with the compatibility option `Enable Environment Variables`. If you need to retrieve information about the local operating system's environment it is recommended to use the more flexible and accurate `System,GetEnv` command instead.
+Fixed environment variables are included only for compatibility with Winbuilder and must be enabled with the compatibility option `Enable legacy environment and %Version% variables`. If you need to retrieve information about the local operating system's environment it is recommended to use the more flexible and accurate `System,GetEnv` command instead.
 
 | Variable | Description |
 | --- | --- |

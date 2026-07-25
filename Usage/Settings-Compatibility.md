@@ -18,7 +18,7 @@ Compatibility settings may be configured via the **PEBakery > Settings > Compat*
 
 | Setting | Ini Key | Description |
 | --- | --- | --- |
-| Simulate WinBuilder's *.* bug in DirCopy | AsteriskBugDirCopy | When using wildcards to copy subdirectories, files that exist at the same level are copied as well. |
+| Simulate WinBuilder's *.* bug in DirCopy | AsteriskBugDirCopy | When using wildcards to copy sub-directories, files that exist at the same level are copied as well. |
 | FileRename and DirMove work like PathMove | FileRenameCanMoveDir | Allows `FileRename` and `DirMove` command to move files. |
 | Allow letter in Loop | AllowLetterInLoop | Allows the Loop command to increment alphabetically as well as numerically.|
 | Enable deprecated legacy branch conditions | LegacyBranchCondition | Allow legacy conditions such as `NOTEXISTFILE`, `NOTEXISTDIR`, etc. (Replaced by `If,Not,ExistFile`)|
@@ -40,7 +40,7 @@ Compatibility settings may be configured via the **PEBakery > Settings > Compat*
 | --- | --- | --- |
 | Overridable fixed variables | OverridableFixedVariables | Allow constant/fixed variables to be overwritten. |
 | Overridable loop counter (%^LOOP_IDX%) | OverridableLoopCounter | Winbuilder allows overwriting of the loop counter `%^LOOP_IDX%` during a loop, but then resets the value on the next iteration. Some poorly written scripts use this token as a 'disposable' variable. |
-| Enable environment variables | EnableEnvironmentVariables | Enable a limited set of pre-define environment variables. |
+| Enable legacy environment and %Version% variables | EnableEnvironmentVariables | Enable a limited set of pre-defined environment variables and the Winbuilder `%Version%` variable. See [Variables](../LangRef/Variables.md) for more info. |
 | Enable legacy sharp-styled section parameters (e.g. #1, #2, ...) and loop counter (#c) | EnableAllLegacySectionParams | Enables using legacy `#1` style section parameters and the legacy `#c` style loop counter. Modern projects should disable this setting and use the safer variable based section parameters. (ex. `%^SIPARAM_1%`, `%^LOOP_IDX%`) |
 | Disable legacy sharp-styled extended section parameters (e.g. #a, #r) | DisableLegacyExtendedSectionParams | Disables legacy PEBakery section parameter extensions. This may be desirable if you still need legacy section parameters such as `#1` but also need statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token. Modern projects should enable this setting and use the safer variable based section parameters (ex. `%^RET%`). This setting has no effect if the `Enable legacy sharp-styled section parameters (e.g. #1, #2, ...) and loop counter (#c)` compatibility setting is disabled. |
 
