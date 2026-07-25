@@ -28,7 +28,7 @@ ShellExecuteDelete,<Action>,<FilePath>[,Params][,WorkDir][,%ExitOutVar%]
 | Variable | Description |
 | --- | --- |
 | %ExitCode% | (Legacy) Contains the *Exit Code* returned by the most recent `ShellExecute` command. |
-| #r | Contains the *Exit Code* returned by the most recent `ShellExecute` command. |
+| %^RET% | Contains the *Exit Code* returned by the most recent `ShellExecute` command. |
 
 `%ExitCode%` is included for compatibility with Winbuilder 082.
 

@@ -18,7 +18,7 @@ Loop,BREAK
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path to the script containing the `Section` to execute. Hint: Use %ScriptFile% to reference the current script. |
+| FileName | The full path to the script containing the `Section` to execute. Hint: Use `%ScriptFile%` to reference the current script. |
 | Section | The [Section] to execute. |
 | StartValue | The initial value to start from. Each time the loop finishes the value will be incremented. |
 | EndValue |  The final value to be reached by incrementing `StartValue`. Once this value is reached the loop stops. |
@@ -36,9 +36,11 @@ The following tokens are passed by PEBakery and can be used to perform additiona
 
 | Token | Description |
 | --- | --- |
-| #1, #2, #3, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
-| #a | Contains the number of parameters passed to `Section`. |
-| #c | Contains the current value of the loop relative to `StartValue` and `EndValue`. |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
+| `%^RET%` | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
+| `%^LOOP_IDX%` | Contains the current value of the loop relative to `StartValue` and `EndValue`. |
+
 
 ## Remarks
 
@@ -46,11 +48,11 @@ PEBakery allows an unlimited number of parameters to be passed to the `[section]
 
 Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
-*Note:* Winbuilder allows looping through characters A-Z in addition to integers. The PEBakery `LoopLetter` command replaces this functionality. For backwards compatibility with legacy projects you can enable the _Allow Letter in Loop's Arugment_ compatibility option in PEBakery's settings.
+*Note:* Winbuilder allows looping through characters A-Z in addition to integers. The PEBakery `LoopLetter` and `LoopLetterEx` commands replaces this functionality. For backwards compatibility with legacy projects you can enable the _Allow Letter in Loop's Arugment_ compatibility option in PEBakery's settings.
 
 ## Related
 
-[ForEach](./ForEach.md), [ForRange](./ForRange.md), [LoopLetter](./LoopLetter.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
+[ForEach](./ForEach.md), [ForRange](./ForRange.md), [LoopLetter](./LoopLetter.md), [LoopLetterEx](./LoopLetterEx.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 
@@ -72,7 +74,7 @@ Author=Homes32
 Loop,%ScriptFile%,Count,1,10
 
 [Count]
-Message,"Count: #c"
+Message,"Count: %^LOOP_IDX%"
 ```
 
 ### Example 2
@@ -93,13 +95,13 @@ Author=Homes32
 Loop,%ScriptFile%,Process-Ext,1,10
 
 [Process-Ext]
-// #c is the current value of our loop counter
-If,%CB_Asso_#c%,Equal,True,Run,%ScriptFile%,Register-Ext,%IN_Asso_#c%
+// %^LOOP_IDX% is the current value of our loop counter
+If,%CB_Asso_%^LOOP_IDX%%,Equal,True,Run,%ScriptFile%,Register-Ext,%IN_Asso_%^LOOP_IDX%%
 
 [Register-Ext]
-// #1 is the 1st (and only) parameter we passed to
+// %^SIPARAM_1% is the 1st (and only) parameter we passed to
 // this section and represents the value of the current input box
-Echo,"Registering file extension [#1]..."
+Echo,"Registering file extension [%^SIPARAM_1%]..."
 
 [Interface]
 pTextLabel5_1="File associations:",1,1,9,21,99,18,8,Bold
@@ -147,9 +149,9 @@ Loop,%ScriptFile%,Try-OEM,0,100,SourceDisksFiles,VBoxUSB.sys
 Echo,Found VBoxUSB.sys in [%Result%]
 
 [Try-OEM]
-Set,%file%,C:\Windows\inf\oem#c.inf
-If,ExistFile,%file%,IniRead,%file%,#1,#2,%var%
-If,Not,-%var%,Equal,-,Begin
+Set,%file%,C:\Windows\inf\oem%^LOOP_IDX%.inf
+If,ExistFile,%file%,IniRead,%file%,%^SIPARAM_1%,%^SIPARAM_2%,%var%
+If,Not,%var%,Equal,"",Begin
   Set,%Result%,%file%
   Loop,BREAK
 End

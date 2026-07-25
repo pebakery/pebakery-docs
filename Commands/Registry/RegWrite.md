@@ -94,7 +94,7 @@ RegHiveUnLoad,Tmp_System
 
 ### Example 2
 
-In cases where a registry key contains a `#` character followed by numbers PEBakery can mistakenly interpret this as a parameter passed from a `Run` command, even when this is not intended. The following example demonstrates when this behavior can occur and the correct action to take to ensure the intended result.
+In cases where project has the Compatibility settings `Enable legacy sharp-style section parameters` enabled and `Disable legacy sharp-style extended section parameters` disabled, and a registry key contains a `#` character followed by numbers PEBakery can mistakenly interpret this as a parameter passed from a `Run` command, even when this is not intended. The following example demonstrates when this behavior can occur and the correct action to take to ensure the intended result.
 
 ```pebakery
 
@@ -111,7 +111,7 @@ RegHiveLoad,Tmp_System,%RegSystem%
 // Actual Result : HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394E&10483\Service
 RegWrite,HKLM,REG_SZ,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483,Service,sbp2port
 
-// Use the escaped form of the # character `##`
+// Use the escaped form of the # character `#$h`
 // Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
 RegWrite,HKLM,REG_SZ,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483,Service,sbp2port
 

@@ -14,11 +14,11 @@ RunEx,<FileName>,<Section>[,Parameters]
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path of the script. Hint: Use %ScriptFile% to reference the current script. |
+| FileName | The full path of the script. Hint: Use `%ScriptFile%` to reference the current script. |
 | Section | The name of the section containing the commands you wish to run. |
 | Parameters | **(Optional)** Parameters to pass to the `Section` being executed. Parameters must be defined as either `In=` or `Out=`. |
-|| In=<%variable%> - Pass by value. |
-|| Out=<%variable%> - Pass by reference. If the variable does not exist it will be created. | 
+|| `In=<%variable%>` - Pass by value. |
+|| `Out=<%variable%>` - Pass by reference. If the variable does not exist it will be created. | 
 
 ### Tokens
 
@@ -26,10 +26,10 @@ The following tokens can be used to perform additional operations when executing
 
 | Token | Description |
 | --- | --- |
-| #1, #2, #3, etc. | Used within a `Section` to access `In=` parameters passed. The numbering scheme starts from `1` and continues in the order the `In=` parameters were passed. These tokens are discarded when the section is finished processing. |
-| #a | Contains the number of parameters passed to `Section`. |
-| #o_n_ | References an `Out=` variable inside the called section. The numbering scheme starts from `1` and continues in the order the `Out=` parameters were passed. These tokens are discarded when the section is finished processing. |
-| #r | Return a value from the `Section`. The `#r` token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. #r is volatile so if you need to preserve the return value copy it into a local variable. |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access `In=` parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
+| `%^RET%` | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
+| `%^SOPARAM_1%`, `%^SOPARAM_2%`, `%^SOPARAM_3%`, etc.| References an `Out=` variable inside the called section. The numbering scheme starts from `1` and continues in the order the `Out=` parameters were passed. These tokens are discarded when the section is finished processing. |
 
 ## Remarks
 
@@ -70,8 +70,8 @@ Message,"Open-File Terminated with code: %Return%"
 
 [Open-File]
 System,SetLocal
-Echo,"Opening file: #1"
-ShellExecute,Open,notepad.exe,#1
-Set,#o1,%ExitCode%
+Echo,"Opening file: %^SIPARAM_1%"
+ShellExecute,Open,notepad.exe,%^SIPARAM_1%
+Set,%^SOPARAM_1%,%ExitCode%
 System,EndLocal
 ```

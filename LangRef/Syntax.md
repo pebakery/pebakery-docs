@@ -25,48 +25,15 @@ At times a comma, quote, or other reserved character may need to be used inside 
 | Escape Sequence | Character |
 | --- | --- |
 | #$c | Comma (,) |
+| #$h | Hash mark (#) |
 | #$p | Percent (%) |
 | #$q | Double quotes (") |
 | #$s | Space |
 | #$t | Tab |
 | #$x | Newline (\r\n) |
-| ##  | Hash mark (#) |
-
-The `##` escape sequence is especially important to remember if you are performing an operation such as `IniWrite` or `RegWrite` that will write a string containing a `#` mark immediately followed by:
-
-- the letter `a`, `r`, or `c`. - These tokens `#a` `#r` and `#c` are used by PEBakery to return special values when running loops or other sections within a script.
-- a number `#12345`. - `#<integer>` are interpreted as PEBakery parameters.
-
-Consider the following example:
-
-```pebakery
-[Main]
-Title=Escapes Example
-Author=Homes32
-Level=5
-
-[Variables]
-
-[Process]
-Run,%ScriptFile%,Test
-
-[Test]
-RegHiveLoad,Tmp_System,%RegSystem%
-
-// Intended Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
-// Due to #609 being interpreted as a parameter
-// Actual Result : HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394E&10483\Service
-RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483,Service,sbp2port
-
-// Use the escaped form of the # character `##`
-// Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
-RegWrite,HKLM,0x1,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483,Service,sbp2port
-
-RegHiveUnLoad,Tmp_System
-```
 
 ## White Space
 
 Strings containing white space must be enclosed in double quotes ("String with spaces").
 
-PEBakery ignores white space at the beginning and end of lines, as well as blank lines. Where feasible, the use of white space is encouraged in order to keep your code organized and readable.
+PEBakery ignores white space at the beginning and end of lines and parameters. Blank lines are also ignored. Where feasible, the use of white space is encouraged in order to keep your code organized and readable.

@@ -16,7 +16,7 @@ System,OnScriptExit,<Command>
 
 ### Reason Codes
 
-If the `Command` is `Run`, the *reason* for the exit is passed as parameter #1. This allows you to perform additional processing in order to control what actions are taken.
+If the `Command` is `Run`, the *reason* for the exit is passed as parameter `%^SIPARAM_1%`. This allows you to perform additional processing in order to control what actions are taken.
 
 *Reason* can be one of the following values:
 
@@ -86,31 +86,31 @@ If,%Simulation%,Equal,5,Echo,"PEBakery does not currently return this reason."
 [CLEANUP]
 Echo,"Entering Cleanup function..."
 // Error
-If,#1,EQUAL,ERROR,Begin
+If,%^SIPARAM_1%,EQUAL,ERROR,Begin
   Beep,ERROR
   Message,"An error occurred. Exiting...",ERROR,5
 End
 
 // User STOP
-If,#1,EQUAL,STOP,Begin
+If,%^SIPARAM_1%,EQUAL,STOP,Begin
   Beep,Asterisk
   Message,"You pressed the STOP button. Exiting...",WARNING,5
 End
 
 // Build/Script Finished
-If,#1,EQUAL,DONE,Begin
+If,%^SIPARAM_1%,EQUAL,DONE,Begin
   Beep,OK
   Message,"Finished Processing! Exiting...",INFORMATION,5
 End
 
 // HALT/EXIT COMMAND
-If,#1,EQUAL,COMMAND,Begin
+If,%^SIPARAM_1%,EQUAL,COMMAND,Begin
   Beep,CONFIRMATION
   Message,"A halt or exit command was issued. Exiting...",ERROR,5
 End
 
 // Critical Exception
-If,#1,EQUAL,EXCEPTION,Begin
+If,%^SIPARAM_1%,EQUAL,EXCEPTION,Begin
   Beep,ERROR
   Message,"An critical exception occurred. Exiting...",ERROR,5
 End

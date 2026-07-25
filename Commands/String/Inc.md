@@ -68,7 +68,7 @@ If,EXISTFILE,%fullPath%,ShellExecute,OPEN,%fullPath%
 
 [Search-Drives]
 Set,%drive%,A
-StrFormat,Inc,%drive%,#c
+StrFormat,Inc,%drive%,%^LOOP_IDX%
 Echo,"Searching drive [%drive%:\]"
 Set,%fullPath%,%drive%:\%searchFile%
 If,EXISTFILE,%fullPath%,Loop,BREAK

@@ -12,7 +12,7 @@ Return,[VALUE]
 
 | Argument | Description |
 | --- | --- |
-| Return Value | **(Optional)** Will set value of the `#r` token, which will be made available to the caller upon return. |
+| Return Value | **(Optional)** Will set value of the `%^RET%` token, which will be made available to the caller upon return. |
 
 ## Remarks
 
@@ -36,7 +36,7 @@ Echo,"We should never get here..."
 
 ### Example 2
 
-Stop processing the current section and return, setting the value of `#r` to `%var%`.
+Stop processing the current section and return, setting the value of `%^RET%` to `%var%`.
 
 ```pebakery
 Set,%var%,2

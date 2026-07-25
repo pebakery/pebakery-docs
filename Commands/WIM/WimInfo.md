@@ -116,16 +116,16 @@ LOOP,%ScriptFile%,DisplayInfo,1,%imgCount%
 
 [DisplayInfo]
 System,SetLocal
-WimInfo,%wim%,#c,WINDOWS/VERSION/MAJOR,%verMaj%
-WimInfo,%wim%,#c,WINDOWS/VERSION/MINOR,%verMin%
-WimInfo,%wim%,#c,WINDOWS/VERSION/BUILD,%verBld%
-WimInfo,%wim%,#c,WINDOWS/VERSION/SPLEVEL,%verSP%
-WimInfo,%wim%,#c,WINDOWS/LANGUAGES/LANGUAGE,%lang%
-WimInfo,%wim%,#c,NAME,%imgName%
-WimInfo,%wim%,#c,DESCRIPTION,%imgDescr%
-WimInfo,%wim%,#c,FLAGS,%imgFlags%
-WimInfo,%wim%,#c,DISPLAYNAME,%imgDispName%
-WimInfo,%wim%,#c,DISPLAYDESCRIPTION,%imgDispDescr%
-Message,"Image: #c of %imgCount%#$xVersion: %verMaj%.%verMin% (Build %verBld% Service Pack %verSP%)#$xLanguage: %lang%#$xName: %imgName%#$xDescription: %imgDescr%#$xFlags: %imgFlags%#$xDisplay Name: %imgDispName%#$xDisplay Description: %imgDispDescr%"
+WimInfo,%wim%,%^LOOP_IDX%,WINDOWS/VERSION/MAJOR,%verMaj%
+WimInfo,%wim%,%^LOOP_IDX%,WINDOWS/VERSION/MINOR,%verMin%
+WimInfo,%wim%,%^LOOP_IDX%,WINDOWS/VERSION/BUILD,%verBld%
+WimInfo,%wim%,%^LOOP_IDX%,WINDOWS/VERSION/SPLEVEL,%verSP%
+WimInfo,%wim%,%^LOOP_IDX%,WINDOWS/LANGUAGES/LANGUAGE,%lang%
+WimInfo,%wim%,%^LOOP_IDX%,NAME,%imgName%
+WimInfo,%wim%,%^LOOP_IDX%,DESCRIPTION,%imgDescr%
+WimInfo,%wim%,%^LOOP_IDX%,FLAGS,%imgFlags%
+WimInfo,%wim%,%^LOOP_IDX%,DISPLAYNAME,%imgDispName%
+WimInfo,%wim%,%^LOOP_IDX%,DISPLAYDESCRIPTION,%imgDispDescr%
+Message,"Image: %^LOOP_IDX% of %imgCount%#$xVersion: %verMaj%.%verMin% (Build %verBld% Service Pack %verSP%)#$xLanguage: %lang%#$xName: %imgName%#$xDescription: %imgDescr%#$xFlags: %imgFlags%#$xDisplay Name: %imgDispName%#$xDisplay Description: %imgDispDescr%"
 System,EndLocal
 ```

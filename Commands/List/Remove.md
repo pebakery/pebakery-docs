@@ -68,25 +68,25 @@ RemoveDuplicates,%myList%
 Message,"Result: %myList%"
 
 [RemoveDups]
-// #1 - List
-List,Count,#1,%n%
-Loop,%ScriptFile%,GetListItem-Loop,1,%n%,#1
+// %^SIPARAM_1% - List
+List,Count,%^SIPARAM_1%,%n%
+Loop,%ScriptFile%,GetListItem-Loop,1,%n%,%^SIPARAM_1%
 Set,%myList%,%tmpList%
 
 [GetListItem-Loop]
 // Loop through each item in the list.
-// #1 - List
-List,Get,#1,#c,%Item%
-Run,%ScriptFile%,CheckListItem,#1,%Item%
+// %^SIPARAM_1% - List
+List,Get,%^SIPARAM_1%,%^LOOP_IDX%,%Item%
+Run,%ScriptFile%,CheckListItem,%^SIPARAM_1%,%Item%
 
 [CheckListItem]
 // Check the value passed to determine if there are duplicates
 // we test this by comparing the index of the first occurrence
 // with the index of the last occurrence. If they are not equal
 // that means we have multiple occurrences of the item.
-// #1 - List  #2 - Item
-List,Pos,#1,#2,%ItemFirstPos%
-List,LastPos,#1,#2,%ItemLastPos%
+// %^SIPARAM_1% - List  %^SIPARAM_2% - Item
+List,Pos,%^SIPARAM_1%,%^SIPARAM_2%,%ItemFirstPos%
+List,LastPos,%^SIPARAM_1%,%^SIPARAM_2%,%ItemLastPos%
 If,Not,%ItemFirstPos%,Equal,%ItemLastPos%,Begin
   Echo,"Removing duplicate occurrences of [%Item%]..."
   // We don't care how many occurrences there are of %Item%
@@ -94,12 +94,12 @@ If,Not,%ItemFirstPos%,Equal,%ItemLastPos%,Begin
   // we can be lazy and just Remove all occurrences of %Item%
   // and not have to fool around looking for additional occurrences
   // between the 1st and the last.
-  List,Remove,#1,#2
+  List,Remove,%^SIPARAM_1%,%^SIPARAM_2%
   // Then reinsert %Item% where we found the first occurrence
-  List,Insert,#1,%ItemFirstPos%,#2
+  List,Insert,%^SIPARAM_1%,%ItemFirstPos%,%^SIPARAM_2%
   // Run parameters are passed by value so
   // we need to return the result as a variable.
-  Set,%tmpList%,#1
+  Set,%tmpList%,%^SIPARAM_1%
   // Now that we have removed an item(s) our index count has changed
   // so we need break out of the current loop and restart to check
   // the remaining items in the list.

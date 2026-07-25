@@ -65,6 +65,6 @@ List,Count,%myList%,%n%
 Loop,%ScriptFile%,GetListItem-Loop,1,%n%
 
 [GetListItem-Loop]
-List,Get,%myList%,#c,%DestVar%
-Message,"Item [#c/%n%]: %DestVar%"
+List,Get,%myList%,%^LOOP_IDX%,%DestVar%
+Message,"Item [%^LOOP_IDX%/%n%]: %DestVar%"
 ```

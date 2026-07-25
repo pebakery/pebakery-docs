@@ -18,7 +18,7 @@ LoopLetter,BREAK
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path to the script containing the `Section` to execute. Hint: Use %ScriptFile% to reference the current script. |
+| FileName | The full path to the script containing the `Section` to execute. Hint: Use `%ScriptFile%` to reference the current script. |
 | Section | The [Section] to execute. |
 | StartLetter | The initial letter to start from. Each time the loop finishes the letter will be incremented lexicographically. |
 | EndLetter |  The final letter to be reached by increment `StartLetter`. Once this letter is reached the loop stops. |
@@ -34,11 +34,14 @@ LoopLetter,BREAK
 
 The following tokens are passed by PEBakery and can be used to perform additional operations within the loop.
 
+
 | Token | Description |
 | --- | --- |
-| #1, #2, #3, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
-| #a | Contains the number of parameters passed to `Section`. |
-| #c | Contains the current value of the loop relative to `StartValue` and `EndValue`. |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
+| `%^RET%` | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
+| `%^LOOP_IDX%` | Contains the current value of the loop relative to `StartValue` and `EndValue`. |
+| `%^SOPARAM_1%`, `%^SOPARAM_2%`, `%^SOPARAM_3%`, etc.| References an `Out=` variable inside the called section. The numbering scheme starts from `1` and continues in the order the `Out=` parameters were passed. These tokens are discarded when the section is finished processing. |
 
 ## Remarks
 
@@ -48,7 +51,7 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ## Related
 
-[ForEach](./ForEach.md), [ForRange](./ForRange.md), [Loop](./Loop.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
+[ForEach](./ForEach.md), [ForRange](./ForRange.md), [Loop](./Loop.md), [LoopEx](./LoopEx.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 
@@ -72,7 +75,7 @@ LoopLetter,%ScriptFile%,Search-Drives,A,Z
 If,EXISTFILE,%fullPath%,ShellExecute,OPEN,%fullPath%
 
 [Search-Drives]
-Echo,"Searching drive [#c:\]"
-Set,%fullPath%,#c:\%searchFile%
+Echo,"Searching drive [%^LOOP_IDX%:\]"
+Set,%fullPath%,%^LOOP_IDX%:\%searchFile%
 If,EXISTFILE,%fullPath%,Loop,BREAK
 ```

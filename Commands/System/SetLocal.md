@@ -18,7 +18,7 @@ This command has no arguments.
 
 | Return Value | Description |
 | --- | --- |
-| #r | When `System,EndLocal` is called the contents of the isolated variables are discarded. The `#r` token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `#r` is volatile so if you need to preserve the return value copy it into a local variable. |
+| %^RET% | When `System,EndLocal` is called the contents of the isolated variables are discarded. The `%^RET%` token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
 
 ## Remarks
 
@@ -49,7 +49,7 @@ Set,%var%,"This value should never change!"
 Run,%ScriptFile%,mySection
 Echo,"Let's verify our var1 didn't change."
 Echo,"Var1 = %var%"
-Echo,"R = #r"
+Echo,"R = %^RET%"
 
 [mySection]
 System,SETLOCAL
@@ -57,6 +57,6 @@ System,SETLOCAL
 Echo,"Our isolated copy of var1: %var%"
 // Lets change it!
 Set,%var%,"Hello World!"
-Set,#r,%var%
+Set,%^RET%,%var%
 System,ENDLOCAL
 ```

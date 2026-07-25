@@ -47,7 +47,7 @@ Author=Homes32
 [Process]
 // Comma's are reserved, so we must escape (#$c) or quote ("Delim=,") them.
 List,Get,%myList%,3,%DestVar%,Delim=#$c
-Message,"Item #3: %DestVar%"
+Message,"Item %^SIPARAM_3%: %DestVar%"
 ```
 
 ### Example 2
@@ -91,6 +91,6 @@ List,Count,%myList%,%n%
 Loop,%ScriptFile%,GetListItem-Loop,1,%n%
 
 [GetListItem-Loop]
-List,Get,%myList%,#c,%DestVar%
-Message,"Item [#c/%n%]: %DestVar%"
+List,Get,%myList%,%^LOOP_IDX%,%DestVar%
+Message,"Item [%^LOOP_IDX%/%n%]: %DestVar%"
 ```

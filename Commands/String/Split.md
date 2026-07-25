@@ -53,6 +53,6 @@ StrFormat,SPLIT,%string%,#$s,0,%count%
 Loop,%ScriptFile%,DisplayWords,1,%count%
 
 [DisplayWords]
-StrFormat,Split,%string%," ",#c,%result%
-Message,"Split [#c] of [%count%]: %result%"
+StrFormat,Split,%string%," ",%^LOOP_IDX%,%result%
+Message,"Split [%^LOOP_IDX%] of [%count%]: %result%"
 ```

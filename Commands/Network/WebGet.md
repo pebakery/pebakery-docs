@@ -35,7 +35,7 @@ Flags may be specified in any order.
 
 | Variable | Description |
 | --- | --- |
-| #r | When used in conjunction with the NOERR flag the return code can be tested and corrective action taken when a failure occurs. |
+| %^RET% | When used in conjunction with the NOERR flag the return code can be tested and corrective action taken when a failure occurs. |
 | | 0 - The request could not be established (e.g. timeout, invalid URL, etc.). |
 | | 1 - The request succeeded but the downloaded file does not match the hash digest provided. |
 | | Otherwise it will return the HTTP Status code from the most recent WebGet operation. A list of HTTP Status codes can be found at the [HTTP Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml). |
@@ -93,14 +93,14 @@ WebGetIfNotExistEx,"https://zlib.net/zlib-1.2.11.tar.gz",%BaseDir%\zlib.tar.gz
 
 [WebGetIfNotExistEx]
 // Syntax: WebGetIfNotExistEx,<URL>,<DestFile>
-Echo,"Checking for #2..."
-If,Not,ExistFile,#2,Begin
+Echo,"Checking for %^SIPARAM_2%..."
+If,Not,ExistFile,%^SIPARAM_2%,Begin
 // File doesn't exist. lets download it!
-Echo,"Downloading #2..."
-WebGet,#1,#2
+Echo,"Downloading %^SIPARAM_2%..."
+WebGet,%^SIPARAM_1%,%^SIPARAM_2%
 End
 Else,Begin
 // File already exists on disk.
-Echo,"#2 already exists! Skipping download."
+Echo,"%^SIPARAM_2% already exists! Skipping download."
 End
 ```

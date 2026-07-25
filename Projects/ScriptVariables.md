@@ -50,6 +50,6 @@ myMacro=Run,%ScriptFile%,EchoMessage
 myMacro,%myProgramName%
 
 [EchoMessage]
-Echo,#1
-Message,#1
+Echo,%^SIPARAM_1%
+Message,%^SIPARAM_1%
 ```

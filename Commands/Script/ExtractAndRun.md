@@ -75,14 +75,14 @@ Author=Homes32
 
 // Define our Marco
 [Variables]
-ExtractAndRunEx=Run,%ScriptFile%,ExtractAndRunEx,#1,#2,#3,#4,#5
+ExtractAndRunEx=Run,%ScriptFile%,ExtractAndRunEx,%^SIPARAM_1%,%^SIPARAM_2%,%^SIPARAM_3%,%^SIPARAM_4%,%^SIPARAM_5%
 
 [process]
 ExtractAndRunEx,%ScriptFile%,Folder,myApp.exe
 
 [ExtractAndRunEx]
 // Syntax: ExtractAndRunEx,<Action>,<ScriptFile>,<DirName>,<FileName>,[,<Parameters>]
-// #1 = Action (Open/Hide)  #2 = ScriptFile  #3 = DirName  #4 = FileName  #5 = Parameters
-ExtractFile,#2,#3,#4,%ProjectTemp%\
-ShellExecuteDelete,#1,%ProjectTemp%\#4,#5,%ProjectTemp%
+// %^SIPARAM_1% = Action (Open/Hide)  %^SIPARAM_2% = ScriptFile  %^SIPARAM_3% = DirName  %^SIPARAM_4% = FileName  %^SIPARAM_5% = Parameters
+ExtractFile,%^SIPARAM_2%,%^SIPARAM_3%,%^SIPARAM_4%,%ProjectTemp%\
+ShellExecuteDelete,%^SIPARAM_1%,%ProjectTemp%\%^SIPARAM_4%,%^SIPARAM_5%,%ProjectTemp%
 ```

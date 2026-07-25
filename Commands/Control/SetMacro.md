@@ -62,14 +62,14 @@ WebGetIfNotExistEx,"https://zlib.net/zlib-1.2.11.tar.gz",%BaseDir%\zlib.tar.gz
 // This is the section to be executed when our macro is called
 [WebGetIfNotExistEx]
 // Syntax: WebGetIfNotExistEx,<URL>,<DestFile>
-Echo,"Checking for #2..."
-If,Not,ExistFile,#2,Begin
+Echo,"Checking for %^SIPARAM_2%..."
+If,Not,ExistFile,%^SIPARAM_2%,Begin
 // File doesn't exist. lets download it!
-Echo,"Downloading #2..."
-WebGet,#1,#2
+Echo,"Downloading %^SIPARAM_2%..."
+WebGet,%^SIPARAM_1%,%^SIPARAM_2%
 End
 Else,Begin
 // File already exists on disk.
-Echo,"#2 found! Skipping download."
+Echo,"%^SIPARAM_2% found! Skipping download."
 End
 ```

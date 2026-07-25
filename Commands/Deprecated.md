@@ -30,7 +30,7 @@ No longer used. Originally this command would display a dialog containing a lice
 
 ### IniReadEsc
 
-No documented use. Originally this command would read Winbuilder style escaped characters `#$p` and `#$q` as literal strings rather then escaping them as `##$p` and `##$q`.
+This command only appeared in a beta version of Winbuilder before being removed and would read Winbuilder style escaped characters `#$p` and `#$q` as literal strings rather then escaping them as `##$p` and `##$q`.
 
 ### `[OnProcessEntry]` section in script.project
 
@@ -177,3 +177,31 @@ The following variables have been deprecated. A small subset of environment vari
 | %Wow64% | Winbuilder returns `True` if it is running under a 64bit operating system. | Modern operating systems are all 64bit. If you still need to test this condition consider using `System,GetENV,"PROCESSOR_ARCHITECTURE",%ProcessorType%` |
 | %Wow64Dir% | Winbuilder returns the path of the WindowsOnWindows64 subsystem. Typically `C:\Windows\SysWOW64` | Use `System,GenENV,"windir",%WindowsDir%    Set,%Wow64Dir%,"%WindowsDir%\SysWOW64` |
 | %Programs64% | Winbuilder returns the path where 64bit Program Files are stored. | Use `System,GetENV,"ProgramFiles",%ProgramFilesDir%` |
+
+## Deprecated Section Parameters
+
+These variables may be enabled if needed to support a legacy project, however their use is strongly discouraged due to known issues affecting file and registry operations.
+
+The following variables are available if the compatibility options `Enable legacy sharp-styled section parameters (e.g. #1, #2, ...)` is enabled.
+
+| Token | Description |
+| --- | --- |
+| #1, #2, #3, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| #c | Contains the current loop count during a `Loop` or `LoopLetter` command. |
+
+The following variables are available if the compatibility options `Disable legacy sharp-styled extended section parameters (e.g. #1, #2, ...)` is enabled.
+
+Note: The following tokens are extensions to the script language added by PEBakery, they are not present in Winbuilder.
+ 
+| Token | Description |
+| --- | --- |
+| #a | Contains the number of parameters passed to `Section`. |
+| #oa | Contains the number out-params passed to `Section`. |
+| #o1-#o9 |  Used within a `Section` to access any output parameters passed to `Section`. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| #r | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. #r is volatile so if you need to preserve the return value copy it into a local variable. |
+ 
+## Deprecated Undocumented Features
+
+### `##` Escape Sequence
+
+Winbuilder has an undocumented escape sequence, escaping the  `#` character with a second `#`. PEBakery uses `#$h` to escape the `#` character in order to prevent collisions with common and legitimate use of `##` in strings.

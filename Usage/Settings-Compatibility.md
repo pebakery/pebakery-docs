@@ -39,10 +39,10 @@ Compatibility settings may be configured via the **PEBakery > Settings > Compat*
 | Setting | Ini Key | Description |
 | --- | --- | --- |
 | Overridable fixed variables | OverridableFixedVariables | Allow constant/fixed variables to be overwritten. |
-| Overridable loop counter (#c) | OverridableLoopCounter | Winbuilder allows overwriting of the loop counter `#c` during a loop, but then resets the value on the next iteration. Some poorly written scripts use this token as a 'disposable' variable. |
+| Overridable loop counter (%^LOOP_IDX%) | OverridableLoopCounter | Winbuilder allows overwriting of the loop counter `%^LOOP_IDX%` during a loop, but then resets the value on the next iteration. Some poorly written scripts use this token as a 'disposable' variable. |
 | Enable environment variables | EnableEnvironmentVariables | Enable a limited set of pre-define environment variables. |
-| Enable legacy sharp-styled section parameters (e.g. #1, #2, ...) | EnableAllLegacySectionParams | Enables using legacy `#1` style section parameters. Modern projects should disable this setting and use the safer variable based section parameters. (ex. `%^SIPARAM_1%`)| |
-| Disable legacy sharp-styled extended section parameters (e.g. #a, #r) | DisableLegacyExtendedSectionParams | Disables the `#a` and `#r` tokens. This may be desirable if you use statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token. Modern projects should enable this setting and use the safer variable based section parameters. (ex. `%^RET%`) |
+| Enable legacy sharp-styled section parameters (e.g. #1, #2, ...) and loop counter (#c) | EnableAllLegacySectionParams | Enables using legacy `#1` style section parameters and the legacy `#c` style loop counter. Modern projects should disable this setting and use the safer variable based section parameters. (ex. `%^SIPARAM_1%`, `%^LOOP_IDX%`) |
+| Disable legacy sharp-styled extended section parameters (e.g. #a, #r) | DisableLegacyExtendedSectionParams | Disables legacy PEBakery section parameter extensions. This may be desirable if you still need legacy section parameters such as `#1` but also need statements such as `TxtAddline,%w%,"#RequireAdmin",Append` where PEBakery can mistake `#R`  for the `#r` token. Modern projects should enable this setting and use the safer variable based section parameters (ex. `%^RET%`). This setting has no effect if the `Enable legacy sharp-styled section parameters (e.g. #1, #2, ...) and loop counter (#c)` compatibility setting is disabled. |
 
 ## Examples
 

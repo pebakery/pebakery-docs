@@ -14,19 +14,19 @@ Run,<FileName>,<Section>[,Parameters]
 
 | Argument | Description |
 | --- | --- |
-| FileName | The full path of the script. Hint: Use %scriptFile% to reference the current script. |
+| FileName | The full path of the script. Hint: Use `%ScriptFile%` to reference the current script. |
 | Section | The name of the section containing the commands you wish to run. |
 | Parameters | **(Optional)** Parameters to pass to the `Section` being executed. |
 
-### Tokens
+### Variables
 
-The following tokens can be used to perform additional operations when executing a section.
+The following variables can be used to perform additional operations when executing a section.
 
 | Token | Description |
 | --- | --- |
-| #1, #2, #3, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
-| #a | Contains the number of parameters passed to `Section`. |
-| #r | Return a value from the `Section`. The `#r` token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. #r is volatile so if you need to preserve the return value copy it into a local variable. |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
+| `%^RET%` | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
 
 ## Remarks
 
