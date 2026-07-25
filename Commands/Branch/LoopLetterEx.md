@@ -2,14 +2,16 @@
 
 Loops through a range of letters in alphabetical order.
 
+`LoopLetterEx` is an extended form of the standard `LoopLetter` command that allows passing parameters by reference as well as by value.
+
 ## Syntax
 
 ```pebakery
-LoopLetter,<FileName>,<Section>,<StartLetter>,<EndLetter>[,Parameters]
+LoopLetterEx,<FileName>,<Section>,<StartLetter>,<EndLetter>[,Parameters]
 ```
 
 ```pebakery
-LoopLetter,BREAK
+LoopLetterEx,BREAK
 ```
 
 ### Arguments
@@ -22,13 +24,15 @@ LoopLetter,BREAK
 | Section | The [Section] to execute. |
 | StartLetter | The initial letter to start from. Each time the loop finishes the letter will be incremented lexicographically. |
 | EndLetter |  The final letter to be reached by increment `StartLetter`. Once this letter is reached the loop stops. |
-| Parameters | **(Optional)** Parameters to pass to the `Section` being executed. |
+| Parameters | **(Optional)** Parameters to pass to the `Section` being executed. Parameters must be defined as either `In=` or `Out=`. |
+|| `In=<%variable%>` - Pass by value. |
+|| `Out=<%variable%>` - Pass by reference. If the variable does not exist it will be created. | 
 
 #### Version 2
 
 | Argument | Description |
 | --- | --- |
-| BREAK | Immediately exits the loop. The script will continue processing with the next line following the `LoopLetter` command. |
+| BREAK | Immediately exits the loop. The script will continue processing with the next line following the `LoopLetterEx` command. |
 
 ### Tokens
 
@@ -41,6 +45,7 @@ The following tokens are passed by PEBakery and can be used to perform additiona
 | `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
 | `%^RET%` | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
 | `%^LOOP_IDX%` | Contains the current value of the loop relative to `StartValue` and `EndValue`. |
+| `%^SOPARAM_1%`, `%^SOPARAM_2%`, `%^SOPARAM_3%`, etc.| References an `Out=` variable inside the called section. The numbering scheme starts from `1` and continues in the order the `Out=` parameters were passed. These tokens are discarded when the section is finished processing. |
 
 ## Remarks
 
@@ -50,7 +55,7 @@ Although the parameters themselves are passed by value using tokens, all variabl
 
 ## Related
 
-[ForEach](./ForEach.md), [ForRange](./ForRange.md), [Loop](./Loop.md), [LoopEx](./LoopEx.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
+[ForEach](./ForEach.md), [ForRange](./ForRange.md), [Loop](./Loop.md), [LoopLetter](./LoopLetter.md), [System,SetLocal](../System/SetLocal.md), [System,EndLocal](../System/EndLocal.md)
 
 ## Examples
 

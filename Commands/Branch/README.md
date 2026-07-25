@@ -15,7 +15,9 @@ Click on a Command name for a detailed description.
 | [If-Else](./If-Else.md) | Conditionally run statements. |
 | [If-Question](./If-Question.md) | Displays a dialog that asks the user a question, then uses their response to determine if the command should be executed. |
 | [Loop](./Loop.md) | Loops through a series of commands based on the value of a counter. |
+| [LoopEx](./LoopEx.md) | Loops through a series of commands based on the value of a counter. Supports passing parameters by reference. |
 | [LoopLetter](./LoopLetter.md) | Loops through a range of letters in alphabetical order. |
+| [LoopLetterEx](./LoopLetterEx.md) | Loops through a range of letters in alphabetical order. Supports passing parameters by reference. |
 | [Operators](./Operators.md) | Supported comparison and logical operators. |
 | [Run](./Run.md) | Runs the commands found in a named `[Section]` of a script file. |
 | [RunEx](./RunEx.md) | Runs the commands found in a named `[Section]` of a script file. Supports passing parameters by reference. |
