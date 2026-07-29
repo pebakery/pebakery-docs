@@ -186,7 +186,7 @@ The following variables are available if the compatibility options `Enable legac
 
 | Token | Description |
 | --- | --- |
-| #1, #2, #3, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| #1-#9. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed, up to a maximum of 9 parameters. These tokens are discarded when the section is finished processing. |
 | #c | Contains the current loop count during a `Loop` or `LoopLetter` command. |
 
 The following variables are available if the compatibility options `Disable legacy sharp-styled extended section parameters (e.g. #1, #2, ...)` is enabled.

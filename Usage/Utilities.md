@@ -19,3 +19,9 @@ For more information on escape characters please refer to the [Script Syntax](..
 ## Syntax Checker
 
 The Syntax Checker validates code snippets to ensure they will run correctly in PEBakery.
+
+## Registry Converter
+
+The Registry Converter allows you to convert `.reg` files exported from REGEDIT into PEBakery (RegWrite, RegWriteEx, RegDelete) script commands. 
+
+See [Registry Converter](./Utilities-RegistryConverter.md).
