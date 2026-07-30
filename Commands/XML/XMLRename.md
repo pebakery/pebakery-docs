@@ -46,6 +46,6 @@ For more information about using XPath syntax check out this [XPath Tutorial](ht
 ```pebakery
 
 // Rename a Subnode called GUIConfig under GUIConfigs
-XMLRename,%config.xml%,"NotepadPlus/GUIConfigs","Configs"
+XMLRename,%config.xml%,"NotepadPlus/GUIConfigs","GUIConfig"
 
 ```
