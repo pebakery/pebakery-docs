@@ -138,6 +138,18 @@ If `PathSetting=True` is defined in `script.project` then the following variable
 | %ISOFile% | True | Value of `ISOFile=` |
 | | False | undefined |
 
+### Section Variables
+
+The following reserved variables can be used to perform additional operations when executing a section or a loop.
+
+| Variable | Description |
+| --- | --- |
+| `%^LOOP_IDX%` | Contains the current value of the `Loop` relative to `StartValue` and `EndValue`. |
+| `%^RET%` | Return a value from the `Section`. This variable is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These variables are discarded when the section is finished processing. |
+| `%^SOPARAM_1%`, `%^SOPARAM_2%`, `%^SOPARAM_3%`, etc.| References an `Out=` variable inside the called section. The numbering scheme starts from `1` and continues in the order the `Out=` parameters were passed. These variables are discarded when the section is finished processing. |
+| `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
+
 ## Related
 
 [AddVariables](../Commands/Control/AddVariables.md), [Set](../Commands/Control/Set.md), [Project Variables](../Projects/ProjectVariables.md), [Script Variables](../Projects/ScriptVariables.md)

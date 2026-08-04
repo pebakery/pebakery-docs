@@ -30,23 +30,22 @@ Loop,BREAK
 | --- | --- |
 | BREAK | Immediately exits the loop. The script will continue processing with the next line following the `Loop` command. |
 
-### Tokens
+### Variables
 
-The following tokens are passed by PEBakery and can be used to perform additional operations within the loop.
+The following variables are passed by PEBakery and can be used to perform additional operations within the loop.
 
 | Token | Description |
 | --- | --- |
-| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These tokens are discarded when the section is finished processing. |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These variables are discarded when the section is finished processing. |
 | `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
 | `%^RET%` | Return a value from the `Section`. This token is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
 | `%^LOOP_IDX%` | Contains the current value of the loop relative to `StartValue` and `EndValue`. |
-
 
 ## Remarks
 
 PEBakery allows an unlimited number of parameters to be passed to the `[section]` being executed.
 
-Although the parameters themselves are passed by value using tokens, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
+Although the parameters themselves are passed by value using section variables, all variables are in the scope of the entire script, so the original values can modified by referencing them by name. If required, you can use the `System,SetLocal` command to isolate variables modified within the running section.
 
 *Note:* Winbuilder allows looping through characters A-Z in addition to integers. The PEBakery `LoopLetter` and `LoopLetterEx` commands replaces this functionality. For backwards compatibility with legacy projects you can enable the _Allow Letter in Loop's Arugment_ compatibility option in PEBakery's settings.
 

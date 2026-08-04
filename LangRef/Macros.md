@@ -39,3 +39,12 @@ The following variables may be used within the _script.project_ Variables sectio
 | %APIVAR% | The name of the section within the script defined by `%API%` that contains the Macro Definitions to be loaded into the GLOBAL project scope. |
 
 For more details see [Project Variables](../Projects/ProjectVariables.md).
+
+## Parameters
+
+Macros can accept an unlimited number of parameters. These will be passed to the target section by value.
+
+```pebakery
+[Process]
+myMacro,Arg1,Arg2,%ArgVar3%
+```

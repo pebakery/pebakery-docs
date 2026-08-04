@@ -6,6 +6,26 @@ Sections are specific blocks of code or other information within a script file. 
 
 Sections are defined by specifying the name of the section within `[]`brackets, (Ex. `[mySection]`) and end when either another section starts or the "end of file" is reached.
 
+## Section Parameters
+
+When used in conjunction with the `Run`, `Exec`, `SetMacro`, and similar commands sections can behave like a function and accept an unlimited number of parameters. 
+
+To access a parameter that has been passed to a section you can:
+
+- Access the parameter directly via it's reserved variable. (e.g `%^SIPARAM_1%`)
+- Retrieve the parameter with `GetParam` based on it's position and assign it to a custom variable. (e.g. `GetParam,2,%Arg2%`) 
+
+### Variables
+
+The following reserved variables can be used to perform additional operations when executing a section.
+
+| Variable | Description |
+| --- | --- |
+| `%^SIPARAM_1%`, `%^SIPARAM_2%`, `%^SIPARAM_3%`, etc. | Used within a `Section` to access any parameters passed. The numbering scheme starts from `1` and continues in the order the parameters were passed. These variables are discarded when the section is finished processing. |
+| `%^SOPARAM_1%`, `%^SOPARAM_2%`, `%^SOPARAM_3%`, etc.| References an `Out=` variable inside the called section. The numbering scheme starts from `1` and continues in the order the `Out=` parameters were passed. These variables are discarded when the section is finished processing. |
+| `%^SIPARAM_COUNT%` | Contains the number of parameters passed to `Section`. |
+| `%^RET%` | Return a value from the `Section`. This variable is not affected by the constraints of `System,SetLocal` and can be used to return the value of an isolated variable to the main process. `%^RET%` is volatile so if you need to preserve the return value copy it into a local variable. |
+
 ## Examples
 
 ### Example 1
