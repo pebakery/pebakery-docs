@@ -1,4 +1,4 @@
-# LoopLetter
+# LoopLetterEx
 
 Loops through a range of letters in alphabetical order.
 
