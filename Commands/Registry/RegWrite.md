@@ -5,7 +5,7 @@ Create or modify a key or value in the registry.
 ## Syntax
 
 ```pebakery
-RegWrite,<HKey>,<ValueType>,<KeyPath>,<ValueName>,<Value>,[NOWARN]
+RegWrite,<HKey>,<ValueType>,<KeyPath>,[ValueName],[Value],[NOWARN]
 ```
 
 ### Arguments
@@ -27,8 +27,10 @@ RegWrite,<HKey>,<ValueType>,<KeyPath>,<ValueName>,<Value>,[NOWARN]
 ||`0x7` or `REG_MULTI_SZ` - Multiple Null Separated Strings |
 ||`0x11` or `REG_QWORD` - 64bit integer |
 | KeyPath | The full path of the registry key. You can create an empty Key by omitting the `ValueName` and `Value` arguments or setting both to `""`. |
-| ValueName | The name of the value. For `(Default)` values use an empty string (`""`). |
-| Value | The value to write.<br/>Large values can be wrapped for easier reading by using the `\` character to indicate that the value continues on the next line, similar to the .reg file format. **Note:** If the `Value` to be written is the `\` character eg. `RegWrite,HKLM,0x1,Tmp_System\Setup,OsLoaderPath,"\"` be sure to wrap it in double quotes so it is not mistaken for a line continuation.  |
+| ValueName | **(Optional)*** The name of the value. For `(Default)` values use an empty string (`""`). |
+| Value | **(Optional)*** The value to write.<br/>Large values can be wrapped for easier reading by using the `\` character to indicate that the value continues on the next line, similar to the .reg file format. **Note:** If the `Value` to be written is the `\` character eg. `RegWrite,HKLM,0x1,"Tmp_System\Setup","OsLoaderPath","\"` be sure to wrap it in double quotes so it is not mistaken for a line continuation.  |
+
+*Optional only if `ValueType` is one of: `REG_NONE`, `REG_SZ`, `REG_EXPAND_SZ`
 
 _Note:_ For the ValueType argument you may use either the hex value `0x1` or name `REG_SZ` interchangeably.
 
@@ -39,6 +41,8 @@ _Note:_ For the ValueType argument you may use either the hex value `0x1` or nam
 | NOWARN | **(Optional)** Suppress Overwrite messages in the log if the `Value` already exists. |
 
 ## Remarks
+
+You can create an empty registry key by specifying a `ValueType` of `REG_NONE`, `REG_SZ`, or `REG_EXPAND_SZ` and omitting the `ValueName` and the `Value` arguments.
 
 If you need to modify the value of an ***existing*** REG_MULTI_SZ value consider using the `RegMulti` command to insert and delete values without overwriting the entire value list.
 
@@ -58,19 +62,19 @@ If you have a large number of keys to import it may be feasible to encode a _.re
 RegHiveLoad,Tmp_System,%RegSystem%
 
 // Write a DWORD
-RegWrite,HKLM,0x4,Tmp_System\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution,1024
+RegWrite,HKLM,0x4,"Tmp_System\ControlSet001\Services\VgaSave\Device0","DefaultSettings.XResolution",1024
 
 // You may also use the "friendly name" in place of the hex value type
-RegWrite,HKLM,REG_DWORD,Tmp_System\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution,1024
+RegWrite,HKLM,REG_DWORD,"Tmp_System\ControlSet001\Services\VgaSave\Device0","DefaultSettings.XResolution",1024
 
 // Write a BINARY value
-RegWrite,HKLM,REG_BINARY,Tmp_System\ControlSet001\Control\Network\{4d36e975-e325-11ce-bfc1-08002be10318}\{12F2EEA2-EE86-4933-8C0B-346E5E57F332},InstallTimeStamp,d9,07,07,00,02,00,0e,00,04,00,31,00,20,00,fd,00
+RegWrite,HKLM,REG_BINARY,"Tmp_System\ControlSet001\Control\Network\{4d36e975-e325-11ce-bfc1-08002be10318}\{12F2EEA2-EE86-4933-8C0B-346E5E57F332}","InstallTimeStamp",d9,07,07,00,02,00,0e,00,04,00,31,00,20,00,fd,00
 
 // Write a Multi-String value
-RegWrite,HKLM,REG_MULTI_SZ,Tmp_System\ControlSet001\Control\Network,FilterClasses,ms_firewall_upper,scheduler,encryption,compression,vpn,loadbalance,failover,diagnostic,custom
+RegWrite,HKLM,REG_MULTI_SZ,"Tmp_System\ControlSet001\Control\Network",FilterClasses,ms_firewall_upper,scheduler,encryption,compression,vpn,loadbalance,failover,diagnostic,custom
 
 // Write a large BINARY value using multiple lines for easy reading
-RegWrite,HKLM,REG_BINARY,Tmp_Default\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop,TaskbarWinXP,0c,\
+RegWrite,HKLM,REG_BINARY,"Tmp_Default\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams\Desktop","TaskbarWinXP",0c,\
 00,00,00,08,00,00,00,02,00,00,00,00,00,00,00,b0,e2,2b,d8,64,57,d0,11,a9,6e,00,c0,4f,d7,05,a2,22,00,1c,00,0a,10,00,00,01,00,00,00,01,00,00,00,00,00,00,\
 00,00,00,00,00,00,00,00,00,4c,00,00,00,01,14,02,00,00,00,00,00,c0,00,00,00,00,00,00,46,81,01,00,00,11,00,00,00,64,54,7a,06,bd,b2,cb,01,ea,2f,16,74,ca,\
 b8,cb,01,ea,2f,16,74,ca,b8,cb,01,00,10,00,00,00,00,00,00,01,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,04,02,14,00,1f,44,47,1a,03,59,72,3f,a7,44,89,\
@@ -88,6 +92,10 @@ c5,55,95,fe,6b,30,ee,7e,00,74,00,1c,00,43,46,53,46,16,00,31,00,00,00,00,00,2d,3e
 ad,9f,09,e0,19,75,24,e0,11,89,f4,00,50,56,c0,00,08,52,cb,74,30,40,c1,22,45,81,05,c7,54,dd,94,b1,ad,9f,09,e0,19,75,24,e0,11,89,f4,00,50,56,c0,00,08,00,\
 00,00,00,8d,00,00,00,40,07,00,00,00,00,00,00,1e,00,00,00,00,00,00,00,00,00,00,00,1e,00,00,00,00,00,00,00,01,00,00,00,01,00,00,00,aa,4f,28,68,48,6a,d0,\
 11,8c,78,00,c0,4f,d9,18,b4,a9,04,00,00,40,0d,00,00,00,00,00,00,1e,00,00,00,00,00,00,00,00,00,00,00,1e,00,00,00,00,00,00,00,01,00,00,00
+
+// Create an empty registry key: HKLM\Software\PhoenixPE
+
+
 
 RegHiveUnLoad,Tmp_System
 ```
@@ -109,11 +117,11 @@ RegHiveLoad,Tmp_System,%RegSystem%
 // Intended Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
 // Due to #609 being interpreted as a parameter
 // Actual Result : HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394E&10483\Service
-RegWrite,HKLM,REG_SZ,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483,Service,sbp2port
+RegWrite,HKLM,REG_SZ,"Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483","Service","sbp2port"
 
 // Use the escaped form of the # character `#$h`
 // Result: HKLM\Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394#609E&10483\Service
-RegWrite,HKLM,REG_SZ,Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483,Service,sbp2port
+RegWrite,HKLM,REG_SZ,"Tmp_System\ControlSet001\Control\CriticalDeviceDatabase\1394##609E&10483","Service","sbp2port"
 
 RegHiveUnLoad,Tmp_System
 ```

@@ -55,7 +55,7 @@ The Windows registry allows the use of wildcard characters (? \*) in key names (
 RegHiveLoad,Tmp_Ins_System,InstallSrc\windows\system32\config\SYSTEM
 RegHiveLoad,Tmp_System,%RegSystem%
 // Copy HKLM\System\ControlSet001\Services\Tcpip and all subkeys/values from Install.wim registry to Boot.wim registry
-RegCopy,HKLM,Tmp_Ins_System\ControlSet001\Services\Tcpip,HKLM,Tmp_System\ControlSet001\Services\Tcpip
+RegCopy,HKLM,"Tmp_Ins_System\ControlSet001\Services\Tcpip",HKLM,"Tmp_System\ControlSet001\Services\Tcpip"
 RegHiveUnLoad,Tmp_System
 RegHiveUnLoad,Tmp_Ins_System
 ```
@@ -67,7 +67,7 @@ Copy all registry keys under _HKLM\DriverDatabase\DriverPackages_ that begin wit
 ```pebakery
 RegHiveLoad,Tmp_Drivers,%RegDrivers%
 RegHiveLoad,Tmp_Install_Drivers,%RegInstallDrivers%
-RegCopy,HKLM,Tmp_Install_Drivers\DriverDatabase\DriverPackages\bda.inf*,HKLM,Tmp_Drivers\DriverDatabase\DriverPackages,WILDCARD
+RegCopy,HKLM,"Tmp_Install_Drivers\DriverDatabase\DriverPackages\bda.inf*",HKLM,"Tmp_Drivers\DriverDatabase\DriverPackages",WILDCARD
 RegHiveUnload,Tmp_Drivers
 RegHiveUnload,Tmp_Install_Drivers
 ```

@@ -38,6 +38,6 @@ RegExport,<HKey>,<KeyPath>,<RegFile>
 ```pebakery
 // Make sure RegHiveLoad,<KeyPath> matches the path in your *.reg file
 RegHiveLoad,Tmp_System,%RegSystem%
-RegExport,HKEY_LOCAL_MACHINE,Tmp_System\ControlSet001\Control\Network,c:\myFile.reg
+RegExport,HKEY_LOCAL_MACHINE,"Tmp_System\ControlSet001\Control\Network","c:\myFile.reg"
 RegHiveUnLoad,Tmp_System
 ```

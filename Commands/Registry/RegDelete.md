@@ -37,7 +37,7 @@ Delete a registry value.
 
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
-RegDelete,HKLM,Tmp_System\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution
+RegDelete,HKLM,"Tmp_System\ControlSet001\Services\VgaSave\Device0","DefaultSettings.XResolution"
 RegHiveUnLoad,Tmp_System
 ```
 
@@ -47,6 +47,6 @@ Delete a registry key.
 
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
-RegDelete,HKLM,Tmp_System\ControlSet001\Services\VgaSave\Device0
+RegDelete,HKLM,"Tmp_System\ControlSet001\Services\VgaSave\Device0"
 RegHiveUnLoad,Tmp_System
 ```

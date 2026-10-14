@@ -36,7 +36,7 @@ If the registry key does not exist the operation will fail.
 
 ```pebakery
 RegHiveLoad,Tmp_System,%RegSystem%
-RegRead,HKLM,Tmp_System\ControlSet001\Services\VgaSave\Device0,DefaultSettings.XResolution,%myXresolution%
-Echo, %myXresolution%
+RegRead,HKLM,"Tmp_System\ControlSet001\Services\VgaSave\Device0","DefaultSettings.XResolution",%myXresolution%
+Echo,%myXresolution%
 RegHiveUnLoad,Tmp_System
 ```
